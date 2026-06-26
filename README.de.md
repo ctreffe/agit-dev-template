@@ -74,3 +74,11 @@ Dieses Projekt steht unter der MIT-Lizenz.
 ## Version 0.3.0
 
 Version 0.3.0 ergänzt die Projektphilosophie als zentrales Dokument für AGIT-Projekte.
+
+## Core Documents
+
+- [DOCUMENTATION.md](DOCUMENTATION.md) – Dokumentationsstandards
+
+## Version 0.4.0
+
+Version 0.4.0 ergänzt Dokumentationsstandards für die Kerndokumente des Templates.

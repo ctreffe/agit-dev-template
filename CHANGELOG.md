@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 
 This project follows Semantic Versioning.
 
+## [0.4.0] - 2026-06-26
+
+### Added
+
+- Add `DOCUMENTATION.md` as a core repository document.
+- Document the purpose and responsibility of the core project documents.
+- Define guidance for user-facing documentation, engineering philosophy and collaboration documentation.
+
+### Changed
+
+- Update English and German README files to reference `DOCUMENTATION.md`.
+- Update project version metadata to 0.4.0.
+
 ## [0.3.0] - 2026-06-26
 
 ### Added
