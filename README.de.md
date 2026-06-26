@@ -98,3 +98,7 @@ Nach Abschluss der Ersteinrichtung können `PROJECT_SETUP.md`, `DOCUMENTATION.md
 ## Version 0.6.0
 
 Version 0.6.0 ergänzt eine Anleitung zur Ersteinrichtung neuer Projekte.
+
+## Version 0.7.0
+
+Version 0.7.0 ergänzt die Projektphilosophie um Grundsätze zur Versionierung.

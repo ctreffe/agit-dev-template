@@ -82,6 +82,22 @@ Unnecessary complexity should be removed whenever practical.
 
 The goal is steady evolution rather than constant reinvention.
 
+
+---
+
+# Versioning
+
+Projects should follow Semantic Versioning.
+
+Version numbers communicate the significance of changes rather than simply counting releases.
+
+- Patch releases contain compatible fixes and minor improvements.
+- Minor releases introduce new functionality while maintaining compatibility.
+- Major releases indicate intentional breaking changes or significant architectural evolution.
+
+Version tags and releases should be created intentionally to communicate meaningful project milestones rather than routine development activity.
+
+
 ---
 
 # Final Principle

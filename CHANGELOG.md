@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 This project follows Semantic Versioning.
 
+## [0.7.0] - 2026-06-26
+
+### Added
+
+- Extend `PHILOSOPHY.md` with a section describing versioning principles based on Semantic Versioning.
+
+### Changed
+
+- Update English and German README files.
+- Update project version metadata to 0.7.0.
+
 ## [0.6.0] - 2026-06-26
 
 ### Added

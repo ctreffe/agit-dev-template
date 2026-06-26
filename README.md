@@ -98,3 +98,7 @@ After completing the initial setup, `PROJECT_SETUP.md`, `DOCUMENTATION.md` and `
 ## Version 0.6.0
 
 Version 0.6.0 adds an initial setup guide for projects created from this template.
+
+## Version 0.7.0
+
+Version 0.7.0 refines the project philosophy by documenting versioning principles.
