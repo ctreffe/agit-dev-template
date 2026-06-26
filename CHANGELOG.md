@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 This project follows Semantic Versioning.
 
+## [1.0.1] - 2026-06-26
+
+### Changed
+
+- Use the latest Git tag instead of the latest GitHub Release for the version badge in the English and German README files.
+
 ## [1.0.0] - 2026-06-26
 
 ### Changed

@@ -1,7 +1,7 @@
 # AGIT Project Template
 
 ![Lizenz](https://img.shields.io/github/license/ctreffe/agit-project-template)
-![Release](https://img.shields.io/github/v/release/ctreffe/agit-project-template)
+![Release](https://img.shields.io/github/v/tag/ctreffe/agit-project-template)
 ![Letzter Commit](https://img.shields.io/github/last-commit/ctreffe/agit-project-template)
 
 [English documentation](README.md)
