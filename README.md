@@ -78,7 +78,12 @@ Version 0.3.0 adds the project philosophy as a core document for AGIT projects.
 ## Core Documents
 
 - [DOCUMENTATION.md](DOCUMENTATION.md) – documentation standards
+- [REPOSITORY.md](REPOSITORY.md) – repository standards
 
 ## Version 0.4.0
 
 Version 0.4.0 adds documentation standards for the template's core documents.
+
+## Version 0.5.0
+
+Version 0.5.0 adds repository standards for Git, versioning, releases and repository metadata.

@@ -78,7 +78,12 @@ Version 0.3.0 ergänzt die Projektphilosophie als zentrales Dokument für AGIT-P
 ## Core Documents
 
 - [DOCUMENTATION.md](DOCUMENTATION.md) – Dokumentationsstandards
+- [REPOSITORY.md](REPOSITORY.md) – Repository-Standards
 
 ## Version 0.4.0
 
 Version 0.4.0 ergänzt Dokumentationsstandards für die Kerndokumente des Templates.
+
+## Version 0.5.0
+
+Version 0.5.0 ergänzt Repository-Standards für Git, Versionierung, Releases und Repository-Metadaten.

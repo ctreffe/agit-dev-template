@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 
 This project follows Semantic Versioning.
 
+## [0.5.0] - 2026-06-26
+
+### Added
+
+- Add `REPOSITORY.md` as a core repository document.
+- Document repository naming, descriptions, Git workflow, commit messages, version tags, releases and repository metadata.
+- Document repository-ready delivery as a repository-level standard.
+
+### Changed
+
+- Update English and German README files to reference `REPOSITORY.md`.
+- Update project version metadata to 0.5.0.
+
 ## [0.4.0] - 2026-06-26
 
 ### Added
