@@ -9,15 +9,17 @@
 > [!NOTE]
 > **KI-Zusammenarbeit**
 >
-> Dieses Repository unterstützt Softwareprojekte, die in iterativer Zusammenarbeit zwischen dem Repository-Maintainer (**ctreffe**) und **ChatGPT (OpenAI)** entstehen.
+> Dieses Repository pflegt das aktuelle AGIT Collaboration Model.
 >
-> Der Kollaborationsprozess wird später in `ChatGPT.md` als versioniertes Collaboration Model dokumentiert.
+> Das Collaboration Model dokumentiert Engineering-Praktiken, Kollaborations-Workflows und Repository-Konventionen, die in AGIT-Projekten verwendet werden.
+>
+> Es wird in [ChatGPT.md](ChatGPT.md) gepflegt.
 
 ## Überblick
 
 Das AGIT Project Template definiert den Startpunkt für zukünftige AGIT-Softwareprojekte.
 
-Es stellt wiederverwendbare Repository-Konventionen, Dokumentationsstandards und Kollaborationspraktiken bereit, damit neue Projekte mit einer konsistenten Struktur und einer gemeinsamen Engineering-Philosophie beginnen.
+Es stellt wiederverwendbare Repository-Konventionen, Dokumentationsstandards und Kollaborationspraktiken bereit, damit neue Projekte mit einer konsistenten Struktur beginnen.
 
 Dieses Repository ist kein Code-Framework. Es ist ein Engineering-Template.
 
@@ -36,13 +38,21 @@ Ein neues Projekt sollte von Anfang an enthalten:
 - konsistente Git- und Release-Praktiken
 - Dokumentation, die als Teil des Produkts verstanden wird
 
+## Kerndokumente
+
+- [ChatGPT.md](ChatGPT.md) – Collaboration Model
+- [CHANGELOG.md](CHANGELOG.md) – Versionshistorie
+- [README.md](README.md) – englische Dokumentation
+- [LICENSE](LICENSE) – MIT-Lizenz
+
+Weitere Projektdokumente werden in späteren Versionen ergänzt.
+
 ## Aktueller Umfang
 
-Version 0.1.0 legt die Repository-Vision und die erste Dokumentationsbasis fest.
+Version 0.2.0 ergänzt das AGIT Collaboration Model als zentrales Repository-Dokument.
 
 Zukünftige Versionen werden ergänzen:
 
-- `ChatGPT.md` mit dem aktuellen Collaboration Model
 - `PHILOSOPHY.md`
 - Dokumentationsvorlagen
 - Git-Workflow-Richtlinien
@@ -54,7 +64,9 @@ Zukünftige Versionen werden ergänzen:
 
 Dieses Repository wird schrittweise weiterentwickelt.
 
-Der erste Fokus liegt darauf, die gemeinsamen Engineering-Standards zu dokumentieren, die während der Entwicklung des AGIT Deployment Kits entstanden sind, und sie für zukünftige Projekte wiederverwendbar zu machen.
+Der erste Fokus liegt darauf, die gemeinsamen Engineering-Standards zu dokumentieren, die während der Entwicklung des AGIT Windows Deployment Kits entstanden sind, und sie für zukünftige Projekte wiederverwendbar zu machen.
+
+Die Dokumentation sollte präzise technische Sprache verwenden und auf werbliche Formulierungen verzichten.
 
 ## Lizenz
 

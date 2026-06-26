@@ -9,15 +9,17 @@
 > [!NOTE]
 > **AI Collaboration**
 >
-> This repository is intended to support software projects developed through an iterative collaboration between the repository maintainer (**ctreffe**) and **ChatGPT (OpenAI)**.
+> This repository maintains the current AGIT Collaboration Model.
 >
-> The collaboration process will be documented in `ChatGPT.md` as a versioned Collaboration Model.
+> The Collaboration Model documents engineering practices, collaboration workflows and repository conventions used across AGIT projects.
+>
+> It is maintained in [ChatGPT.md](ChatGPT.md).
 
 ## Overview
 
 The AGIT Project Template defines the starting point for future AGIT software projects.
 
-It provides reusable repository conventions, documentation standards and collaboration practices that help new projects start with a consistent structure and a shared engineering philosophy.
+It provides reusable repository conventions, documentation standards and collaboration practices that help new projects start with a consistent structure.
 
 This repository is not a code framework. It is an engineering template.
 
@@ -36,13 +38,21 @@ A new project should start with:
 - consistent Git and release practices
 - documentation that is treated as part of the product
 
+## Core Documents
+
+- [ChatGPT.md](ChatGPT.md) – Collaboration Model
+- [CHANGELOG.md](CHANGELOG.md) – version history
+- [README.de.md](README.de.md) – German documentation
+- [LICENSE](LICENSE) – MIT License
+
+Additional project documents will be added in later versions.
+
 ## Current Scope
 
-Version 0.1.0 establishes the repository vision and initial documentation baseline.
+Version 0.2.0 adds the AGIT Collaboration Model as a core repository document.
 
 Future versions will add:
 
-- `ChatGPT.md` with the current Collaboration Model
 - `PHILOSOPHY.md`
 - documentation templates
 - Git workflow guidelines
@@ -52,9 +62,11 @@ Future versions will add:
 
 ## Repository Principles
 
-This repository will evolve gradually.
+This repository evolves gradually.
 
-The initial focus is to document the shared engineering standards that emerged during the development of the AGIT Deployment Kit and make them reusable for future projects.
+The initial focus is to document the shared engineering standards that emerged during the development of the AGIT Windows Deployment Kit and make them reusable for future projects.
+
+Documentation should use precise, technical language and avoid promotional wording.
 
 ## License
 
