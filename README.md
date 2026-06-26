@@ -79,6 +79,7 @@ Version 0.3.0 adds the project philosophy as a core document for AGIT projects.
 
 - [DOCUMENTATION.md](DOCUMENTATION.md) – documentation standards
 - [REPOSITORY.md](REPOSITORY.md) – repository standards
+- [PROJECT_SETUP.md](PROJECT_SETUP.md) – initial setup guide for new projects
 
 ## Version 0.4.0
 
@@ -87,3 +88,13 @@ Version 0.4.0 adds documentation standards for the template's core documents.
 ## Version 0.5.0
 
 Version 0.5.0 adds repository standards for Git, versioning, releases and repository metadata.
+
+## Using This Template
+
+After creating a new repository from this template, `PROJECT_SETUP.md` describes the recommended initial setup steps.
+
+After completing the initial setup, `PROJECT_SETUP.md`, `DOCUMENTATION.md` and `REPOSITORY.md` may be removed from the derived project unless they remain useful there.
+
+## Version 0.6.0
+
+Version 0.6.0 adds an initial setup guide for projects created from this template.

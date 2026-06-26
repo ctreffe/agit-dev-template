@@ -160,3 +160,24 @@ English is the primary project language.
 Translated documentation may be provided where useful.
 
 Non-English documentation should be clearly identified and should follow the structure of the primary English documentation whenever practical.
+
+---
+
+# Derived Projects
+
+Repositories created from the AGIT Project Template should review which template documents remain useful after initial setup.
+
+In most derived projects, the following documents are part of the setup workflow and may be removed after initialization:
+
+- `PROJECT_SETUP.md`
+- `DOCUMENTATION.md`
+- `REPOSITORY.md`
+
+The following documents usually remain part of the derived project:
+
+- `README.md`
+- `README.de.md` where useful
+- `CHANGELOG.md`
+- `ChatGPT.md`
+- `PHILOSOPHY.md`
+- `LICENSE`

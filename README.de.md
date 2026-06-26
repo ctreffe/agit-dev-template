@@ -79,6 +79,7 @@ Version 0.3.0 ergänzt die Projektphilosophie als zentrales Dokument für AGIT-P
 
 - [DOCUMENTATION.md](DOCUMENTATION.md) – Dokumentationsstandards
 - [REPOSITORY.md](REPOSITORY.md) – Repository-Standards
+- [PROJECT_SETUP.md](PROJECT_SETUP.md) – Anleitung zur Ersteinrichtung neuer Projekte
 
 ## Version 0.4.0
 
@@ -87,3 +88,13 @@ Version 0.4.0 ergänzt Dokumentationsstandards für die Kerndokumente des Templa
 ## Version 0.5.0
 
 Version 0.5.0 ergänzt Repository-Standards für Git, Versionierung, Releases und Repository-Metadaten.
+
+## Using This Template
+
+Nach dem Erstellen eines neuen Repositorys aus diesem Template beschreibt `PROJECT_SETUP.md` die empfohlenen Schritte zur Ersteinrichtung.
+
+Nach Abschluss der Ersteinrichtung können `PROJECT_SETUP.md`, `DOCUMENTATION.md` und `REPOSITORY.md` aus dem abgeleiteten Projekt entfernt werden, sofern sie dort nicht weiterhin benötigt werden.
+
+## Version 0.6.0
+
+Version 0.6.0 ergänzt eine Anleitung zur Ersteinrichtung neuer Projekte.

@@ -68,6 +68,18 @@ Although the file is named `ChatGPT.md`, it is intended to be useful for future 
 
 ---
 
+---
+
+# PROJECT_SETUP.md
+
+`PROJECT_SETUP.md` guides the initial setup of repositories created from the AGIT Project Template.
+
+It is a template-only document.
+
+After a derived project has been initialized, this file may be removed unless it remains useful for that project.
+
+---
+
 # Additional Documentation
 
 Additional documentation should be added only when it has a clear purpose and audience.

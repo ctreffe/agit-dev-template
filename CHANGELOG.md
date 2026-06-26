@@ -4,6 +4,20 @@ All notable changes to this project will be documented in this file.
 
 This project follows Semantic Versioning.
 
+## [0.6.0] - 2026-06-26
+
+### Added
+
+- Add `PROJECT_SETUP.md` as the initial setup guide for projects created from the template.
+- Document the recommended setup workflow for derived repositories.
+- Document which template-only files may be removed after project initialization.
+
+### Changed
+
+- Update English and German README files to reference `PROJECT_SETUP.md`.
+- Update `DOCUMENTATION.md` and `REPOSITORY.md` to describe the role of setup-only documents in derived projects.
+- Update project version metadata to 0.6.0.
+
 ## [0.5.0] - 2026-06-26
 
 ### Added
