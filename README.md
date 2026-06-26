@@ -17,88 +17,52 @@
 
 ## Overview
 
-The AGIT Project Template defines the starting point for future AGIT software projects.
+The AGIT Project Template is the starting point for new AGIT software projects.
 
-It provides reusable repository conventions, documentation standards and collaboration practices that help new projects start with a consistent structure.
+It provides a reusable repository foundation with documentation, collaboration and repository standards.
 
 This repository is not a code framework. It is an engineering template.
 
-## Purpose
+## How to Use This Template
 
-The goal of this template is to answer one question:
+1. Create a new repository from this template.
+2. Review `PROJECT_SETUP.md`.
+3. Adapt the README files and repository metadata to the new project.
+4. Review the core project documents.
+5. Remove template-only setup documents when the project setup is complete.
 
-> How should a new AGIT project begin?
+## Documents That Usually Remain
 
-A new project should start with:
+The following documents usually remain part of a derived project:
 
-- a clear README
-- a defined license
-- a documented collaboration model
-- a project philosophy
-- consistent Git and release practices
-- documentation that is treated as part of the product
+- `README.md`
+- `README.de.md`, where useful
+- `CHANGELOG.md`
+- `ChatGPT.md`
+- `PHILOSOPHY.md`
+- `LICENSE`
 
-## Core Documents
+## Template-Only Documents
 
+The following documents primarily support project initialization:
+
+- `PROJECT_SETUP.md`
+- `DOCUMENTATION.md`
+- `REPOSITORY.md`
+
+After the initial setup is complete, these documents may be removed from the derived project unless they remain useful there.
+
+## Core Template Documents
+
+- [PROJECT_SETUP.md](PROJECT_SETUP.md) – initial setup guide for new projects
 - [ChatGPT.md](ChatGPT.md) – Collaboration Model
+- [PHILOSOPHY.md](PHILOSOPHY.md) – project philosophy
+- [DOCUMENTATION.md](DOCUMENTATION.md) – documentation standards
+- [REPOSITORY.md](REPOSITORY.md) – repository standards
 - [CHANGELOG.md](CHANGELOG.md) – version history
 - [README.de.md](README.de.md) – German documentation
 - [LICENSE](LICENSE) – MIT License
 
-Additional project documents will be added in later versions.
-
-## Current Scope
-
-Version 0.2.0 adds the AGIT Collaboration Model as a core repository document.
-
-Future versions will add:
-
-- documentation templates
-- Git workflow guidelines
-- release workflow guidelines
-- repository structure recommendations
-- GitHub issue and pull request templates
-
-## Repository Principles
-
-This repository evolves gradually.
-
-The initial focus is to document the shared engineering standards that emerged during the development of the AGIT Windows Deployment Kit and make them reusable for future projects.
-
-Documentation should use precise, technical language and avoid promotional wording.
-
 ## License
 
 This project is licensed under the MIT License.
-
-## Version 0.3.0
-
-Version 0.3.0 adds the project philosophy as a core document for AGIT projects.
-
-## Core Documents
-
-- [DOCUMENTATION.md](DOCUMENTATION.md) – documentation standards
-- [REPOSITORY.md](REPOSITORY.md) – repository standards
-- [PROJECT_SETUP.md](PROJECT_SETUP.md) – initial setup guide for new projects
-
-## Version 0.4.0
-
-Version 0.4.0 adds documentation standards for the template's core documents.
-
-## Version 0.5.0
-
-Version 0.5.0 adds repository standards for Git, versioning, releases and repository metadata.
-
-## Using This Template
-
-After creating a new repository from this template, `PROJECT_SETUP.md` describes the recommended initial setup steps.
-
-After completing the initial setup, `PROJECT_SETUP.md`, `DOCUMENTATION.md` and `REPOSITORY.md` may be removed from the derived project unless they remain useful there.
-
-## Version 0.6.0
-
-Version 0.6.0 adds an initial setup guide for projects created from this template.
-
-## Version 0.7.0
-
-Version 0.7.0 refines the project philosophy by documenting versioning principles.

@@ -162,6 +162,10 @@ After completing the setup, remove the files that are no longer needed:
 - `DOCUMENTATION.md`
 - `REPOSITORY.md`
 
+Remove template-only setup files in a dedicated commit.
+
+This keeps the project history clear by showing when the initial setup was completed.
+
 The resulting repository should contain only the documents that are useful for the ongoing project.
 
 ---

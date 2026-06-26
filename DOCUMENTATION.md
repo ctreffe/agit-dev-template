@@ -2,7 +2,7 @@
 
 # Documentation Standards
 
-This document describes the purpose and responsibility of the core documents used in AGIT projects.
+This document describes the purpose and responsibility of the core documents used by the AGIT Project Template.
 
 It does not define project-specific content. Instead, it explains which document should contain which type of information.
 
@@ -10,7 +10,7 @@ It does not define project-specific content. Instead, it explains which document
 
 # README.md
 
-`README.md` is the primary user-facing entry point.
+Within the AGIT Project Template, `README.md` is the primary user-facing entry point.
 
 It should explain:
 
@@ -28,7 +28,7 @@ It should not become a general archive for engineering philosophy, collaboration
 
 # README.de.md
 
-`README.de.md` is the German translation of the user-facing README.
+Within the AGIT Project Template, `README.de.md` is the German translation of the user-facing README.
 
 It should follow the structure and intent of `README.md`.
 
@@ -40,7 +40,7 @@ The German README is provided to make the project easier to use for German-speak
 
 # CHANGELOG.md
 
-`CHANGELOG.md` documents notable changes between project versions.
+Within the AGIT Project Template, `CHANGELOG.md` documents notable changes between project versions.
 
 It should describe changes that are relevant to users, maintainers or contributors.
 
@@ -50,7 +50,7 @@ The changelog should be updated whenever a versioned project milestone is prepar
 
 # PHILOSOPHY.md
 
-`PHILOSOPHY.md` documents the engineering philosophy shared by projects created from the AGIT Project Template.
+Within the AGIT Project Template, `PHILOSOPHY.md` documents the engineering philosophy shared by derived projects.
 
 It should describe long-term principles and values, not project-specific implementation details.
 
@@ -60,7 +60,7 @@ This document should change less frequently than workflow-oriented documentation
 
 # ChatGPT.md
 
-`ChatGPT.md` contains the AGIT Collaboration Model.
+Within the AGIT Project Template, `ChatGPT.md` contains the AGIT Collaboration Model.
 
 It documents the collaboration workflow, AI-assisted engineering practices, repository-ready delivery process and related development conventions.
 
@@ -72,7 +72,7 @@ Although the file is named `ChatGPT.md`, it is intended to be useful for future 
 
 # PROJECT_SETUP.md
 
-`PROJECT_SETUP.md` guides the initial setup of repositories created from the AGIT Project Template.
+Within the AGIT Project Template, `PROJECT_SETUP.md` guides the initial setup of derived repositories.
 
 It is a template-only document.
 

@@ -17,88 +17,52 @@
 
 ## Überblick
 
-Das AGIT Project Template definiert den Startpunkt für zukünftige AGIT-Softwareprojekte.
+Das AGIT Project Template ist der Startpunkt für neue AGIT-Softwareprojekte.
 
-Es stellt wiederverwendbare Repository-Konventionen, Dokumentationsstandards und Kollaborationspraktiken bereit, damit neue Projekte mit einer konsistenten Struktur beginnen.
+Es stellt eine wiederverwendbare Repository-Grundlage mit Dokumentations-, Kollaborations- und Repository-Standards bereit.
 
 Dieses Repository ist kein Code-Framework. Es ist ein Engineering-Template.
 
-## Zweck
+## Verwendung des Templates
 
-Das Template beantwortet eine zentrale Frage:
+1. Neues Repository aus diesem Template erstellen.
+2. `PROJECT_SETUP.md` lesen.
+3. README-Dateien und Repository-Metadaten an das neue Projekt anpassen.
+4. Kerndokumente prüfen.
+5. Template-spezifische Setup-Dokumente entfernen, sobald die Projekteinrichtung abgeschlossen ist.
 
-> Wie sollte ein neues AGIT-Projekt beginnen?
+## Dokumente, die normalerweise bleiben
 
-Ein neues Projekt sollte von Anfang an enthalten:
+Die folgenden Dokumente bleiben normalerweise Teil eines abgeleiteten Projekts:
 
-- eine klare README
-- eine definierte Lizenz
-- ein dokumentiertes Kollaborationsmodell
-- eine Projektphilosophie
-- konsistente Git- und Release-Praktiken
-- Dokumentation, die als Teil des Produkts verstanden wird
+- `README.md`
+- `README.de.md`, sofern sinnvoll
+- `CHANGELOG.md`
+- `ChatGPT.md`
+- `PHILOSOPHY.md`
+- `LICENSE`
 
-## Kerndokumente
+## Template-spezifische Dokumente
 
+Die folgenden Dokumente unterstützen vor allem die Projekteinrichtung:
+
+- `PROJECT_SETUP.md`
+- `DOCUMENTATION.md`
+- `REPOSITORY.md`
+
+Nach Abschluss der Ersteinrichtung können diese Dokumente aus dem abgeleiteten Projekt entfernt werden, sofern sie dort nicht weiterhin nützlich sind.
+
+## Kerndokumente des Templates
+
+- [PROJECT_SETUP.md](PROJECT_SETUP.md) – Anleitung zur Ersteinrichtung neuer Projekte
 - [ChatGPT.md](ChatGPT.md) – Collaboration Model
+- [PHILOSOPHY.md](PHILOSOPHY.md) – Projektphilosophie
+- [DOCUMENTATION.md](DOCUMENTATION.md) – Dokumentationsstandards
+- [REPOSITORY.md](REPOSITORY.md) – Repository-Standards
 - [CHANGELOG.md](CHANGELOG.md) – Versionshistorie
 - [README.md](README.md) – englische Dokumentation
 - [LICENSE](LICENSE) – MIT-Lizenz
 
-Weitere Projektdokumente werden in späteren Versionen ergänzt.
-
-## Aktueller Umfang
-
-Version 0.2.0 ergänzt das AGIT Collaboration Model als zentrales Repository-Dokument.
-
-Zukünftige Versionen werden ergänzen:
-
-- Dokumentationsvorlagen
-- Git-Workflow-Richtlinien
-- Release-Workflow-Richtlinien
-- Empfehlungen zur Repository-Struktur
-- GitHub Issue- und Pull-Request-Templates
-
-## Repository-Prinzipien
-
-Dieses Repository wird schrittweise weiterentwickelt.
-
-Der erste Fokus liegt darauf, die gemeinsamen Engineering-Standards zu dokumentieren, die während der Entwicklung des AGIT Windows Deployment Kits entstanden sind, und sie für zukünftige Projekte wiederverwendbar zu machen.
-
-Die Dokumentation sollte präzise technische Sprache verwenden und auf werbliche Formulierungen verzichten.
-
 ## Lizenz
 
 Dieses Projekt steht unter der MIT-Lizenz.
-
-## Version 0.3.0
-
-Version 0.3.0 ergänzt die Projektphilosophie als zentrales Dokument für AGIT-Projekte.
-
-## Core Documents
-
-- [DOCUMENTATION.md](DOCUMENTATION.md) – Dokumentationsstandards
-- [REPOSITORY.md](REPOSITORY.md) – Repository-Standards
-- [PROJECT_SETUP.md](PROJECT_SETUP.md) – Anleitung zur Ersteinrichtung neuer Projekte
-
-## Version 0.4.0
-
-Version 0.4.0 ergänzt Dokumentationsstandards für die Kerndokumente des Templates.
-
-## Version 0.5.0
-
-Version 0.5.0 ergänzt Repository-Standards für Git, Versionierung, Releases und Repository-Metadaten.
-
-## Using This Template
-
-Nach dem Erstellen eines neuen Repositorys aus diesem Template beschreibt `PROJECT_SETUP.md` die empfohlenen Schritte zur Ersteinrichtung.
-
-Nach Abschluss der Ersteinrichtung können `PROJECT_SETUP.md`, `DOCUMENTATION.md` und `REPOSITORY.md` aus dem abgeleiteten Projekt entfernt werden, sofern sie dort nicht weiterhin benötigt werden.
-
-## Version 0.6.0
-
-Version 0.6.0 ergänzt eine Anleitung zur Ersteinrichtung neuer Projekte.
-
-## Version 0.7.0
-
-Version 0.7.0 ergänzt die Projektphilosophie um Grundsätze zur Versionierung.

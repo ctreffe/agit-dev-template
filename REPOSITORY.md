@@ -2,9 +2,9 @@
 
 # Repository Standards
 
-This document describes repository-level standards for projects created from the AGIT Project Template.
+This document describes repository-level standards used by the AGIT Project Template.
 
-It focuses on repository organization, Git usage, versioning and release handling.
+It focuses on repository organization, Git usage, versioning and release handling for repositories created from the template.
 
 ---
 

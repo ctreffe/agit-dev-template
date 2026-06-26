@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 This project follows Semantic Versioning.
 
+## [1.0.0] - 2026-06-26
+
+### Changed
+
+- Refine the English and German README files into concise user-facing entry points.
+- Clarify the role of template-only documents and documents that usually remain in derived projects.
+- Refine `DOCUMENTATION.md` and `REPOSITORY.md` wording for the AGIT Project Template.
+- Add guidance to remove template-only setup files in a dedicated commit.
+- Update project version metadata to 1.0.0.
+
 ## [0.7.0] - 2026-06-26
 
 ### Added
