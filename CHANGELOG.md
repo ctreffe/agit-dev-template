@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 
 This project follows Semantic Versioning.
 
+## [0.3.0] - 2026-06-26
+
+### Added
+
+- Add `PHILOSOPHY.md` as a core repository document.
+- Document the engineering philosophy shared by projects created from the AGIT Project Template.
+- Define principles for simplicity, maintainability, transparency, documentation, pragmatism, quality and continuous evolution.
+
+### Changed
+
+- Update English and German README files to reference `PHILOSOPHY.md`.
+- Update project version metadata to 0.3.0.
+
 ## [0.2.0] - 2026-06-26
 
 ### Added

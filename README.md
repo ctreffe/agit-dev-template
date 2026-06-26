@@ -53,7 +53,6 @@ Version 0.2.0 adds the AGIT Collaboration Model as a core repository document.
 
 Future versions will add:
 
-- `PHILOSOPHY.md`
 - documentation templates
 - Git workflow guidelines
 - release workflow guidelines
@@ -71,3 +70,7 @@ Documentation should use precise, technical language and avoid promotional wordi
 ## License
 
 This project is licensed under the MIT License.
+
+## Version 0.3.0
+
+Version 0.3.0 adds the project philosophy as a core document for AGIT projects.
