@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 This project follows Semantic Versioning.
 
+## [1.0.2] - 2026-06-26
+
+### Changed
+
+- Clarify the versioning philosophy by distinguishing repository version tags from GitHub Releases.
+- Document that not every version tag requires a GitHub Release.
+
 ## [1.0.1] - 2026-06-26
 
 ### Changed

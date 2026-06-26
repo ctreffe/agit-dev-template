@@ -95,7 +95,13 @@ Version numbers communicate the significance of changes rather than simply count
 - Minor releases introduce new functionality while maintaining compatibility.
 - Major releases indicate intentional breaking changes or significant architectural evolution.
 
-Version tags and releases should be created intentionally to communicate meaningful project milestones rather than routine development activity.
+Version tags identify repository versions.
+
+GitHub Releases communicate meaningful milestones to humans.
+
+Not every version tag requires a GitHub Release.
+
+Version tags and releases should be created intentionally rather than automatically.
 
 
 ---
