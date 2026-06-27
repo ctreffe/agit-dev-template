@@ -173,7 +173,7 @@ AGIT Project Template version:
 Collaboration Model version:
 
 ```text
-v1.6
+v1.7
 ```
 
 Current collaboration notes:
@@ -187,6 +187,7 @@ Current collaboration notes:
 - Capability limitations should be stated directly instead of hidden behind simulated completion.
 - Required template artifacts such as the AI Collaboration Note should remain visible and factually accurate unless intentionally modified.
 - If Codex is used locally, `CODEX.md` defines the local operating policy.
+- Long-running sessions should update `PROJECT_CONTEXT.md` before context exhaustion becomes likely.
 - Feature commits and milestone commits should remain separate.
 - Validation should happen before declaring a step complete.
 

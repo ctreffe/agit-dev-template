@@ -8,6 +8,8 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Upgrade the Collaboration Model to v1.7.
+- Add Context Handoff Discipline for updating `PROJECT_CONTEXT.md` before context exhaustion becomes likely.
 - Clarify that derived projects should preserve the AI Collaboration Note's purpose, placement and visibility while adapting project-specific wording when literal template text would be inaccurate.
 
 ## [v1.0.9] - 2026-06-27

@@ -1,6 +1,6 @@
 # ChatGPT.md
 
-# Collaboration Model v1.6
+# Collaboration Model v1.7
 
 **Status:** Stable  
 **Applies to:** AGIT software projects  
@@ -101,6 +101,31 @@ Every AGIT project should maintain `PROJECT_CONTEXT.md`.
 The document should describe the current state, not the full history. History belongs in `CHANGELOG.md`, ADRs or commit history.
 
 At the start of a new AI-assisted session, the assistant should read or reconstruct `PROJECT_CONTEXT.md` before proposing implementation work.
+
+---
+
+# Context Handoff Discipline
+
+Long AI-assisted work can exceed a model's available context window.
+
+The assistant should not rely on private chat history remaining available. When a session becomes long, a substantial change is in progress, or context exhaustion appears possible, the assistant should update `PROJECT_CONTEXT.md` before continuing with lower-priority implementation work.
+
+If the assistant environment exposes remaining context or token budget, the assistant should reserve enough capacity for a useful handoff update before the context becomes full. Exact token counts are environment-specific, so the rule is to preserve practical handoff capacity rather than depend on a fixed number.
+
+If no budget information is visible, the assistant should use conservative judgment. Warning signs include long conversations, many changed files, multiple unresolved decisions, extended validation work or a likely transition to another session.
+
+A handoff update should capture enough information for a new session to continue from the repository alone, including:
+
+- the current repository baseline
+- the active objective
+- completed changes since the last context update
+- open tasks
+- affected files
+- validation results
+- known limitations or blockers
+- the recommended next step
+
+The assistant should prefer an early, slightly imperfect handoff update over losing important state to context exhaustion.
 
 ---
 
@@ -570,5 +595,7 @@ Version 1.4 integrates the BootProfile Switcher v0.3.0 retrospective: repository
 Version 1.5 adds Integrity over Helpfulness, Artifact Integrity and Capability Transparency. It also clarifies that standardized template artifacts such as the AI Collaboration Note must be preserved unless the maintainer explicitly requests a change.
 
 Version 1.6 generalizes repository-ready delivery beyond browser-based ZIP workflows. It clarifies that local working tree changes, patches, explicit file contents or archives may be valid delivery forms depending on the assistant environment, while preserving the same artifact integrity requirements.
+
+Version 1.7 adds Context Handoff Discipline. It clarifies that assistants should update `PROJECT_CONTEXT.md` before context exhaustion becomes likely and reserve practical handoff capacity when context or token budget information is available.
 
 Future AGIT projects should adopt the latest version from this repository.
