@@ -9,7 +9,7 @@
 > [!NOTE]
 > **KI-Zusammenarbeit**
 >
-> Dieses Repository pflegt das aktuelle AGIT Collaboration Model.
+> Dieses Repository pflegt das AGIT Collaboration Model.
 >
 > Das Collaboration Model dokumentiert Engineering-Praktiken, Kollaborations-Workflows und Repository-Konventionen, die in AGIT-Projekten verwendet werden.
 >
@@ -19,29 +19,58 @@
 
 Das AGIT Project Template ist der Startpunkt für neue AGIT-Softwareprojekte.
 
-Es stellt eine wiederverwendbare Repository-Grundlage mit Dokumentations-, Kollaborations- und Repository-Standards bereit.
+Es stellt eine wiederverwendbare Repository-Grundlage für Dokumentation, Zusammenarbeit, Projektkontext, Repository-Standards und retrospektivische Prozessverbesserung bereit.
 
 Dieses Repository ist kein Code-Framework. Es ist ein Engineering-Template.
 
+## Was das Template bereitstellt
+
+Das Template definiert:
+
+- ein Collaboration Model für KI-gestützte Softwareentwicklung
+- ein Dokument für den aktuellen Projektkontext
+- Dokumentations- und Repository-Standards
+- eine gemeinsame Engineering-Philosophie
+- Versions- und Release-Regeln
+- einen Retrospektivenprozess zur Weiterentwicklung des Templates aus realer Projekterfahrung
 
 ## Projektkontext
 
 Jedes AGIT-Projekt sollte eine Datei `PROJECT_CONTEXT.md` pflegen.
 
-`PROJECT_CONTEXT.md` ist der zentrale Einstiegspunkt, um die Arbeit an einem Projekt wieder aufzunehmen. Die Datei beschreibt den aktuellen Projektstand, den aktuellen Fokus, abgeschlossene Meilensteine, offene Entscheidungen und relevante Dokumentationslinks.
+`PROJECT_CONTEXT.md` ist der zentrale Einstiegspunkt, um die Arbeit an einem Projekt wieder aufzunehmen. Die Datei beschreibt den aktuellen Projektstand, den aktuellen Fokus, den Repository-Baseline-Stand, abgeschlossene Meilensteine, den Validierungsstand, offene Entscheidungen und relevante Dokumentationslinks.
 
 Die Datei ersetzt nicht README, Changelog, Architekturdokumentation oder ADRs. Stattdessen hilft sie dabei zu verstehen, wo das Projekt heute steht und welche Dokumente aktuell relevant sind.
+
+## Entwicklungsworkflow
+
+AGIT-Projekte folgen einem repository-first Workflow.
+
+Das Repository ist der maßgebliche Projektstand. Bei KI-gestützter Zusammenarbeit sollte die Arbeit von einem klaren Repository-Baseline-Stand ausgehen, entweder einem öffentlichen Repository-Stand oder einem aktuellen ZIP-Archiv.
+
+Der bevorzugte Ablauf ist:
+
+1. Aktuellen Repository-Baseline-Stand festlegen.
+2. Nächsten Roadmap-Schritt vereinbaren.
+3. Kleine, prüfbare Änderung umsetzen.
+4. Änderung validieren, sofern praktisch möglich.
+5. Während der Validierung gefundene Fehler beheben.
+6. Repository-ready Beitrag vorbereiten.
+7. Validierten Schritt committen.
+8. Meilensteine getrennt von Feature-Arbeit abschließen.
+
+Explizite Aufforderungen wie „erstelle den Commit“ bedeuten, dass das angeforderte Artefakt erzeugt und nicht nur beschrieben werden soll.
 
 ## Verwendung des Templates
 
 1. Neues Repository aus diesem Template erstellen.
-2. Das neu erstellte Repository als ZIP-Datei herunterladen.
-3. Bei KI-gestützter Zusammenarbeit die ZIP-Datei hochladen, damit der vollständige Repository-Stand verfügbar ist.
-4. `PROJECT_SETUP.md` lesen.
-5. README-Dateien und Repository-Metadaten an das neue Projekt anpassen.
-6. `PROJECT_CONTEXT.md` als Einstiegspunkt für den aktuellen Projektstand anlegen oder anpassen.
-7. Kerndokumente prüfen.
-8. Template-spezifische Setup-Dokumente entfernen, sobald die Projekteinrichtung abgeschlossen ist.
+2. Initialen Repository-Baseline-Stand aus dem öffentlichen Repository oder einem ZIP-Archiv festlegen.
+3. `PROJECT_SETUP.md` lesen.
+4. README-Dateien und Repository-Metadaten an das neue Projekt anpassen.
+5. `PROJECT_CONTEXT.md` als Einstiegspunkt für den aktuellen Projektstand anlegen oder anpassen.
+6. Kerndokumente prüfen.
+7. Template-spezifische Setup-Dokumente entfernen, sobald die Projekteinrichtung abgeschlossen ist.
+8. Entwicklung gemäß `ChatGPT.md` fortsetzen.
 
 ## Dokumente, die normalerweise bleiben
 
@@ -69,7 +98,9 @@ Nach Abschluss der Ersteinrichtung können diese Dokumente aus dem abgeleiteten 
 
 Das AGIT Project Template entwickelt sich durch Projektretrospektiven weiter.
 
-Retrospektiven finden normalerweise am Ende eines Projekts statt, können aber auch während eines Projekts eingeschoben werden, wenn ausreichend praktische Erkenntnisse vorliegen. Änderungen am Template sollen ausschließlich im Rahmen einer solchen Retrospektive erfolgen, nicht beiläufig während der normalen Projektarbeit.
+Retrospektiven finden normalerweise am Ende eines Projekts statt, können aber auch während eines Projekts eingeschoben werden, wenn ausreichend praktische Erkenntnisse vorliegen.
+
+Änderungen am Template sollen ausschließlich im Rahmen einer solchen Retrospektive erfolgen. Wenn eine Retrospektive zentrale Prozessregeln verändert, sollen betroffene Dokumente harmonisiert werden, statt nur isolierte Notizen zu ergänzen.
 
 ## Kerndokumente des Templates
 

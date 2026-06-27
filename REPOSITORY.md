@@ -4,7 +4,7 @@
 
 This document describes repository-level standards used by the AGIT Project Template.
 
-It focuses on repository organization, Git usage, versioning and release handling for repositories created from the template.
+It focuses on repository organization, Git usage, versioning, release handling and repository-ready delivery for projects created from the template.
 
 ---
 
@@ -33,7 +33,23 @@ Prefer precise technical language.
 
 Avoid promotional wording, exaggerated claims or vague statements.
 
-A good repository description should help a visitor quickly understand the scope of the project.
+A good repository description helps a visitor quickly understand the scope of the project.
+
+---
+
+# Repository as Source of Truth
+
+The repository is the authoritative project state.
+
+Project decisions, current status and reusable knowledge should be captured in repository artifacts rather than relying on chat history.
+
+When AI assistance is used, work should begin from a clearly identified repository baseline:
+
+- the current public repository state, if accessible
+- a ZIP archive supplied by the maintainer
+- a previously generated artifact explicitly accepted as the new baseline
+
+If the baseline is unclear, do not prepare repository-ready changes until it is clarified.
 
 ---
 
@@ -68,13 +84,40 @@ Every commit should have:
 
 The summary should describe the primary purpose of the change.
 
-The description should describe the actual diff introduced by the commit.
+The description should describe the actual diff introduced by the commit and explain the reason for the change when it is not obvious.
 
-Commit descriptions should not repeat project history or describe future plans.
+Commit descriptions should not repeat unrelated project history or describe future plans.
 
 Each commit should represent one logical engineering step.
 
 Unrelated changes should be split into separate commits whenever practical.
+
+---
+
+# Feature Commits and Milestone Commits
+
+Feature commits implement or improve a specific logical step.
+
+They may use conventional prefixes such as:
+
+```text
+feat:
+fix:
+docs:
+chore:
+refactor:
+```
+
+Milestone commits finalize a completed roadmap milestone.
+
+Milestone commits are separate from feature commits and usually update:
+
+- `VERSION`
+- `CHANGELOG.md`
+- `PROJECT_CONTEXT.md`
+- README files or milestone documentation, if needed
+
+A milestone commit should not be used to hide unvalidated feature work.
 
 ---
 
@@ -86,6 +129,8 @@ Updates to README files, CHANGELOG.md, PHILOSOPHY.md, ChatGPT.md, DOCUMENTATION.
 
 Documentation-only commits are acceptable when they improve clarity, usability or maintainability.
 
+Documentation changes that alter the collaboration model or project philosophy should be harmonized across affected documents.
+
 ---
 
 # Repository-Ready Delivery
@@ -94,20 +139,42 @@ When repository changes are prepared with AI assistance, they should be delivere
 
 Whenever practical, this includes:
 
-- a ZIP archive containing the modified repository files
+- a ZIP archive containing the modified repository state or changed files, as agreed
 - a commit summary
 - a commit description
 - tag or release guidance when relevant
 
 Repository-ready deliverables should represent the final agreed state of the change and should not require additional manual editing before commit.
 
-If the current repository state is unclear, the AI assistant should request a current repository ZIP before preparing repository-ready deliverables.
+The archive must actually contain the stated changes.
+
+If no files changed, the assistant should say so instead of returning an unchanged archive as a completed deliverable.
+
+If the current repository state is unclear, the assistant should request a current repository ZIP or an explicit repository baseline before preparing repository-ready deliverables.
+
+---
+
+# Validation Before Commit
+
+Validation should happen before a logical step is committed whenever practical.
+
+Validation may include:
+
+- running scripts or tests
+- testing on a real system
+- reviewing generated artifacts
+- verifying documentation consistency
+- checking whether the roadmap objective has been met
+
+Bugs found during validation should be fixed before the feature commit if the feature has not yet been committed.
+
+If a bug is found after a feature commit, fix it in a separate commit with an appropriate summary.
 
 ---
 
 # Version Tags
 
-Version tags should mark meaningful project milestones.
+Version tags should mark meaningful completed project states.
 
 For future AGIT projects, version tags should use a leading `v`, for example:
 
@@ -124,7 +191,7 @@ Tags should be created intentionally and should not be added after every commit 
 
 # Releases
 
-GitHub Releases should be created for meaningful project milestones.
+GitHub Releases should be created for selected user-facing milestones.
 
 Not every tag requires a release.
 
@@ -135,6 +202,16 @@ For small projects, it is usually sufficient to create releases for:
 - versions with meaningful user-facing changes
 
 Release notes should describe the actual changes included in the release.
+
+---
+
+# Version Metadata
+
+The `VERSION` file should describe the latest completed project version according to the repository's versioning policy.
+
+Do not update `VERSION` merely because a new roadmap step begins.
+
+Update version metadata when a versioned milestone is completed.
 
 ---
 
@@ -161,6 +238,8 @@ Translated documentation may be provided where useful.
 
 Non-English documentation should be clearly identified and should follow the structure of the primary English documentation whenever practical.
 
+Translations should be complete and consistent, not partially localized copies.
+
 ---
 
 # Derived Projects
@@ -175,6 +254,7 @@ In most derived projects, the following documents are part of the setup workflow
 
 The following documents usually remain part of the derived project:
 
+- `PROJECT_CONTEXT.md`
 - `README.md`
 - `README.de.md` where useful
 - `CHANGELOG.md`

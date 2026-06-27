@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 This project follows Semantic Versioning.
 
+## [v1.0.6] - 2026-06-27
+
+### Changed
+
+- Upgrade the Collaboration Model to v1.4 after the BootProfile Switcher v0.3.0 retrospective.
+- Harmonize repository-first collaboration, roadmap-first implementation, validated learning and repository-ready delivery across the template documentation.
+- Clarify the distinction between feature commits and milestone commits.
+- Refine documentation standards so retrospective updates are integrated across affected documents instead of appended as isolated notes.
+- Update README files, project setup guidance, repository standards and project context guidance to reflect the improved workflow.
+- Bump template version to 1.0.6.
+
 ## [v1.0.5] - 2026-06-27
 
 ### Added

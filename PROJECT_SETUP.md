@@ -2,23 +2,22 @@
 
 # Project Setup Guide
 
-This document guides the initial setup of a new project created from the AGIT Project Template.
+This document describes how to initialize a new project from the AGIT Project Template.
 
-It is intended to be used immediately after creating a new repository from the template.
-
-After the setup is complete, this file should be removed from the derived project.
+It is primarily useful during project creation. Many derived projects may remove this file after setup is complete.
 
 ---
 
-# 1. Create the Derived Repository
+# 1. Create the Repository
 
-Create the new repository from the AGIT Project Template.
+Create a new repository from the AGIT Project Template.
 
-After the repository has been created, download the complete repository state as a ZIP file.
+After creating the repository, establish the first working baseline:
 
-When working with AI assistance, upload this ZIP file before project-specific initialization begins. The uploaded repository ZIP is the shared working baseline for the next set of changes.
+- use the public repository `main` branch if it is accessible and intended as the source of truth, or
+- download the repository as a ZIP archive and use that ZIP as the working baseline.
 
-This avoids relying on incomplete or inaccessible remote repository content.
+When using AI assistance, make the baseline explicit before requesting repository-ready changes.
 
 ---
 
@@ -43,17 +42,44 @@ Avoid promotional or marketing-oriented wording.
 Review and adapt the user-facing documentation:
 
 - `README.md`
-- `README.de.md`
+- `README.de.md`, if useful
 
 The English README is the primary project documentation.
 
 The German README may be kept, updated or removed depending on the target audience of the derived project.
 
+If both are kept, maintain them as structurally aligned translations.
+
 ---
 
-# 4. Review Core Project Documents
+# 4. Create or Adapt PROJECT_CONTEXT.md
 
-The following documents should usually remain in the derived project:
+Create or adapt `PROJECT_CONTEXT.md` for the derived project.
+
+This document is the primary entry point for resuming work on the project. It should describe the current state rather than the full history.
+
+At minimum, review and update:
+
+- project name and repository
+- current version or initial milestone
+- current status
+- current focus
+- repository baseline
+- completed milestones, if any
+- roadmap
+- validation status
+- open decisions
+- relevant documents
+- Collaboration Model version
+- AGIT Project Template version
+
+Keep this document concise. Its purpose is to help a maintainer, contributor or AI assistant quickly understand where the project stands today.
+
+---
+
+# 5. Review Core Project Documents
+
+The following documents usually remain in the derived project:
 
 - `PROJECT_CONTEXT.md`
 - `README.md`
@@ -64,29 +90,6 @@ The following documents should usually remain in the derived project:
 - `LICENSE`
 
 These documents define the current project state, user documentation, version history, collaboration model, engineering philosophy and license of the project.
-
----
-
-
-# 5. Create or Adapt PROJECT_CONTEXT.md
-
-Create or adapt `PROJECT_CONTEXT.md` for the derived project.
-
-This document is the primary entry point for resuming work on the project. It should describe the current state of the project rather than the full history of how the project reached that state.
-
-At minimum, review and update:
-
-- project name and repository
-- current version or initial milestone
-- current status
-- current focus
-- completed milestones, if any
-- open decisions
-- relevant documents
-- Collaboration Model version
-- AGIT Project Template version
-
-Keep this document concise. Its purpose is to help a maintainer, contributor or AI assistant quickly understand where the project stands today.
 
 ---
 
@@ -121,7 +124,7 @@ Typical updates include:
 - version references
 - links to related repositories
 
-Keep the documentation focused on the users of the derived project.
+Keep documentation focused on the users and contributors of the derived project.
 
 ---
 
@@ -162,6 +165,8 @@ v0.1.0
 v1.0.0
 ```
 
+Do not increase the version merely because a milestone begins. Increase version metadata when the milestone is completed.
+
 ---
 
 # 11. Prepare the First Project Commit
@@ -173,7 +178,7 @@ Use a concise summary and a meaningful description.
 Example summary:
 
 ```text
-Establish project foundation
+chore: initialize project from AGIT template
 ```
 
 Example description:
@@ -182,17 +187,15 @@ Example description:
 Initialize the project from the AGIT Project Template.
 
 Review and adapt the README files, core project documents and repository
-metadata for the new project.
-
-Remove template-only setup documentation after completing the initial
-project setup.
+metadata for the new project. Establish PROJECT_CONTEXT.md as the current
+state entry point for future development sessions.
 ```
 
 ---
 
 # 12. Remove Template-Only Setup Files
 
-After completing the setup, remove the files that are no longer needed:
+After completing setup, remove the files that are no longer needed:
 
 - `PROJECT_SETUP.md`
 - `DOCUMENTATION.md`
@@ -200,24 +203,28 @@ After completing the setup, remove the files that are no longer needed:
 
 Remove template-only setup files in a dedicated commit.
 
-This keeps the project history clear by showing when the initial setup was completed.
+This keeps project history clear by showing when the initial setup was completed.
 
-The resulting repository should contain only the documents that are useful for the ongoing project. `PROJECT_CONTEXT.md` should remain because it documents the current project state and supports future project resumption.
+`PROJECT_CONTEXT.md` should remain because it documents the current project state and supports future project resumption.
 
 ---
 
 # 13. Start Development
 
-After the initial setup commit, continue development according to the Collaboration Model in `ChatGPT.md`. Keep `PROJECT_CONTEXT.md` current when completing milestones, changing the roadmap, resolving important decisions or preparing to resume the project in a new collaboration session.
+After the initial setup commit, continue development according to the Collaboration Model in `ChatGPT.md`.
 
-When working with AI assistance, use repository-ready delivery:
+Keep `PROJECT_CONTEXT.md` current when completing milestones, changing the roadmap, resolving important decisions or preparing to resume the project in a new collaboration session.
 
-- provide the current repository state as a ZIP file when needed
-- receive complete change sets
-- ensure commit ZIP files contain only new or changed files
-- review the changes
+When working with AI assistance:
+
+- establish the current repository baseline
+- agree on the next roadmap step
+- implement small changes
+- validate before commit whenever practical
+- request repository-ready deliverables only after the plan is clear
 - commit with a clear summary and description
-- tag meaningful milestones intentionally
+- keep feature commits separate from milestone commits
+- tag meaningful completed milestones intentionally
 
 ---
 
@@ -230,3 +237,5 @@ Template changes should not be made casually during normal project work. Instead
 Retrospectives normally take place at the end of a project, but they may also be held during a project when enough practical experience has accumulated.
 
 Only changes that have proven useful in real project work should be considered for inclusion in the AGIT Project Template.
+
+When a retrospective changes core process guidance, update all affected template documents consistently instead of appending isolated notes.

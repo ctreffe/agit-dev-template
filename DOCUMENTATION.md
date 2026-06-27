@@ -2,167 +2,151 @@
 
 # Documentation Standards
 
-This document describes the purpose and responsibility of the core documents used by the AGIT Project Template.
+This document describes documentation standards used by the AGIT Project Template.
 
-It does not define project-specific content. Instead, it explains which document should contain which type of information.
-
----
-
-
-# PROJECT_CONTEXT.md
-
-Within the AGIT Project Template, `PROJECT_CONTEXT.md` is the primary entry point for resuming work on a project.
-
-It should describe the current project state, current focus, completed milestones, open decisions, relevant repository versions and the most important documents for continuing work.
-
-It should answer:
-
-- where the project stands today
-- what the current development focus is
-- what has already been completed
-- what decisions are still open
-- which documents should be read next
-
-`PROJECT_CONTEXT.md` should not become a full project history. Historical changes belong in `CHANGELOG.md`; decision rationale belongs in ADRs; general project explanation belongs in the README.
-
-For AGIT projects, `PROJECT_CONTEXT.md` should usually remain in the repository and be kept current whenever a milestone is completed, a retrospective changes the working model or the project is about to be resumed in a new collaboration session.
+Documentation is treated as part of the software. It should be maintained with the same care as implementation code.
 
 ---
 
-# README.md
+# Document Roles
 
-Within the AGIT Project Template, `README.md` is the primary user-facing entry point.
+Each document should have a clear role.
 
-It should explain:
+## README.md
 
-- what the project is
-- what problem it solves
-- how to get started
-- where to find additional documentation
-- important usage notes
+The primary user-facing entry point.
 
-The README should remain focused on users of the project.
+It explains what the project is, who it is for, how to get started and where to find more information.
 
-It should not become a general archive for engineering philosophy, collaboration practices or internal development process details.
+## README.de.md
 
----
+A German translation of the README where useful.
 
-# README.de.md
+It should follow the structure of `README.md` and should not drift into a separate document.
 
-Within the AGIT Project Template, `README.de.md` is the German translation of the user-facing README.
+## PROJECT_CONTEXT.md
 
-It should follow the structure and intent of `README.md`.
+The current-state entry point for resuming work.
 
-The English README remains the primary project documentation.
+It describes where the project stands today, the active milestone, the current baseline and the next steps.
 
-The German README is provided to make the project easier to use for German-speaking users.
+## CHANGELOG.md
 
-Translated documents should be complete translations, not partially localized documents. Headings, explanatory text and lists should be translated consistently. Established technical terms and proper names may remain unchanged when that improves clarity.
+The version history.
 
----
+It records completed changes by version. It should not replace `PROJECT_CONTEXT.md` or the roadmap.
 
-# CHANGELOG.md
+## ChatGPT.md
 
-Within the AGIT Project Template, `CHANGELOG.md` documents notable changes between project versions.
+The AGIT Collaboration Model.
 
-It should describe changes that are relevant to users, maintainers or contributors.
+It describes how the maintainer and AI assistant collaborate, including repository-ready delivery, roadmap-first work and validation expectations.
 
-The changelog should be updated whenever a versioned project milestone is prepared.
+## PHILOSOPHY.md
 
----
+The shared engineering philosophy.
 
-# PHILOSOPHY.md
+It describes the values behind technical decisions, such as maintainability, transparency and validated learning.
 
-Within the AGIT Project Template, `PHILOSOPHY.md` documents the engineering philosophy shared by derived projects.
+## ADRs
 
-It should describe long-term principles and values, not project-specific implementation details.
-
-This document should change less frequently than workflow-oriented documentation.
+Architecture Decision Records may be used when a decision is important enough that its reasoning should remain available later.
 
 ---
 
-# ChatGPT.md
+# Current State vs. History
 
-Within the AGIT Project Template, `ChatGPT.md` contains the AGIT Collaboration Model.
+Keep current state and history separate.
 
-It documents the collaboration workflow, AI-assisted engineering practices, repository-ready delivery process and related development conventions.
+- Current state belongs in `PROJECT_CONTEXT.md`.
+- Version history belongs in `CHANGELOG.md`.
+- Decision reasoning belongs in ADRs, when used.
+- User-facing overview belongs in `README.md`.
 
-Although the file is named `ChatGPT.md`, it is intended to be useful for future AI assistants as well as human contributors.
-
----
-
----
-
-# PROJECT_SETUP.md
-
-Within the AGIT Project Template, `PROJECT_SETUP.md` guides the initial setup of derived repositories.
-
-It is a template-only document.
-
-After a derived project has been initialized, this file may be removed unless it remains useful for that project.
+Do not force one document to serve all purposes.
 
 ---
 
-# Architecture Documentation
+# Repository-Ready Documentation
 
-Architecture documentation describes how a project is structured.
+Documentation changes are repository-ready only when they are consistent across affected documents.
 
-It should explain the major components, responsibilities and relationships of the system. It should not replace Architecture Decision Records.
+For example, if the collaboration workflow changes, review at least:
 
----
+- `ChatGPT.md`
+- `PHILOSOPHY.md`
+- `PROJECT_CONTEXT.md`
+- `README.md`
+- `README.de.md`, if present
+- `DOCUMENTATION.md`
+- `REPOSITORY.md`, if repository behavior is affected
 
-# Architecture Decision Records
+Do not append isolated notes when the change affects the structure or meaning of existing documentation.
 
-Architecture Decision Records document why a specific architectural decision was made.
-
-An ADR should document a decision, not merely describe the current state of the project.
-
-For AGIT projects, ADR numbering should normally start with `ADR-0001`. A special `ADR-0000` should be avoided unless there is a clear project-specific reason.
-
----
-
-# Retrospective Documentation
-
-Retrospectives are used to identify improvements to the AGIT Project Template based on practical project experience.
-
-They normally occur at the end of a project, but they may also be held during a project when enough findings have accumulated.
-
-Template improvements should be made only as part of a retrospective. This keeps the template stable during normal project work while still allowing it to evolve.
+Rewrite affected sections so the final documents read as one coherent version.
 
 ---
 
-# Additional Documentation
+# Language and Tone
 
-Additional documentation should be added only when it has a clear purpose and audience.
+Use precise, technical language.
 
-Examples may include:
+Avoid promotional, exaggerated or marketing-oriented wording.
 
-- architecture documentation
-- configuration reference
-- release documentation
-- developer documentation
-- API documentation
+Prefer clarity over persuasion.
 
-New documents should not duplicate existing documentation.
-
-Each document should have one clearly defined responsibility.
-
-A useful distinction for AGIT projects is:
-
-- `PROJECT_CONTEXT.md` explains where the project stands today and is the primary re-entry point.
-- `README.md` explains what the project is.
-- Architecture documentation explains how the system is structured.
-- ADRs explain why specific architecture decisions were made.
-- `PHILOSOPHY.md` explains the shared AGIT engineering philosophy.
+Documentation should explain what is true, what is supported and what remains intentionally out of scope.
 
 ---
 
-# General Guidance
+# German Documentation
 
-Documentation should be precise, useful and maintainable.
+When a German README or other translation is maintained, it should be a complete translation of the corresponding English document.
 
-Prefer factual descriptions over promotional language.
+Project names, repository names and established technical terms may remain in English when translation would reduce clarity.
 
-Keep user documentation focused on using the project.
+Do not mix languages within one document unless there is a clear technical reason.
 
-Keep engineering standards and collaboration practices in their dedicated documents.
+---
+
+# Documentation During Proofs of Concept
+
+Proof-of-concept documentation should describe:
+
+- the hypothesis or objective
+- the implementation boundaries
+- what was tested
+- what was validated
+- what did not work, if relevant
+- what remains out of scope
+
+Validated negative results should be documented when they influence the roadmap or architecture.
+
+---
+
+# Retrospective Updates
+
+Template updates should be made through retrospectives based on real project experience.
+
+A retrospective update should not simply add a new section to every document.
+
+Instead, review the role of each document and integrate the new guidance where it belongs.
+
+Remove outdated or redundant wording when necessary.
+
+---
+
+# Minimal Useful Documentation
+
+Documentation should remain useful and lightweight.
+
+Do not create documents only because a template exists.
+
+Do create documentation when it improves:
+
+- onboarding
+- validation
+- maintainability
+- decision traceability
+- release confidence
+- the ability to resume work later

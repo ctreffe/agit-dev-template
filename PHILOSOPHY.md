@@ -4,7 +4,7 @@
 
 This document describes the engineering philosophy shared by projects created from the AGIT Project Template.
 
-It complements the Collaboration Model by documenting the principles that influence technical decisions throughout the lifetime of a project.
+It complements the Collaboration Model in `ChatGPT.md`. The Collaboration Model describes how work is coordinated. This document describes the engineering values behind that work.
 
 ---
 
@@ -16,6 +16,8 @@ Complexity should only be introduced when it provides a clear and lasting benefi
 
 Readable solutions are generally preferred over clever solutions.
 
+A simple validated solution is usually better than a sophisticated unvalidated one.
+
 ---
 
 # Maintainability
@@ -26,25 +28,33 @@ Engineering decisions should therefore prioritize long-term maintainability over
 
 Projects should evolve gradually rather than through unnecessary rewrites.
 
+A change is not complete when it merely works once. It should also be understandable, reviewable and possible to continue later.
+
 ---
 
 # Transparency
 
 Software should behave predictably.
 
-Important assumptions, configuration options and architectural decisions should be documented.
+Important assumptions, configuration options, limitations and architectural decisions should be documented.
 
 Automation should never hide important behavior from the user.
+
+When a project uses AI assistance, the repository should make that collaboration understandable instead of relying on private conversation history.
 
 ---
 
 # Documentation
 
-Documentation is considered part of the software.
+Documentation is part of the software.
 
-It should evolve together with the implementation and be maintained with the same level of care as the source code.
+It should evolve together with the implementation and be maintained with the same level of care as source code.
 
-Every document should have a clearly defined purpose and target audience.
+Every document should have a clearly defined purpose and audience.
+
+Avoid duplicating the same rule across many documents. Prefer one authoritative location and clear references from other documents.
+
+Documentation should describe the actual state of the project, not an aspirational state that has not been implemented or validated.
 
 ---
 
@@ -55,6 +65,32 @@ Engineering decisions should be guided by practical value.
 Automation is encouraged where it improves consistency, reliability or maintainability.
 
 Manual steps are acceptable whenever they improve safety, transparency or the overall engineering process.
+
+The best process is the simplest process that preserves correctness, traceability and confidence.
+
+---
+
+# Validated Learning
+
+Projects should reduce uncertainty through validation.
+
+A proof of concept is successful when it produces reliable knowledge. That knowledge may confirm the intended design, or it may show that a different approach is needed.
+
+Validated negative results are useful project knowledge. They should be documented when they influence architecture or roadmap decisions.
+
+The goal is not to pursue every technically interesting path. The goal is to answer the questions that matter for the current roadmap.
+
+---
+
+# Roadmap Discipline
+
+The roadmap should guide implementation.
+
+Technical exploration should support the active milestone rather than replace it.
+
+Before continuing with additional experiments, ask whether the current milestone objective has already been satisfied.
+
+This prevents projects from drifting into open-ended engineering work after the important question has already been answered.
 
 ---
 
@@ -69,6 +105,27 @@ A successful project is also:
 - reproducible
 - well documented
 - transparent
+- validated
+- easy to resume after a pause
+
+A repository that cannot be continued confidently is not finished, even if the code appears to work.
+
+---
+
+# Repository-First Work
+
+The repository is the durable project memory.
+
+Chats, notes and experiments are useful, but the repository should contain the information needed to understand and continue the project.
+
+Important outcomes should be reflected in one or more durable artifacts:
+
+- code
+- documentation
+- changelog entries
+- project context
+- ADRs, where useful
+- commit history
 
 ---
 
@@ -82,19 +139,7 @@ Unnecessary complexity should be removed whenever practical.
 
 The goal is steady evolution rather than constant reinvention.
 
-
----
-
-# Experience-Driven Template Evolution
-
-The AGIT Project Template evolves from practical project experience.
-
-Template changes should be based on lessons learned while applying the template in real projects, not on hypothetical needs.
-
-Retrospectives are the preferred mechanism for turning practical experience into reusable template improvements.
-
-The template should remain useful, focused and lightweight. It should capture reusable process knowledge rather than documenting one-off execution mistakes.
-
+The AGIT Project Template itself evolves through retrospectives based on real project experience.
 
 ---
 
@@ -102,24 +147,22 @@ The template should remain useful, focused and lightweight. It should capture re
 
 Projects should follow Semantic Versioning.
 
-Version numbers communicate the significance of changes rather than simply counting releases.
+Version numbers communicate the significance of completed project states rather than simply counting commits.
 
-- Patch releases contain compatible fixes and minor improvements.
-- Minor releases introduce new functionality while maintaining compatibility.
-- Major releases indicate intentional breaking changes or significant architectural evolution.
+- Patch versions contain compatible fixes and minor improvements.
+- Minor versions introduce new functionality while maintaining compatibility.
+- Major versions indicate intentional breaking changes or significant architectural evolution.
 
-Version tags identify repository versions.
+Version tags identify meaningful completed repository states.
 
-GitHub Releases communicate meaningful milestones to humans.
+GitHub Releases communicate selected user-facing milestones.
 
-Not every version tag requires a GitHub Release.
+Not every tag requires a GitHub Release.
 
 Version tags and releases should be created intentionally rather than automatically.
-
 
 ---
 
 # Final Principle
 
-Well-designed software should communicate its quality through clarity,
-consistency and technical accuracy rather than persuasive language.
+Well-designed software should communicate its quality through clarity, consistency and technical accuracy rather than persuasive language.

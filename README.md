@@ -9,7 +9,7 @@
 > [!NOTE]
 > **AI Collaboration**
 >
-> This repository maintains the current AGIT Collaboration Model.
+> This repository maintains the AGIT Collaboration Model.
 >
 > The Collaboration Model documents engineering practices, collaboration workflows and repository conventions used across AGIT projects.
 >
@@ -19,29 +19,58 @@
 
 The AGIT Project Template is the starting point for new AGIT software projects.
 
-It provides a reusable repository foundation with documentation, collaboration and repository standards.
+It provides a reusable repository foundation for documentation, collaboration, project context, repository standards and retrospective-driven process improvement.
 
 This repository is not a code framework. It is an engineering template.
 
+## What the Template Provides
+
+The template defines:
+
+- a collaboration model for AI-assisted software development
+- a current-state project context document
+- documentation and repository standards
+- a shared engineering philosophy
+- versioning and release guidance
+- a retrospective process for improving the template from real project experience
 
 ## Project Context
 
-Every AGIT project should maintain a `PROJECT_CONTEXT.md` file.
+Every AGIT project should maintain `PROJECT_CONTEXT.md`.
 
-`PROJECT_CONTEXT.md` is the primary entry point for resuming a project. It captures the current project state, current focus, completed milestones, open decisions and relevant documentation links.
+`PROJECT_CONTEXT.md` is the primary entry point for resuming a project. It captures the current project state, current focus, repository baseline, completed milestones, validation status, open decisions and relevant documentation links.
 
-The file is not intended to replace the README, changelog, architecture documentation or ADRs. Instead, it helps readers understand where the project stands today and which documents are currently relevant.
+The file does not replace the README, changelog, architecture documentation or ADRs. Instead, it helps readers understand where the project stands today and which documents are currently relevant.
+
+## Development Workflow
+
+AGIT projects follow a repository-first workflow.
+
+The repository is the authoritative project state. When AI assistance is used, work should start from a clear repository baseline, either a public repository state or a current ZIP archive.
+
+The preferred workflow is:
+
+1. Establish the current repository baseline.
+2. Agree on the next roadmap step.
+3. Implement a small, reviewable change.
+4. Validate the change whenever practical.
+5. Fix issues found during validation.
+6. Prepare a repository-ready contribution.
+7. Commit the validated step.
+8. Finalize milestones separately from feature work.
+
+Explicit requests such as "create the commit" mean that the requested artifact should be produced, not merely described.
 
 ## How to Use This Template
 
 1. Create a new repository from this template.
-2. Download the newly created repository as a ZIP file.
-3. Upload the ZIP file when working with AI assistance so the full repository state is available.
-4. Review `PROJECT_SETUP.md`.
-5. Adapt the README files and repository metadata to the new project.
-6. Create or adapt `PROJECT_CONTEXT.md` as the current-state entry point for the project.
-7. Review the core project documents.
-8. Remove template-only setup documents when the project setup is complete.
+2. Establish the initial repository baseline from the public repository state or a ZIP archive.
+3. Review `PROJECT_SETUP.md`.
+4. Adapt the README files and repository metadata to the new project.
+5. Create or adapt `PROJECT_CONTEXT.md` as the current-state entry point for the project.
+6. Review the core project documents.
+7. Remove template-only setup documents when the project setup is complete.
+8. Continue development according to `ChatGPT.md`.
 
 ## Documents That Usually Remain
 
@@ -69,7 +98,9 @@ After the initial setup is complete, these documents may be removed from the der
 
 The AGIT Project Template evolves through project retrospectives.
 
-Retrospectives normally take place at the end of a project, but they may also be held during a project when enough practical findings have accumulated. Template changes should be made only as part of such a retrospective, not casually during normal project work.
+Retrospectives normally take place at the end of a project, but they may also be held during a project when enough practical findings have accumulated.
+
+Template changes should be made only as part of such a retrospective. When a retrospective changes core process guidance, affected documents should be harmonized instead of receiving isolated notes.
 
 ## Core Template Documents
 
