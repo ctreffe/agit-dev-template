@@ -61,6 +61,8 @@ Repository guidance should avoid assuming command-line Git usage whenever practi
 
 Command-line Git may still be used when needed, but documentation should not depend on it unless there is a clear reason.
 
+When Codex is used locally, `CODEX.md` defines the allowed Git usage. By default, Codex may use Git only for read-only inspection, while the maintainer controls staging, commits, tags, pushes and other repository state changes.
+
 ---
 
 # Branching Strategy
@@ -125,7 +127,7 @@ A milestone commit should not be used to hide unvalidated feature work.
 
 Documentation changes are first-class engineering work.
 
-Updates to README files, CHANGELOG.md, PHILOSOPHY.md, ChatGPT.md, DOCUMENTATION.md or other project documentation should receive clear commits.
+Updates to README files, CHANGELOG.md, PHILOSOPHY.md, ChatGPT.md, CODEX.md, DOCUMENTATION.md or other project documentation should receive clear commits.
 
 Documentation-only commits are acceptable when they improve clarity, usability or maintainability.
 
@@ -270,5 +272,6 @@ The following documents usually remain part of the derived project:
 - `README.de.md` where useful
 - `CHANGELOG.md`
 - `ChatGPT.md`
+- `CODEX.md` when Codex is used for local project work
 - `PHILOSOPHY.md`
 - `LICENSE`

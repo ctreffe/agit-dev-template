@@ -28,6 +28,7 @@ Dieses Repository ist kein Code-Framework. Es ist ein Engineering-Template.
 Das Template definiert:
 
 - ein Collaboration Model für KI-gestützte Softwareentwicklung
+- eine lokale Codex Operating Policy
 - ein Dokument für den aktuellen Projektkontext
 - Dokumentations- und Repository-Standards
 - eine gemeinsame Engineering-Philosophie
@@ -70,8 +71,9 @@ Explizite Aufforderungen wie „erstelle den Commit“ bedeuten, dass das angefo
 5. Die originale AI Collaboration Note direkt unter den README-Badges beibehalten.
 6. `PROJECT_CONTEXT.md` als Einstiegspunkt für den aktuellen Projektstand anlegen oder anpassen.
 7. Kerndokumente prüfen.
-8. Template-spezifische Setup-Dokumente entfernen, sobald die Projekteinrichtung abgeschlossen ist.
-9. Entwicklung gemäß `ChatGPT.md` fortsetzen.
+8. `CODEX.md` prüfen, wenn Codex für lokale Projektarbeit verwendet wird.
+9. Template-spezifische Setup-Dokumente entfernen, sobald die Projekteinrichtung abgeschlossen ist.
+10. Entwicklung gemäß `ChatGPT.md` fortsetzen.
 
 ## Dokumente, die normalerweise bleiben
 
@@ -82,6 +84,7 @@ Die folgenden Dokumente bleiben normalerweise Teil eines abgeleiteten Projekts:
 - `README.de.md`, sofern sinnvoll
 - `CHANGELOG.md`
 - `ChatGPT.md`
+- `CODEX.md`, wenn Codex für lokale Projektarbeit verwendet wird
 - `PHILOSOPHY.md`
 - `LICENSE`
 
@@ -108,6 +111,7 @@ Retrospektiven finden normalerweise am Ende eines Projekts statt, können aber a
 - [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) – aktueller Projektstand und zentraler Wiedereinstiegspunkt
 - [PROJECT_SETUP.md](PROJECT_SETUP.md) – Anleitung zur Ersteinrichtung neuer Projekte
 - [ChatGPT.md](ChatGPT.md) – Collaboration Model
+- [CODEX.md](CODEX.md) – lokale Codex Operating Policy
 - [PHILOSOPHY.md](PHILOSOPHY.md) – Projektphilosophie
 - [DOCUMENTATION.md](DOCUMENTATION.md) – Dokumentationsstandards
 - [REPOSITORY.md](REPOSITORY.md) – Repository-Standards

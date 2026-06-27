@@ -28,6 +28,7 @@ This repository is not a code framework. It is an engineering template.
 The template defines:
 
 - a collaboration model for AI-assisted software development
+- a local Codex operating policy
 - a current-state project context document
 - documentation and repository standards
 - a shared engineering philosophy
@@ -70,8 +71,9 @@ Explicit requests such as "create the commit" mean that the requested artifact s
 5. Preserve the original AI Collaboration Note directly below the README badges.
 6. Create or adapt `PROJECT_CONTEXT.md` as the current-state entry point for the project.
 7. Review the core project documents.
-8. Remove template-only setup documents when the project setup is complete.
-9. Continue development according to `ChatGPT.md`.
+8. Review `CODEX.md` if Codex will be used for local project work.
+9. Remove template-only setup documents when the project setup is complete.
+10. Continue development according to `ChatGPT.md`.
 
 ## Documents That Usually Remain
 
@@ -82,6 +84,7 @@ The following documents usually remain part of a derived project:
 - `README.de.md`, where useful
 - `CHANGELOG.md`
 - `ChatGPT.md`
+- `CODEX.md`, when Codex is used for local project work
 - `PHILOSOPHY.md`
 - `LICENSE`
 
@@ -108,6 +111,7 @@ Template changes should be made only as part of such a retrospective. When a ret
 - [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) – current project state and primary re-entry point
 - [PROJECT_SETUP.md](PROJECT_SETUP.md) – initial setup guide for new projects
 - [ChatGPT.md](ChatGPT.md) – Collaboration Model
+- [CODEX.md](CODEX.md) – local Codex operating policy
 - [PHILOSOPHY.md](PHILOSOPHY.md) – project philosophy
 - [DOCUMENTATION.md](DOCUMENTATION.md) – documentation standards
 - [REPOSITORY.md](REPOSITORY.md) – repository standards

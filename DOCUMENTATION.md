@@ -42,6 +42,12 @@ The AGIT Collaboration Model.
 
 It describes how the maintainer and AI assistant collaborate, including repository-ready delivery, roadmap-first work and validation expectations.
 
+## CODEX.md
+
+The local Codex operating policy.
+
+It describes what Codex may do on the maintainer's machine, including local tool usage, read-only Git access, approval-required actions, data disclosure rules and delivery expectations.
+
 ## PHILOSOPHY.md
 
 The shared engineering philosophy.
@@ -74,6 +80,7 @@ Documentation changes are repository-ready only when they are consistent across 
 For example, if the collaboration workflow changes, review at least:
 
 - `ChatGPT.md`
+- `CODEX.md`, if local Codex operating rules are affected
 - `PHILOSOPHY.md`
 - `PROJECT_CONTEXT.md`
 - `README.md`
@@ -95,6 +102,19 @@ Some documentation elements are standardized template artifacts. They should be 
 The AI Collaboration Note in `README.md` and `README.de.md` is such an artifact. It should appear directly below the README badges and should be copied from the template without shortening or paraphrasing unless the project intentionally changes its collaboration disclosure.
 
 When repository documentation is updated with AI assistance, the assistant should preserve standardized artifacts unless explicitly instructed to change them.
+
+---
+
+# Local Operating Policy Documentation
+
+Keep the general collaboration model and local execution rules separate.
+
+- `ChatGPT.md` documents the general AGIT Collaboration Model.
+- `CODEX.md` documents how Codex may operate locally.
+- `PROJECT_SETUP.md` explains how to prepare a local project environment.
+- `PROJECT_CONTEXT.md` describes the current state of a derived project after setup.
+
+Do not move local tool rules, Git command restrictions or machine-specific execution guidance into `ChatGPT.md` unless the rule is part of the general collaboration model.
 
 ---
 

@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 
 This project follows Semantic Versioning.
 
+## [v1.0.8] - 2026-06-27
+
+### Added
+
+- Add `CODEX.md` as the local Codex operating policy for AGIT repositories.
+- Document allowed, approval-required and forbidden local Codex actions.
+- Document read-only Git usage, local tool environments and internet/data disclosure rules.
+- Add ignore rules for local Codex inputs, caches, generated artifacts and project-local tool environments.
+
+### Changed
+
+- Update template documentation to distinguish the general Collaboration Model from local Codex execution rules.
+- Update setup and repository guidance to reference `CODEX.md`.
+- Bump template version to 1.0.8.
+
 ## [v1.0.7] - 2026-06-27
 
 ### Changed

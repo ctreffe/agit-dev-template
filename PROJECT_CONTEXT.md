@@ -154,6 +154,7 @@ Use this section as a navigation aid.
 - `CHANGELOG.md` — version history
 - `PHILOSOPHY.md` — shared AGIT engineering philosophy
 - `ChatGPT.md` — AGIT Collaboration Model
+- `CODEX.md` — local Codex operating policy, if Codex is used
 - `<architecture document>` — system structure, if applicable
 - `<ADR directory>` — architectural decisions, if applicable
 
@@ -184,6 +185,7 @@ Current collaboration notes:
 - Integrity has priority over apparent helpfulness: artifacts must exist before they are reported as delivered.
 - Capability limitations should be stated directly instead of hidden behind simulated completion.
 - Required template artifacts such as the AI Collaboration Note should remain unchanged unless intentionally modified.
+- If Codex is used locally, `CODEX.md` defines the local operating policy.
 - Feature commits and milestone commits should remain separate.
 - Validation should happen before declaring a step complete.
 

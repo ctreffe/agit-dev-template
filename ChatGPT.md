@@ -16,6 +16,8 @@ Although this document is named **ChatGPT.md**, it is intentionally written for 
 
 The model exists to make collaboration reproducible across conversations and across projects. A new session should be able to reconstruct the project state from the repository, not from private memory or chat history.
 
+Codex-specific local execution rules are documented separately in `CODEX.md`. This keeps the general Collaboration Model separate from machine-local operating policy.
+
 ---
 
 # Core Principles

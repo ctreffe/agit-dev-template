@@ -99,10 +99,11 @@ The following documents usually remain in the derived project:
 - `README.de.md` where useful
 - `CHANGELOG.md`
 - `ChatGPT.md`
+- `CODEX.md` when Codex will be used for local project work
 - `PHILOSOPHY.md`
 - `LICENSE`
 
-These documents define the current project state, user documentation, version history, collaboration model, engineering philosophy and license of the project.
+These documents define the current project state, user documentation, version history, collaboration model, local Codex operating policy, engineering philosophy and license of the project.
 
 ---
 
@@ -151,7 +152,61 @@ If the AGIT Project Template contains a newer version of the Collaboration Model
 
 ---
 
-# 9. Review the Project Philosophy
+# 9. Review the Codex Operating Policy
+
+Review `CODEX.md` if Codex will be used for local project work.
+
+`CODEX.md` defines local execution rules for Codex, including:
+
+- allowed local tools
+- read-only Git usage
+- approval-required actions
+- forbidden actions
+- local tool environments
+- internet and data disclosure rules
+- multi-repository safety
+- delivery expectations
+
+Keep `CODEX.md` in the derived project when Codex will continue to assist with local repository work.
+
+If the project does not use Codex locally, the file may be removed during setup.
+
+---
+
+# 10. Prepare Local Tooling
+
+Install or verify the local tools that are useful for the derived project.
+
+Common tools include:
+
+- Git for Windows
+- GitHub Desktop
+- PowerShell
+- Python with project-local virtual environments
+- Node.js where needed
+- `rg` or another fast local search tool
+- ZIP/archive tooling
+
+Codex should prefer project-local tool environments over global tool changes.
+
+Typical local tool artifacts include:
+
+```text
+.venv/
+node_modules/
+.codex-input/
+.codex-cache/
+.codex-tmp/
+.codex-output/
+artifacts/
+deliverables/
+```
+
+These should normally remain ignored by Git unless the derived project intentionally uses a different structure.
+
+---
+
+# 11. Review the Project Philosophy
 
 Review `PHILOSOPHY.md`.
 
@@ -161,7 +216,7 @@ Only change it if the derived project intentionally follows different engineerin
 
 ---
 
-# 10. Initialize Versioning
+# 12. Initialize Versioning
 
 Set the initial project version.
 
@@ -182,7 +237,7 @@ Do not increase the version merely because a milestone begins. Increase version 
 
 ---
 
-# 11. Prepare the First Project Commit
+# 13. Prepare the First Project Commit
 
 The first project-specific commit should describe the repository initialization.
 
@@ -206,7 +261,7 @@ state entry point for future development sessions.
 
 ---
 
-# 12. Remove Template-Only Setup Files
+# 14. Remove Template-Only Setup Files
 
 After completing setup, remove the files that are no longer needed:
 
@@ -222,9 +277,11 @@ This keeps project history clear by showing when the initial setup was completed
 
 ---
 
-# 13. Start Development
+# 15. Start Development
 
 After the initial setup commit, continue development according to the Collaboration Model in `ChatGPT.md`.
+
+When using Codex locally, also follow `CODEX.md`.
 
 Keep `PROJECT_CONTEXT.md` current when completing milestones, changing the roadmap, resolving important decisions or preparing to resume the project in a new collaboration session.
 
@@ -242,7 +299,7 @@ When working with AI assistance:
 
 ---
 
-# 14. Retrospectives and Template Feedback
+# 16. Retrospectives and Template Feedback
 
 During project work, collect findings that may improve the AGIT Project Template.
 
