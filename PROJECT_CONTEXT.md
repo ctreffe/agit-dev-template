@@ -185,7 +185,7 @@ Current collaboration notes:
 - Explicit create or commit requests require actual repository-ready deliverables.
 - Integrity has priority over apparent helpfulness: artifacts must exist before they are reported as delivered.
 - Capability limitations should be stated directly instead of hidden behind simulated completion.
-- Required template artifacts such as the AI Collaboration Note should remain unchanged unless intentionally modified.
+- Required template artifacts such as the AI Collaboration Note should remain visible and factually accurate unless intentionally modified.
 - If Codex is used locally, `CODEX.md` defines the local operating policy.
 - Feature commits and milestone commits should remain separate.
 - Validation should happen before declaring a step complete.

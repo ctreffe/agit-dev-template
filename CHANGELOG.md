@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 This project follows Semantic Versioning.
 
+## [Unreleased]
+
+### Changed
+
+- Clarify that derived projects should preserve the AI Collaboration Note's purpose, placement and visibility while adapting project-specific wording when literal template text would be inaccurate.
+
 ## [v1.0.9] - 2026-06-27
 
 ### Changed

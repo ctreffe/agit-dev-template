@@ -68,7 +68,7 @@ Explizite Aufforderungen wie „erstelle den Commit“ bedeuten, dass das angefo
 2. Initialen Repository-Baseline-Stand aus dem lokalen Arbeitsbaum, dem öffentlichen Repository oder einem ZIP-Archiv festlegen.
 3. `PROJECT_SETUP.md` lesen.
 4. README-Dateien und Repository-Metadaten an das neue Projekt anpassen.
-5. Die originale AI Collaboration Note direkt unter den README-Badges beibehalten.
+5. Eine AI Collaboration Note direkt unter den README-Badges beibehalten und projektspezifische Formulierungen bei Bedarf sachlich korrekt anpassen.
 6. `PROJECT_CONTEXT.md` als Einstiegspunkt für den aktuellen Projektstand anlegen oder anpassen.
 7. Kerndokumente prüfen.
 8. `CODEX.md` prüfen, wenn Codex für lokale Projektarbeit verwendet wird.

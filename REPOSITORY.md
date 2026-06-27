@@ -254,7 +254,7 @@ Translations should be complete and consistent, not partially localized copies.
 
 Derived repositories should preserve required template artifacts unless intentionally changed.
 
-The AI Collaboration Note in `README.md` and `README.de.md` is a required repository-visible artifact for AGIT projects. It should remain directly below the README badges and should match the original template wording unless a project explicitly decides to use a different disclosure.
+The AI Collaboration Note in `README.md` and `README.de.md` is a required repository-visible artifact for AGIT projects. It should remain directly below the README badges and preserve the original disclosure purpose. Derived projects may adapt project-specific wording when the literal template wording would be inaccurate, but the note should still clearly disclose AI collaboration and point readers to `ChatGPT.md`.
 
 ---
 

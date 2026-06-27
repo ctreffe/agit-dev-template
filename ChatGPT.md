@@ -453,11 +453,11 @@ Existing repositories may keep their established tag style for consistency.
 
 # Standard Template Artifacts
 
-Some template elements are standardized project artifacts rather than free-form prose. They should be copied from the template without modification unless the maintainer explicitly asks to change them.
+Some template elements are standardized project artifacts rather than free-form prose. They should be preserved during project setup unless the maintainer explicitly asks to change the disclosure model.
 
 This includes the AI Collaboration Note in `README.md` and `README.de.md`.
 
-Derived projects should place the original AI Collaboration Note directly below the README badges. The note should point readers to `ChatGPT.md` and should not be shortened, paraphrased or rewritten during project initialization unless the project intentionally defines a different collaboration disclosure.
+Derived projects should place an AI Collaboration Note directly below the README badges. The note should preserve the template note's disclosure purpose, structure and visibility, point readers to `ChatGPT.md`, and use wording that is factually correct for the derived project. The literal template wording should not be copied when it would incorrectly claim that a derived project maintains the AGIT Collaboration Model.
 
 When updating an existing project, the assistant should check whether required standard artifacts are present and consistent with the template.
 
@@ -567,7 +567,7 @@ Version 1.3 introduced Completion Integrity and clarified that explicit commit c
 
 Version 1.4 integrates the BootProfile Switcher v0.3.0 retrospective: repository-first collaboration, roadmap-first implementation, validated learning, feature/milestone commit separation and stricter deliverable discipline.
 
-Version 1.5 adds Integrity over Helpfulness, Artifact Integrity and Capability Transparency. It also clarifies that standardized template artifacts such as the AI Collaboration Note must be preserved unchanged unless the maintainer explicitly requests a change.
+Version 1.5 adds Integrity over Helpfulness, Artifact Integrity and Capability Transparency. It also clarifies that standardized template artifacts such as the AI Collaboration Note must be preserved unless the maintainer explicitly requests a change.
 
 Version 1.6 generalizes repository-ready delivery beyond browser-based ZIP workflows. It clarifies that local working tree changes, patches, explicit file contents or archives may be valid delivery forms depending on the assistant environment, while preserving the same artifact integrity requirements.
 

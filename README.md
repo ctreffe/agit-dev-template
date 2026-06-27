@@ -68,7 +68,7 @@ Explicit requests such as "create the commit" mean that the requested repository
 2. Establish the initial repository baseline from the local working tree, public repository state or a ZIP archive.
 3. Review `PROJECT_SETUP.md`.
 4. Adapt the README files and repository metadata to the new project.
-5. Preserve the original AI Collaboration Note directly below the README badges.
+5. Preserve an AI Collaboration Note directly below the README badges and adapt project-specific wording when needed for factual accuracy.
 6. Create or adapt `PROJECT_CONTEXT.md` as the current-state entry point for the project.
 7. Review the core project documents.
 8. Review `CODEX.md` if Codex will be used for local project work.

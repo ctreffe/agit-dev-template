@@ -53,7 +53,7 @@ A project artifact should never be described as completed unless it actually exi
 
 This applies to code, documentation, generated archives, commits, validation results and AI-assisted repository updates. Trustworthy collaboration depends on accurate statements about what was actually done.
 
-Standard template artifacts should also be preserved with care. When a project inherits a required template element, such as the AI Collaboration Note in the README files, it should not be shortened, paraphrased or rewritten unless the change is intentional.
+Standard template artifacts should also be preserved with care. When a project inherits a required template element, such as the AI Collaboration Note in the README files, it should keep the required disclosure visible and factually accurate. Project-specific wording may be adapted when literal template text would be misleading.
 
 ---
 

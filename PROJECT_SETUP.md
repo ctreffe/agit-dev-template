@@ -53,14 +53,16 @@ If both are kept, maintain them as structurally aligned translations.
 
 ## Required AI Collaboration Note
 
-Every AGIT project README should include the original AI Collaboration Note from this template directly below the badges.
+Every AGIT project README should include an AI Collaboration Note directly below the badges.
 
-The note is a standardized template artifact. Copy it from `README.md` and `README.de.md` without shortening, paraphrasing or rewriting it unless the project intentionally defines a different disclosure.
+The note is a standardized disclosure artifact. It should preserve the purpose, position and level of visibility of the template note, but the wording must remain factually correct for the derived project.
+
+For the AGIT Project Template itself, the note states that the repository maintains the AGIT Collaboration Model. For derived projects, adapt that project-specific sentence so it accurately describes the collaboration in the derived repository, while still pointing readers to `ChatGPT.md`.
 
 Before completing project setup, verify that:
 
-- `README.md` contains the original English AI Collaboration Note below the badges
-- `README.de.md`, if kept, contains the original German AI Collaboration Note below the badges
+- `README.md` contains an English AI Collaboration Note below the badges
+- `README.de.md`, if kept, contains a German AI Collaboration Note below the badges
 - both notes point to `ChatGPT.md`
 - no generated project update has replaced the note with a shortened variant
 
