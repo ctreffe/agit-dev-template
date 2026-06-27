@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 
 This project follows Semantic Versioning.
 
+## [1.0.3] - 2026-06-27
+
+### Added
+
+- Document retrospective-driven evolution of the AGIT Project Template.
+- Clarify that practical project experience is the basis for template improvements.
+- Record the first retrospective-driven refinement cycle after applying the template in a real project.
+
+### Changed
+
+- Update project version metadata to 1.0.3.
+- Extend the project philosophy with experience-driven template evolution.
+
 ## [1.0.2] - 2026-06-26
 
 ### Changed

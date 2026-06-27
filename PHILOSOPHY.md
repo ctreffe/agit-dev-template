@@ -85,6 +85,19 @@ The goal is steady evolution rather than constant reinvention.
 
 ---
 
+# Experience-Driven Template Evolution
+
+The AGIT Project Template evolves from practical project experience.
+
+Template changes should be based on lessons learned while applying the template in real projects, not on hypothetical needs.
+
+Retrospectives are the preferred mechanism for turning practical experience into reusable template improvements.
+
+The template should remain useful, focused and lightweight. It should capture reusable process knowledge rather than documenting one-off execution mistakes.
+
+
+---
+
 # Versioning
 
 Projects should follow Semantic Versioning.
