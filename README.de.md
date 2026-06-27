@@ -23,6 +23,15 @@ Es stellt eine wiederverwendbare Repository-Grundlage mit Dokumentations-, Kolla
 
 Dieses Repository ist kein Code-Framework. Es ist ein Engineering-Template.
 
+
+## Projektkontext
+
+Jedes AGIT-Projekt sollte eine Datei `PROJECT_CONTEXT.md` pflegen.
+
+`PROJECT_CONTEXT.md` ist der zentrale Einstiegspunkt, um die Arbeit an einem Projekt wieder aufzunehmen. Die Datei beschreibt den aktuellen Projektstand, den aktuellen Fokus, abgeschlossene Meilensteine, offene Entscheidungen und relevante Dokumentationslinks.
+
+Die Datei ersetzt nicht README, Changelog, Architekturdokumentation oder ADRs. Stattdessen hilft sie dabei zu verstehen, wo das Projekt heute steht und welche Dokumente aktuell relevant sind.
+
 ## Verwendung des Templates
 
 1. Neues Repository aus diesem Template erstellen.
@@ -30,13 +39,15 @@ Dieses Repository ist kein Code-Framework. Es ist ein Engineering-Template.
 3. Bei KI-gestützter Zusammenarbeit die ZIP-Datei hochladen, damit der vollständige Repository-Stand verfügbar ist.
 4. `PROJECT_SETUP.md` lesen.
 5. README-Dateien und Repository-Metadaten an das neue Projekt anpassen.
-6. Kerndokumente prüfen.
-7. Template-spezifische Setup-Dokumente entfernen, sobald die Projekteinrichtung abgeschlossen ist.
+6. `PROJECT_CONTEXT.md` als Einstiegspunkt für den aktuellen Projektstand anlegen oder anpassen.
+7. Kerndokumente prüfen.
+8. Template-spezifische Setup-Dokumente entfernen, sobald die Projekteinrichtung abgeschlossen ist.
 
 ## Dokumente, die normalerweise bleiben
 
 Die folgenden Dokumente bleiben normalerweise Teil eines abgeleiteten Projekts:
 
+- `PROJECT_CONTEXT.md`
 - `README.md`
 - `README.de.md`, sofern sinnvoll
 - `CHANGELOG.md`
@@ -62,6 +73,7 @@ Retrospektiven finden normalerweise am Ende eines Projekts statt, können aber a
 
 ## Kerndokumente des Templates
 
+- [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) – aktueller Projektstand und zentraler Wiedereinstiegspunkt
 - [PROJECT_SETUP.md](PROJECT_SETUP.md) – Anleitung zur Ersteinrichtung neuer Projekte
 - [ChatGPT.md](ChatGPT.md) – Collaboration Model
 - [PHILOSOPHY.md](PHILOSOPHY.md) – Projektphilosophie

@@ -8,6 +8,27 @@ It does not define project-specific content. Instead, it explains which document
 
 ---
 
+
+# PROJECT_CONTEXT.md
+
+Within the AGIT Project Template, `PROJECT_CONTEXT.md` is the primary entry point for resuming work on a project.
+
+It should describe the current project state, current focus, completed milestones, open decisions, relevant repository versions and the most important documents for continuing work.
+
+It should answer:
+
+- where the project stands today
+- what the current development focus is
+- what has already been completed
+- what decisions are still open
+- which documents should be read next
+
+`PROJECT_CONTEXT.md` should not become a full project history. Historical changes belong in `CHANGELOG.md`; decision rationale belongs in ADRs; general project explanation belongs in the README.
+
+For AGIT projects, `PROJECT_CONTEXT.md` should usually remain in the repository and be kept current whenever a milestone is completed, a retrospective changes the working model or the project is about to be resumed in a new collaboration session.
+
+---
+
 # README.md
 
 Within the AGIT Project Template, `README.md` is the primary user-facing entry point.
@@ -128,6 +149,7 @@ Each document should have one clearly defined responsibility.
 
 A useful distinction for AGIT projects is:
 
+- `PROJECT_CONTEXT.md` explains where the project stands today and is the primary re-entry point.
 - `README.md` explains what the project is.
 - Architecture documentation explains how the system is structured.
 - ADRs explain why specific architecture decisions were made.

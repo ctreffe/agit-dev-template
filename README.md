@@ -23,6 +23,15 @@ It provides a reusable repository foundation with documentation, collaboration a
 
 This repository is not a code framework. It is an engineering template.
 
+
+## Project Context
+
+Every AGIT project should maintain a `PROJECT_CONTEXT.md` file.
+
+`PROJECT_CONTEXT.md` is the primary entry point for resuming a project. It captures the current project state, current focus, completed milestones, open decisions and relevant documentation links.
+
+The file is not intended to replace the README, changelog, architecture documentation or ADRs. Instead, it helps readers understand where the project stands today and which documents are currently relevant.
+
 ## How to Use This Template
 
 1. Create a new repository from this template.
@@ -30,13 +39,15 @@ This repository is not a code framework. It is an engineering template.
 3. Upload the ZIP file when working with AI assistance so the full repository state is available.
 4. Review `PROJECT_SETUP.md`.
 5. Adapt the README files and repository metadata to the new project.
-6. Review the core project documents.
-7. Remove template-only setup documents when the project setup is complete.
+6. Create or adapt `PROJECT_CONTEXT.md` as the current-state entry point for the project.
+7. Review the core project documents.
+8. Remove template-only setup documents when the project setup is complete.
 
 ## Documents That Usually Remain
 
 The following documents usually remain part of a derived project:
 
+- `PROJECT_CONTEXT.md`
 - `README.md`
 - `README.de.md`, where useful
 - `CHANGELOG.md`
@@ -62,6 +73,7 @@ Retrospectives normally take place at the end of a project, but they may also be
 
 ## Core Template Documents
 
+- [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) – current project state and primary re-entry point
 - [PROJECT_SETUP.md](PROJECT_SETUP.md) – initial setup guide for new projects
 - [ChatGPT.md](ChatGPT.md) – Collaboration Model
 - [PHILOSOPHY.md](PHILOSOPHY.md) – project philosophy

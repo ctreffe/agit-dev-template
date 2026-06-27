@@ -55,6 +55,7 @@ The German README may be kept, updated or removed depending on the target audien
 
 The following documents should usually remain in the derived project:
 
+- `PROJECT_CONTEXT.md`
 - `README.md`
 - `README.de.md` where useful
 - `CHANGELOG.md`
@@ -62,11 +63,34 @@ The following documents should usually remain in the derived project:
 - `PHILOSOPHY.md`
 - `LICENSE`
 
-These documents define the user documentation, version history, collaboration model, engineering philosophy and license of the project.
+These documents define the current project state, user documentation, version history, collaboration model, engineering philosophy and license of the project.
 
 ---
 
-# 5. Review Template-Only Documents
+
+# 5. Create or Adapt PROJECT_CONTEXT.md
+
+Create or adapt `PROJECT_CONTEXT.md` for the derived project.
+
+This document is the primary entry point for resuming work on the project. It should describe the current state of the project rather than the full history of how the project reached that state.
+
+At minimum, review and update:
+
+- project name and repository
+- current version or initial milestone
+- current status
+- current focus
+- completed milestones, if any
+- open decisions
+- relevant documents
+- Collaboration Model version
+- AGIT Project Template version
+
+Keep this document concise. Its purpose is to help a maintainer, contributor or AI assistant quickly understand where the project stands today.
+
+---
+
+# 6. Review Template-Only Documents
 
 The following documents are primarily useful during project initialization:
 
@@ -82,7 +106,7 @@ If a derived project has a practical reason to keep one of these documents, it m
 
 ---
 
-# 6. Update Project-Specific Content
+# 7. Update Project-Specific Content
 
 Replace template-specific wording with project-specific content.
 
@@ -101,7 +125,7 @@ Keep the documentation focused on the users of the derived project.
 
 ---
 
-# 7. Review the Collaboration Model
+# 8. Review the Collaboration Model
 
 Review `ChatGPT.md`.
 
@@ -111,7 +135,7 @@ If the AGIT Project Template contains a newer version of the Collaboration Model
 
 ---
 
-# 8. Review the Project Philosophy
+# 9. Review the Project Philosophy
 
 Review `PHILOSOPHY.md`.
 
@@ -121,7 +145,7 @@ Only change it if the derived project intentionally follows different engineerin
 
 ---
 
-# 9. Initialize Versioning
+# 10. Initialize Versioning
 
 Set the initial project version.
 
@@ -140,7 +164,7 @@ v1.0.0
 
 ---
 
-# 10. Prepare the First Project Commit
+# 11. Prepare the First Project Commit
 
 The first project-specific commit should describe the repository initialization.
 
@@ -166,7 +190,7 @@ project setup.
 
 ---
 
-# 11. Remove Template-Only Setup Files
+# 12. Remove Template-Only Setup Files
 
 After completing the setup, remove the files that are no longer needed:
 
@@ -178,13 +202,13 @@ Remove template-only setup files in a dedicated commit.
 
 This keeps the project history clear by showing when the initial setup was completed.
 
-The resulting repository should contain only the documents that are useful for the ongoing project.
+The resulting repository should contain only the documents that are useful for the ongoing project. `PROJECT_CONTEXT.md` should remain because it documents the current project state and supports future project resumption.
 
 ---
 
-# 12. Start Development
+# 13. Start Development
 
-After the initial setup commit, continue development according to the Collaboration Model in `ChatGPT.md`.
+After the initial setup commit, continue development according to the Collaboration Model in `ChatGPT.md`. Keep `PROJECT_CONTEXT.md` current when completing milestones, changing the roadmap, resolving important decisions or preparing to resume the project in a new collaboration session.
 
 When working with AI assistance, use repository-ready delivery:
 
@@ -197,7 +221,7 @@ When working with AI assistance, use repository-ready delivery:
 
 ---
 
-# 13. Retrospectives and Template Feedback
+# 14. Retrospectives and Template Feedback
 
 During project work, collect findings that may improve the AGIT Project Template.
 

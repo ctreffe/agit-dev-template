@@ -4,6 +4,18 @@ All notable changes to this project will be documented in this file.
 
 This project follows Semantic Versioning.
 
+## [v1.0.5] - 2026-06-27
+
+### Added
+
+- Introduce `PROJECT_CONTEXT.md` as the primary entry point for resuming AGIT projects.
+- Add guidance for documenting the current project state independently from chat history.
+
+### Changed
+
+- Update README files, documentation standards and project setup guidance to include `PROJECT_CONTEXT.md`.
+- Bump template version to 1.0.5.
+
 ## [v1.0.4] - 2026-06-27
 
 ### Added
