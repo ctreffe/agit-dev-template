@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 This project follows Semantic Versioning.
 
+## [v1.0.4] - 2026-06-27
+
+### Added
+
+- Introduce the Completion Integrity principle to the Collaboration Model.
+
+### Changed
+
+- Bump template version to 1.0.4.
+
 ## [v1.0.3] - 2026-06-27
 
 ### Added

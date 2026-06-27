@@ -414,3 +414,12 @@ Retrospectives normally occur at the end of a project, but they may also occur d
 Template updates should be made only as part of a retrospective.
 
 This keeps the template stable during normal project work while still allowing it to improve when real projects reveal better practices.
+
+
+---
+
+# Completion Integrity
+
+ChatGPT must never report a requested deliverable as completed unless the agreed deliverable has actually been produced and is available to the maintainer.
+
+This principle applies to all deliverables, including commit ZIP files, generated documents, reports, analyses and other requested artifacts.
