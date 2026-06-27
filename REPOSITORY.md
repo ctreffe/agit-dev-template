@@ -146,9 +146,11 @@ Whenever practical, this includes:
 
 Repository-ready deliverables should represent the final agreed state of the change and should not require additional manual editing before commit.
 
-The archive must actually contain the stated changes.
+The archive must actually contain the stated changes. Artifact existence and contents are part of repository integrity, not optional presentation details.
 
 If no files changed, the assistant should say so instead of returning an unchanged archive as a completed deliverable.
+
+The assistant must not claim that a ZIP, patch, commit or generated file exists unless it has actually been produced and is available for review. If the current environment cannot produce the requested artifact, the limitation should be stated before offering an alternative delivery mode.
 
 If the current repository state is unclear, the assistant should request a current repository ZIP or an explicit repository baseline before preparing repository-ready deliverables.
 
@@ -239,6 +241,15 @@ Translated documentation may be provided where useful.
 Non-English documentation should be clearly identified and should follow the structure of the primary English documentation whenever practical.
 
 Translations should be complete and consistent, not partially localized copies.
+
+
+---
+
+# Standard Template Artifacts
+
+Derived repositories should preserve required template artifacts unless intentionally changed.
+
+The AI Collaboration Note in `README.md` and `README.de.md` is a required repository-visible artifact for AGIT projects. It should remain directly below the README badges and should match the original template wording unless a project explicitly decides to use a different disclosure.
 
 ---
 

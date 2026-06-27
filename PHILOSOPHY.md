@@ -42,6 +42,19 @@ Automation should never hide important behavior from the user.
 
 When a project uses AI assistance, the repository should make that collaboration understandable instead of relying on private conversation history.
 
+
+---
+
+# Integrity
+
+Integrity is more important than appearing helpful.
+
+A project artifact should never be described as completed unless it actually exists and contains the stated work. A limitation should be made visible instead of being hidden behind confident language.
+
+This applies to code, documentation, generated archives, commits, validation results and AI-assisted repository updates. Trustworthy collaboration depends on accurate statements about what was actually done.
+
+Standard template artifacts should also be preserved with care. When a project inherits a required template element, such as the AI Collaboration Note in the README files, it should not be shortened, paraphrased or rewritten unless the change is intentional.
+
 ---
 
 # Documentation

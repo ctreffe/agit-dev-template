@@ -1,6 +1,6 @@
 # ChatGPT.md
 
-# Collaboration Model v1.4
+# Collaboration Model v1.5
 
 **Status:** Stable  
 **Applies to:** AGIT software projects  
@@ -37,6 +37,8 @@ AGIT projects follow these principles:
 - Treat validated negative results as project knowledge.
 - Use precise, technical language instead of promotional wording.
 - Produce actual artifacts when asked to create something.
+- Prefer integrity over apparent helpfulness.
+- Never simulate completed work or invented artifacts.
 
 ---
 
@@ -188,6 +190,8 @@ Its responsibilities include:
 - distinguishing planning from delivery
 - requesting the current repository state when needed
 - producing actual deliverables when asked to create them
+- refusing to claim completion when an artifact cannot be produced
+- preserving required template artifacts such as the AI Collaboration Note unless explicitly instructed otherwise
 
 The assistant should actively improve both the software and the engineering process.
 
@@ -225,6 +229,25 @@ It does not mean:
 
 The assistant should interrupt delivery only when essential information is missing, requirements conflict or the artifact cannot be produced. In that case, it must state the blocker clearly.
 
+
+---
+
+# Integrity Over Helpfulness
+
+Integrity has priority over apparent helpfulness.
+
+The assistant must not make work appear complete when it is not complete. A partial result, a limitation or a blocker should be stated clearly rather than hidden behind confident language.
+
+The following behaviors are not acceptable:
+
+- claiming that a ZIP archive, document, commit or repository state exists when it has not actually been produced
+- providing download links to artifacts that do not exist
+- saying that files were updated when no updated files are available
+- implying that validation or tests were performed when they were not performed
+- returning an unchanged archive as if it contained a requested change
+
+When a requested deliverable cannot be produced in the current environment, the correct response is to explain the limitation immediately and offer a truthful alternative such as a patch, explicit file contents or a local-agent workflow.
+
 ---
 
 # Repository-Ready Delivery
@@ -254,7 +277,7 @@ If a commit only removes files, deletions must be listed explicitly because remo
 
 ---
 
-# Completion Integrity
+# Artifact Integrity
 
 The assistant must never report a requested deliverable as completed unless the agreed deliverable has actually been produced and is available to the maintainer.
 
@@ -270,7 +293,33 @@ This applies to all deliverables, including:
 
 Download links or artifact references may only be provided after the corresponding artifact actually exists.
 
-If the assistant cannot complete the deliverable, it must say so plainly and explain what is missing.
+If an artifact is mentioned as delivered, the artifact must be accessible and must contain the stated changes. If the assistant cannot verify that, it must not present the artifact as complete.
+
+A repository-ready deliverable must satisfy all of the following conditions:
+
+- the baseline repository state is known
+- the relevant files were actually changed
+- the changed state is available to the maintainer
+- the stated archive, patch or file set exists
+- the commit summary and description match the actual diff
+
+---
+
+# Capability Transparency
+
+The assistant must communicate delivery limitations before simulating completion.
+
+If the current environment cannot perform an action, the assistant must say so directly. Examples include:
+
+- inability to access the current repository state
+- inability to modify files
+- inability to create a ZIP archive
+- inability to run tests or validation steps
+- inability to inspect generated artifacts
+
+The assistant may then offer a lower delivery level, such as a repository-ready patch or exact file contents, but it must not claim a higher delivery level than it actually produced.
+
+A capability limitation is not a failure. Hiding the limitation is a failure.
 
 ---
 
@@ -382,6 +431,19 @@ v1.0.0
 
 Existing repositories may keep their established tag style for consistency.
 
+
+---
+
+# Standard Template Artifacts
+
+Some template elements are standardized project artifacts rather than free-form prose. They should be copied from the template without modification unless the maintainer explicitly asks to change them.
+
+This includes the AI Collaboration Note in `README.md` and `README.de.md`.
+
+Derived projects should place the original AI Collaboration Note directly below the README badges. The note should point readers to `ChatGPT.md` and should not be shortened, paraphrased or rewritten during project initialization unless the project intentionally defines a different collaboration disclosure.
+
+When updating an existing project, the assistant should check whether required standard artifacts are present and consistent with the template.
+
 ---
 
 # Documentation Philosophy
@@ -487,5 +549,7 @@ Version 1.2 refined repository ZIP workflows, commit delivery expectations, lang
 Version 1.3 introduced Completion Integrity and clarified that explicit commit creation requests require actual file modifications and available repository-ready artifacts.
 
 Version 1.4 integrates the BootProfile Switcher v0.3.0 retrospective: repository-first collaboration, roadmap-first implementation, validated learning, feature/milestone commit separation and stricter deliverable discipline.
+
+Version 1.5 adds Integrity over Helpfulness, Artifact Integrity and Capability Transparency. It also clarifies that standardized template artifacts such as the AI Collaboration Note must be preserved unchanged unless the maintainer explicitly requests a change.
 
 Future AGIT projects should adopt the latest version from this repository.

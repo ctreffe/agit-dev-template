@@ -85,6 +85,17 @@ Do not append isolated notes when the change affects the structure or meaning of
 
 Rewrite affected sections so the final documents read as one coherent version.
 
+
+---
+
+# Standard Documentation Artifacts
+
+Some documentation elements are standardized template artifacts. They should be reused consistently in derived projects rather than rewritten during setup.
+
+The AI Collaboration Note in `README.md` and `README.de.md` is such an artifact. It should appear directly below the README badges and should be copied from the template without shortening or paraphrasing unless the project intentionally changes its collaboration disclosure.
+
+When repository documentation is updated with AI assistance, the assistant should preserve standardized artifacts unless explicitly instructed to change them.
+
 ---
 
 # Language and Tone

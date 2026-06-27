@@ -59,7 +59,7 @@ Der bevorzugte Ablauf ist:
 7. Validierten Schritt committen.
 8. Meilensteine getrennt von Feature-Arbeit abschließen.
 
-Explizite Aufforderungen wie „erstelle den Commit“ bedeuten, dass das angeforderte Artefakt erzeugt und nicht nur beschrieben werden soll.
+Explizite Aufforderungen wie „erstelle den Commit“ bedeuten, dass das angeforderte Artefakt erzeugt und nicht nur beschrieben werden soll. Artefaktintegrität ist Teil des Workflows: erzeugte Archive, Commits und Repository-Aktualisierungen müssen tatsächlich existieren, bevor sie als abgeschlossen gemeldet werden.
 
 ## Verwendung des Templates
 
@@ -67,10 +67,11 @@ Explizite Aufforderungen wie „erstelle den Commit“ bedeuten, dass das angefo
 2. Initialen Repository-Baseline-Stand aus dem öffentlichen Repository oder einem ZIP-Archiv festlegen.
 3. `PROJECT_SETUP.md` lesen.
 4. README-Dateien und Repository-Metadaten an das neue Projekt anpassen.
-5. `PROJECT_CONTEXT.md` als Einstiegspunkt für den aktuellen Projektstand anlegen oder anpassen.
-6. Kerndokumente prüfen.
-7. Template-spezifische Setup-Dokumente entfernen, sobald die Projekteinrichtung abgeschlossen ist.
-8. Entwicklung gemäß `ChatGPT.md` fortsetzen.
+5. Die originale AI Collaboration Note direkt unter den README-Badges beibehalten.
+6. `PROJECT_CONTEXT.md` als Einstiegspunkt für den aktuellen Projektstand anlegen oder anpassen.
+7. Kerndokumente prüfen.
+8. Template-spezifische Setup-Dokumente entfernen, sobald die Projekteinrichtung abgeschlossen ist.
+9. Entwicklung gemäß `ChatGPT.md` fortsetzen.
 
 ## Dokumente, die normalerweise bleiben
 

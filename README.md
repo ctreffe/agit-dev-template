@@ -59,7 +59,7 @@ The preferred workflow is:
 7. Commit the validated step.
 8. Finalize milestones separately from feature work.
 
-Explicit requests such as "create the commit" mean that the requested artifact should be produced, not merely described.
+Explicit requests such as "create the commit" mean that the requested artifact should be produced, not merely described. Artifact integrity is part of the workflow: generated archives, commits and repository updates must actually exist before they are reported as complete.
 
 ## How to Use This Template
 
@@ -67,10 +67,11 @@ Explicit requests such as "create the commit" mean that the requested artifact s
 2. Establish the initial repository baseline from the public repository state or a ZIP archive.
 3. Review `PROJECT_SETUP.md`.
 4. Adapt the README files and repository metadata to the new project.
-5. Create or adapt `PROJECT_CONTEXT.md` as the current-state entry point for the project.
-6. Review the core project documents.
-7. Remove template-only setup documents when the project setup is complete.
-8. Continue development according to `ChatGPT.md`.
+5. Preserve the original AI Collaboration Note directly below the README badges.
+6. Create or adapt `PROJECT_CONTEXT.md` as the current-state entry point for the project.
+7. Review the core project documents.
+8. Remove template-only setup documents when the project setup is complete.
+9. Continue development according to `ChatGPT.md`.
 
 ## Documents That Usually Remain
 

@@ -50,6 +50,19 @@ The German README may be kept, updated or removed depending on the target audien
 
 If both are kept, maintain them as structurally aligned translations.
 
+## Required AI Collaboration Note
+
+Every AGIT project README should include the original AI Collaboration Note from this template directly below the badges.
+
+The note is a standardized template artifact. Copy it from `README.md` and `README.de.md` without shortening, paraphrasing or rewriting it unless the project intentionally defines a different disclosure.
+
+Before completing project setup, verify that:
+
+- `README.md` contains the original English AI Collaboration Note below the badges
+- `README.de.md`, if kept, contains the original German AI Collaboration Note below the badges
+- both notes point to `ChatGPT.md`
+- no generated project update has replaced the note with a shortened variant
+
 ---
 
 # 4. Create or Adapt PROJECT_CONTEXT.md
@@ -222,6 +235,7 @@ When working with AI assistance:
 - implement small changes
 - validate before commit whenever practical
 - request repository-ready deliverables only after the plan is clear
+- require actual artifacts, not simulated completion
 - commit with a clear summary and description
 - keep feature commits separate from milestone commits
 - tag meaningful completed milestones intentionally

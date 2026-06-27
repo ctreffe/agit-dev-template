@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 This project follows Semantic Versioning.
 
+## [v1.0.7] - 2026-06-27
+
+### Changed
+
+- Upgrade the Collaboration Model to v1.5.
+- Add Integrity over Helpfulness, Artifact Integrity and Capability Transparency as explicit collaboration rules.
+- Clarify that repository-ready artifacts must actually exist before they are reported as complete.
+- Require derived projects to preserve the original AI Collaboration Note in README files directly below the badges.
+- Update setup, documentation, repository and project-context guidance to treat the AI Collaboration Note as a required standardized template artifact.
+- Bump template version to 1.0.7.
+
 ## [v1.0.6] - 2026-06-27
 
 ### Changed

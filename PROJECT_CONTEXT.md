@@ -168,7 +168,7 @@ AGIT Project Template version:
 Collaboration Model version:
 
 ```text
-<collaboration model version>
+v1.5
 ```
 
 Current collaboration notes:
@@ -177,6 +177,9 @@ Current collaboration notes:
 - A public repository may be used as the working baseline when accessible.
 - A current ZIP archive should be provided when the assistant cannot reliably access the repository state.
 - Explicit create or commit requests require actual repository-ready deliverables.
+- Integrity has priority over apparent helpfulness: artifacts must exist before they are reported as delivered.
+- Capability limitations should be stated directly instead of hidden behind simulated completion.
+- Required template artifacts such as the AI Collaboration Note should remain unchanged unless intentionally modified.
 - Feature commits and milestone commits should remain separate.
 - Validation should happen before declaring a step complete.
 
