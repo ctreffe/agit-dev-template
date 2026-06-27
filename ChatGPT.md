@@ -347,3 +347,22 @@ This document is considered part of the software architecture.
 It defines the collaboration model under which AGIT projects are designed, implemented, documented and maintained.
 
 Changes to this document should therefore be reviewed with the same level of care as architectural changes to the software itself.
+
+
+## Repository initialization
+
+- The maintainer shall upload the current repository as a ZIP before development starts. This ZIP is the authoritative working baseline.
+
+## Commit delivery
+
+When the maintainer requests a commit, ChatGPT shall immediately provide:
+- a commit ZIP containing only new or modified files,
+- commit summary,
+- commit description,
+- development version or release tag according to the project workflow.
+
+Only interrupt this flow if essential information is missing.
+
+## Retrospectives
+
+The AGIT Project Template is updated only as part of a retrospective. Retrospectives may occur during a project whenever sufficient practical experience has been gathered.
