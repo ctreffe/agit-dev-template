@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 This project follows Semantic Versioning.
 
-## [1.0.3] - 2026-06-27
+## [v1.0.3] - 2026-06-27
 
 ### Added
 
@@ -17,20 +17,20 @@ This project follows Semantic Versioning.
 - Update project version metadata to 1.0.3.
 - Extend the project philosophy with experience-driven template evolution.
 
-## [1.0.2] - 2026-06-26
+## [v1.0.2] - 2026-06-26
 
 ### Changed
 
 - Clarify the versioning philosophy by distinguishing repository version tags from GitHub Releases.
 - Document that not every version tag requires a GitHub Release.
 
-## [1.0.1] - 2026-06-26
+## [v1.0.1] - 2026-06-26
 
 ### Changed
 
 - Use the latest Git tag instead of the latest GitHub Release for the version badge in the English and German README files.
 
-## [1.0.0] - 2026-06-26
+## [v1.0.0] - 2026-06-26
 
 ### Changed
 
@@ -40,7 +40,7 @@ This project follows Semantic Versioning.
 - Add guidance to remove template-only setup files in a dedicated commit.
 - Update project version metadata to 1.0.0.
 
-## [0.7.0] - 2026-06-26
+## [v0.7.0] - 2026-06-26
 
 ### Added
 
@@ -51,7 +51,7 @@ This project follows Semantic Versioning.
 - Update English and German README files.
 - Update project version metadata to 0.7.0.
 
-## [0.6.0] - 2026-06-26
+## [v0.6.0] - 2026-06-26
 
 ### Added
 
@@ -65,7 +65,7 @@ This project follows Semantic Versioning.
 - Update `DOCUMENTATION.md` and `REPOSITORY.md` to describe the role of setup-only documents in derived projects.
 - Update project version metadata to 0.6.0.
 
-## [0.5.0] - 2026-06-26
+## [v0.5.0] - 2026-06-26
 
 ### Added
 
@@ -78,7 +78,7 @@ This project follows Semantic Versioning.
 - Update English and German README files to reference `REPOSITORY.md`.
 - Update project version metadata to 0.5.0.
 
-## [0.4.0] - 2026-06-26
+## [v0.4.0] - 2026-06-26
 
 ### Added
 
@@ -91,7 +91,7 @@ This project follows Semantic Versioning.
 - Update English and German README files to reference `DOCUMENTATION.md`.
 - Update project version metadata to 0.4.0.
 
-## [0.3.0] - 2026-06-26
+## [v0.3.0] - 2026-06-26
 
 ### Added
 
@@ -104,7 +104,7 @@ This project follows Semantic Versioning.
 - Update English and German README files to reference `PHILOSOPHY.md`.
 - Update project version metadata to 0.3.0.
 
-## [0.2.0] - 2026-06-26
+## [v0.2.0] - 2026-06-26
 
 ### Added
 
@@ -120,7 +120,7 @@ This project follows Semantic Versioning.
 - Update project version metadata to 0.2.0.
 - Replace earlier "vision" wording with more precise project language.
 
-## [0.1.0] - 2026-06-26
+## [v0.1.0] - 2026-06-26
 
 ### Added
 
