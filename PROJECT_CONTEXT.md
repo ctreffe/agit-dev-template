@@ -1,12 +1,16 @@
 # PROJECT_CONTEXT.md
 
-# Project Context
+# Project Context Template
 
-This document captures the current state of a project created from the AGIT Project Template.
+This document is a project-context template for repositories created from the AGIT Project Template.
 
-It is the primary entry point for resuming work after a pause, when starting a new AI-assisted collaboration session or when onboarding another contributor.
+In a derived project, this file should be adapted to capture the current state of that project.
 
-It should describe where the project stands today. It should not provide the complete project history.
+After adaptation, it becomes the primary entry point for resuming work after a pause, when starting a new AI-assisted collaboration session or when onboarding another contributor.
+
+It should describe where the derived project stands today. It should not provide the complete project history.
+
+The placeholders in this file are intentional. Replace them during project setup.
 
 ---
 
