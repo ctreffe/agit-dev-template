@@ -14,6 +14,7 @@ Create a new repository from the AGIT Project Template.
 
 After creating the repository, establish the first working baseline:
 
+- use the local repository working tree if it is accessible to the assistant and intended as the source of truth,
 - use the public repository `main` branch if it is accessible and intended as the source of truth, or
 - download the repository as a ZIP archive and use that ZIP as the working baseline.
 

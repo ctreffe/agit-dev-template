@@ -45,6 +45,7 @@ Project decisions, current status and reusable knowledge should be captured in r
 
 When AI assistance is used, work should begin from a clearly identified repository baseline:
 
+- the local repository working tree, if accessible to the assistant and intended as the source of truth
 - the current public repository state, if accessible
 - a ZIP archive supplied by the maintainer
 - a previously generated artifact explicitly accepted as the new baseline
@@ -141,20 +142,22 @@ When repository changes are prepared with AI assistance, they should be delivere
 
 Whenever practical, this includes:
 
-- a ZIP archive containing the modified repository state or changed files, as agreed
+- the changed repository state in the agreed delivery form
 - a commit summary
 - a commit description
 - tag or release guidance when relevant
 
 Repository-ready deliverables should represent the final agreed state of the change and should not require additional manual editing before commit.
 
-The archive must actually contain the stated changes. Artifact existence and contents are part of repository integrity, not optional presentation details.
+The delivery form may be local working tree changes, a patch, explicit file contents or a ZIP archive, depending on the assistant environment and the maintainer's request.
+
+If an archive is used, it must actually contain the stated changes. Artifact existence and contents are part of repository integrity, not optional presentation details.
 
 If no files changed, the assistant should say so instead of returning an unchanged archive as a completed deliverable.
 
 The assistant must not claim that a ZIP, patch, commit or generated file exists unless it has actually been produced and is available for review. If the current environment cannot produce the requested artifact, the limitation should be stated before offering an alternative delivery mode.
 
-If the current repository state is unclear, the assistant should request a current repository ZIP or an explicit repository baseline before preparing repository-ready deliverables.
+If the current repository state is unclear, the assistant should request an explicit repository baseline before preparing repository-ready deliverables.
 
 ---
 

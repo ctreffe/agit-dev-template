@@ -69,7 +69,7 @@ Status:
 Current working baseline:
 
 ```text
-<public repository main branch | uploaded ZIP filename | accepted generated artifact>
+<local working tree | public repository main branch | uploaded ZIP filename | accepted generated artifact>
 ```
 
 Baseline notes:
@@ -173,12 +173,13 @@ AGIT Project Template version:
 Collaboration Model version:
 
 ```text
-v1.5
+v1.6
 ```
 
 Current collaboration notes:
 
 - The repository is the authoritative project state.
+- A local repository working tree may be used as the working baseline when accessible to the assistant.
 - A public repository may be used as the working baseline when accessible.
 - A current ZIP archive should be provided when the assistant cannot reliably access the repository state.
 - Explicit create or commit requests require actual repository-ready deliverables.

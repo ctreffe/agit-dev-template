@@ -47,7 +47,7 @@ The file does not replace the README, changelog, architecture documentation or A
 
 AGIT projects follow a repository-first workflow.
 
-The repository is the authoritative project state. When AI assistance is used, work should start from a clear repository baseline, either a public repository state or a current ZIP archive.
+The repository is the authoritative project state. When AI assistance is used, work should start from a clear repository baseline, such as an accessible local working tree, a public repository state or a current ZIP archive.
 
 The preferred workflow is:
 
@@ -56,16 +56,16 @@ The preferred workflow is:
 3. Implement a small, reviewable change.
 4. Validate the change whenever practical.
 5. Fix issues found during validation.
-6. Prepare a repository-ready contribution.
+6. Prepare a repository-ready contribution in the agreed delivery form.
 7. Commit the validated step.
 8. Finalize milestones separately from feature work.
 
-Explicit requests such as "create the commit" mean that the requested artifact should be produced, not merely described. Artifact integrity is part of the workflow: generated archives, commits and repository updates must actually exist before they are reported as complete.
+Explicit requests such as "create the commit" mean that the requested repository-ready result should be produced, not merely described. Artifact integrity is part of the workflow: local working tree changes, generated archives, commits and repository updates must actually exist before they are reported as complete.
 
 ## How to Use This Template
 
 1. Create a new repository from this template.
-2. Establish the initial repository baseline from the public repository state or a ZIP archive.
+2. Establish the initial repository baseline from the local working tree, public repository state or a ZIP archive.
 3. Review `PROJECT_SETUP.md`.
 4. Adapt the README files and repository metadata to the new project.
 5. Preserve the original AI Collaboration Note directly below the README badges.

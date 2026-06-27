@@ -47,7 +47,7 @@ Die Datei ersetzt nicht README, Changelog, Architekturdokumentation oder ADRs. S
 
 AGIT-Projekte folgen einem repository-first Workflow.
 
-Das Repository ist der maßgebliche Projektstand. Bei KI-gestützter Zusammenarbeit sollte die Arbeit von einem klaren Repository-Baseline-Stand ausgehen, entweder einem öffentlichen Repository-Stand oder einem aktuellen ZIP-Archiv.
+Das Repository ist der maßgebliche Projektstand. Bei KI-gestützter Zusammenarbeit sollte die Arbeit von einem klaren Repository-Baseline-Stand ausgehen, zum Beispiel einem zugänglichen lokalen Arbeitsbaum, einem öffentlichen Repository-Stand oder einem aktuellen ZIP-Archiv.
 
 Der bevorzugte Ablauf ist:
 
@@ -56,16 +56,16 @@ Der bevorzugte Ablauf ist:
 3. Kleine, prüfbare Änderung umsetzen.
 4. Änderung validieren, sofern praktisch möglich.
 5. Während der Validierung gefundene Fehler beheben.
-6. Repository-ready Beitrag vorbereiten.
+6. Repository-ready Beitrag in der vereinbarten Lieferform vorbereiten.
 7. Validierten Schritt committen.
 8. Meilensteine getrennt von Feature-Arbeit abschließen.
 
-Explizite Aufforderungen wie „erstelle den Commit“ bedeuten, dass das angeforderte Artefakt erzeugt und nicht nur beschrieben werden soll. Artefaktintegrität ist Teil des Workflows: erzeugte Archive, Commits und Repository-Aktualisierungen müssen tatsächlich existieren, bevor sie als abgeschlossen gemeldet werden.
+Explizite Aufforderungen wie „erstelle den Commit“ bedeuten, dass das angeforderte repository-ready Ergebnis erzeugt und nicht nur beschrieben werden soll. Artefaktintegrität ist Teil des Workflows: lokale Arbeitsbaumänderungen, erzeugte Archive, Commits und Repository-Aktualisierungen müssen tatsächlich existieren, bevor sie als abgeschlossen gemeldet werden.
 
 ## Verwendung des Templates
 
 1. Neues Repository aus diesem Template erstellen.
-2. Initialen Repository-Baseline-Stand aus dem öffentlichen Repository oder einem ZIP-Archiv festlegen.
+2. Initialen Repository-Baseline-Stand aus dem lokalen Arbeitsbaum, dem öffentlichen Repository oder einem ZIP-Archiv festlegen.
 3. `PROJECT_SETUP.md` lesen.
 4. README-Dateien und Repository-Metadaten an das neue Projekt anpassen.
 5. Die originale AI Collaboration Note direkt unter den README-Badges beibehalten.

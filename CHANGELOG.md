@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 This project follows Semantic Versioning.
 
+## [v1.0.9] - 2026-06-27
+
+### Changed
+
+- Upgrade the Collaboration Model to v1.6.
+- Generalize repository-ready delivery beyond browser-based ZIP workflows.
+- Clarify that local working tree changes, patches, explicit file contents or archives may be valid delivery forms depending on the assistant environment.
+- Add local repository working trees as accepted repository baselines when accessible to the assistant.
+- Bump template version to 1.0.9.
+
 ## [v1.0.8] - 2026-06-27
 
 ### Added

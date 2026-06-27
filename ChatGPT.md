@@ -1,6 +1,6 @@
 # ChatGPT.md
 
-# Collaboration Model v1.5
+# Collaboration Model v1.6
 
 **Status:** Stable  
 **Applies to:** AGIT software projects  
@@ -70,7 +70,11 @@ The repository is the authoritative project state.
 
 The chat is useful for discussion, validation and decision making, but it is not the canonical record. The current repository contents, especially `PROJECT_CONTEXT.md`, define where the project stands.
 
-When a public repository is available, the assistant should prefer the current repository state as the working baseline. If the assistant cannot technically access or process the public repository, it must say so explicitly and request a current ZIP archive.
+When the assistant has access to the local repository working tree, that local working tree may be used as the working baseline.
+
+When a public repository is available and intended as the source of truth, the assistant may use the current public repository state as the working baseline.
+
+When the assistant cannot technically access or process the intended repository state, it must say so explicitly and request a usable baseline, such as a current ZIP archive.
 
 When the repository state is ambiguous, outdated or missing, the assistant must request the current repository state before preparing repository-ready deliverables.
 
@@ -219,7 +223,7 @@ means:
 
 - modify the required files
 - perform consistency checks
-- produce the repository-ready artifact
+- produce the repository-ready result in the agreed delivery form
 - provide commit summary and commit description
 
 It does not mean:
@@ -227,9 +231,9 @@ It does not mean:
 - describe a possible commit
 - restate the plan
 - provide only a commit message
-- claim completion without an artifact
+- claim completion without the agreed result
 
-The assistant should interrupt delivery only when essential information is missing, requirements conflict or the artifact cannot be produced. In that case, it must state the blocker clearly.
+The assistant should interrupt delivery only when essential information is missing, requirements conflict or the agreed result cannot be produced. In that case, it must state the blocker clearly.
 
 
 ---
@@ -248,24 +252,33 @@ The following behaviors are not acceptable:
 - implying that validation or tests were performed when they were not performed
 - returning an unchanged archive as if it contained a requested change
 
-When a requested deliverable cannot be produced in the current environment, the correct response is to explain the limitation immediately and offer a truthful alternative such as a patch, explicit file contents or a local-agent workflow.
+When a requested deliverable cannot be produced in the current environment, the correct response is to explain the limitation immediately and offer a truthful alternative such as local working tree changes, a patch, explicit file contents or an archive, depending on what the environment can actually provide.
 
 ---
 
 # Repository-Ready Delivery
 
-Repository-ready delivery means producing the actual agreed artifacts, not merely describing what those artifacts should contain.
+Repository-ready delivery means producing the actual agreed repository state or artifacts, not merely describing what they should contain.
 
 A repository-ready contribution should normally include:
 
-- a ZIP archive containing the changed repository state or changed files, as agreed
+- the changed repository state in the agreed delivery form
 - an appropriate commit summary
 - a detailed commit description
 - updates to affected documentation
 - consistency checks across related documents
 - tag or release guidance when relevant
 
-The delivered artifact must represent the exact state intended for the repository.
+The delivery form depends on the working environment.
+
+Examples include:
+
+- local working tree changes when a local agent has repository write access
+- a patch when direct repository editing is not available
+- explicit file contents when patch or archive generation is not available
+- a ZIP archive containing changed files or repository state when files must be transferred through a chat interface
+
+The delivered state or artifact must represent the exact state intended for the repository.
 
 Repository-ready deliverables should not require additional manual editing before commit.
 
@@ -273,7 +286,7 @@ Placeholder files, conceptual file lists, draft-only snippets or imaginary downl
 
 If a ZIP archive is provided, it must actually exist and contain the stated changes.
 
-If no files changed, the assistant must say that no repository-ready ZIP is necessary instead of returning an unchanged archive as a completed change.
+If no files changed, the assistant must say that no repository-ready change is necessary instead of returning an unchanged artifact as a completed change.
 
 If a commit only removes files, deletions must be listed explicitly because removed files cannot be represented by their presence in an archive.
 
@@ -285,6 +298,7 @@ The assistant must never report a requested deliverable as completed unless the 
 
 This applies to all deliverables, including:
 
+- local working tree changes
 - commit ZIP files
 - generated documents
 - reports
@@ -301,8 +315,8 @@ A repository-ready deliverable must satisfy all of the following conditions:
 
 - the baseline repository state is known
 - the relevant files were actually changed
-- the changed state is available to the maintainer
-- the stated archive, patch or file set exists
+- the changed state is available to the maintainer in the agreed delivery form
+- the stated local changes, archive, patch or file set exists
 - the commit summary and description match the actual diff
 
 ---
@@ -315,7 +329,7 @@ If the current environment cannot perform an action, the assistant must say so d
 
 - inability to access the current repository state
 - inability to modify files
-- inability to create a ZIP archive
+- inability to create the requested delivery artifact
 - inability to run tests or validation steps
 - inability to inspect generated artifacts
 
@@ -331,6 +345,7 @@ Before preparing repository-ready deliverables, the assistant must know the base
 
 Accepted baselines are:
 
+- the local repository working tree when it is accessible to the assistant and intended as the source
 - the current public repository state, if accessible and explicitly intended as the source
 - a repository ZIP uploaded by the maintainer
 - a previously generated repository-ready artifact explicitly accepted as the new baseline
@@ -553,5 +568,7 @@ Version 1.3 introduced Completion Integrity and clarified that explicit commit c
 Version 1.4 integrates the BootProfile Switcher v0.3.0 retrospective: repository-first collaboration, roadmap-first implementation, validated learning, feature/milestone commit separation and stricter deliverable discipline.
 
 Version 1.5 adds Integrity over Helpfulness, Artifact Integrity and Capability Transparency. It also clarifies that standardized template artifacts such as the AI Collaboration Note must be preserved unchanged unless the maintainer explicitly requests a change.
+
+Version 1.6 generalizes repository-ready delivery beyond browser-based ZIP workflows. It clarifies that local working tree changes, patches, explicit file contents or archives may be valid delivery forms depending on the assistant environment, while preserving the same artifact integrity requirements.
 
 Future AGIT projects should adopt the latest version from this repository.
