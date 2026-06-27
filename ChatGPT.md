@@ -1,6 +1,6 @@
 # ChatGPT.md
 
-# Collaboration Model v1.2
+# Collaboration Model v1.3
 
 **Status:** Stable  
 **Applies to:** AGIT software projects  
@@ -136,6 +136,8 @@ Repository-ready deliverables should only be generated after the repository main
 The delivered ZIP archive, commit metadata and accompanying documentation are expected to represent the exact state intended for the repository.
 
 Repository-ready deliverables should not require additional manual editing before being committed.
+
+Repository-ready delivery means producing the actual agreed artifacts, not merely describing what those artifacts should contain. Placeholder files, draft-only file lists or conceptual commit descriptions are not repository-ready deliverables unless the maintainer explicitly requests them.
 
 The objective is to minimize manual preparation work for the repository maintainer and provide complete, reviewable change sets.
 
@@ -312,6 +314,8 @@ Beginning with version 1.1, the AGIT Project Template is the canonical source fo
 
 Version 1.2 refined the repository ZIP workflow, commit delivery expectations, language consistency rules and retrospective-driven template evolution based on practical experience from the BootProfile Switcher project.
 
+Version 1.3 clarified that explicit commit creation requests require actual file modifications and available repository-ready artifacts, not plans, placeholders or conceptual deliverables.
+
 Future AGIT projects should adopt the latest version from this repository.
 
 ---
@@ -388,7 +392,11 @@ When the maintainer asks the AI assistant to create a commit, the expected outpu
 
 The AI assistant should therefore modify the affected files, perform consistency checks and provide a repository-ready ZIP archive with the actual changed files.
 
+Creating a commit always includes producing the real file changes required for that commit. It is not sufficient to describe the intended changes, provide a conceptual file list or generate placeholder content.
+
 A commit request should not be answered with a plan, outline or proposed file list unless the maintainer explicitly asks for planning instead of execution.
+
+If the AI assistant cannot create the requested commit because the current repository state is missing, ambiguous or technically unavailable, it should state that explicitly and request the missing information instead of presenting an incomplete commit as finished.
 
 ## Language Consistency
 
@@ -423,3 +431,5 @@ This keeps the template stable during normal project work while still allowing i
 ChatGPT must never report a requested deliverable as completed unless the agreed deliverable has actually been produced and is available to the maintainer.
 
 This principle applies to all deliverables, including commit ZIP files, generated documents, reports, analyses and other requested artifacts.
+
+Download links or artifact references should only be provided after the corresponding artifact has actually been created and is available to the maintainer.
