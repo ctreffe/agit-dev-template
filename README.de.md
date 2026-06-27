@@ -26,10 +26,12 @@ Dieses Repository ist kein Code-Framework. Es ist ein Engineering-Template.
 ## Verwendung des Templates
 
 1. Neues Repository aus diesem Template erstellen.
-2. `PROJECT_SETUP.md` lesen.
-3. README-Dateien und Repository-Metadaten an das neue Projekt anpassen.
-4. Kerndokumente prüfen.
-5. Template-spezifische Setup-Dokumente entfernen, sobald die Projekteinrichtung abgeschlossen ist.
+2. Das neu erstellte Repository als ZIP-Datei herunterladen.
+3. Bei KI-gestützter Zusammenarbeit die ZIP-Datei hochladen, damit der vollständige Repository-Stand verfügbar ist.
+4. `PROJECT_SETUP.md` lesen.
+5. README-Dateien und Repository-Metadaten an das neue Projekt anpassen.
+6. Kerndokumente prüfen.
+7. Template-spezifische Setup-Dokumente entfernen, sobald die Projekteinrichtung abgeschlossen ist.
 
 ## Dokumente, die normalerweise bleiben
 
@@ -51,6 +53,12 @@ Die folgenden Dokumente unterstützen vor allem die Projekteinrichtung:
 - `REPOSITORY.md`
 
 Nach Abschluss der Ersteinrichtung können diese Dokumente aus dem abgeleiteten Projekt entfernt werden, sofern sie dort nicht weiterhin nützlich sind.
+
+## Kontinuierliche Weiterentwicklung
+
+Das AGIT Project Template entwickelt sich durch Projektretrospektiven weiter.
+
+Retrospektiven finden normalerweise am Ende eines Projekts statt, können aber auch während eines Projekts eingeschoben werden, wenn ausreichend praktische Erkenntnisse vorliegen. Änderungen am Template sollen ausschließlich im Rahmen einer solchen Retrospektive erfolgen, nicht beiläufig während der normalen Projektarbeit.
 
 ## Kerndokumente des Templates
 

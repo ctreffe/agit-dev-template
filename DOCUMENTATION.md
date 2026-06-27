@@ -36,6 +36,8 @@ The English README remains the primary project documentation.
 
 The German README is provided to make the project easier to use for German-speaking users.
 
+Translated documents should be complete translations, not partially localized documents. Headings, explanatory text and lists should be translated consistently. Established technical terms and proper names may remain unchanged when that improves clarity.
+
 ---
 
 # CHANGELOG.md
@@ -80,6 +82,34 @@ After a derived project has been initialized, this file may be removed unless it
 
 ---
 
+# Architecture Documentation
+
+Architecture documentation describes how a project is structured.
+
+It should explain the major components, responsibilities and relationships of the system. It should not replace Architecture Decision Records.
+
+---
+
+# Architecture Decision Records
+
+Architecture Decision Records document why a specific architectural decision was made.
+
+An ADR should document a decision, not merely describe the current state of the project.
+
+For AGIT projects, ADR numbering should normally start with `ADR-0001`. A special `ADR-0000` should be avoided unless there is a clear project-specific reason.
+
+---
+
+# Retrospective Documentation
+
+Retrospectives are used to identify improvements to the AGIT Project Template based on practical project experience.
+
+They normally occur at the end of a project, but they may also be held during a project when enough findings have accumulated.
+
+Template improvements should be made only as part of a retrospective. This keeps the template stable during normal project work while still allowing it to evolve.
+
+---
+
 # Additional Documentation
 
 Additional documentation should be added only when it has a clear purpose and audience.
@@ -95,6 +125,13 @@ Examples may include:
 New documents should not duplicate existing documentation.
 
 Each document should have one clearly defined responsibility.
+
+A useful distinction for AGIT projects is:
+
+- `README.md` explains what the project is.
+- Architecture documentation explains how the system is structured.
+- ADRs explain why specific architecture decisions were made.
+- `PHILOSOPHY.md` explains the shared AGIT engineering philosophy.
 
 ---
 

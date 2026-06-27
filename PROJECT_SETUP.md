@@ -10,7 +10,19 @@ After the setup is complete, this file should be removed from the derived projec
 
 ---
 
-# 1. Review Repository Metadata
+# 1. Create the Derived Repository
+
+Create the new repository from the AGIT Project Template.
+
+After the repository has been created, download the complete repository state as a ZIP file.
+
+When working with AI assistance, upload this ZIP file before project-specific initialization begins. The uploaded repository ZIP is the shared working baseline for the next set of changes.
+
+This avoids relying on incomplete or inaccessible remote repository content.
+
+---
+
+# 2. Review Repository Metadata
 
 Update the repository metadata on GitHub:
 
@@ -26,7 +38,7 @@ Avoid promotional or marketing-oriented wording.
 
 ---
 
-# 2. Review Project Documentation
+# 3. Review Project Documentation
 
 Review and adapt the user-facing documentation:
 
@@ -39,7 +51,7 @@ The German README may be kept, updated or removed depending on the target audien
 
 ---
 
-# 3. Review Core Project Documents
+# 4. Review Core Project Documents
 
 The following documents should usually remain in the derived project:
 
@@ -54,7 +66,7 @@ These documents define the user documentation, version history, collaboration mo
 
 ---
 
-# 4. Review Template-Only Documents
+# 5. Review Template-Only Documents
 
 The following documents are primarily useful during project initialization:
 
@@ -70,7 +82,7 @@ If a derived project has a practical reason to keep one of these documents, it m
 
 ---
 
-# 5. Update Project-Specific Content
+# 6. Update Project-Specific Content
 
 Replace template-specific wording with project-specific content.
 
@@ -89,7 +101,7 @@ Keep the documentation focused on the users of the derived project.
 
 ---
 
-# 6. Review the Collaboration Model
+# 7. Review the Collaboration Model
 
 Review `ChatGPT.md`.
 
@@ -99,7 +111,7 @@ If the AGIT Project Template contains a newer version of the Collaboration Model
 
 ---
 
-# 7. Review the Project Philosophy
+# 8. Review the Project Philosophy
 
 Review `PHILOSOPHY.md`.
 
@@ -109,7 +121,7 @@ Only change it if the derived project intentionally follows different engineerin
 
 ---
 
-# 8. Initialize Versioning
+# 9. Initialize Versioning
 
 Set the initial project version.
 
@@ -128,7 +140,7 @@ v1.0.0
 
 ---
 
-# 9. Prepare the First Project Commit
+# 10. Prepare the First Project Commit
 
 The first project-specific commit should describe the repository initialization.
 
@@ -154,7 +166,7 @@ project setup.
 
 ---
 
-# 10. Remove Template-Only Setup Files
+# 11. Remove Template-Only Setup Files
 
 After completing the setup, remove the files that are no longer needed:
 
@@ -170,14 +182,27 @@ The resulting repository should contain only the documents that are useful for t
 
 ---
 
-# 11. Start Development
+# 12. Start Development
 
 After the initial setup commit, continue development according to the Collaboration Model in `ChatGPT.md`.
 
 When working with AI assistance, use repository-ready delivery:
 
-- provide the current repository state when needed
+- provide the current repository state as a ZIP file when needed
 - receive complete change sets
+- ensure commit ZIP files contain only new or changed files
 - review the changes
 - commit with a clear summary and description
 - tag meaningful milestones intentionally
+
+---
+
+# 13. Retrospectives and Template Feedback
+
+During project work, collect findings that may improve the AGIT Project Template.
+
+Template changes should not be made casually during normal project work. Instead, review collected findings in a retrospective.
+
+Retrospectives normally take place at the end of a project, but they may also be held during a project when enough practical experience has accumulated.
+
+Only changes that have proven useful in real project work should be considered for inclusion in the AGIT Project Template.

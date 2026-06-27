@@ -26,10 +26,12 @@ This repository is not a code framework. It is an engineering template.
 ## How to Use This Template
 
 1. Create a new repository from this template.
-2. Review `PROJECT_SETUP.md`.
-3. Adapt the README files and repository metadata to the new project.
-4. Review the core project documents.
-5. Remove template-only setup documents when the project setup is complete.
+2. Download the newly created repository as a ZIP file.
+3. Upload the ZIP file when working with AI assistance so the full repository state is available.
+4. Review `PROJECT_SETUP.md`.
+5. Adapt the README files and repository metadata to the new project.
+6. Review the core project documents.
+7. Remove template-only setup documents when the project setup is complete.
 
 ## Documents That Usually Remain
 
@@ -51,6 +53,12 @@ The following documents primarily support project initialization:
 - `REPOSITORY.md`
 
 After the initial setup is complete, these documents may be removed from the derived project unless they remain useful there.
+
+## Continuous Improvement
+
+The AGIT Project Template evolves through project retrospectives.
+
+Retrospectives normally take place at the end of a project, but they may also be held during a project when enough practical findings have accumulated. Template changes should be made only as part of such a retrospective, not casually during normal project work.
 
 ## Core Template Documents
 
