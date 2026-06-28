@@ -36,6 +36,36 @@ Short description:
 
 ---
 
+# Maintainer Project Intent
+
+Maintainer-owned initial context:
+
+```text
+<problem space, operating context, target users or environment>
+```
+
+Desired end state:
+
+```text
+<what the project should enable, feel like or technically achieve when successful>
+```
+
+Initial boundaries and non-goals:
+
+```text
+<what the project should not do, should avoid or should intentionally postpone>
+```
+
+Roadmap implications:
+
+```text
+<how the context and desired end state shape the first milestones>
+```
+
+The maintainer should provide this section at project start. It should guide the initial roadmap and help future sessions understand why the roadmap has its current shape.
+
+---
+
 # Current Status
 
 Current project version:
@@ -173,7 +203,7 @@ AGIT Project Template version:
 Collaboration Model version:
 
 ```text
-v1.12
+v1.13
 ```
 
 Current collaboration notes:
@@ -190,6 +220,7 @@ Current collaboration notes:
 - Long-running sessions should update `PROJECT_CONTEXT.md` before context exhaustion becomes likely.
 - When a change is approaching commit readiness, the assistant should provide concise numbered next steps for decisions, validation, review and commit actions whenever practical.
 - Projects should establish an explicit initial roadmap before implementation accelerates, including early milestones, purpose, intended validation and intentional non-goals.
+- Initial roadmaps should be derived from maintainer-owned project intent, context, desired end state and boundaries.
 - Active milestones should progress through small implement-validate-adjust-commit loops, with feature commits kept separate from milestone commits.
 - Commit recommendations should include both a concise summary and a meaningful description.
 - Assistant-written code should be documented and structured so maintainers and future contributors can understand it without private chat history.

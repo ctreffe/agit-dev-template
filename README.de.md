@@ -30,6 +30,7 @@ Das Template definiert:
 - ein Collaboration Model für KI-gestützte Softwareentwicklung
 - eine lokale Codex Operating Policy
 - ein Dokument für den aktuellen Projektkontext
+- Guidance für Maintainer-Projektintent und Zielbild
 - roadmap-first Meilenstein-Guidance
 - Dokumentations- und Repository-Standards für Maintainer, Mitwirkende und Nutzer:innen
 - eine gemeinsame Engineering-Philosophie
@@ -44,6 +45,8 @@ Jedes AGIT-Projekt sollte eine Datei `PROJECT_CONTEXT.md` pflegen.
 
 Die Datei ersetzt nicht README, Changelog, Architekturdokumentation oder ADRs. Stattdessen hilft sie dabei zu verstehen, wo das Projekt heute steht und welche Dokumente aktuell relevant sind.
 
+Zu Projektbeginn sollte `PROJECT_CONTEXT.md` außerdem den Projektintent aus Maintainer-Sicht festhalten: Problemkontext, gewünschtes Zielbild, wichtige Grenzen und Auswirkungen auf die Roadmap. Dieser Maintainer-eigene Kontext gibt der Roadmap Richtung, bevor Implementierung beschleunigt.
+
 ## Entwicklungsworkflow
 
 AGIT-Projekte folgen einem repository-first Workflow.
@@ -53,14 +56,15 @@ Das Repository ist der maßgebliche Projektstand. Bei KI-gestützter Zusammenarb
 Der bevorzugte Ablauf ist:
 
 1. Aktuellen Repository-Baseline-Stand festlegen.
-2. Roadmap festlegen oder prüfen und den nächsten Meilenstein-Schritt vereinbaren.
-3. Kleine, prüfbare Änderung umsetzen.
-4. Änderung validieren, sofern praktisch möglich.
-5. Während der Validierung gefundene Fehler beheben.
-6. Betroffene Code-, Anwender:innen- und Projektdokumentation aktualisieren.
-7. Repository-ready Beitrag in der vereinbarten Lieferform vorbereiten.
-8. Validierten Schritt committen.
-9. Meilensteine getrennt von Feature-Arbeit abschließen.
+2. Maintainer-Projektintent und gewünschtes Zielbild festlegen oder prüfen.
+3. Roadmap festlegen oder prüfen und den nächsten Meilenstein-Schritt vereinbaren.
+4. Kleine, prüfbare Änderung umsetzen.
+5. Änderung validieren, sofern praktisch möglich.
+6. Während der Validierung gefundene Fehler beheben.
+7. Betroffene Code-, Anwender:innen- und Projektdokumentation aktualisieren.
+8. Repository-ready Beitrag in der vereinbarten Lieferform vorbereiten.
+9. Validierten Schritt committen.
+10. Meilensteine getrennt von Feature-Arbeit abschließen.
 
 Explizite Aufforderungen wie „erstelle den Commit“ bedeuten, dass das angeforderte repository-ready Ergebnis erzeugt und nicht nur beschrieben werden soll. Artefaktintegrität ist Teil des Workflows: lokale Arbeitsbaumänderungen, erzeugte Archive, Commits und Repository-Aktualisierungen müssen tatsächlich existieren, bevor sie als abgeschlossen gemeldet werden.
 
@@ -71,12 +75,13 @@ Explizite Aufforderungen wie „erstelle den Commit“ bedeuten, dass das angefo
 3. `PROJECT_SETUP.md` lesen.
 4. README-Dateien und Repository-Metadaten an das neue Projekt anpassen.
 5. Eine AI Collaboration Note direkt unter den README-Badges beibehalten und projektspezifische Formulierungen bei Bedarf sachlich korrekt anpassen.
-6. `PROJECT_CONTEXT.md` als Einstiegspunkt für den aktuellen Projektstand anlegen oder anpassen.
-7. Initiale Roadmap festlegen und in `PROJECT_CONTEXT.md` oder einem eigenen Roadmap-Dokument festhalten.
-8. Kerndokumente prüfen.
-9. `CODEX.md` prüfen, wenn Codex für lokale Projektarbeit verwendet wird.
-10. Template-spezifische Setup-Dokumente entfernen, sobald die Projekteinrichtung abgeschlossen ist.
-11. Entwicklung gemäß `ChatGPT.md` fortsetzen.
+6. Projektintent, Kontext, gewünschtes Zielbild und Grenzen aus Maintainer-Sicht festhalten.
+7. `PROJECT_CONTEXT.md` als Einstiegspunkt für den aktuellen Projektstand anlegen oder anpassen.
+8. Initiale Roadmap aus dem Maintainer-Intent ableiten und in `PROJECT_CONTEXT.md` oder einem eigenen Roadmap-Dokument festhalten.
+9. Kerndokumente prüfen.
+10. `CODEX.md` prüfen, wenn Codex für lokale Projektarbeit verwendet wird.
+11. Template-spezifische Setup-Dokumente entfernen, sobald die Projekteinrichtung abgeschlossen ist.
+12. Entwicklung gemäß `ChatGPT.md` fortsetzen.
 
 ## Dokumente, die normalerweise bleiben
 

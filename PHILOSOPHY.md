@@ -107,6 +107,8 @@ The roadmap should guide implementation.
 
 Projects should establish an explicit initial roadmap before implementation accelerates.
 
+Before the initial roadmap is created, the maintainer should describe the project context and desired end state. A roadmap is strongest when it is derived from why the project exists, who or what it serves, what success should look like and what should intentionally remain out of scope.
+
 A good roadmap does not need to be perfect or exhaustive. It should provide enough structure to keep work focused, explain why each milestone exists and make it clear what should be validated before moving on.
 
 Technical exploration should support the active milestone rather than replace it.

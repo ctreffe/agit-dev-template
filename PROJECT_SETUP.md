@@ -70,7 +70,27 @@ Before completing project setup, verify that:
 
 ---
 
-# 4. Create or Adapt PROJECT_CONTEXT.md
+# 4. Capture Maintainer Project Intent
+
+Before establishing the initial roadmap, capture the maintainer's project intent and context.
+
+This is the maintainer-owned description of why the project exists and what a successful end state should look like. It may describe a desired user experience, a technical capability, an operational workflow, a deployment model or another clear target.
+
+Record this in the `Maintainer Project Intent` section of `PROJECT_CONTEXT.md`.
+
+At minimum, clarify:
+
+- the problem space or operating context
+- the intended users, maintainers or operating environment
+- the desired end state
+- important boundaries, risks and intentional non-goals
+- how these points shape the first roadmap milestones
+
+The roadmap should be derived from this intent instead of from isolated technical ideas.
+
+---
+
+# 5. Create or Adapt PROJECT_CONTEXT.md
 
 Create or adapt `PROJECT_CONTEXT.md` for the derived project.
 
@@ -79,6 +99,7 @@ This document is the primary entry point for resuming work on the project. It sh
 At minimum, review and update:
 
 - project name and repository
+- maintainer project intent and desired end state
 - current version or initial milestone
 - current status
 - current focus
@@ -95,9 +116,9 @@ Keep this document concise. Its purpose is to help a maintainer, contributor or 
 
 ---
 
-# 5. Establish the Initial Roadmap
+# 6. Establish the Initial Roadmap
 
-Before implementation accelerates, establish an initial roadmap for the derived project.
+Before implementation accelerates, establish an initial roadmap for the derived project based on the maintainer project intent.
 
 The roadmap should identify the first meaningful milestones and explain what each milestone is meant to prove, decide or deliver. It should also name important non-goals and validation expectations.
 
@@ -107,7 +128,7 @@ Record the roadmap in `PROJECT_CONTEXT.md` or a dedicated roadmap document if th
 
 ---
 
-# 6. Review Core Project Documents
+# 7. Review Core Project Documents
 
 The following documents usually remain in the derived project:
 
@@ -124,7 +145,7 @@ These documents define the current project state, user documentation, version hi
 
 ---
 
-# 7. Review Template-Only Documents
+# 8. Review Template-Only Documents
 
 The following documents are primarily useful during project initialization:
 
@@ -140,7 +161,7 @@ If a derived project has a practical reason to keep one of these documents, it m
 
 ---
 
-# 8. Update Project-Specific Content
+# 9. Update Project-Specific Content
 
 Replace template-specific wording with project-specific content.
 
@@ -159,7 +180,7 @@ Keep documentation focused on the users and contributors of the derived project.
 
 ---
 
-# 9. Review the Collaboration Model
+# 10. Review the Collaboration Model
 
 Review `ChatGPT.md`.
 
@@ -169,7 +190,7 @@ If the AGIT Project Template contains a newer version of the Collaboration Model
 
 ---
 
-# 10. Review the Codex Operating Policy
+# 11. Review the Codex Operating Policy
 
 Review `CODEX.md` if Codex will be used for local project work.
 
@@ -190,7 +211,7 @@ If the project does not use Codex locally, the file may be removed during setup.
 
 ---
 
-# 11. Prepare Local Tooling
+# 12. Prepare Local Tooling
 
 Install or verify the local tools that are useful for the derived project.
 
@@ -223,7 +244,7 @@ These should normally remain ignored by Git unless the derived project intention
 
 ---
 
-# 12. Review the Project Philosophy
+# 13. Review the Project Philosophy
 
 Review `PHILOSOPHY.md`.
 
@@ -233,7 +254,7 @@ Only change it if the derived project intentionally follows different engineerin
 
 ---
 
-# 13. Initialize Versioning
+# 14. Initialize Versioning
 
 Set the initial project version.
 
@@ -254,7 +275,7 @@ Do not increase the version merely because a milestone begins. Increase version 
 
 ---
 
-# 14. Prepare the First Project Commit
+# 15. Prepare the First Project Commit
 
 The first project-specific commit should describe the repository initialization.
 
@@ -272,13 +293,14 @@ Example description:
 Initialize the project from the AGIT Project Template.
 
 Review and adapt the README files, core project documents and repository
-metadata for the new project. Establish PROJECT_CONTEXT.md as the current
-state entry point for future development sessions.
+metadata for the new project. Capture maintainer project intent and establish
+PROJECT_CONTEXT.md as the current state entry point for future development
+sessions.
 ```
 
 ---
 
-# 15. Remove Template-Only Setup Files
+# 16. Remove Template-Only Setup Files
 
 After completing setup, remove the files that are no longer needed:
 
@@ -294,7 +316,7 @@ This keeps project history clear by showing when the initial setup was completed
 
 ---
 
-# 16. Start Development
+# 17. Start Development
 
 After the initial setup commit, continue development according to the Collaboration Model in `ChatGPT.md`.
 
@@ -305,6 +327,7 @@ Keep `PROJECT_CONTEXT.md` current when completing milestones, changing the roadm
 When working with AI assistance:
 
 - establish the current repository baseline
+- capture or review the maintainer-owned project intent and desired end state
 - establish or review the current roadmap
 - agree on the next roadmap step
 - implement small changes
@@ -321,7 +344,7 @@ When working with AI assistance:
 
 ---
 
-# 17. Retrospectives and Template Feedback
+# 18. Retrospectives and Template Feedback
 
 During project work, collect findings that may improve the AGIT Project Template.
 

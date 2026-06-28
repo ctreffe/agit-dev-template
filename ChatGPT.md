@@ -1,6 +1,6 @@
 ﻿# ChatGPT.md
 
-# Collaboration Model v1.12
+# Collaboration Model v1.13
 
 **Status:** Stable  
 **Applies to:** AGIT software projects  
@@ -136,17 +136,18 @@ Projects evolve through iterative collaboration.
 The preferred workflow is:
 
 1. Establish the current repository baseline.
-2. Understand the roadmap objective.
-3. Discuss architectural alternatives when needed.
-4. Agree on the next small step.
-5. Implement incrementally.
-6. Validate on a real system whenever practical.
-7. Review the result against the roadmap objective.
-8. Fix issues discovered during validation.
-9. Update all affected documentation.
-10. Prepare a repository-ready contribution.
-11. Commit only after the work is complete and validated.
-12. Finalize milestones separately from feature work.
+2. Establish maintainer-owned project context and desired end state.
+3. Derive or review the roadmap objective.
+4. Discuss architectural alternatives when needed.
+5. Agree on the next small step.
+6. Implement incrementally.
+7. Validate on a real system whenever practical.
+8. Review the result against the roadmap objective.
+9. Fix issues discovered during validation.
+10. Update all affected documentation.
+11. Prepare a repository-ready contribution.
+12. Commit only after the work is complete and validated.
+13. Finalize milestones separately from feature work.
 
 For proof-of-concept work, the expected loop is:
 
@@ -196,6 +197,20 @@ The assistant should avoid expanding the milestone opportunistically once the ag
 The roadmap is the primary guide for deciding what to build next.
 
 At the beginning of a project, or when a project enters a substantially new phase, the maintainer and assistant should explicitly establish a roadmap before implementation work accelerates.
+
+Before the roadmap is established, the maintainer should describe the project intent and context from the maintainer's point of view. This is a maintainer-owned input, not something the assistant should invent from technical possibilities alone.
+
+The initial intent discussion should normally cover:
+
+- the problem space or operating context
+- the intended users, maintainers or operating environment
+- the desired end state or target experience
+- the technical or product outcome that would make the project successful
+- important boundaries, risks and intentional non-goals
+
+The end state does not need to be a complete specification. It may be a desired user experience, a technical capability, an operational workflow, a deployment model or another clear target that gives the project direction.
+
+The assistant should use this intent and context to help derive a roadmap. The roadmap should not be based only on isolated technical ideas when the broader project direction is still undefined.
 
 An initial roadmap should normally define:
 
@@ -712,5 +727,7 @@ Version 1.10 adds explicit initial roadmap agreement guidance. It clarifies that
 Version 1.11 adds explicit code documentation and maintainability guidance for assistant-written implementation work. It clarifies that code must be understandable from the repository itself without relying on private AI conversation history.
 
 Version 1.12 adds explicit user-facing documentation guidance. It clarifies that projects should document setup, configuration, productive usage, command or settings references, troubleshooting, permissions, safety notes and maturity where relevant.
+
+Version 1.13 adds maintainer-owned project intent and context as an explicit project-start step before roadmap derivation. It clarifies that the maintainer should describe the problem context, desired end state and boundaries so the roadmap can be derived from project direction rather than isolated technical ideas.
 
 Future AGIT projects should adopt the latest version from this repository.
