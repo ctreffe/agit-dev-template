@@ -93,7 +93,19 @@ Keep this document concise. Its purpose is to help a maintainer, contributor or 
 
 ---
 
-# 5. Review Core Project Documents
+# 5. Establish the Initial Roadmap
+
+Before implementation accelerates, establish an initial roadmap for the derived project.
+
+The roadmap should identify the first meaningful milestones and explain what each milestone is meant to prove, decide or deliver. It should also name important non-goals and validation expectations.
+
+The roadmap may evolve as the project learns, but starting with an explicit roadmap helps keep AI-assisted development focused and comparable across sessions.
+
+Record the roadmap in `PROJECT_CONTEXT.md` or a dedicated roadmap document if the project needs more detail.
+
+---
+
+# 6. Review Core Project Documents
 
 The following documents usually remain in the derived project:
 
@@ -110,7 +122,7 @@ These documents define the current project state, user documentation, version hi
 
 ---
 
-# 6. Review Template-Only Documents
+# 7. Review Template-Only Documents
 
 The following documents are primarily useful during project initialization:
 
@@ -126,7 +138,7 @@ If a derived project has a practical reason to keep one of these documents, it m
 
 ---
 
-# 7. Update Project-Specific Content
+# 8. Update Project-Specific Content
 
 Replace template-specific wording with project-specific content.
 
@@ -145,7 +157,7 @@ Keep documentation focused on the users and contributors of the derived project.
 
 ---
 
-# 8. Review the Collaboration Model
+# 9. Review the Collaboration Model
 
 Review `ChatGPT.md`.
 
@@ -155,7 +167,7 @@ If the AGIT Project Template contains a newer version of the Collaboration Model
 
 ---
 
-# 9. Review the Codex Operating Policy
+# 10. Review the Codex Operating Policy
 
 Review `CODEX.md` if Codex will be used for local project work.
 
@@ -176,7 +188,7 @@ If the project does not use Codex locally, the file may be removed during setup.
 
 ---
 
-# 10. Prepare Local Tooling
+# 11. Prepare Local Tooling
 
 Install or verify the local tools that are useful for the derived project.
 
@@ -209,7 +221,7 @@ These should normally remain ignored by Git unless the derived project intention
 
 ---
 
-# 11. Review the Project Philosophy
+# 12. Review the Project Philosophy
 
 Review `PHILOSOPHY.md`.
 
@@ -219,7 +231,7 @@ Only change it if the derived project intentionally follows different engineerin
 
 ---
 
-# 12. Initialize Versioning
+# 13. Initialize Versioning
 
 Set the initial project version.
 
@@ -240,7 +252,7 @@ Do not increase the version merely because a milestone begins. Increase version 
 
 ---
 
-# 13. Prepare the First Project Commit
+# 14. Prepare the First Project Commit
 
 The first project-specific commit should describe the repository initialization.
 
@@ -264,7 +276,7 @@ state entry point for future development sessions.
 
 ---
 
-# 14. Remove Template-Only Setup Files
+# 15. Remove Template-Only Setup Files
 
 After completing setup, remove the files that are no longer needed:
 
@@ -280,7 +292,7 @@ This keeps project history clear by showing when the initial setup was completed
 
 ---
 
-# 15. Start Development
+# 16. Start Development
 
 After the initial setup commit, continue development according to the Collaboration Model in `ChatGPT.md`.
 
@@ -291,6 +303,7 @@ Keep `PROJECT_CONTEXT.md` current when completing milestones, changing the roadm
 When working with AI assistance:
 
 - establish the current repository baseline
+- establish or review the current roadmap
 - agree on the next roadmap step
 - implement small changes
 - validate before commit whenever practical
@@ -304,7 +317,7 @@ When working with AI assistance:
 
 ---
 
-# 16. Retrospectives and Template Feedback
+# 17. Retrospectives and Template Feedback
 
 During project work, collect findings that may improve the AGIT Project Template.
 

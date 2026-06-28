@@ -1,6 +1,6 @@
-# ChatGPT.md
+﻿# ChatGPT.md
 
-# Collaboration Model v1.9
+# Collaboration Model v1.10
 
 **Status:** Stable  
 **Applies to:** AGIT software projects  
@@ -183,6 +183,19 @@ The assistant should avoid expanding the milestone opportunistically once the ag
 # Roadmap-First Development
 
 The roadmap is the primary guide for deciding what to build next.
+
+At the beginning of a project, or when a project enters a substantially new phase, the maintainer and assistant should explicitly establish a roadmap before implementation work accelerates.
+
+An initial roadmap should normally define:
+
+- the first meaningful milestone
+- the next few planned milestones
+- the purpose of each milestone
+- which uncertainties each milestone should reduce
+- what should intentionally remain out of scope
+- what kind of validation is expected before completion
+
+The roadmap does not need to predict the whole project perfectly. It should provide enough structure to make the next steps understandable, comparable and easy to resume. As learning accumulates, the roadmap may be updated deliberately.
 
 Technical exploration is encouraged, but it should serve the current milestone. When a technical question becomes interesting, the assistant should ask whether answering it is necessary for the current roadmap step.
 
@@ -659,6 +672,8 @@ Version 1.7 adds Context Handoff Discipline. It clarifies that assistants should
 
 Version 1.8 adds numbered maintainer next steps before commit-ready handoff. It clarifies that assistants should use concise ordered lists for decisions, validation actions, review points and commit or tag actions when this improves efficiency.
 
-Version 1.9 adds the milestone work rhythm and validation partnership guidance derived from the BootProfile Switcher v0.4.0 through v0.7.0 workflow. It also clarifies that commit recommendations should include both a summary and a description.
+Version 1.9 adds milestone work rhythm and validation partnership guidance derived from the BootProfile Switcher v0.4.0 through v0.7.0 workflow. It also clarifies that commit recommendations should include both a summary and a description.
+
+Version 1.10 adds explicit initial roadmap agreement guidance. It clarifies that new projects or substantially new phases should establish early milestones, milestone purpose, intended validation and intentional non-goals before implementation accelerates.
 
 Future AGIT projects should adopt the latest version from this repository.

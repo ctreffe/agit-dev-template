@@ -1,4 +1,4 @@
-# Changelog
+﻿# Changelog
 
 All notable changes to this project will be documented in this file.
 
@@ -8,6 +8,8 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Upgrade the Collaboration Model to v1.10.
+- Add explicit initial roadmap agreement guidance for new projects and substantially new phases.
 - Upgrade the Collaboration Model to v1.9.
 - Add milestone work rhythm and validation partnership guidance based on the BootProfile Switcher v0.4.0 through v0.7.0 workflow.
 - Clarify that commit recommendations should include both a summary and a description.

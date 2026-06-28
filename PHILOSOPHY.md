@@ -99,6 +99,10 @@ The goal is not to pursue every technically interesting path. The goal is to ans
 
 The roadmap should guide implementation.
 
+Projects should establish an explicit initial roadmap before implementation accelerates.
+
+A good roadmap does not need to be perfect or exhaustive. It should provide enough structure to keep work focused, explain why each milestone exists and make it clear what should be validated before moving on.
+
 Technical exploration should support the active milestone rather than replace it.
 
 Before continuing with additional experiments, ask whether the current milestone objective has already been satisfied.

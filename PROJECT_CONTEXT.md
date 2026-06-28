@@ -1,4 +1,4 @@
-# PROJECT_CONTEXT.md
+﻿# PROJECT_CONTEXT.md
 
 # Project Context Template
 
@@ -189,6 +189,7 @@ Current collaboration notes:
 - If Codex is used locally, `CODEX.md` defines the local operating policy.
 - Long-running sessions should update `PROJECT_CONTEXT.md` before context exhaustion becomes likely.
 - When a change is approaching commit readiness, the assistant should provide concise numbered next steps for decisions, validation, review and commit actions whenever practical.
+- Projects should establish an explicit initial roadmap before implementation accelerates, including early milestones, purpose, intended validation and intentional non-goals.
 - Active milestones should progress through small implement-validate-adjust-commit loops, with feature commits kept separate from milestone commits.
 - Commit recommendations should include both a concise summary and a meaningful description.
 - When validation requires maintainer-local or elevated execution, the assistant should provide exact steps, interpret the output and document relevant validation results.

@@ -32,6 +32,8 @@ It describes where the project stands today, the active milestone, the current b
 
 For active milestone work, it should also capture validation notes, immediate validation targets and the next recommended step when those details are needed to resume efficiently.
 
+For new projects, it should capture the initial roadmap clearly enough that future sessions can understand the intended milestone sequence and why the next step matters.
+
 ## CHANGELOG.md
 
 The version history.
