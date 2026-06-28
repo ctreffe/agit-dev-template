@@ -294,11 +294,13 @@ When working with AI assistance:
 - agree on the next roadmap step
 - implement small changes
 - validate before commit whenever practical
+- use small implement-validate-adjust-commit loops during active milestones
 - request repository-ready deliverables only after the plan is clear
 - require actual artifacts, not simulated completion
 - commit with a clear summary and description
 - keep feature commits separate from milestone commits
 - tag meaningful completed milestones intentionally
+- expect numbered maintainer next steps when validation, review, commit or tag actions are needed
 
 ---
 

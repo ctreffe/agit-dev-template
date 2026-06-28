@@ -107,6 +107,16 @@ This prevents projects from drifting into open-ended engineering work after the 
 
 ---
 
+# Collaborative Efficiency
+
+Efficient collaboration is a quality attribute.
+
+Small, validated steps reduce uncertainty and keep momentum high. A good process should make it easy for the maintainer to know what to decide, what to run, what to review and when to commit.
+
+Numbered next steps, explicit validation expectations and clear commit summaries and descriptions are not ceremony. They are lightweight tools for reducing ambiguity and preserving confidence.
+
+---
+
 # Quality
 
 Software quality is not measured solely by functionality.

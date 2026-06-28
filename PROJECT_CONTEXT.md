@@ -173,7 +173,7 @@ AGIT Project Template version:
 Collaboration Model version:
 
 ```text
-v1.8
+v1.9
 ```
 
 Current collaboration notes:
@@ -189,6 +189,9 @@ Current collaboration notes:
 - If Codex is used locally, `CODEX.md` defines the local operating policy.
 - Long-running sessions should update `PROJECT_CONTEXT.md` before context exhaustion becomes likely.
 - When a change is approaching commit readiness, the assistant should provide concise numbered next steps for decisions, validation, review and commit actions whenever practical.
+- Active milestones should progress through small implement-validate-adjust-commit loops, with feature commits kept separate from milestone commits.
+- Commit recommendations should include both a concise summary and a meaningful description.
+- When validation requires maintainer-local or elevated execution, the assistant should provide exact steps, interpret the output and document relevant validation results.
 - Feature commits and milestone commits should remain separate.
 - Validation should happen before declaring a step complete.
 

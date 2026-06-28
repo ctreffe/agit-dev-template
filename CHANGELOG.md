@@ -8,6 +8,10 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Upgrade the Collaboration Model to v1.9.
+- Add milestone work rhythm and validation partnership guidance based on the BootProfile Switcher v0.4.0 through v0.7.0 workflow.
+- Clarify that commit recommendations should include both a summary and a description.
+- Update repository, setup, documentation, project-context and philosophy guidance to preserve the efficient validated collaboration pattern.
 - Upgrade the Collaboration Model to v1.8.
 - Add numbered maintainer next steps as the preferred handoff format when a change is approaching commit readiness.
 - Upgrade the Collaboration Model to v1.7.

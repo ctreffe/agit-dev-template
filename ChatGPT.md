@@ -1,6 +1,6 @@
 # ChatGPT.md
 
-# Collaboration Model v1.8
+# Collaboration Model v1.9
 
 **Status:** Stable  
 **Applies to:** AGIT software projects  
@@ -158,6 +158,28 @@ A feature commit should represent a validated logical step. A milestone commit s
 
 ---
 
+# Milestone Work Rhythm
+
+Recent AGIT project work has shown that collaboration is most efficient when roadmap milestones are handled as small, validated loops.
+
+For an active milestone, the assistant should normally help maintain a rhythm like:
+
+1. Confirm the current baseline and active milestone.
+2. Identify the next smallest useful step.
+3. Implement only that step.
+4. Validate the step with the maintainer, especially when real-system or privileged checks are needed.
+5. Interpret validation output before declaring success.
+6. Prepare a feature commit with summary and description.
+7. Repeat until the milestone objective is satisfied.
+8. Prepare a separate milestone commit.
+9. Tag the completed milestone when appropriate.
+
+This rhythm is especially useful when a project is evolving through architecture, proof-of-concept validation, local system integration or other work where small confirmed steps build confidence.
+
+The assistant should avoid expanding the milestone opportunistically once the agreed objective is satisfied. If additional ideas emerge, they should be recorded as future roadmap candidates unless they are necessary to complete the current milestone.
+
+---
+
 # Roadmap-First Development
 
 The roadmap is the primary guide for deciding what to build next.
@@ -185,6 +207,25 @@ A project may advance by confirming that an approach works. It may also advance 
 Negative findings should be documented when they affect architecture, roadmap decisions or future implementation choices.
 
 A failed hypothesis is not a failed milestone if the milestone was designed to reduce uncertainty.
+
+---
+
+# Validation Partnership
+
+Some AGIT work must be validated by the repository maintainer because it requires local system access, elevated permissions, hardware state, GUI tools or other environment-specific conditions.
+
+In these cases, the assistant should:
+
+- prepare exact commands or manual steps
+- explain the expected outcome
+- ask the maintainer to run only the smallest necessary validation
+- interpret the maintainer's pasted output
+- distinguish successful validation from partial or ambiguous validation
+- update the repository context or documentation when the result affects future work
+
+The maintainer's real-system validation output is part of the engineering process. The assistant should not treat a command as validated merely because it is syntactically correct or plausible.
+
+When validation reveals an issue, the assistant should fix the issue and re-enter the validation loop before recommending a commit.
 
 ---
 
@@ -259,6 +300,13 @@ It does not mean:
 - claim completion without the agreed result
 
 The assistant should interrupt delivery only when essential information is missing, requirements conflict or the agreed result cannot be produced. In that case, it must state the blocker clearly.
+
+Whenever the assistant recommends a commit, it should provide both:
+
+- a concise commit summary
+- a meaningful commit description
+
+This applies to feature commits, documentation commits and milestone commits. The description should match the actual diff and should not describe future work as if it had already been completed.
 
 When a change is approaching commit readiness, the assistant should provide concise numbered next steps for the repository maintainer whenever practical. This is especially useful when the maintainer must perform actions outside the assistant environment, such as running validation commands, reviewing generated files, making decisions, committing through GitHub Desktop or creating tags.
 
@@ -610,5 +658,7 @@ Version 1.6 generalizes repository-ready delivery beyond browser-based ZIP workf
 Version 1.7 adds Context Handoff Discipline. It clarifies that assistants should update `PROJECT_CONTEXT.md` before context exhaustion becomes likely and reserve practical handoff capacity when context or token budget information is available.
 
 Version 1.8 adds numbered maintainer next steps before commit-ready handoff. It clarifies that assistants should use concise ordered lists for decisions, validation actions, review points and commit or tag actions when this improves efficiency.
+
+Version 1.9 adds the milestone work rhythm and validation partnership guidance derived from the BootProfile Switcher v0.4.0 through v0.7.0 workflow. It also clarifies that commit recommendations should include both a summary and a description.
 
 Future AGIT projects should adopt the latest version from this repository.

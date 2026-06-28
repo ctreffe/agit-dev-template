@@ -145,6 +145,7 @@ Whenever practical, this includes:
 - the changed repository state in the agreed delivery form
 - a commit summary
 - a commit description
+- a concise numbered maintainer checklist for review, validation, commit and tag actions when useful
 - tag or release guidance when relevant
 
 Repository-ready deliverables should represent the final agreed state of the change and should not require additional manual editing before commit.
@@ -176,6 +177,27 @@ Validation may include:
 Bugs found during validation should be fixed before the feature commit if the feature has not yet been committed.
 
 If a bug is found after a feature commit, fix it in a separate commit with an appropriate summary.
+
+When validation requires maintainer-local execution, the assistant should provide exact commands or steps and should interpret the maintainer's output before recommending a commit.
+
+---
+
+# Milestone Closure
+
+Milestones should be finalized intentionally.
+
+A typical milestone closure includes:
+
+- confirming that the milestone objective has been satisfied
+- confirming that validation results are documented where needed
+- moving changelog entries from `Unreleased` to the completed version
+- updating `VERSION`
+- updating `PROJECT_CONTEXT.md`
+- updating README files or milestone documentation when user-facing status changes
+- preparing a milestone commit with summary and description
+- creating a version tag when the commit represents a meaningful completed state
+
+Feature work should not be hidden inside a milestone commit. A milestone commit should primarily record and summarize an already validated milestone.
 
 ---
 

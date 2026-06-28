@@ -30,6 +30,8 @@ The current-state entry point for resuming work.
 
 It describes where the project stands today, the active milestone, the current baseline and the next steps.
 
+For active milestone work, it should also capture validation notes, immediate validation targets and the next recommended step when those details are needed to resume efficiently.
+
 ## CHANGELOG.md
 
 The version history.
@@ -152,6 +154,8 @@ Proof-of-concept documentation should describe:
 - what remains out of scope
 
 Validated negative results should be documented when they influence the roadmap or architecture.
+
+For milestone-driven implementation, document the final validated state rather than every chat turn. Use `PROJECT_CONTEXT.md` for current status and next validation targets, `CHANGELOG.md` for version history, and ADRs for durable decision reasoning.
 
 ---
 
