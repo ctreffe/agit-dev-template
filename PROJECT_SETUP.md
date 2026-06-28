@@ -312,6 +312,7 @@ When working with AI assistance:
 - require actual artifacts, not simulated completion
 - commit with a clear summary and description
 - keep feature commits separate from milestone commits
+- document assistant-written code well enough that maintainers and future contributors can understand it without chat history
 - tag meaningful completed milestones intentionally
 - expect numbered maintainer next steps when validation, review, commit or tag actions are needed
 

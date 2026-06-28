@@ -1,4 +1,4 @@
-﻿# Changelog
+# Changelog
 
 All notable changes to this project will be documented in this file.
 
@@ -8,6 +8,8 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Upgrade the Collaboration Model to v1.11.
+- Add explicit code documentation and maintainability guidance for assistant-written implementation work.
 - Upgrade the Collaboration Model to v1.10.
 - Add explicit initial roadmap agreement guidance for new projects and substantially new phases.
 - Upgrade the Collaboration Model to v1.9.

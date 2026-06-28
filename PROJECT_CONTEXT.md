@@ -1,4 +1,4 @@
-﻿# PROJECT_CONTEXT.md
+# PROJECT_CONTEXT.md
 
 # Project Context Template
 
@@ -173,7 +173,7 @@ AGIT Project Template version:
 Collaboration Model version:
 
 ```text
-v1.9
+v1.11
 ```
 
 Current collaboration notes:
@@ -192,6 +192,7 @@ Current collaboration notes:
 - Projects should establish an explicit initial roadmap before implementation accelerates, including early milestones, purpose, intended validation and intentional non-goals.
 - Active milestones should progress through small implement-validate-adjust-commit loops, with feature commits kept separate from milestone commits.
 - Commit recommendations should include both a concise summary and a meaningful description.
+- Assistant-written code should be documented and structured so maintainers and future contributors can understand it without private chat history.
 - When validation requires maintainer-local or elevated execution, the assistant should provide exact steps, interpret the output and document relevant validation results.
 - Feature commits and milestone commits should remain separate.
 - Validation should happen before declaring a step complete.

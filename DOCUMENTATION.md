@@ -6,6 +6,10 @@ This document describes documentation standards used by the AGIT Project Templat
 
 Documentation is treated as part of the software. It should be maintained with the same care as implementation code.
 
+Assistant-written implementation work must be understandable from the repository itself. When code contains non-obvious behavior, assumptions, constraints, integration points or architectural decisions, those details should be documented close to the code or in the appropriate project document.
+
+Prefer clear names, small modules and purposeful comments over lengthy explanations of obvious code. Comments should explain intent, trade-offs and constraints, not restate what the code already says.
+
 ---
 
 # Document Roles

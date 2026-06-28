@@ -1,6 +1,6 @@
 ﻿# ChatGPT.md
 
-# Collaboration Model v1.10
+# Collaboration Model v1.11
 
 **Status:** Stable  
 **Applies to:** AGIT software projects  
@@ -158,8 +158,19 @@ A feature commit should represent a validated logical step. A milestone commit s
 
 ---
 
-# Milestone Work Rhythm
+# Code Documentation and Maintainability
 
+Assistant-written code must be understandable without private chat history.
+
+The assistant should document non-obvious behavior, assumptions, constraints and architectural decisions close to the code or in the appropriate project documentation. Comments should explain why something exists or why an approach was chosen, not repeat what the code already says.
+
+Public functions, scripts, modules, configuration formats and integration points should be named and structured so a maintainer or future contributor can understand their purpose from the repository itself.
+
+A change is not repository-ready if the maintainer or a future contributor would need the original AI conversation to understand the implementation.
+
+---
+
+# Milestone Work Rhythm
 Recent AGIT project work has shown that collaboration is most efficient when roadmap milestones are handled as small, validated loops.
 
 For an active milestone, the assistant should normally help maintain a rhythm like:
@@ -675,5 +686,7 @@ Version 1.8 adds numbered maintainer next steps before commit-ready handoff. It 
 Version 1.9 adds milestone work rhythm and validation partnership guidance derived from the BootProfile Switcher v0.4.0 through v0.7.0 workflow. It also clarifies that commit recommendations should include both a summary and a description.
 
 Version 1.10 adds explicit initial roadmap agreement guidance. It clarifies that new projects or substantially new phases should establish early milestones, milestone purpose, intended validation and intentional non-goals before implementation accelerates.
+
+Version 1.11 adds explicit code documentation and maintainability guidance for assistant-written implementation work. It clarifies that code must be understandable from the repository itself without relying on private AI conversation history.
 
 Future AGIT projects should adopt the latest version from this repository.
