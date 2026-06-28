@@ -195,7 +195,7 @@ A typical milestone closure includes:
 - moving changelog entries from `Unreleased` to the completed version
 - updating `VERSION`
 - updating `PROJECT_CONTEXT.md`
-- updating README files or milestone documentation when user-facing status changes
+- updating README files, reference documentation or milestone documentation when user-facing status, setup, usage or configuration changes
 - preparing a milestone commit with summary and description
 - creating a version tag when the commit represents a meaningful completed state
 

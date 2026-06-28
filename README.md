@@ -30,7 +30,8 @@ The template defines:
 - a collaboration model for AI-assisted software development
 - a local Codex operating policy
 - a current-state project context document
-- documentation and repository standards
+- roadmap-first milestone guidance
+- documentation and repository standards for maintainers, contributors and users
 - a shared engineering philosophy
 - versioning and release guidance
 - a retrospective process for improving the template from real project experience
@@ -52,13 +53,14 @@ The repository is the authoritative project state. When AI assistance is used, w
 The preferred workflow is:
 
 1. Establish the current repository baseline.
-2. Agree on the next roadmap step.
+2. Establish or review the roadmap and agree on the next milestone step.
 3. Implement a small, reviewable change.
 4. Validate the change whenever practical.
 5. Fix issues found during validation.
-6. Prepare a repository-ready contribution in the agreed delivery form.
-7. Commit the validated step.
-8. Finalize milestones separately from feature work.
+6. Update affected code, user-facing and project documentation.
+7. Prepare a repository-ready contribution in the agreed delivery form.
+8. Commit the validated step.
+9. Finalize milestones separately from feature work.
 
 Explicit requests such as "create the commit" mean that the requested repository-ready result should be produced, not merely described. Artifact integrity is part of the workflow: local working tree changes, generated archives, commits and repository updates must actually exist before they are reported as complete.
 
@@ -70,10 +72,11 @@ Explicit requests such as "create the commit" mean that the requested repository
 4. Adapt the README files and repository metadata to the new project.
 5. Preserve an AI Collaboration Note directly below the README badges and adapt project-specific wording when needed for factual accuracy.
 6. Create or adapt `PROJECT_CONTEXT.md` as the current-state entry point for the project.
-7. Review the core project documents.
-8. Review `CODEX.md` if Codex will be used for local project work.
-9. Remove template-only setup documents when the project setup is complete.
-10. Continue development according to `ChatGPT.md`.
+7. Establish the initial roadmap and record it in `PROJECT_CONTEXT.md` or a dedicated roadmap document.
+8. Review the core project documents.
+9. Review `CODEX.md` if Codex will be used for local project work.
+10. Remove template-only setup documents when the project setup is complete.
+11. Continue development according to `ChatGPT.md`.
 
 ## Documents That Usually Remain
 
