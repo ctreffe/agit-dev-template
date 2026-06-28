@@ -1,6 +1,6 @@
 ﻿# ChatGPT.md
 
-# Collaboration Model v1.11
+# Collaboration Model v1.12
 
 **Status:** Stable  
 **Applies to:** AGIT software projects  
@@ -594,6 +594,28 @@ Avoid promotional, exaggerated or marketing-oriented wording.
 
 ---
 
+# User-Facing Documentation
+
+Projects should be documented so users can set them up, configure them and use them productively without relying on private chat history or maintainer explanations.
+
+User-facing documentation should normally explain:
+
+- what the project does and who it is for
+- prerequisites, installation and setup
+- configuration and important defaults
+- common usage workflows and examples
+- available commands, scripts, flags, settings or profiles when the project exposes them
+- expected outputs, logs, files or system effects where relevant
+- permissions, safety notes, platform constraints and rollback or uninstall guidance when applicable
+- troubleshooting steps for common failures
+- current maturity, limitations and intentionally unsupported scenarios
+
+Reference documentation is encouraged when a project exposes a meaningful command surface, configuration schema, module interface or operational workflow. Keep it concise, accurate and generated or easy to verify when practical.
+
+Documentation should make the first successful use of the project easy, and it should make repeated productive use predictable.
+
+---
+
 # Repository Evolution
 
 Repositories should evolve gradually.
@@ -688,5 +710,7 @@ Version 1.9 adds milestone work rhythm and validation partnership guidance deriv
 Version 1.10 adds explicit initial roadmap agreement guidance. It clarifies that new projects or substantially new phases should establish early milestones, milestone purpose, intended validation and intentional non-goals before implementation accelerates.
 
 Version 1.11 adds explicit code documentation and maintainability guidance for assistant-written implementation work. It clarifies that code must be understandable from the repository itself without relying on private AI conversation history.
+
+Version 1.12 adds explicit user-facing documentation guidance. It clarifies that projects should document setup, configuration, productive usage, command or settings references, troubleshooting, permissions, safety notes and maturity where relevant.
 
 Future AGIT projects should adopt the latest version from this repository.

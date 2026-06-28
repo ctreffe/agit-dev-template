@@ -147,6 +147,7 @@ Whenever practical, this includes:
 - a commit description
 - a concise numbered maintainer checklist for review, validation, commit and tag actions when useful
 - code-level documentation or project documentation updates needed to make the implementation understandable without chat context
+- user-facing setup, usage, reference or troubleshooting documentation updates when behavior, commands, configuration or operational workflows change
 - tag or release guidance when relevant
 
 Repository-ready deliverables should represent the final agreed state of the change and should not require additional manual editing before commit.

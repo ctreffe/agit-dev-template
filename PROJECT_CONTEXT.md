@@ -173,7 +173,7 @@ AGIT Project Template version:
 Collaboration Model version:
 
 ```text
-v1.11
+v1.12
 ```
 
 Current collaboration notes:
@@ -193,6 +193,7 @@ Current collaboration notes:
 - Active milestones should progress through small implement-validate-adjust-commit loops, with feature commits kept separate from milestone commits.
 - Commit recommendations should include both a concise summary and a meaningful description.
 - Assistant-written code should be documented and structured so maintainers and future contributors can understand it without private chat history.
+- User-facing documentation should explain setup, configuration, productive usage, reference surfaces and troubleshooting where relevant.
 - When validation requires maintainer-local or elevated execution, the assistant should provide exact steps, interpret the output and document relevant validation results.
 - Feature commits and milestone commits should remain separate.
 - Validation should happen before declaring a step complete.

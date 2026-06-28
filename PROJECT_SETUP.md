@@ -47,6 +47,8 @@ Review and adapt the user-facing documentation:
 
 The English README is the primary project documentation.
 
+It should explain setup, configuration and productive use clearly enough that a new user can reach a successful first use without private maintainer context. If the project exposes commands, scripts, settings, profiles or operational workflows, add concise reference documentation or link to the appropriate reference document.
+
 The German README may be kept, updated or removed depending on the target audience of the derived project.
 
 If both are kept, maintain them as structurally aligned translations.
@@ -306,6 +308,7 @@ When working with AI assistance:
 - establish or review the current roadmap
 - agree on the next roadmap step
 - implement small changes
+- keep user-facing setup, usage, reference and troubleshooting documentation aligned with behavior
 - validate before commit whenever practical
 - use small implement-validate-adjust-commit loops during active milestones
 - request repository-ready deliverables only after the plan is clear

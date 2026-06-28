@@ -71,6 +71,8 @@ Avoid duplicating the same rule across many documents. Prefer one authoritative 
 
 Documentation should describe the actual state of the project, not an aspirational state that has not been implemented or validated.
 
+User-facing documentation should help people use the project successfully. Setup, configuration, usage, references, troubleshooting and safety notes should be documented when they affect practical adoption or reliable operation.
+
 Code comments should be purposeful and close to the relevant implementation. They should explain intent, constraints and trade-offs where those are not obvious from names and structure alone.
 
 ---

@@ -8,6 +8,8 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Upgrade the Collaboration Model to v1.12.
+- Add explicit user-facing documentation guidance for setup, configuration, productive usage, references and troubleshooting.
 - Upgrade the Collaboration Model to v1.11.
 - Add explicit code documentation and maintainability guidance for assistant-written implementation work.
 - Upgrade the Collaboration Model to v1.10.

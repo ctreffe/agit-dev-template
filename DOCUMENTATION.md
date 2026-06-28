@@ -126,6 +126,28 @@ Do not move local tool rules, Git command restrictions or machine-specific execu
 
 ---
 
+# User-Facing Documentation
+
+User-facing documentation should make the project practically usable.
+
+For projects with setup, configuration, commands, scripts, profiles, modules or operational workflows, document the relevant user surface clearly enough that a user can proceed without asking the maintainer for missing context.
+
+Depending on the project, useful user documentation may include:
+
+- prerequisites and supported platforms
+- installation, setup and update steps
+- configuration files, settings, defaults and valid values
+- command, script, flag or profile reference material
+- examples for common workflows
+- expected outputs, logs, generated files or system changes
+- permissions, safety notes, rollback or uninstall steps
+- troubleshooting guidance for common failures
+- current maturity, limitations and intentionally unsupported scenarios
+
+Reference material should be kept accurate and easy to verify. If a project exposes many commands or settings, prefer a concise generated or generated-like reference over scattered prose.
+
+---
+
 # Language and Tone
 
 Use precise, technical language.
