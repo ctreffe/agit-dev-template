@@ -173,7 +173,7 @@ AGIT Project Template version:
 Collaboration Model version:
 
 ```text
-v1.7
+v1.8
 ```
 
 Current collaboration notes:
@@ -188,6 +188,7 @@ Current collaboration notes:
 - Required template artifacts such as the AI Collaboration Note should remain visible and factually accurate unless intentionally modified.
 - If Codex is used locally, `CODEX.md` defines the local operating policy.
 - Long-running sessions should update `PROJECT_CONTEXT.md` before context exhaustion becomes likely.
+- When a change is approaching commit readiness, the assistant should provide concise numbered next steps for decisions, validation, review and commit actions whenever practical.
 - Feature commits and milestone commits should remain separate.
 - Validation should happen before declaring a step complete.
 

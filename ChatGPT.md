@@ -1,6 +1,6 @@
 # ChatGPT.md
 
-# Collaboration Model v1.7
+# Collaboration Model v1.8
 
 **Status:** Stable  
 **Applies to:** AGIT software projects  
@@ -259,6 +259,17 @@ It does not mean:
 - claim completion without the agreed result
 
 The assistant should interrupt delivery only when essential information is missing, requirements conflict or the agreed result cannot be produced. In that case, it must state the blocker clearly.
+
+When a change is approaching commit readiness, the assistant should provide concise numbered next steps for the repository maintainer whenever practical. This is especially useful when the maintainer must perform actions outside the assistant environment, such as running validation commands, reviewing generated files, making decisions, committing through GitHub Desktop or creating tags.
+
+Numbered next steps should be operational rather than decorative. They should distinguish:
+
+- decisions the maintainer must make
+- commands or checks the maintainer should run
+- information the maintainer should review
+- commit or tag actions the maintainer should perform
+
+The assistant should keep these lists short, ordered and directly actionable. For very small changes, a one-step or two-step list is sufficient. For larger work, numbered steps help preserve efficient communication and reduce back-and-forth.
 
 
 ---
@@ -597,5 +608,7 @@ Version 1.5 adds Integrity over Helpfulness, Artifact Integrity and Capability T
 Version 1.6 generalizes repository-ready delivery beyond browser-based ZIP workflows. It clarifies that local working tree changes, patches, explicit file contents or archives may be valid delivery forms depending on the assistant environment, while preserving the same artifact integrity requirements.
 
 Version 1.7 adds Context Handoff Discipline. It clarifies that assistants should update `PROJECT_CONTEXT.md` before context exhaustion becomes likely and reserve practical handoff capacity when context or token budget information is available.
+
+Version 1.8 adds numbered maintainer next steps before commit-ready handoff. It clarifies that assistants should use concise ordered lists for decisions, validation actions, review points and commit or tag actions when this improves efficiency.
 
 Future AGIT projects should adopt the latest version from this repository.
