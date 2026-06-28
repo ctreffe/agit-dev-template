@@ -81,6 +81,30 @@ Do not force one document to serve all purposes.
 
 ---
 
+# Dedicated Component Documentation
+
+READMEs should remain concise entry points and navigation aids.
+
+When a module, integration, component or workflow becomes too substantial for the README, move the detailed documentation into a dedicated document such as:
+
+- `docs/modules/<name>.md`
+- `docs/integrations/<name>.md`
+- another project-specific documentation area
+
+The README should briefly explain what the component is, link to the dedicated document and avoid duplicating long configuration, lifecycle, warning or troubleshooting sections.
+
+If a substantial production component is exposed to users, include a demonstration, example configuration or validation path when applicable. This does not need to be the same shape in every project. Depending on the project, it may be:
+
+- an installable demo
+- a sample configuration
+- a reproducible command sequence
+- a fixture
+- a validation checklist
+
+The goal is to make the component understandable and verifiable without requiring private maintainer explanations.
+
+---
+
 # Repository-Ready Documentation
 
 Documentation changes are repository-ready only when they are consistent across affected documents.
@@ -99,6 +123,19 @@ For example, if the collaboration workflow changes, review at least:
 Do not append isolated notes when the change affects the structure or meaning of existing documentation.
 
 Rewrite affected sections so the final documents read as one coherent version.
+
+Before a milestone commit, perform a documentation freshness pass. Review whether the milestone state is reflected in:
+
+- version and status wording
+- roadmap and current-focus notes
+- `CHANGELOG.md`
+- `README.md`
+- `README.de.md`, if present
+- links to new dedicated documentation
+- setup, demo or usage instructions
+- validation results and known limitations
+
+The milestone commit should contain the coherent completed state. Avoid relying on a follow-up cleanup commit for documentation that should have been current at the milestone.
 
 
 ---

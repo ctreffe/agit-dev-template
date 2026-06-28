@@ -203,7 +203,7 @@ AGIT Project Template version:
 Collaboration Model version:
 
 ```text
-v1.13
+v1.14
 ```
 
 Current collaboration notes:
@@ -225,6 +225,9 @@ Current collaboration notes:
 - Commit recommendations should include both a concise summary and a meaningful description.
 - Assistant-written code should be documented and structured so maintainers and future contributors can understand it without private chat history.
 - User-facing documentation should explain setup, configuration, productive usage, reference surfaces and troubleshooting where relevant.
+- Substantial modules, integrations or workflows should use dedicated documentation instead of overloading the README.
+- Substantial production components should include a demonstration, example configuration or validation path when applicable.
+- Before preparing a milestone commit, documentation should be checked for version, status, roadmap, changelog, README, dedicated-documentation links, setup guidance and validation freshness.
 - When validation requires maintainer-local or elevated execution, the assistant should provide exact steps, interpret the output and document relevant validation results.
 - Feature commits and milestone commits should remain separate.
 - Validation should happen before declaring a step complete.

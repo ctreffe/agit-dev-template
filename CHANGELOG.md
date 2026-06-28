@@ -11,6 +11,10 @@ This project follows Semantic Versioning.
 - Upgrade the Collaboration Model to v1.13.
 - Add maintainer-owned project intent and desired end state as an explicit project-start step before roadmap derivation.
 - Update project setup, project context and documentation guidance so initial roadmaps are derived from project context and target state.
+- Upgrade the Collaboration Model to v1.14.
+- Add dedicated documentation guidance for substantial modules, integrations and workflows.
+- Clarify that substantial production components should include a demonstration, example configuration or validation path when applicable.
+- Add a documentation freshness pass before milestone commits.
 
 ## [v1.1.0] - 2026-06-28
 

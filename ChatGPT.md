@@ -1,6 +1,6 @@
 ﻿# ChatGPT.md
 
-# Collaboration Model v1.13
+# Collaboration Model v1.14
 
 **Status:** Stable  
 **Applies to:** AGIT software projects  
@@ -183,12 +183,15 @@ For an active milestone, the assistant should normally help maintain a rhythm li
 5. Interpret validation output before declaring success.
 6. Prepare a feature commit with summary and description.
 7. Repeat until the milestone objective is satisfied.
-8. Prepare a separate milestone commit.
-9. Tag the completed milestone when appropriate.
+8. Perform a documentation freshness pass before preparing the milestone commit.
+9. Prepare a separate milestone commit.
+10. Tag the completed milestone when appropriate.
 
 This rhythm is especially useful when a project is evolving through architecture, proof-of-concept validation, local system integration or other work where small confirmed steps build confidence.
 
 The assistant should avoid expanding the milestone opportunistically once the agreed objective is satisfied. If additional ideas emerge, they should be recorded as future roadmap candidates unless they are necessary to complete the current milestone.
+
+Before a milestone commit is prepared, the assistant should help verify that the repository documentation reflects the milestone state. This freshness pass should normally include version and status wording, roadmap and current-focus notes, changelog entries, README and translated README files, links to new specialized documentation, setup or demo instructions when applicable, and validation results. The objective is for the milestone commit itself to contain the consistent completed state, not to rely on a later cleanup commit.
 
 ---
 
@@ -607,6 +610,8 @@ Technical documentation should use precise, objective language.
 
 Avoid promotional, exaggerated or marketing-oriented wording.
 
+READMEs should remain entry points and navigation aids. When a module, integration, component or workflow becomes too substantial for the README, the detailed user-facing and maintainer-facing documentation should move into a dedicated document such as `docs/modules/<name>.md`, `docs/integrations/<name>.md` or another project-appropriate location. The README should summarize the component briefly and link to the dedicated documentation instead of duplicating all details.
+
 ---
 
 # User-Facing Documentation
@@ -626,6 +631,8 @@ User-facing documentation should normally explain:
 - current maturity, limitations and intentionally unsupported scenarios
 
 Reference documentation is encouraged when a project exposes a meaningful command surface, configuration schema, module interface or operational workflow. Keep it concise, accurate and generated or easy to verify when practical.
+
+If a project exposes production modules, integrations or other reusable components, each substantial component should include a small demonstration, example configuration or validation path when applicable. The form should fit the project: a demo installer, sample configuration, reproducible command sequence, fixture or documented validation checklist may all be appropriate.
 
 Documentation should make the first successful use of the project easy, and it should make repeated productive use predictable.
 
@@ -729,5 +736,7 @@ Version 1.11 adds explicit code documentation and maintainability guidance for a
 Version 1.12 adds explicit user-facing documentation guidance. It clarifies that projects should document setup, configuration, productive usage, command or settings references, troubleshooting, permissions, safety notes and maturity where relevant.
 
 Version 1.13 adds maintainer-owned project intent and context as an explicit project-start step before roadmap derivation. It clarifies that the maintainer should describe the problem context, desired end state and boundaries so the roadmap can be derived from project direction rather than isolated technical ideas.
+
+Version 1.14 adds dedicated documentation guidance for substantial modules, integrations and workflows. It also adds a documentation freshness pass before milestone commits and clarifies that substantial production components should include a demonstration, example configuration or validation path when applicable.
 
 Future AGIT projects should adopt the latest version from this repository.
