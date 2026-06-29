@@ -15,6 +15,8 @@ This project follows Semantic Versioning.
 - Add dedicated documentation guidance for substantial modules, integrations and workflows.
 - Clarify that substantial production components should include a demonstration, example configuration or validation path when applicable.
 - Add a documentation freshness pass before milestone commits.
+- Upgrade the Collaboration Model to v1.15.
+- Add explicit ADR checkpoint guidance for important architecture, configuration-format, lifecycle, deployment and security decisions.
 
 ## [v1.1.0] - 2026-06-28
 

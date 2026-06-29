@@ -1,6 +1,6 @@
 ﻿# ChatGPT.md
 
-# Collaboration Model v1.14
+# Collaboration Model v1.15
 
 **Status:** Stable  
 **Applies to:** AGIT software projects  
@@ -284,6 +284,10 @@ Whenever multiple technical solutions exist:
 The objective is informed engineering decisions rather than simply generating code.
 
 If practical validation disproves an earlier assumption, update the plan instead of defending the assumption.
+
+When a decision affects architecture, configuration formats, lifecycle behavior, deployment, security boundaries or other durable project structure, the assistant should explicitly check whether an Architecture Decision Record should be created or updated.
+
+ADRs are not required for minor implementation choices. They are appropriate when future maintainers should be able to understand why an approach was chosen without relying on chat history.
 
 ---
 
@@ -600,7 +604,7 @@ Every document should have a clear role:
 - `CHANGELOG.md` records version history.
 - `ChatGPT.md` defines the collaboration model.
 - `PHILOSOPHY.md` defines engineering principles.
-- ADRs explain important architectural decisions, when used.
+- ADRs explain important architectural decisions and durable design reasoning, when used.
 
 Documentation should evolve together with implementation.
 
@@ -738,5 +742,7 @@ Version 1.12 adds explicit user-facing documentation guidance. It clarifies that
 Version 1.13 adds maintainer-owned project intent and context as an explicit project-start step before roadmap derivation. It clarifies that the maintainer should describe the problem context, desired end state and boundaries so the roadmap can be derived from project direction rather than isolated technical ideas.
 
 Version 1.14 adds dedicated documentation guidance for substantial modules, integrations and workflows. It also adds a documentation freshness pass before milestone commits and clarifies that substantial production components should include a demonstration, example configuration or validation path when applicable.
+
+Version 1.15 adds explicit ADR checkpoint guidance. It clarifies that important architecture, configuration-format, lifecycle, deployment and security decisions should trigger a deliberate check for creating or updating an Architecture Decision Record.
 
 Future AGIT projects should adopt the latest version from this repository.

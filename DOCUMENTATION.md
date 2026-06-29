@@ -66,6 +66,10 @@ It describes the values behind technical decisions, such as maintainability, tra
 
 Architecture Decision Records may be used when a decision is important enough that its reasoning should remain available later.
 
+Use an ADR checkpoint when a decision affects architecture, configuration formats, lifecycle behavior, deployment, security boundaries or another durable part of the project structure.
+
+ADRs should explain the context, decision, rationale and consequences. They should not be used for every small implementation choice.
+
 ---
 
 # Current State vs. History
@@ -74,7 +78,7 @@ Keep current state and history separate.
 
 - Current state belongs in `PROJECT_CONTEXT.md`.
 - Version history belongs in `CHANGELOG.md`.
-- Decision reasoning belongs in ADRs, when used.
+- Durable decision reasoning belongs in ADRs, when used.
 - User-facing overview belongs in `README.md`.
 
 Do not force one document to serve all purposes.
