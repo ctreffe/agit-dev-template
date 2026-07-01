@@ -47,6 +47,12 @@ Codex may prepare working tree changes, explain diffs, run checks and propose co
 
 The maintainer decides what to stage, commit, tag, push or discard.
 
+Codex has no default permission to perform Git history actions. File-edit
+approval, tool approval or approval to prepare a commit-ready change does not
+authorize staging, committing, tagging, pushing or any other Git history action.
+Each such action requires an explicit maintainer instruction for that specific
+action.
+
 ---
 
 # Allowed by Default
@@ -72,7 +78,8 @@ Codex should report important command results that affect the conclusion of the 
 
 # Read-Only Git Usage
 
-Codex may use Git only for read-only inspection unless the maintainer explicitly changes this policy.
+Codex may use Git only for read-only inspection unless the maintainer explicitly
+instructs Codex to perform a specific Git history action.
 
 Allowed read-only Git commands include:
 
@@ -117,6 +124,9 @@ git clean
 Codex must not edit `.git/` directly.
 
 If a Git command can change repository state, Codex should treat it as forbidden even if the command is convenient.
+
+This rule remains in force even when Codex is otherwise allowed to edit project
+files. Changing repository history is a separate maintainer-controlled action.
 
 ---
 
@@ -220,6 +230,9 @@ When preparing a repository change, Codex should provide:
 - a suggested commit description
 
 The maintainer performs staging, commits, tags and pushes in GitHub Desktop unless a project explicitly defines a different process.
+
+Suggested commit metadata is advisory. It is not permission for Codex to create
+the commit.
 
 ---
 

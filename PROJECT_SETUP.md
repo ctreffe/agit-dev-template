@@ -336,10 +336,10 @@ When working with AI assistance:
 - check whether important architecture, configuration-format, lifecycle, deployment or security decisions need an ADR
 - keep user-facing setup, usage, reference and troubleshooting documentation aligned with behavior
 - validate before commit whenever practical
-- use small implement-validate-adjust-commit loops during active milestones
+- use small implement-validate-adjust-prepare loops during active milestones
 - request repository-ready deliverables only after the plan is clear
 - require actual artifacts, not simulated completion
-- commit with a clear summary and description
+- provide commit-ready guidance with a clear summary and description
 - keep feature commits separate from milestone commits
 - document assistant-written code well enough that maintainers and future contributors can understand it without chat history
 - tag meaningful completed milestones intentionally

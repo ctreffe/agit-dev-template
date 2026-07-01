@@ -1,6 +1,6 @@
 ﻿# ChatGPT.md
 
-# Collaboration Model v1.15
+# Collaboration Model v1.16
 
 **Status:** Stable  
 **Applies to:** AGIT software projects  
@@ -146,16 +146,54 @@ The preferred workflow is:
 9. Fix issues discovered during validation.
 10. Update all affected documentation.
 11. Prepare a repository-ready contribution.
-12. Commit only after the work is complete and validated.
+12. Prepare commit-ready changes only after the work is complete and validated.
 13. Finalize milestones separately from feature work.
 
 For proof-of-concept work, the expected loop is:
 
 ```text
-Implement -> Validate -> Adjust -> Commit -> Continue
+Implement -> Validate -> Adjust -> Prepare commit -> Continue
 ```
 
-A feature commit should represent a validated logical step. A milestone commit should represent the explicit conclusion of a roadmap milestone.
+A feature commit should represent a validated logical step. A milestone commit
+should represent the explicit conclusion of a roadmap milestone. The maintainer
+controls when these commits are actually created unless the maintainer gives an
+explicit instruction for the assistant to perform a specific Git history action.
+
+---
+
+# Git History Authority
+
+The assistant has no default permission to perform Git history actions.
+
+Git history actions include, but are not limited to:
+
+- staging files
+- creating commits
+- amending commits
+- rebasing
+- resetting
+- reverting
+- creating, deleting or switching branches
+- creating or deleting tags
+- pushing or force-pushing
+- pulling or merging
+- changing `.git/` contents directly
+
+The assistant may inspect Git status, diffs and logs when useful. The assistant
+may prepare file changes, propose commit boundaries and suggest commit summaries
+and descriptions.
+
+The assistant must not perform Git history actions unless the maintainer
+explicitly instructs the assistant to perform that specific action.
+
+Maintainer approval for file edits does not imply approval for Git history
+actions. A request to create, implement, build, organize, document or prepare a
+commit does not imply permission to run Git history commands. Approval for one
+class of Git history action does not imply approval for another; local commits,
+tags and pushes each require their own explicit maintainer instruction.
+
+Repository history is maintainer-controlled project memory.
 
 ---
 
@@ -181,11 +219,11 @@ For an active milestone, the assistant should normally help maintain a rhythm li
 3. Implement only that step.
 4. Validate the step with the maintainer, especially when real-system or privileged checks are needed.
 5. Interpret validation output before declaring success.
-6. Prepare a feature commit with summary and description.
+6. Prepare feature-commit guidance with summary and description.
 7. Repeat until the milestone objective is satisfied.
 8. Perform a documentation freshness pass before preparing the milestone commit.
-9. Prepare a separate milestone commit.
-10. Tag the completed milestone when appropriate.
+9. Prepare separate milestone-commit guidance.
+10. Recommend a tag for the completed milestone when appropriate.
 
 This rhythm is especially useful when a project is evolving through architecture, proof-of-concept validation, local system integration or other work where small confirmed steps build confidence.
 
@@ -323,7 +361,12 @@ The wording of a maintainer request matters.
 
 If the maintainer asks to discuss, plan, review, compare or decide, the assistant should remain in planning mode.
 
-If the maintainer asks to create, implement, build, update or prepare a commit, the assistant should treat the planning phase as complete and produce the requested deliverable.
+If the maintainer asks to create, implement, build, update or prepare a commit,
+the assistant should treat the planning phase as complete and produce the
+requested repository-ready deliverable in the working tree.
+
+Preparing a commit means preparing the files and commit metadata for maintainer
+review. It does not authorize staging, committing, tagging or pushing.
 
 A request such as:
 
@@ -331,6 +374,8 @@ A request such as:
 Create the commit.
 ```
 
+only authorizes an actual Git commit when the maintainer explicitly asks the
+assistant to perform that Git history action. Otherwise, commit-related wording
 means:
 
 - modify the required files
@@ -495,6 +540,11 @@ The following Git workflow is preferred for AGIT projects.
 GitHub Desktop is the preferred Git client for the repository maintainer.
 
 The assistant should therefore avoid assuming command-line Git usage whenever practical and should provide guidance that works naturally with GitHub Desktop.
+
+The maintainer controls staging, commits, tags, pushes and other Git history
+actions by default. The assistant may inspect Git state and prepare
+repository-ready changes, but must not perform Git history actions unless the
+maintainer explicitly instructs the assistant to perform that specific action.
 
 ## Branching Strategy
 
@@ -744,5 +794,10 @@ Version 1.13 adds maintainer-owned project intent and context as an explicit pro
 Version 1.14 adds dedicated documentation guidance for substantial modules, integrations and workflows. It also adds a documentation freshness pass before milestone commits and clarifies that substantial production components should include a demonstration, example configuration or validation path when applicable.
 
 Version 1.15 adds explicit ADR checkpoint guidance. It clarifies that important architecture, configuration-format, lifecycle, deployment and security decisions should trigger a deliberate check for creating or updating an Architecture Decision Record.
+
+Version 1.16 adds explicit Git history authority. It clarifies that repository
+history is maintainer-controlled project memory and that assistants have no
+default permission to stage, commit, tag, push or otherwise perform Git history
+actions.
 
 Future AGIT projects should adopt the latest version from this repository.

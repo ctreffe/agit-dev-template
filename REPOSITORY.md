@@ -65,6 +65,16 @@ Command-line Git may still be used when needed, but documentation should not dep
 
 When Codex is used locally, `CODEX.md` defines the allowed Git usage. By default, Codex may use Git only for read-only inspection, while the maintainer controls staging, commits, tags, pushes and other repository state changes.
 
+This is a hard collaboration rule, not only a Codex implementation detail.
+Assistants may prepare working tree changes, propose commit boundaries and
+suggest commit summaries and descriptions. They must not stage files, create
+commits, amend commits, rebase, reset, revert, create or delete branches, create
+or delete tags, push, pull, merge or otherwise change Git history unless the
+maintainer explicitly instructs the assistant to perform that specific action.
+
+Approval for file edits is not approval for Git history actions. Approval for
+one history action is not approval for another.
+
 ---
 
 # Branching Strategy

@@ -203,7 +203,7 @@ AGIT Dev Template version:
 Collaboration Model version:
 
 ```text
-v1.14
+v1.16
 ```
 
 Current collaboration notes:
@@ -221,7 +221,7 @@ Current collaboration notes:
 - When a change is approaching commit readiness, the assistant should provide concise numbered next steps for decisions, validation, review and commit actions whenever practical.
 - Projects should establish an explicit initial roadmap before implementation accelerates, including early milestones, purpose, intended validation and intentional non-goals.
 - Initial roadmaps should be derived from maintainer-owned project intent, context, desired end state and boundaries.
-- Active milestones should progress through small implement-validate-adjust-commit loops, with feature commits kept separate from milestone commits.
+- Active milestones should progress through small implement-validate-adjust-prepare loops, with feature commit guidance kept separate from milestone commit guidance.
 - Commit recommendations should include both a concise summary and a meaningful description.
 - Assistant-written code should be documented and structured so maintainers and future contributors can understand it without private chat history.
 - User-facing documentation should explain setup, configuration, productive usage, reference surfaces and troubleshooting where relevant.
@@ -230,6 +230,7 @@ Current collaboration notes:
 - Before preparing a milestone commit, documentation should be checked for version, status, roadmap, changelog, README, dedicated-documentation links, setup guidance and validation freshness.
 - When validation requires maintainer-local or elevated execution, the assistant should provide exact steps, interpret the output and document relevant validation results.
 - Feature commits and milestone commits should remain separate.
+- Git history actions are maintainer-controlled. Assistants may prepare changes and commit metadata, but must not stage, commit, tag or push without explicit maintainer instruction for that specific action.
 - Validation should happen before declaring a step complete.
 
 Adapt this section when the project intentionally uses different collaboration rules.

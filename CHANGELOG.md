@@ -6,6 +6,18 @@ This project follows Semantic Versioning.
 
 ## [Unreleased]
 
+## [v1.1.2] - 2026-07-02
+
+### Changed
+
+- Upgrade the Collaboration Model to v1.16.
+- Clarify that Git history actions are maintainer-controlled and forbidden for
+  assistants by default.
+- Harmonize `ChatGPT.md`, `REPOSITORY.md` and `CODEX.md` around explicit
+  maintainer authorization for staging, commits, tags, pushes and other Git
+  history actions.
+- Bump template version to 1.1.2.
+
 ## [v1.1.1] - 2026-07-02
 
 ### Changed
