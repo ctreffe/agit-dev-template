@@ -23,7 +23,7 @@ It provides a reusable repository foundation for projects involving code, script
 
 This repository is not a code framework. It is a development project template.
 
-The AGIT Dev Template builds on the generic AGIT Project Template. Use the generic template for non-development projects, and use this template when software, scripts, automation, validation, technical architecture or release workflows are central to the project.
+The AGIT Dev Template builds on the generic [AGIT Project Template](https://github.com/ctreffe/agit-project-template). Use the generic template for non-development projects, and use this template when software, scripts, automation, validation, technical architecture or release workflows are central to the project.
 
 ## What the Template Provides
 

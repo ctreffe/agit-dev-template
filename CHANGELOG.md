@@ -6,6 +6,8 @@ This project follows Semantic Versioning.
 
 ## [Unreleased]
 
+## [v1.1.1] - 2026-07-02
+
 ### Changed
 
 - Reposition this repository as the AGIT Dev Template.
@@ -20,6 +22,7 @@ This project follows Semantic Versioning.
 - Add a documentation freshness pass before milestone commits.
 - Upgrade the Collaboration Model to v1.15.
 - Add explicit ADR checkpoint guidance for important architecture, configuration-format, lifecycle, deployment and security decisions.
+- Bump template version to 1.1.1.
 
 ## [v1.1.0] - 2026-06-28
 

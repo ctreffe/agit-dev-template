@@ -23,7 +23,7 @@ Es stellt eine wiederverwendbare Repository-Grundlage für Projekte mit Code, Sk
 
 Dieses Repository ist kein Code-Framework. Es ist ein Entwicklungsprojekt-Template.
 
-Das AGIT Dev Template baut auf dem generischen AGIT Project Template auf. Für nicht entwicklungsorientierte Projekte sollte das generische Template verwendet werden; dieses Template ist für Projekte gedacht, in denen Software, Skripte, Automatisierung, Validierung, technische Architektur oder Release-Workflows zentral sind.
+Das AGIT Dev Template baut auf dem generischen [AGIT Project Template](https://github.com/ctreffe/agit-project-template) auf. Für nicht entwicklungsorientierte Projekte sollte das generische Template verwendet werden; dieses Template ist für Projekte gedacht, in denen Software, Skripte, Automatisierung, Validierung, technische Architektur oder Release-Workflows zentral sind.
 
 ## Was das Template bereitstellt
 
