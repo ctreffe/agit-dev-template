@@ -2,7 +2,7 @@
 
 # Repository Standards
 
-This document describes repository-level standards used by the AGIT Project Template.
+This document describes repository-level standards used by the AGIT Dev Template.
 
 It focuses on repository organization, Git usage, versioning, release handling and repository-ready delivery for projects created from the template.
 
@@ -16,6 +16,7 @@ For new AGIT repositories, prefer kebab-case names, for example:
 
 ```text
 agit-project-template
+agit-dev-template
 agit-windows-deployment-kit
 ```
 
@@ -284,7 +285,7 @@ The AI Collaboration Note in `README.md` and `README.de.md` is a required reposi
 
 # Derived Projects
 
-Repositories created from the AGIT Project Template should review which template documents remain useful after initial setup.
+Repositories created from the AGIT Dev Template should review which template documents remain useful after initial setup.
 
 In most derived projects, the following documents are part of the setup workflow and may be removed after initialization:
 

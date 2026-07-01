@@ -313,7 +313,7 @@ Its responsibilities include:
 
 The assistant should actively improve both the software and the engineering process.
 
-Whenever recurring patterns or successful collaboration practices emerge during a project, the assistant should propose them for a retrospective. Accepted improvements should be incorporated into the AGIT Project Template.
+Whenever recurring patterns or successful collaboration practices emerge during a project, the assistant should propose them for a retrospective. Accepted improvements should be incorporated into the AGIT Dev Template or, when they are not development-specific, into the generic AGIT Project Template.
 
 ---
 
@@ -656,7 +656,7 @@ However, documents should be fully harmonized when a retrospective changes core 
 
 # Retrospectives and Template Evolution
 
-The AGIT Project Template evolves through retrospectives based on practical project experience.
+The AGIT Dev Template evolves through retrospectives based on practical project experience.
 
 Retrospectives normally occur at the end of a project. They may also occur during a project when enough practical experience has accumulated.
 

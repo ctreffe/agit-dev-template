@@ -2,7 +2,7 @@
 
 # Project Context Template
 
-This document is a project-context template for repositories created from the AGIT Project Template.
+This document is a project-context template for repositories created from the AGIT Dev Template.
 
 In a derived project, this file should be adapted to capture the current state of that project.
 
@@ -194,7 +194,7 @@ Remove or adapt entries that do not apply to the derived project.
 
 # Collaboration Context
 
-AGIT Project Template version:
+AGIT Dev Template version:
 
 ```text
 <template version>

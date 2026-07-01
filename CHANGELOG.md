@@ -8,6 +8,9 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Reposition this repository as the AGIT Dev Template.
+- Clarify that the AGIT Dev Template is the development-oriented specialization of the generic AGIT Project Template.
+- Update README badges, version metadata and setup guidance for the `agit-dev-template` repository identity.
 - Upgrade the Collaboration Model to v1.13.
 - Add maintainer-owned project intent and desired end state as an explicit project-start step before roadmap derivation.
 - Update project setup, project context and documentation guidance so initial roadmaps are derived from project context and target state.

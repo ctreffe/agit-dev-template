@@ -2,15 +2,17 @@
 
 # Project Setup Guide
 
-This document describes how to initialize a new project from the AGIT Project Template.
+This document describes how to initialize a new project from the AGIT Dev Template.
 
 It is primarily useful during project creation. Many derived projects may remove this file after setup is complete.
+
+Use this template for development-oriented AGIT projects. For general non-development projects, start from the generic AGIT Project Template instead.
 
 ---
 
 # 1. Create the Repository
 
-Create a new repository from the AGIT Project Template.
+Create a new repository from the AGIT Dev Template.
 
 After creating the repository, establish the first working baseline:
 
@@ -59,7 +61,7 @@ Every AGIT project README should include an AI Collaboration Note directly below
 
 The note is a standardized disclosure artifact. It should preserve the purpose, position and level of visibility of the template note, but the wording must remain factually correct for the derived project.
 
-For the AGIT Project Template itself, the note states that the repository maintains the AGIT Collaboration Model. For derived projects, adapt that project-specific sentence so it accurately describes the collaboration in the derived repository, while still pointing readers to `ChatGPT.md`.
+For the AGIT Dev Template itself, the note states that the repository maintains the AGIT Dev Template. For derived projects, adapt that project-specific sentence so it accurately describes the collaboration in the derived repository, while still pointing readers to `ChatGPT.md`.
 
 Before completing project setup, verify that:
 
@@ -110,7 +112,7 @@ At minimum, review and update:
 - open decisions
 - relevant documents
 - Collaboration Model version
-- AGIT Project Template version
+- AGIT Dev Template version
 
 Keep this document concise. Its purpose is to help a maintainer, contributor or AI assistant quickly understand where the project stands today.
 
@@ -186,7 +188,7 @@ Review `ChatGPT.md`.
 
 The file should usually be kept unchanged unless the derived project has a specific reason to adjust the Collaboration Model.
 
-If the AGIT Project Template contains a newer version of the Collaboration Model, prefer adopting the newer version.
+If the AGIT Dev Template contains a newer version of the Collaboration Model, prefer adopting the newer version.
 
 ---
 
@@ -290,7 +292,7 @@ chore: initialize project from AGIT template
 Example description:
 
 ```text
-Initialize the project from the AGIT Project Template.
+Initialize the project from the AGIT Dev Template.
 
 Review and adapt the README files, core project documents and repository
 metadata for the new project. Capture maintainer project intent and establish
@@ -347,12 +349,12 @@ When working with AI assistance:
 
 # 18. Retrospectives and Template Feedback
 
-During project work, collect findings that may improve the AGIT Project Template.
+During project work, collect findings that may improve the AGIT Dev Template or the generic AGIT Project Template.
 
 Template changes should not be made casually during normal project work. Instead, review collected findings in a retrospective.
 
 Retrospectives normally take place at the end of a project, but they may also be held during a project when enough practical experience has accumulated.
 
-Only changes that have proven useful in real project work should be considered for inclusion in the AGIT Project Template.
+Only changes that have proven useful in real project work should be considered for inclusion in the AGIT Dev Template.
 
 When a retrospective changes core process guidance, update all affected template documents consistently instead of appending isolated notes.

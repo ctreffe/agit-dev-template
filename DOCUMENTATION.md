@@ -2,7 +2,7 @@
 
 # Documentation Standards
 
-This document describes documentation standards used by the AGIT Project Template.
+This document describes documentation standards used by the AGIT Dev Template.
 
 Documentation is treated as part of the software. It should be maintained with the same care as implementation code.
 

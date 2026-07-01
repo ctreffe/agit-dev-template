@@ -1,27 +1,29 @@
-# AGIT Project Template
+# AGIT Dev Template
 
-![License](https://img.shields.io/github/license/ctreffe/agit-project-template)
-![Release](https://img.shields.io/github/v/tag/ctreffe/agit-project-template)
-![Last Commit](https://img.shields.io/github/last-commit/ctreffe/agit-project-template)
+![License](https://img.shields.io/github/license/ctreffe/agit-dev-template)
+![Release](https://img.shields.io/github/v/tag/ctreffe/agit-dev-template)
+![Last Commit](https://img.shields.io/github/last-commit/ctreffe/agit-dev-template)
 
 [Deutsche Dokumentation](README.de.md)
 
 > [!NOTE]
 > **AI Collaboration**
 >
-> This repository maintains the AGIT Collaboration Model.
+> This repository maintains the AGIT Dev Template.
 >
-> The Collaboration Model documents engineering practices, collaboration workflows and repository conventions used across AGIT projects.
+> The AGIT Dev Template is the development-oriented specialization of the generic AGIT Project Template.
 >
-> It is maintained in [ChatGPT.md](ChatGPT.md).
+> Its collaboration model is maintained in [ChatGPT.md](ChatGPT.md).
 
 ## Overview
 
-The AGIT Project Template is the starting point for new AGIT software projects.
+The AGIT Dev Template is the starting point for development-oriented AGIT projects.
 
-It provides a reusable repository foundation for documentation, collaboration, project context, repository standards and retrospective-driven process improvement.
+It provides a reusable repository foundation for projects involving code, scripts, automation, technical documentation, validation, releases, repository standards and retrospective-driven process improvement.
 
-This repository is not a code framework. It is an engineering template.
+This repository is not a code framework. It is a development project template.
+
+The AGIT Dev Template builds on the generic AGIT Project Template. Use the generic template for non-development projects, and use this template when software, scripts, automation, validation, technical architecture or release workflows are central to the project.
 
 ## What the Template Provides
 
@@ -108,7 +110,7 @@ After the initial setup is complete, these documents may be removed from the der
 
 ## Continuous Improvement
 
-The AGIT Project Template evolves through project retrospectives.
+The AGIT Dev Template evolves through project retrospectives.
 
 Retrospectives normally take place at the end of a project, but they may also be held during a project when enough practical findings have accumulated.
 
