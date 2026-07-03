@@ -112,7 +112,7 @@ Unrelated changes should be split into separate commits whenever practical.
 
 Feature commits implement or improve a specific logical step.
 
-They may use conventional prefixes such as:
+Regular working commits must use Conventional Commit prefixes such as:
 
 ```text
 feat:
@@ -120,6 +120,17 @@ fix:
 docs:
 chore:
 refactor:
+test:
+ci:
+build:
+```
+
+Choose the prefix that matches the actual change. Documentation-only changes should normally use `docs:`.
+
+Milestone commits are the exception. A milestone commit should not use a Conventional Commit prefix. It should use a human-readable summary that includes the completed version number, for example:
+
+```text
+Finalize proof-of-concept milestone (v0.3.0)
 ```
 
 Milestone commits finalize a completed roadmap milestone.
@@ -313,5 +324,7 @@ The following documents usually remain part of the derived project:
 - `CODEX.md` when Codex is used for local project work
 - `PHILOSOPHY.md`
 - `LICENSE`
+
+
 
 

@@ -281,7 +281,7 @@ Do not increase the version merely because a milestone begins. Increase version 
 
 The first project-specific commit should describe the repository initialization.
 
-Use a concise summary and a meaningful description.
+Use a concise summary and a meaningful description. Regular working commits must use Conventional Commit prefixes. Milestone commits are the exception: they should be human-readable, omit the prefix and include the completed version number.
 
 Example summary:
 
@@ -361,5 +361,7 @@ Retrospectives normally take place at the end of a project, but they may also be
 Only changes that have proven useful in real project work should be considered for inclusion in the AGIT Dev Template.
 
 When a retrospective changes core process guidance, update all affected template documents consistently instead of appending isolated notes.
+
+
 
 

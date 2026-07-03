@@ -575,7 +575,7 @@ Unrelated changes should be split into separate commits whenever practical.
 
 Feature commits implement or improve a specific logical step.
 
-They may use conventional prefixes such as:
+Regular working commits must use Conventional Commit prefixes such as:
 
 ```text
 feat:
@@ -583,17 +583,18 @@ fix:
 docs:
 chore:
 refactor:
+test:
+ci:
+build:
 ```
 
-The prefix should match the actual change.
+The prefix should match the actual change. Documentation-only changes should normally use `docs:`.
 
 ## Milestone Commits
 
 Milestone commits finalize a completed roadmap milestone.
 
-They are separate from feature commits. They usually update version metadata, changelog entries, project context and documentation that summarizes the completed milestone.
-
-Milestone commits may use human-readable summaries without conventional prefixes, for example:
+They are separate from feature commits. Milestone commits should not use a Conventional Commit prefix. They should use human-readable summaries that include the completed version number, for example:
 
 ```text
 Finalize proof-of-concept milestone (v0.3.0)
@@ -801,3 +802,5 @@ default permission to stage, commit, tag, push or otherwise perform Git history
 actions.
 
 Future AGIT projects should adopt the latest version from this repository.
+
+

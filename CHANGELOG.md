@@ -14,6 +14,7 @@ This project follows Semantic Versioning.
 
 - Clarify that template-only setup files may be removed or retained after initialization depending on project needs.
 - Clarify that retained initialization files should keep their original names and may document setup status internally or in `PROJECT_CONTEXT.md`.
+- Clarify that regular working commits must use Conventional Commit prefixes while milestone commits should omit prefixes and include the completed version number.
 
 ## [v1.1.2] - 2026-07-02
 
@@ -261,5 +262,6 @@ This project follows Semantic Versioning.
 - Add German README translation.
 - Define the initial scope of the AGIT Project Template.
 - Add initial project version metadata.
+
 
 
