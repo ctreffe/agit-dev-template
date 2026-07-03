@@ -1,4 +1,4 @@
-# DOCUMENTATION.md
+﻿# DOCUMENTATION.md
 
 # Documentation Standards
 
@@ -254,3 +254,5 @@ Do create documentation when it improves:
 - decision traceability
 - release confidence
 - the ability to resume work later
+
+

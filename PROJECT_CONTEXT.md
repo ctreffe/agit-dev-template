@@ -1,4 +1,4 @@
-# PROJECT_CONTEXT.md
+﻿# PROJECT_CONTEXT.md
 
 # Project Context Template
 
@@ -181,6 +181,7 @@ Include validated negative findings here when they affect future work.
 Use this section as a navigation aid.
 
 - `README.md` — project overview and user-facing entry point
+- `INITIAL_PROMPT.md` — first prompt for reproducible project initialization, if kept after setup
 - `CHANGELOG.md` — version history
 - `PHILOSOPHY.md` — shared AGIT engineering philosophy
 - `ChatGPT.md` — AGIT Collaboration Model
@@ -216,6 +217,7 @@ Current collaboration notes:
 - Integrity has priority over apparent helpfulness: artifacts must exist before they are reported as delivered.
 - Capability limitations should be stated directly instead of hidden behind simulated completion.
 - Required template artifacts such as the AI Collaboration Note should remain visible and factually accurate unless intentionally modified.
+- Template-only initialization files may be removed or retained after setup depending on project needs; retained files should keep their original names.
 - If Codex is used locally, `CODEX.md` defines the local operating policy.
 - Long-running sessions should update `PROJECT_CONTEXT.md` before context exhaustion becomes likely.
 - When a change is approaching commit readiness, the assistant should provide concise numbered next steps for decisions, validation, review and commit actions whenever practical.
@@ -252,3 +254,5 @@ Examples:
 ```text
 <notes>
 ```
+
+

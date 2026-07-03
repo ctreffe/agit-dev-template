@@ -1,4 +1,4 @@
-# REPOSITORY.md
+﻿# REPOSITORY.md
 
 # Repository Standards
 
@@ -313,3 +313,5 @@ The following documents usually remain part of the derived project:
 - `CODEX.md` when Codex is used for local project work
 - `PHILOSOPHY.md`
 - `LICENSE`
+
+

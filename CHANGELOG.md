@@ -1,10 +1,19 @@
-# Changelog
+﻿# Changelog
 
 All notable changes to this project will be documented in this file.
 
 This project follows Semantic Versioning.
 
 ## [Unreleased]
+
+### Added
+
+- Add `INITIAL_PROMPT.md` as a reproducible first-session prompt for derived project initialization.
+
+### Changed
+
+- Clarify that template-only setup files may be removed or retained after initialization depending on project needs.
+- Clarify that retained initialization files should keep their original names and may document setup status internally or in `PROJECT_CONTEXT.md`.
 
 ## [v1.1.2] - 2026-07-02
 
@@ -252,3 +261,5 @@ This project follows Semantic Versioning.
 - Add German README translation.
 - Define the initial scope of the AGIT Project Template.
 - Add initial project version metadata.
+
+

@@ -1,4 +1,4 @@
-# AGIT Dev Template
+﻿# AGIT Dev Template
 
 ![License](https://img.shields.io/github/license/ctreffe/agit-dev-template)
 ![Release](https://img.shields.io/github/v/tag/ctreffe/agit-dev-template)
@@ -31,6 +31,7 @@ The template defines:
 
 - a collaboration model for AI-assisted software development
 - a local Codex operating policy
+- an initial prompt for reproducible project setup
 - a current-state project context document
 - maintainer-owned project intent and target-state guidance
 - roadmap-first milestone guidance
@@ -82,7 +83,7 @@ Explicit requests such as "create the commit" mean that the requested repository
 8. Establish the initial roadmap from the maintainer intent and record it in `PROJECT_CONTEXT.md` or a dedicated roadmap document.
 9. Review the core project documents.
 10. Review `CODEX.md` if Codex will be used for local project work.
-11. Remove template-only setup documents when the project setup is complete.
+11. Review template-only setup documents and decide whether to remove or retain them.
 12. Continue development according to `ChatGPT.md`.
 
 ## Documents That Usually Remain
@@ -103,10 +104,11 @@ The following documents usually remain part of a derived project:
 The following documents primarily support project initialization:
 
 - `PROJECT_SETUP.md`
+- `INITIAL_PROMPT.md`
 - `DOCUMENTATION.md`
 - `REPOSITORY.md`
 
-After the initial setup is complete, these documents may be removed from the derived project unless they remain useful there.
+After the initial setup is complete, these documents may be removed from the derived project unless they remain useful there. They may also be retained for onboarding, traceability or future re-initialization. If retained, keep their original names and optionally document their setup status inside the file or in `PROJECT_CONTEXT.md`.
 
 ## Continuous Improvement
 
@@ -118,8 +120,9 @@ Template changes should be made only as part of such a retrospective. When a ret
 
 ## Core Template Documents
 
-- [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) – current project state and primary re-entry point
+- [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) - project context template and derived-project re-entry point
 - [PROJECT_SETUP.md](PROJECT_SETUP.md) – initial setup guide for new projects
+- [INITIAL_PROMPT.md](INITIAL_PROMPT.md) – first prompt for reproducible project initialization
 - [ChatGPT.md](ChatGPT.md) – Collaboration Model
 - [CODEX.md](CODEX.md) – local Codex operating policy
 - [PHILOSOPHY.md](PHILOSOPHY.md) – project philosophy
@@ -132,3 +135,7 @@ Template changes should be made only as part of such a retrospective. When a ret
 ## License
 
 This project is licensed under the MIT License.
+
+
+
+

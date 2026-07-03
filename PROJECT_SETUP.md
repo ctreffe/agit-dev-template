@@ -1,10 +1,10 @@
-# PROJECT_SETUP.md
+﻿# PROJECT_SETUP.md
 
 # Project Setup Guide
 
 This document describes how to initialize a new project from the AGIT Dev Template.
 
-It is primarily useful during project creation. Many derived projects may remove this file after setup is complete.
+It is primarily useful during project creation. Derived projects may remove it after setup when it is no longer useful, or retain it for onboarding, traceability or future re-initialization.
 
 Use this template for development-oriented AGIT projects. For general non-development projects, start from the generic AGIT Project Template instead.
 
@@ -20,7 +20,7 @@ After creating the repository, establish the first working baseline:
 - use the public repository `main` branch if it is accessible and intended as the source of truth, or
 - download the repository as a ZIP archive and use that ZIP as the working baseline.
 
-When using AI assistance, make the baseline explicit before requesting repository-ready changes.
+When using AI assistance, make the baseline explicit before requesting repository-ready changes. Begin the first assistant session with `INITIAL_PROMPT.md` when practical.
 
 ---
 
@@ -302,17 +302,20 @@ sessions.
 
 ---
 
-# 16. Remove Template-Only Setup Files
+# 16. Review Template-Only Setup Files
 
-After completing setup, remove the files that are no longer needed:
+After completing setup, decide whether to remove or retain files that are primarily useful during initialization:
 
 - `PROJECT_SETUP.md`
+- `INITIAL_PROMPT.md`
 - `DOCUMENTATION.md`
 - `REPOSITORY.md`
 
-Remove template-only setup files in a dedicated commit.
+Remove them when they are no longer useful and would only add noise.
 
-This keeps project history clear by showing when the initial setup was completed.
+Retain them when they help with onboarding, traceability, future re-initialization or project governance.
+
+If retained, do not rename them. Optionally add a short setup status note inside the retained file or record the decision in `PROJECT_CONTEXT.md`.
 
 `PROJECT_CONTEXT.md` should remain because it documents the current project state and supports future project resumption.
 
@@ -358,3 +361,5 @@ Retrospectives normally take place at the end of a project, but they may also be
 Only changes that have proven useful in real project work should be considered for inclusion in the AGIT Dev Template.
 
 When a retrospective changes core process guidance, update all affected template documents consistently instead of appending isolated notes.
+
+
