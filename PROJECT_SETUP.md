@@ -1,4 +1,4 @@
-﻿# PROJECT_SETUP.md
+# PROJECT_SETUP.md
 
 # Project Setup Guide
 
@@ -86,6 +86,7 @@ At minimum, clarify:
 - the intended users, maintainers or operating environment
 - the desired end state
 - important boundaries, risks and intentional non-goals
+- private input, fixture, dump, log, screenshot or generated-artifact handling
 - how these points shape the first roadmap milestones
 
 The roadmap should be derived from this intent instead of from isolated technical ideas.
@@ -336,7 +337,7 @@ When working with AI assistance:
 - establish or review the current roadmap
 - agree on the next roadmap step
 - implement small changes
-- check whether important architecture, configuration-format, lifecycle, deployment or security decisions need an ADR
+- check whether important architecture, configuration-format, lifecycle, deployment, security, sensitive-input, fixture-versioning or generated-artifact decisions need an ADR
 - keep user-facing setup, usage, reference and troubleshooting documentation aligned with behavior
 - validate before commit whenever practical
 - use small implement-validate-adjust-prepare loops during active milestones
@@ -346,6 +347,7 @@ When working with AI assistance:
 - keep feature commits separate from milestone commits
 - document assistant-written code well enough that maintainers and future contributors can understand it without chat history
 - tag meaningful completed milestones intentionally
+- update `PROJECT_CONTEXT.md` after a milestone commit or tag exists if the previous context described a pre-commit or pre-tag state
 - expect numbered maintainer next steps when validation, review, commit or tag actions are needed
 
 ---
@@ -361,7 +363,3 @@ Retrospectives normally take place at the end of a project, but they may also be
 Only changes that have proven useful in real project work should be considered for inclusion in the AGIT Dev Template.
 
 When a retrospective changes core process guidance, update all affected template documents consistently instead of appending isolated notes.
-
-
-
-

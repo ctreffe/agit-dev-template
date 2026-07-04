@@ -37,6 +37,8 @@ operating context, desired end state, intended users or maintainers,
 boundaries, non-goals, first roadmap milestones, validation expectations,
 repository metadata and any project-specific collaboration constraints.
 
+Before reading raw private, confidential or personal development material such as `.env` files, logs, dumps, API responses, screenshots or customer data, inventory it at the metadata level and ask whether direct inspection is allowed or whether a sanitized derivative should be used.
+
 Do not invent the project intent, roadmap, architecture, validation status or
 repository direction. You may ask clarifying questions, point out gaps and give
 feedback on structure, consistency, scope and feasibility, but I remain in

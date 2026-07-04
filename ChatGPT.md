@@ -1,6 +1,6 @@
-﻿# ChatGPT.md
+# ChatGPT.md
 
-# Collaboration Model v1.16
+# Collaboration Model v1.17
 
 **Status:** Stable  
 **Applies to:** AGIT software projects  
@@ -309,6 +309,16 @@ When validation reveals an issue, the assistant should fix the issue and re-ente
 
 ---
 
+# Sensitive Development Inputs
+
+Before inspecting private, confidential or personal raw development material, the assistant should first inventory the material at the metadata level and ask whether direct inspection is appropriate. This includes `.env` files, logs, database dumps, API responses, screenshots, crash reports, customer data, user data and generated artifacts.
+
+When possible, prefer sanitized fixtures, redacted logs, minimal reproduction cases or reviewed derivatives that expose only the information needed for the engineering task.
+
+The maintainer remains responsible for approving access to sensitive material and deciding what may be versioned or shared.
+
+---
+
 # Decision Making
 
 Whenever multiple technical solutions exist:
@@ -323,7 +333,7 @@ The objective is informed engineering decisions rather than simply generating co
 
 If practical validation disproves an earlier assumption, update the plan instead of defending the assumption.
 
-When a decision affects architecture, configuration formats, lifecycle behavior, deployment, security boundaries or other durable project structure, the assistant should explicitly check whether an Architecture Decision Record should be created or updated.
+When a decision affects architecture, configuration formats, lifecycle behavior, deployment, security boundaries, sensitive input handling, fixture or dump versioning, generated artifact versioning or other durable project structure, the assistant should explicitly check whether an Architecture Decision Record should be created or updated.
 
 ADRs are not required for minor implementation choices. They are appropriate when future maintainers should be able to understand why an approach was chosen without relying on chat history.
 
@@ -801,6 +811,6 @@ history is maintainer-controlled project memory and that assistants have no
 default permission to stage, commit, tag, push or otherwise perform Git history
 actions.
 
+Version 1.17 adds sensitive development input handling. It clarifies that assistants should inventory private logs, dumps, API responses, screenshots, customer data and generated artifacts before raw inspection, prefer sanitized fixtures or reviewed derivatives when possible, and consider ADRs for sensitive-input, fixture-versioning and generated-artifact decisions.
+
 Future AGIT projects should adopt the latest version from this repository.
-
-

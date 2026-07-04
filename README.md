@@ -1,4 +1,4 @@
-﻿# AGIT Dev Template
+# AGIT Dev Template
 
 ![License](https://img.shields.io/github/license/ctreffe/agit-dev-template)
 ![Release](https://img.shields.io/github/v/tag/ctreffe/agit-dev-template)
@@ -36,6 +36,7 @@ The template defines:
 - maintainer-owned project intent and target-state guidance
 - roadmap-first milestone guidance
 - documentation and repository standards for maintainers, contributors and users
+- guidance for sensitive local inputs, sanitized fixtures and generated artifacts
 - a shared engineering philosophy
 - versioning and release guidance
 - a retrospective process for improving the template from real project experience
@@ -135,7 +136,3 @@ Template changes should be made only as part of such a retrospective. When a ret
 ## License
 
 This project is licensed under the MIT License.
-
-
-
-

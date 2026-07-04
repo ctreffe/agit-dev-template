@@ -1,4 +1,4 @@
-﻿# PROJECT_CONTEXT.md
+# PROJECT_CONTEXT.md
 
 # Project Context Template
 
@@ -229,9 +229,10 @@ Current collaboration notes:
 - User-facing documentation should explain setup, configuration, productive usage, reference surfaces and troubleshooting where relevant.
 - Substantial modules, integrations or workflows should use dedicated documentation instead of overloading the README.
 - Substantial production components should include a demonstration, example configuration or validation path when applicable.
-- Before preparing a milestone commit, documentation should be checked for version, status, roadmap, changelog, README, dedicated-documentation links, setup guidance and validation freshness.
+- Before preparing a milestone commit, documentation should be checked for version, status, roadmap, changelog, README, dedicated-documentation links, setup guidance, validation freshness and sensitive input or generated artifact handling.
 - When validation requires maintainer-local or elevated execution, the assistant should provide exact steps, interpret the output and document relevant validation results.
 - Feature commits and milestone commits should remain separate.
+- After a milestone commit or tag exists, `PROJECT_CONTEXT.md` should be updated if it still describes pre-commit or pre-tag review work as the current focus.
 - Git history actions are maintainer-controlled. Assistants may prepare changes and commit metadata, but must not stage, commit, tag or push without explicit maintainer instruction for that specific action.
 - Validation should happen before declaring a step complete.
 
@@ -254,5 +255,3 @@ Examples:
 ```text
 <notes>
 ```
-
-

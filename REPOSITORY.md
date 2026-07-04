@@ -1,4 +1,4 @@
-﻿# REPOSITORY.md
+# REPOSITORY.md
 
 # Repository Standards
 
@@ -105,6 +105,20 @@ Commit descriptions should not repeat unrelated project history or describe futu
 Each commit should represent one logical engineering step.
 
 Unrelated changes should be split into separate commits whenever practical.
+
+---
+
+# Raw Inputs, Sanitized Fixtures and Generated Artifacts
+
+Development repositories should distinguish raw local inputs, sanitized fixtures and generated artifacts.
+
+Raw local inputs include `.env` files, logs, database dumps, API responses, screenshots, crash reports and customer or user data. They may be private, confidential or personal. Assistants should not inspect such material by default; first document the inventory and ask whether raw inspection is appropriate.
+
+Sanitized fixtures or reviewed derivatives are preferred when they can reproduce behavior without exposing sensitive material.
+
+Generated artifacts should be clearly treated as outputs. Document whether they are versioned review artifacts, release artifacts or regenerated locally.
+
+`.gitignore` rules and documentation should be updated together when private local inputs or generated artifacts are required.
 
 ---
 
@@ -219,6 +233,7 @@ A typical milestone closure includes:
 - updating `PROJECT_CONTEXT.md`
 - updating README files, reference documentation or milestone documentation when user-facing status, setup, usage or configuration changes
 - preparing a milestone commit with summary and description
+- refreshing `PROJECT_CONTEXT.md` after the commit or tag exists if it previously described a pre-commit or pre-tag state
 - creating a version tag when the commit represents a meaningful completed state
 
 Feature work should not be hidden inside a milestone commit. A milestone commit should primarily record and summarize an already validated milestone.
@@ -324,7 +339,3 @@ The following documents usually remain part of the derived project:
 - `CODEX.md` when Codex is used for local project work
 - `PHILOSOPHY.md`
 - `LICENSE`
-
-
-
-

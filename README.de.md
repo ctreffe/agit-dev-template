@@ -35,6 +35,7 @@ Das Template definiert:
 - Guidance für Maintainer-Projektintent und Zielbild
 - roadmap-first Meilenstein-Guidance
 - Dokumentations- und Repository-Standards für Maintainer, Mitwirkende und Nutzer:innen
+- Guidance für sensible lokale Inputs, anonymisierte Fixtures und generierte Artefakte
 - eine gemeinsame Engineering-Philosophie
 - Versions- und Release-Regeln
 - einen Retrospektivenprozess zur Weiterentwicklung des Templates aus realer Projekterfahrung

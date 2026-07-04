@@ -1,4 +1,4 @@
-﻿# Changelog
+# Changelog
 
 All notable changes to this project will be documented in this file.
 
@@ -12,6 +12,10 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Upgrade the Collaboration Model to v1.17.
+- Add guidance for sensitive local input handling, sanitized fixtures, generated artifacts and review checks based on access-plan project retrospection.
+- Expand ADR checkpoint guidance for sensitive-input, fixture-versioning and generated-artifact decisions.
+- Clarify that project context should be refreshed after milestone commits or tags when pre-commit status remains documented.
 - Clarify that template-only setup files may be removed or retained after initialization depending on project needs.
 - Clarify that retained initialization files should keep their original names and may document setup status internally or in `PROJECT_CONTEXT.md`.
 - Clarify that regular working commits must use Conventional Commit prefixes while milestone commits should omit prefixes and include the completed version number.
@@ -262,6 +266,3 @@ This project follows Semantic Versioning.
 - Add German README translation.
 - Define the initial scope of the AGIT Project Template.
 - Add initial project version metadata.
-
-
-
