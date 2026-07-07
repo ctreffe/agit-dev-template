@@ -63,10 +63,13 @@ The note is a standardized disclosure artifact. It should preserve the purpose, 
 
 For the AGIT Dev Template itself, the note states that the repository maintains the AGIT Dev Template. For derived projects, adapt that project-specific sentence so it accurately describes the collaboration in the derived repository, while still pointing readers to `ChatGPT.md`.
 
+The derived note should also include one concrete sentence describing what the collaboration model documents in the project, such as engineering practices, collaboration workflows, validation expectations, handoff rules or repository conventions.
+
 Before completing project setup, verify that:
 
 - `README.md` contains an English AI Collaboration Note below the badges
 - `README.de.md`, if kept, contains a German AI Collaboration Note below the badges
+- the note describes what the collaboration model documents for the derived project
 - both notes point to `ChatGPT.md`
 - no generated project update has replaced the note with a shortened variant
 

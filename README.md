@@ -13,6 +13,8 @@
 >
 > The AGIT Dev Template is the development-oriented specialization of the generic AGIT Project Template.
 >
+> The collaboration model documents engineering practices, AI-assisted development workflows and repository conventions used by development-oriented AGIT projects.
+>
 > Its collaboration model is maintained in [ChatGPT.md](ChatGPT.md).
 
 ## Overview

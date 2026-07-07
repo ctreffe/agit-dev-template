@@ -12,6 +12,8 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Clarify the AI Collaboration Note with an explicit sentence about documented engineering practices, AI-assisted workflows and repository conventions.
+- Strengthen setup guidance so derived projects preserve a concrete, project-specific AI Collaboration Note linked to `ChatGPT.md`.
 - Upgrade the Collaboration Model to v1.17.
 - Add guidance for sensitive local input handling, sanitized fixtures, generated artifacts and review checks based on access-plan project retrospection.
 - Expand ADR checkpoint guidance for sensitive-input, fixture-versioning and generated-artifact decisions.

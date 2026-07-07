@@ -13,6 +13,8 @@
 >
 > Das AGIT Dev Template ist die entwicklungsorientierte Spezialisierung des generischen AGIT Project Template.
 >
+> Das Collaboration Model dokumentiert Engineering-Praktiken, KI-gestuetzte Entwicklungsworkflows und Repository-Konventionen fuer entwicklungsorientierte AGIT-Projekte.
+>
 > Das Collaboration Model wird in [ChatGPT.md](ChatGPT.md) gepflegt.
 
 ## Überblick
