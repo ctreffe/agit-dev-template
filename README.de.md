@@ -13,7 +13,7 @@
 >
 > Das AGIT Dev Template ist die entwicklungsorientierte Spezialisierung des generischen AGIT Project Template.
 >
-> Das Collaboration Model dokumentiert Engineering-Praktiken, KI-gestuetzte Entwicklungsworkflows und Repository-Konventionen fuer entwicklungsorientierte AGIT-Projekte.
+> Das Collaboration Model dokumentiert Engineering-Praktiken, KI-gestützte Entwicklungsworkflows und Repository-Konventionen für entwicklungsorientierte AGIT-Projekte.
 >
 > Das Collaboration Model wird in [ChatGPT.md](ChatGPT.md) gepflegt.
 
@@ -26,6 +26,16 @@ Es stellt eine wiederverwendbare Repository-Grundlage für Projekte mit Code, Sk
 Dieses Repository ist kein Code-Framework. Es ist ein Entwicklungsprojekt-Template.
 
 Das AGIT Dev Template baut auf dem generischen [AGIT Project Template](https://github.com/ctreffe/agit-project-template) auf. Für nicht entwicklungsorientierte Projekte sollte das generische Template verwendet werden; dieses Template ist für Projekte gedacht, in denen Software, Skripte, Automatisierung, Validierung, technische Architektur oder Release-Workflows zentral sind.
+
+## AGIT Templateverse
+
+Die öffentlichen AGIT Templates bilden ein kleines Templateverse: eine Familie zusammenhängender Templates, die ein repository-first, maintainer-geführtes Modell für Human-AI Collaboration teilen und für unterschiedliche Projekttypen spezialisieren.
+
+- [AGIT Project Template](https://github.com/ctreffe/agit-project-template) ist der generische Startpunkt für strukturierte Projektarbeit, Recherche, Planung, Konzeptarbeit, Prozessgestaltung und gemischte Projekte.
+- [AGIT Dev Template](https://github.com/ctreffe/agit-dev-template) ist für entwicklungsorientierte Projekte gedacht, in denen Code, Skripte, Automatisierung, Validierung, Architektur oder Release-Workflows zentral sind.
+- [AGIT Documentation Template](https://github.com/ctreffe/agit-docs-template) ist für technische Dokumentationsprojekte gedacht, etwa Benutzerhandbücher, Admin-Guides, Betriebsanweisungen, Tutorials, Migrationsguides und Dokumentationssites.
+
+Das Dev Template passt, wenn Implementierungslebenszyklus, Validierung und Release-Disziplin von Anfang an Teil des Projekts sind. Das generische Project Template passt, wenn diese Anforderungen erst später entstehen können.
 
 ## Was das Template bereitstellt
 

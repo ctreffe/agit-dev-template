@@ -9,6 +9,7 @@ This project follows Semantic Versioning.
 ### Added
 
 - Add `INITIAL_PROMPT.md` as a reproducible first-session prompt for derived project initialization.
+- Add an AGIT Templateverse section to the English and German READMEs.
 
 ### Changed
 

@@ -27,6 +27,16 @@ This repository is not a code framework. It is a development project template.
 
 The AGIT Dev Template builds on the generic [AGIT Project Template](https://github.com/ctreffe/agit-project-template). Use the generic template for non-development projects, and use this template when software, scripts, automation, validation, technical architecture or release workflows are central to the project.
 
+## AGIT Templateverse
+
+The public AGIT templates form a small templateverse: a family of related templates that share a repository-first, maintainer-led Human-AI collaboration model while specializing it for different project types.
+
+- [AGIT Project Template](https://github.com/ctreffe/agit-project-template) is the generic starting point for structured project work, research, planning, concept work, process design and mixed projects.
+- [AGIT Dev Template](https://github.com/ctreffe/agit-dev-template) is for development-oriented projects where code, scripts, automation, validation, architecture or release workflows are central.
+- [AGIT Documentation Template](https://github.com/ctreffe/agit-docs-template) is for technical documentation projects such as user guides, admin guides, operating procedures, tutorials, migration guides and documentation sites.
+
+Start from the Dev Template when implementation lifecycle, validation and release discipline are part of the project from the beginning. Start from the generic Project Template when those needs may emerge later.
+
 ## What the Template Provides
 
 The template defines:
