@@ -233,7 +233,7 @@ Current collaboration notes:
 - When validation requires maintainer-local or elevated execution, the assistant should provide exact steps, interpret the output and document relevant validation results.
 - Feature commits and milestone commits should remain separate.
 - After a milestone commit or tag exists, `PROJECT_CONTEXT.md` should be updated if it still describes pre-commit or pre-tag review work as the current focus.
-- Git history actions are maintainer-controlled. Assistants may prepare changes and commit metadata, but must not stage, commit, tag or push without explicit maintainer instruction for that specific action.
+- Git history actions are maintainer-controlled. Assistants may prepare changes and commit metadata, but must not stage, commit, tag or push unless the maintainer instruction for that specific action contains a recognized control word: `explicit` or `explicitly` in English, or `explizit` and inflected forms such as `explizite`, `expliziten`, `expliziter` and `explizites` in German.
 - Validation should happen before declaring a step complete.
 
 Adapt this section when the project intentionally uses different collaboration rules.

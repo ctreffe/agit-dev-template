@@ -50,8 +50,10 @@ The maintainer decides what to stage, commit, tag, push or discard.
 Codex has no default permission to perform Git history actions. File-edit
 approval, tool approval or approval to prepare a commit-ready change does not
 authorize staging, committing, tagging, pushing or any other Git history action.
-Each such action requires an explicit maintainer instruction for that specific
-action.
+Each such action requires a maintainer instruction for that specific action that
+uses a recognized control word: `explicit` or `explicitly` in English, or the
+German word family `explizit`, including `explizite`, `expliziten`, `expliziter`
+and `explizites`.
 
 ---
 
@@ -78,8 +80,9 @@ Codex should report important command results that affect the conclusion of the 
 
 # Read-Only Git Usage
 
-Codex may use Git only for read-only inspection unless the maintainer explicitly
-instructs Codex to perform a specific Git history action.
+Codex may use Git only for read-only inspection unless the maintainer instructs
+Codex to perform a specific Git history action and uses a recognized control
+word.
 
 Allowed read-only Git commands include:
 
@@ -168,7 +171,7 @@ If data disclosure is possible, Codex should state that before using the externa
 
 # Forbidden by Default
 
-Codex must not perform the following actions unless the maintainer explicitly overrides the policy for a specific task:
+Codex must not perform the following actions unless the maintainer overrides the policy for a specific task with a recognized control word:
 
 - Git history actions
 - staging, committing, tagging, branching, pushing or pulling

@@ -81,7 +81,13 @@ Der bevorzugte Ablauf ist:
 9. Validierten Schritt committen.
 10. Meilensteine getrennt von Feature-Arbeit abschließen.
 
-Explizite Aufforderungen wie „erstelle den Commit“ bedeuten, dass das angeforderte repository-ready Ergebnis erzeugt und nicht nur beschrieben werden soll. Artefaktintegrität ist Teil des Workflows: lokale Arbeitsbaumänderungen, erzeugte Archive, Commits und Repository-Aktualisierungen müssen tatsächlich existieren, bevor sie als abgeschlossen gemeldet werden.
+Aufforderungen wie „erstelle den Commit“ bedeuten, dass das angeforderte repository-ready Ergebnis vorbereitet und nicht nur beschrieben werden soll. Sie erlauben dem Assistant keine Git-History-Befehle, sofern die Anfrage kein anerkanntes Kontrollwort enthält. Artefaktintegrität ist Teil des Workflows: lokale Arbeitsbaumänderungen, erzeugte Archive und vorbereitete Repository-Aktualisierungen müssen tatsächlich existieren, bevor sie als abgeschlossen gemeldet werden.
+
+## Kontrollwörter für Git-History-Aktionen
+
+AI Assistants dürfen Git-History-Aktionen wie Staging, Commit, Tag, Push, Pull, Merge, Rebase, Reset oder Branch-Wechsel nur ausführen, wenn die Maintainer-Anweisung für genau diese Aktion ein anerkanntes Kontrollwort enthält.
+
+Anerkannte Kontrollwörter sind `explicit` und `explicitly` in englischsprachigen Anweisungen sowie die deutsche Wortfamilie `explizit`, einschließlich gebeugter Formen wie `explizite`, `expliziten`, `expliziter` und `explizites`, in deutschsprachigen Anweisungen. Anfragen ohne eines dieser Kontrollwörter erlauben nur Vorbereitung und Anleitung.
 
 ## Verwendung des Templates
 

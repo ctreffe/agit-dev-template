@@ -158,7 +158,8 @@ Implement -> Validate -> Adjust -> Prepare commit -> Continue
 A feature commit should represent a validated logical step. A milestone commit
 should represent the explicit conclusion of a roadmap milestone. The maintainer
 controls when these commits are actually created unless the maintainer gives an
-explicit instruction for the assistant to perform a specific Git history action.
+instruction with a recognized control word for the assistant to perform a
+specific Git history action.
 
 ---
 
@@ -185,13 +186,20 @@ may prepare file changes, propose commit boundaries and suggest commit summaries
 and descriptions.
 
 The assistant must not perform Git history actions unless the maintainer
-explicitly instructs the assistant to perform that specific action.
+instructs the assistant to perform that specific action and uses a recognized
+control word.
+
+Recognized control words are `explicit` and `explicitly` in English-language
+instructions, and the German word family `explizit`, including inflected forms
+such as `explizite`, `expliziten`, `expliziter` and `explizites`, in
+German-language instructions.
 
 Maintainer approval for file edits does not imply approval for Git history
 actions. A request to create, implement, build, organize, document or prepare a
 commit does not imply permission to run Git history commands. Approval for one
 class of Git history action does not imply approval for another; local commits,
-tags and pushes each require their own explicit maintainer instruction.
+tags and pushes each require their own maintainer instruction with a recognized
+control word.
 
 Repository history is maintainer-controlled project memory.
 
@@ -386,9 +394,9 @@ A request such as:
 Create the commit.
 ```
 
-only authorizes an actual Git commit when the maintainer explicitly asks the
-assistant to perform that Git history action. Otherwise, commit-related wording
-means:
+only authorizes an actual Git commit when the maintainer asks the assistant to
+perform that Git history action and uses a recognized control word. Otherwise,
+commit-related wording means:
 
 - modify the required files
 - perform consistency checks
@@ -556,7 +564,8 @@ The assistant should therefore avoid assuming command-line Git usage whenever pr
 The maintainer controls staging, commits, tags, pushes and other Git history
 actions by default. The assistant may inspect Git state and prepare
 repository-ready changes, but must not perform Git history actions unless the
-maintainer explicitly instructs the assistant to perform that specific action.
+maintainer instructs the assistant to perform that specific action with a
+recognized control word.
 
 ## Branching Strategy
 

@@ -82,7 +82,13 @@ The preferred workflow is:
 9. Commit the validated step.
 10. Finalize milestones separately from feature work.
 
-Explicit requests such as "create the commit" mean that the requested repository-ready result should be produced, not merely described. Artifact integrity is part of the workflow: local working tree changes, generated archives, commits and repository updates must actually exist before they are reported as complete.
+Requests such as "create the commit" mean that the requested repository-ready result should be produced, not merely described. They do not authorize the assistant to run Git history commands unless the request contains a recognized control word. Artifact integrity is part of the workflow: local working tree changes, generated archives and repository updates must actually exist before they are reported as complete.
+
+## Git History Control Words
+
+AI assistants must not perform Git history actions such as staging, committing, tagging, pushing, pulling, merging, rebasing, resetting or switching branches unless the maintainer instruction for that specific action contains a recognized control word.
+
+Recognized control words are `explicit` and `explicitly` in English-language instructions, and the German word family `explizit`, including inflected forms such as `explizite`, `expliziten`, `expliziter` and `explizites`, in German-language instructions. Requests without one of these control words authorize preparation and guidance only.
 
 ## How to Use This Template
 
