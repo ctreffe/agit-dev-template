@@ -340,7 +340,7 @@ When working with AI assistance:
 - establish or review the current roadmap
 - agree on the next roadmap step
 - implement small changes
-- check whether important architecture, configuration-format, lifecycle, deployment, security, sensitive-input, fixture-versioning or generated-artifact decisions need an ADR
+- check whether important architecture, configuration-format, lifecycle, deployment, security, sensitive-input, fixture-versioning, generated-artifact, project-scope or documentation decisions need a decision record in `decisions/`
 - keep user-facing setup, usage, reference and troubleshooting documentation aligned with behavior
 - validate before commit whenever practical
 - use small implement-validate-adjust-prepare loops during active milestones

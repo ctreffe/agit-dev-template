@@ -98,7 +98,7 @@ Every AGIT project should maintain `PROJECT_CONTEXT.md`.
 - collaboration notes
 - notes for the next session
 
-The document should describe the current state, not the full history. History belongs in `CHANGELOG.md`, ADRs or commit history.
+The document should describe the current state, not the full history. History belongs in `CHANGELOG.md`, decision records or commit history.
 
 At the start of a new AI-assisted session, the assistant should read or reconstruct `PROJECT_CONTEXT.md` before proposing implementation work.
 
@@ -333,9 +333,11 @@ The objective is informed engineering decisions rather than simply generating co
 
 If practical validation disproves an earlier assumption, update the plan instead of defending the assumption.
 
-When a decision affects architecture, configuration formats, lifecycle behavior, deployment, security boundaries, sensitive input handling, fixture or dump versioning, generated artifact versioning or other durable project structure, the assistant should explicitly check whether an Architecture Decision Record should be created or updated.
+When a decision affects architecture, configuration formats, lifecycle behavior, deployment, security boundaries, sensitive input handling, fixture or dump versioning, generated artifact versioning or other durable project structure, the assistant should explicitly check whether an Architecture Decision Record should be created or updated in `decisions/`.
 
-ADRs are not required for minor implementation choices. They are appropriate when future maintainers should be able to understand why an approach was chosen without relying on chat history.
+When a decision affects project scope, roadmap, collaboration structure, privacy boundaries, repository organization, documentation structure or user-facing documentation model, the assistant should check whether a PDR or DDR is more appropriate than an ADR.
+
+Decision records are not required for minor implementation choices. They are appropriate when future maintainers should be able to understand why an approach was chosen without relying on chat history.
 
 ---
 
@@ -665,7 +667,7 @@ Every document should have a clear role:
 - `CHANGELOG.md` records version history.
 - `ChatGPT.md` defines the collaboration model.
 - `PHILOSOPHY.md` defines engineering principles.
-- ADRs explain important architectural decisions and durable design reasoning, when used.
+- Decision records explain important decisions and durable reasoning, when used.
 
 Documentation should evolve together with implementation.
 

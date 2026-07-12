@@ -59,7 +59,7 @@ Every AGIT project should maintain `PROJECT_CONTEXT.md`.
 
 `PROJECT_CONTEXT.md` is the primary entry point for resuming a project. It captures the current project state, current focus, repository baseline, completed milestones, validation status, open decisions and relevant documentation links.
 
-The file does not replace the README, changelog, architecture documentation or ADRs. Instead, it helps readers understand where the project stands today and which documents are currently relevant.
+The file does not replace the README, changelog, architecture documentation or decision records. Instead, it helps readers understand where the project stands today and which documents are currently relevant.
 
 At project start, `PROJECT_CONTEXT.md` should also capture the maintainer's project intent: the problem context, desired end state, important boundaries and roadmap implications. This maintainer-owned context gives the roadmap direction before implementation accelerates.
 
@@ -141,6 +141,7 @@ Template changes should be made only as part of such a retrospective. When a ret
 - [PHILOSOPHY.md](PHILOSOPHY.md) – project philosophy
 - [DOCUMENTATION.md](DOCUMENTATION.md) – documentation standards
 - [REPOSITORY.md](REPOSITORY.md) – repository standards
+- [decisions/](decisions/) – Decision Record templates for ADRs, PDRs and DDRs
 - [CHANGELOG.md](CHANGELOG.md) – version history
 - [README.de.md](README.de.md) – German documentation
 - [LICENSE](LICENSE) – MIT License

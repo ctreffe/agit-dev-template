@@ -62,13 +62,19 @@ The shared engineering philosophy.
 
 It describes the values behind technical decisions, such as maintainability, transparency and validated learning.
 
-## ADRs
+## Decision Records
 
-Architecture Decision Records may be used when a decision is important enough that its reasoning should remain available later.
+Decision Records may be used when a decision is important enough that its reasoning should remain available later.
 
-Use an ADR checkpoint when a decision affects architecture, configuration formats, lifecycle behavior, deployment, security boundaries, sensitive input handling, fixture or dump versioning, generated artifact versioning or another durable part of the project structure.
+Use `decisions/` as the shared location for durable decision reasoning.
 
-ADRs should explain the context, decision, rationale and consequences. They should not be used for every small implementation choice.
+Choose the record type by decision subject:
+
+- ADRs for architecture, configuration formats, lifecycle behavior, deployment, security boundaries, sensitive input handling, fixture or dump versioning, generated artifact versioning or another durable part of the technical project structure.
+- PDRs for project scope, roadmap, collaboration, privacy, repository structure, release model or governance decisions.
+- DDRs for user-facing documentation, reference structure, terminology, examples, screenshots or documentation QA decisions.
+
+Decision records should explain the context, decision, rationale and consequences. They should not be used for every small implementation choice.
 
 ---
 
@@ -78,7 +84,7 @@ Keep current state and history separate.
 
 - Current state belongs in `PROJECT_CONTEXT.md`.
 - Version history belongs in `CHANGELOG.md`.
-- Durable decision reasoning belongs in ADRs, when used.
+- Durable decision reasoning belongs in decision records, when used.
 - User-facing overview belongs in `README.md`.
 
 Do not force one document to serve all purposes.
@@ -224,7 +230,7 @@ Proof-of-concept documentation should describe:
 
 Validated negative results should be documented when they influence the roadmap or architecture.
 
-For milestone-driven implementation, document the final validated state rather than every chat turn. Use `PROJECT_CONTEXT.md` for current status and next validation targets, `CHANGELOG.md` for version history, and ADRs for durable decision reasoning.
+For milestone-driven implementation, document the final validated state rather than every chat turn. Use `PROJECT_CONTEXT.md` for current status and next validation targets, `CHANGELOG.md` for version history, and decision records for durable decision reasoning.
 
 ---
 

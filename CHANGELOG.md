@@ -10,6 +10,7 @@ This project follows Semantic Versioning.
 
 - Add `INITIAL_PROMPT.md` as a reproducible first-session prompt for derived project initialization.
 - Add an AGIT Templateverse section to the English and German READMEs.
+- Add `decisions/` as the shared Decision Record location with ADR, PDR and DDR templates.
 
 ### Changed
 
@@ -18,6 +19,7 @@ This project follows Semantic Versioning.
 - Upgrade the Collaboration Model to v1.17.
 - Add guidance for sensitive local input handling, sanitized fixtures, generated artifacts and review checks based on access-plan project retrospection.
 - Expand ADR checkpoint guidance for sensitive-input, fixture-versioning and generated-artifact decisions.
+- Clarify that development projects may use PDRs and DDRs alongside ADRs when the decision subject calls for them.
 - Clarify that project context should be refreshed after milestone commits or tags when pre-commit status remains documented.
 - Clarify that template-only setup files may be removed or retained after initialization depending on project needs.
 - Clarify that retained initialization files should keep their original names and may document setup status internally or in `PROJECT_CONTEXT.md`.

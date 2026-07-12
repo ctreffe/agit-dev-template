@@ -167,7 +167,7 @@ If there are no open decisions, state that explicitly.
 
 Summarize decisions that are important for continuing the project.
 
-Detailed reasoning should remain in ADRs where applicable.
+Detailed reasoning should remain in decision records where applicable.
 
 - `<decision>`
 - `<decision>`
@@ -187,7 +187,7 @@ Use this section as a navigation aid.
 - `ChatGPT.md` — AGIT Collaboration Model
 - `CODEX.md` — local Codex operating policy, if Codex is used
 - `<architecture document>` — system structure, if applicable
-- `<ADR directory>` — architectural decisions, if applicable
+- `decisions/` — Decision Records, if used
 
 Remove or adapt entries that do not apply to the derived project.
 
