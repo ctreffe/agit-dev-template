@@ -90,6 +90,9 @@ At minimum, clarify:
 - the desired end state
 - important boundaries, risks and intentional non-goals
 - private input, fixture, dump, log, screenshot or generated-artifact handling
+- who will inspect, review, debug, maintain or extend the code, what technical
+  and domain knowledge those readers have, and whether English is the
+  repository standard for code comments and documentation
 - how these points shape the first roadmap milestones
 
 The roadmap should be derived from this intent instead of from isolated technical ideas.
@@ -304,6 +307,17 @@ PROJECT_CONTEXT.md as the current state entry point for future development
 sessions.
 ```
 
+Initialization is complete only when repository identity, maintainer intent,
+desired end state, boundaries, initial roadmap, validation model, human code
+readership, sensitive-input rules, local tooling, decision-record needs,
+versioning and retained template files have been reviewed and the repository is
+internally consistent. Do not begin substantive implementation while required
+maintainer-owned setup decisions remain hidden behind placeholders.
+
+The initialization commit is normally a regular `chore:` commit. Use an
+unprefixed milestone commit only when initialization also completes a genuinely
+defined and reviewed versioned milestone.
+
 ---
 
 # 16. Review Template-Only Setup Files
@@ -349,6 +363,8 @@ When working with AI assistance:
 - provide commit-ready guidance with a clear summary and description
 - keep feature commits separate from milestone commits
 - document assistant-written code well enough that maintainers and future contributors can understand it without chat history
+- use English for assistant-authored code comments and doc comments when
+  English is the repository standard
 - tag meaningful completed milestones intentionally
 - update `PROJECT_CONTEXT.md` after a milestone commit or tag exists if the previous context described a pre-commit or pre-tag state
 - expect numbered maintainer next steps when validation, review, commit or tag actions are needed

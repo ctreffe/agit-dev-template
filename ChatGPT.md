@@ -1,6 +1,6 @@
 # ChatGPT.md
 
-# Collaboration Model v1.17
+# Collaboration Model v1.18
 
 **Status:** Stable  
 **Applies to:** AGIT software projects  
@@ -208,10 +208,21 @@ Repository history is maintainer-controlled project memory.
 # Code Documentation and Maintainability
 
 Assistant-written code must be understandable without private chat history.
+Code has a target readership just as user documentation has a target audience.
+During initialization, the project should identify who is expected to inspect,
+debug, maintain, review or extend the code and what technical context those
+readers can reasonably be expected to have.
 
 The assistant should document non-obvious behavior, assumptions, constraints and architectural decisions close to the code or in the appropriate project documentation. Comments should explain why something exists or why an approach was chosen, not repeat what the code already says.
 
 Public functions, scripts, modules, configuration formats and integration points should be named and structured so a maintainer or future contributor can understand their purpose from the repository itself.
+
+Code comments and doc comments should use English when English is the
+repository standard. Assistant-authored scripts and code files should document
+their purpose, inputs, outputs, side effects, important invariants, failure
+behavior and non-obvious platform or lifecycle constraints at the level needed
+by the identified human code readers. Comments should explain intent and
+rationale rather than narrating self-evident syntax.
 
 A change is not repository-ready if the maintainer or a future contributor would need the original AI conversation to understand the implementation.
 
@@ -236,6 +247,14 @@ For an active milestone, the assistant should normally help maintain a rhythm li
 This rhythm is especially useful when a project is evolving through architecture, proof-of-concept validation, local system integration or other work where small confirmed steps build confidence.
 
 The assistant should avoid expanding the milestone opportunistically once the agreed objective is satisfied. If additional ideas emerge, they should be recorded as future roadmap candidates unless they are necessary to complete the current milestone.
+
+A milestone should normally contain multiple regular working commits when the
+work divides into meaningful validated steps. The project should not defer all
+implementation, fixes and documentation into one oversized milestone commit.
+The milestone commit is a separate closure commit and should primarily
+harmonize version, changelog, context and milestone-facing documentation. A
+small milestone may legitimately have only one preceding working commit, but
+commit boundaries follow logical work, not version boundaries.
 
 Before a milestone commit is prepared, the assistant should help verify that the repository documentation reflects the milestone state. This freshness pass should normally include version and status wording, roadmap and current-focus notes, changelog entries, README and translated README files, links to new specialized documentation, setup or demo instructions when applicable, and validation results. The objective is for the milestone commit itself to contain the consistent completed state, not to rely on a later cleanup commit.
 
@@ -823,5 +842,10 @@ default permission to stage, commit, tag, push or otherwise perform Git history
 actions.
 
 Version 1.17 adds sensitive development input handling. It clarifies that assistants should inventory private logs, dumps, API responses, screenshots, customer data and generated artifacts before raw inspection, prefer sanitized fixtures or reviewed derivatives when possible, and consider ADRs for sensitive-input, fixture-versioning and generated-artifact decisions.
+
+Version 1.18 formalizes human code readership, English documentation standards
+for assistant-authored code, and the expectation that roadmap milestones
+advance through regular validated commits before a separate milestone closure
+commit.
 
 Future AGIT projects should adopt the latest version from this repository.

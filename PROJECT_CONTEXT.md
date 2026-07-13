@@ -62,6 +62,18 @@ Roadmap implications:
 <how the context and desired end state shape the first milestones>
 ```
 
+Human code readership:
+
+```text
+<who will inspect, review, debug, maintain or extend the code; expected technical and domain knowledge; repository language standard>
+```
+
+Sensitive development inputs and Git rules:
+
+```text
+<which logs, dumps, screenshots, customer data or other raw inputs must remain local; applicable .gitignore rules; which sanitized fixtures or reviewed derivatives may be versioned>
+```
+
 The maintainer should provide this section at project start. It should guide the initial roadmap and help future sessions understand why the roadmap has its current shape.
 
 ---

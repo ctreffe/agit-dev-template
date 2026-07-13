@@ -14,10 +14,18 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Upgrade the Collaboration Model to v1.18.
+- Formalize human code readership and require clear English comments and code
+  documentation for assistant-authored implementation when English is the
+  repository standard.
+- Strengthen the regular-commit rhythm below milestones and clarify that
+  milestone commits close already recorded work.
+- Strengthen safeguards against adding sensitive raw development inputs to Git.
+- Define completion criteria for structured development-project initialization.
+- Prefer concise numbered maintainer decisions and next steps.
 - Require recognized Git history control words before an assistant may perform Git history actions.
 - Clarify the AI Collaboration Note with an explicit sentence about documented engineering practices, AI-assisted workflows and repository conventions.
 - Strengthen setup guidance so derived projects preserve a concrete, project-specific AI Collaboration Note linked to `ChatGPT.md`.
-- Upgrade the Collaboration Model to v1.17.
 - Add guidance for sensitive local input handling, sanitized fixtures, generated artifacts and review checks based on access-plan project retrospection.
 - Expand ADR checkpoint guidance for sensitive-input, fixture-versioning and generated-artifact decisions.
 - Clarify that development projects may use PDRs and DDRs alongside ADRs when the decision subject calls for them.

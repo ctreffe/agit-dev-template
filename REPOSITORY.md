@@ -125,6 +125,13 @@ Generated artifacts should be clearly treated as outputs. Document whether they 
 
 `.gitignore` rules and documentation should be updated together when private local inputs or generated artifacts are required.
 
+Sensitive raw inputs should remain outside Git by default. Establish ignore
+rules and an input inventory before copying logs, dumps, screenshots, customer
+data or other sensitive material into the repository working tree. Before a
+commit is prepared, review new and untracked files for secrets, personal data,
+confidential content and accidental raw-input inclusion. Prefer sanitized
+fixtures or reviewed derivatives whenever they reproduce the required behavior.
+
 ---
 
 # Feature Commits and Milestone Commits
@@ -161,7 +168,10 @@ Milestone commits are separate from feature commits and usually update:
 - `PROJECT_CONTEXT.md`
 - README files or milestone documentation, if needed
 
-A milestone commit should not be used to hide unvalidated feature work.
+A milestone commit should not be used to hide unvalidated feature work or to
+bundle an entire separable milestone into one oversized change. Meaningful
+implementation, validation, fixes and documentation should normally be
+recorded in regular commits before the milestone closure commit.
 
 ---
 

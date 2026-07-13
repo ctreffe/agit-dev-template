@@ -113,6 +113,20 @@ If a substantial production component is exposed to users, include a demonstrati
 
 The goal is to make the component understandable and verifiable without requiring private maintainer explanations.
 
+# Code Readership and In-Code Documentation
+
+Development projects should identify the expected human readers of the code,
+including maintainers, reviewers, operators or future contributors. Repository
+documentation and code comments should reflect their expected technical and
+domain knowledge.
+
+When English is the repository standard, assistant-authored code comments and
+doc comments must be written in English. Scripts, modules and code files should
+document purpose, inputs, outputs, side effects, important invariants, failure
+behavior and non-obvious platform or lifecycle constraints where these are not
+clear from names and structure alone. Comments should explain why a design or
+constraint exists rather than restating obvious syntax.
+
 ---
 
 # Repository-Ready Documentation
