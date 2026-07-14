@@ -121,7 +121,11 @@ Raw local inputs include `.env` files, logs, database dumps, API responses, scre
 
 Sanitized fixtures or reviewed derivatives are preferred when they can reproduce behavior without exposing sensitive material.
 
-Generated artifacts should be clearly treated as outputs. Document whether they are versioned review artifacts, release artifacts or regenerated locally.
+Generated artifacts should be clearly treated as outputs. Document whether they are versioned review artifacts, release artifacts or regenerated locally. Review logs, reports, screenshots, archives, embedded resources and file metadata for disclosure risks before versioning or sharing them.
+
+Assistant access, Git versioning and publication or external sharing are
+separate approval decisions. A sanitized fixture or reviewed derivative may be
+suitable for one purpose without being suitable for the others.
 
 `.gitignore` rules and documentation should be updated together when private local inputs or generated artifacts are required.
 
@@ -131,6 +135,9 @@ data or other sensitive material into the repository working tree. Before a
 commit is prepared, review new and untracked files for secrets, personal data,
 confidential content and accidental raw-input inclusion. Prefer sanitized
 fixtures or reviewed derivatives whenever they reproduce the required behavior.
+
+Automated secret, privacy or content checks may identify risks, but a clean
+result does not authorize access, versioning or publication.
 
 ---
 

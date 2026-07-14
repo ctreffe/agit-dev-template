@@ -89,11 +89,15 @@ At minimum, clarify:
 - the intended users, maintainers or operating environment
 - the desired end state
 - important boundaries, risks and intentional non-goals
-- private input, fixture, dump, log, screenshot or generated-artifact handling
+- private input, fixture, dump, log, screenshot or generated-artifact handling,
+  including separate assistant-access, Git-versioning and publication decisions
 - who will inspect, review, debug, maintain or extend the code, what technical
   and domain knowledge those readers have, and whether English is the
   repository standard for code comments and documentation
 - how these points shape the first roadmap milestones
+
+Automated secret or sensitivity checks may support this review, but their
+results are warnings rather than proof that an artifact is sanitized or safe.
 
 The roadmap should be derived from this intent instead of from isolated technical ideas.
 

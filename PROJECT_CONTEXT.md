@@ -71,7 +71,25 @@ Human code readership:
 Sensitive development inputs and Git rules:
 
 ```text
-<which logs, dumps, screenshots, customer data or other raw inputs must remain local; applicable .gitignore rules; which sanitized fixtures or reviewed derivatives may be versioned>
+<which logs, dumps, screenshots, customer data or other raw inputs must remain local; applicable .gitignore rules>
+```
+
+Assistant-access approval:
+
+```text
+<exact sanitized fixtures or reviewed derivatives, permitted task and limitations>
+```
+
+Git-versioning approval:
+
+```text
+<exact fixtures, derivatives or generated artifacts approved for Git, or none>
+```
+
+Publication or external-sharing approval:
+
+```text
+<exact artifacts and audience, or none>
 ```
 
 The maintainer should provide this section at project start. It should guide the initial roadmap and help future sessions understand why the roadmap has its current shape.

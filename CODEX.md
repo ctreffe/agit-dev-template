@@ -165,6 +165,11 @@ Default rules:
 - Treat package installation as network activity that may disclose package names, versions and environment metadata to package sources.
 - Keep generated ZIP files, reports and artifacts local unless the maintainer explicitly requests external sharing.
 
+Assistant access, Git versioning and publication or external sharing require
+separate maintainer decisions. Approval for one does not authorize another.
+Automated privacy, secret or content checks are warning systems and do not by
+themselves establish that an artifact is sanitized or safe.
+
 If data disclosure is possible, Codex should state that before using the external tool.
 
 ---

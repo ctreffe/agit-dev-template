@@ -14,6 +14,11 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Separate assistant access, Git versioning and publication approval for
+  sensitive development inputs, fixtures and generated artifacts.
+- Extend disclosure review to generated artifacts and define automated checks
+  as warnings rather than safety approval.
+- Add a standard numbered checkpoint handoff for implementation steps.
 - Upgrade the Collaboration Model to v1.18.
 - Formalize human code readership and require clear English comments and code
   documentation for assistant-authored implementation when English is the

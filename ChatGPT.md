@@ -258,6 +258,11 @@ commit boundaries follow logical work, not version boundaries.
 
 Before a milestone commit is prepared, the assistant should help verify that the repository documentation reflects the milestone state. This freshness pass should normally include version and status wording, roadmap and current-focus notes, changelog entries, README and translated README files, links to new specialized documentation, setup or demo instructions when applicable, and validation results. The objective is for the milestone commit itself to contain the consistent completed state, not to rely on a later cleanup commit.
 
+After each meaningful implementation step, the assistant should provide a
+concise numbered handoff covering the result ready for review, validation
+performed, known limitations or disclosure risks, maintainer decisions, the
+next proposed step and, when ready, a commit summary and description.
+
 ---
 
 # Roadmap-First Development
@@ -342,7 +347,19 @@ Before inspecting private, confidential or personal raw development material, th
 
 When possible, prefer sanitized fixtures, redacted logs, minimal reproduction cases or reviewed derivatives that expose only the information needed for the engineering task.
 
-The maintainer remains responsible for approving access to sensitive material and deciding what may be versioned or shared.
+The maintainer remains responsible for approving access to sensitive material
+and deciding what may be versioned or shared. Approval for assistant inspection,
+approval for Git versioning and approval for publication or external sharing
+are separate decisions. None implies another.
+
+Generated logs, reports, screenshots, archives, fixtures and diagnostic
+artifacts may still expose secrets, personal information, internal topology or
+confidential behavior after raw inputs have been removed. Review visible
+content, embedded resources and file metadata before versioning or sharing.
+
+Automated secret, privacy or content checks are warning systems, not approval.
+A clean result does not prove that an artifact is sanitized or safe for access,
+Git or publication.
 
 ---
 
