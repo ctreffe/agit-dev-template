@@ -152,6 +152,7 @@ Template changes should be made only as part of such a retrospective. When a ret
 - [PROJECT_SETUP.md](PROJECT_SETUP.md) – initial setup guide for new projects
 - [INITIAL_PROMPT.md](INITIAL_PROMPT.md) – first prompt for reproducible project initialization
 - [CONTINUATION_PROMPT.md](CONTINUATION_PROMPT.md) – re-entry prompt for a new context window or assistant session
+- [HARMONIZATION_PROMPT.md](HARMONIZATION_PROMPT.md) – source-template, code, documentation and roadmap harmonization
 - [ChatGPT.md](ChatGPT.md) – Collaboration Model
 - [CODEX.md](CODEX.md) – local Codex operating policy
 - [PHILOSOPHY.md](PHILOSOPHY.md) – project philosophy

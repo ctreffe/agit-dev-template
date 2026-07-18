@@ -342,6 +342,9 @@ documented maintainer exception.
 `CONTINUATION_PROMPT.md` should also remain because it provides the repeatable
 entry instruction for a new context window or assistant session.
 
+`HARMONIZATION_PROMPT.md` should remain for periodic source-template, code,
+documentation and roadmap alignment.
+
 ---
 
 # 17. Start Development

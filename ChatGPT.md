@@ -768,9 +768,18 @@ However, documents should be fully harmonized when a retrospective changes core 
 
 # Retrospectives and Template Evolution
 
-The AGIT Dev Template evolves through retrospectives based on practical project experience.
+Use `HARMONIZATION_PROMPT.md` for project-content alignment. Harmonization
+compares a derived project with its recorded source template, reconciles code,
+tests, documentation and repository state, and reviews roadmap fit. The
+concrete project and its Decision Records remain authoritative. Harmonization
+does not evaluate collaboration or derive template improvements.
 
-Retrospectives normally occur at the end of a project. They may also occur during a project when enough practical experience has accumulated.
+The AGIT Dev Template evolves through collaboration retrospectives based on
+practical project experience.
+
+Retrospectives occur less frequently than harmonizations, normally after a
+suitable milestone or at the end of a project. They evaluate Maintainer-Agent
+collaboration, including rules, feedback, decisions, handoffs and work rhythm.
 
 Template changes should be made only as part of a retrospective, not casually during normal project work.
 

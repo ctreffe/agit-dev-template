@@ -262,6 +262,7 @@ Use this section as a navigation aid.
 - `PROJECT_SETUP.md` — retained initialization method and provenance
 - `INITIAL_PROMPT.md` — retained first prompt for reproducible project initialization
 - `CONTINUATION_PROMPT.md` — re-entry prompt for a new context window or assistant session
+- `HARMONIZATION_PROMPT.md` — source-template, code, documentation and roadmap harmonization
 - `CHANGELOG.md` — version history
 - `PHILOSOPHY.md` — shared AGIT engineering philosophy
 - `ChatGPT.md` — AGIT Collaboration Model

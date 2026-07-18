@@ -147,6 +147,7 @@ Retrospektiven finden normalerweise am Ende eines Projekts statt, können aber a
 - [PROJECT_SETUP.md](PROJECT_SETUP.md) – Anleitung zur Ersteinrichtung neuer Projekte
 - [INITIAL_PROMPT.md](INITIAL_PROMPT.md) – erster Prompt für reproduzierbare Projektinitialisierung
 - [CONTINUATION_PROMPT.md](CONTINUATION_PROMPT.md) – Wiedereinstiegsprompt für ein neues Kontextfenster oder eine neue Assistant-Session
+- [HARMONIZATION_PROMPT.md](HARMONIZATION_PROMPT.md) – Abgleich mit dem Quell-Template sowie Code-, Dokumentations- und Roadmap-Harmonisierung
 - [ChatGPT.md](ChatGPT.md) – Collaboration Model
 - [CODEX.md](CODEX.md) – lokale Codex Operating Policy
 - [PHILOSOPHY.md](PHILOSOPHY.md) – Projektphilosophie

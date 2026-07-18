@@ -44,6 +44,13 @@ The repeatable re-entry instruction for a new context window or assistant
 session. It tells the assistant how to reconstruct the Git, implementation,
 validation and documentation baseline before continuing development.
 
+## HARMONIZATION_PROMPT.md
+
+The repeatable development-content alignment instruction. It compares a
+derived project with its recorded source template, reconciles code, tests,
+documentation and repository state, and reviews roadmap fit without evaluating
+collaboration or deriving template improvements.
+
 ## CHANGELOG.md
 
 The version history.

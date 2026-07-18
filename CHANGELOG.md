@@ -8,6 +8,8 @@ This project follows Semantic Versioning.
 
 ### Added
 
+- Add `HARMONIZATION_PROMPT.md` for source-template comparison, development
+  consistency review and roadmap alignment.
 - Add `CONTINUATION_PROMPT.md` for reproducible development-project re-entry in
   a new context window or assistant session.
 - Add `INITIAL_PROMPT.md` as a reproducible first-session prompt for derived project initialization.
