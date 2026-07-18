@@ -341,11 +341,14 @@ If retained, do not rename them. Optionally add a short setup status note inside
 
 `PROJECT_CONTEXT.md` should remain because it documents the current project state and supports future project resumption.
 
+`CONTINUATION_PROMPT.md` should also remain because it provides the repeatable
+entry instruction for a new context window or assistant session.
+
 ---
 
 # 17. Start Development
 
-After the initial setup commit, continue development according to the Collaboration Model in `ChatGPT.md`.
+After the initial setup commit, continue development according to the Collaboration Model in `ChatGPT.md`. Begin a new context window or assistant session with `CONTINUATION_PROMPT.md`.
 
 When using Codex locally, also follow `CODEX.md`.
 

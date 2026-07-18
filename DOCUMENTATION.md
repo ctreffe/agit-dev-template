@@ -38,6 +38,12 @@ For active milestone work, it should also capture validation notes, immediate va
 
 For new projects, it should capture the maintainer's project intent, problem context, desired end state and boundaries before the initial roadmap. The roadmap should be clear enough that future sessions can understand the intended milestone sequence and why the next step matters.
 
+## CONTINUATION_PROMPT.md
+
+The repeatable re-entry instruction for a new context window or assistant
+session. It tells the assistant how to reconstruct the Git, implementation,
+validation and documentation baseline before continuing development.
+
 ## CHANGELOG.md
 
 The version history.

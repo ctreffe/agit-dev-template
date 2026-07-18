@@ -53,6 +53,9 @@ When AI assistance is used, work should begin from a clearly identified reposito
 
 If the baseline is unclear, do not prepare repository-ready changes until it is clarified.
 
+Use `CONTINUATION_PROMPT.md` at the start of a new context window or assistant
+session to reconcile `PROJECT_CONTEXT.md` with current read-only Git evidence.
+
 ---
 
 # Git Client

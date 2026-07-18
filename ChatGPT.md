@@ -102,6 +102,10 @@ The document should describe the current state, not the full history. History be
 
 At the start of a new AI-assisted session, the assistant should read or reconstruct `PROJECT_CONTEXT.md` before proposing implementation work.
 
+Begin a new context window or assistant session with
+`CONTINUATION_PROMPT.md`. It defines the ordered re-entry review, read-only Git
+baseline check and numbered handoff that should precede substantive work.
+
 ---
 
 # Context Handoff Discipline

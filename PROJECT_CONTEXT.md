@@ -212,6 +212,7 @@ Use this section as a navigation aid.
 
 - `README.md` — project overview and user-facing entry point
 - `INITIAL_PROMPT.md` — first prompt for reproducible project initialization, if kept after setup
+- `CONTINUATION_PROMPT.md` — re-entry prompt for a new context window or assistant session
 - `CHANGELOG.md` — version history
 - `PHILOSOPHY.md` — shared AGIT engineering philosophy
 - `ChatGPT.md` — AGIT Collaboration Model
@@ -234,7 +235,7 @@ AGIT Dev Template version:
 Collaboration Model version:
 
 ```text
-v1.16
+v1.18
 ```
 
 Current collaboration notes:

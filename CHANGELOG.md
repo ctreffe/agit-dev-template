@@ -8,12 +8,16 @@ This project follows Semantic Versioning.
 
 ### Added
 
+- Add `CONTINUATION_PROMPT.md` for reproducible development-project re-entry in
+  a new context window or assistant session.
 - Add `INITIAL_PROMPT.md` as a reproducible first-session prompt for derived project initialization.
 - Add an AGIT Templateverse section to the English and German READMEs.
 - Add `decisions/` as the shared Decision Record location with ADR, PDR and DDR templates.
 
 ### Changed
 
+- Align the collaboration-model version in `PROJECT_CONTEXT.md` with the
+  current template baseline.
 - Separate assistant access, Git versioning and publication approval for
   sensitive development inputs, fixtures and generated artifacts.
 - Extend disclosure review to generated artifacts and define automated checks

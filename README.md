@@ -129,6 +129,9 @@ The following documents primarily support project initialization:
 
 After the initial setup is complete, these documents may be removed from the derived project unless they remain useful there. They may also be retained for onboarding, traceability or future re-initialization. If retained, keep their original names and optionally document their setup status inside the file or in `PROJECT_CONTEXT.md`.
 
+Keep `CONTINUATION_PROMPT.md` in the derived project for repeatable
+context-window and session handoffs.
+
 ## Continuous Improvement
 
 The AGIT Dev Template evolves through project retrospectives.
@@ -142,6 +145,7 @@ Template changes should be made only as part of such a retrospective. When a ret
 - [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) - project context template and derived-project re-entry point
 - [PROJECT_SETUP.md](PROJECT_SETUP.md) – initial setup guide for new projects
 - [INITIAL_PROMPT.md](INITIAL_PROMPT.md) – first prompt for reproducible project initialization
+- [CONTINUATION_PROMPT.md](CONTINUATION_PROMPT.md) – re-entry prompt for a new context window or assistant session
 - [ChatGPT.md](ChatGPT.md) – Collaboration Model
 - [CODEX.md](CODEX.md) – local Codex operating policy
 - [PHILOSOPHY.md](PHILOSOPHY.md) – project philosophy
