@@ -4,7 +4,9 @@
 
 This document describes how to initialize a new project from the AGIT Dev Template.
 
-It is primarily useful during project creation. Derived projects may remove it after setup when it is no longer useful, or retain it for onboarding, traceability or future re-initialization.
+It is primarily used during project creation and should normally remain in a
+derived repository as initialization provenance. Record its lifecycle status
+and the template lineage in `PROJECT_CONTEXT.md`.
 
 Use this template for development-oriented AGIT projects. For general non-development projects, start from the generic AGIT Project Template instead.
 
@@ -158,19 +160,16 @@ These documents define the current project state, user documentation, version hi
 
 ---
 
-# 8. Review Template-Only Documents
+# 8. Adapt Ongoing Project Rules
 
-The following documents are primarily useful during project initialization:
+The following documents define ongoing project rules and should be adapted to
+the concrete project rather than treated as disposable setup material:
 
-- `PROJECT_SETUP.md`
 - `DOCUMENTATION.md`
 - `REPOSITORY.md`
 
-After completing the initial project setup, these files may be removed from the derived project.
-
-They are part of the template workflow rather than the long-term documentation of most derived projects.
-
-If a derived project has a practical reason to keep one of these documents, it may do so.
+Keep them current when documentation structure, repository practice or project
+governance changes.
 
 ---
 
@@ -324,20 +323,19 @@ defined and reviewed versioned milestone.
 
 ---
 
-# 16. Review Template-Only Setup Files
+# 16. Record Initialization Provenance
 
-After completing setup, decide whether to remove or retain files that are primarily useful during initialization:
+Keep the initialization artifacts under their original names:
 
 - `PROJECT_SETUP.md`
 - `INITIAL_PROMPT.md`
-- `DOCUMENTATION.md`
-- `REPOSITORY.md`
 
-Remove them when they are no longer useful and would only add noise.
+Record initialization status and date, source template version and commit, later
+harmonization baseline and intentional template deviations in
+`PROJECT_CONTEXT.md`. Remove an initialization artifact only as a deliberate,
+documented maintainer exception.
 
-Retain them when they help with onboarding, traceability, future re-initialization or project governance.
-
-If retained, do not rename them. Optionally add a short setup status note inside the retained file or record the decision in `PROJECT_CONTEXT.md`.
+`DOCUMENTATION.md` and `REPOSITORY.md` remain active project rules.
 
 `PROJECT_CONTEXT.md` should remain because it documents the current project state and supports future project resumption.
 

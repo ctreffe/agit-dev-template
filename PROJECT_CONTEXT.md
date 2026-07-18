@@ -14,6 +14,54 @@ The placeholders in this file are intentional. Replace them during project setup
 
 ---
 
+# Template Lineage and Initialization
+
+Repository role:
+
+```text
+<derived project>
+```
+
+Source template:
+
+```text
+AGIT Dev Template
+```
+
+Initial template baseline:
+
+```text
+<template version and commit hash>
+```
+
+Initialization status:
+
+```text
+<not started | in progress | completed>
+```
+
+Initialization date:
+
+```text
+<YYYY-MM-DD | not yet completed>
+```
+
+Last template harmonization:
+
+```text
+<not yet performed | template version, commit hash and date>
+```
+
+Intentional template deviations and relevant Decision Records:
+
+```text
+<none | concise list>
+```
+
+Keep `PROJECT_SETUP.md` and `INITIAL_PROMPT.md` as initialization provenance.
+
+---
+
 # Project
 
 Project name:
@@ -211,7 +259,8 @@ Include validated negative findings here when they affect future work.
 Use this section as a navigation aid.
 
 - `README.md` — project overview and user-facing entry point
-- `INITIAL_PROMPT.md` — first prompt for reproducible project initialization, if kept after setup
+- `PROJECT_SETUP.md` — retained initialization method and provenance
+- `INITIAL_PROMPT.md` — retained first prompt for reproducible project initialization
 - `CONTINUATION_PROMPT.md` — re-entry prompt for a new context window or assistant session
 - `CHANGELOG.md` — version history
 - `PHILOSOPHY.md` — shared AGIT engineering philosophy
@@ -248,7 +297,7 @@ Current collaboration notes:
 - Integrity has priority over apparent helpfulness: artifacts must exist before they are reported as delivered.
 - Capability limitations should be stated directly instead of hidden behind simulated completion.
 - Required template artifacts such as the AI Collaboration Note should remain visible and factually accurate unless intentionally modified.
-- Template-only initialization files may be removed or retained after setup depending on project needs; retained files should keep their original names.
+- `PROJECT_SETUP.md` and `INITIAL_PROMPT.md` remain as initialization provenance unless the maintainer documents a deliberate exception.
 - If Codex is used locally, `CODEX.md` defines the local operating policy.
 - Long-running sessions should update `PROJECT_CONTEXT.md` before context exhaustion becomes likely.
 - When a change is approaching commit readiness, the assistant should provide concise numbered next steps for decisions, validation, review and commit actions whenever practical.

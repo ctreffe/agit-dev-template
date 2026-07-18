@@ -16,6 +16,9 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Retain initialization artifacts as project provenance, record template
+  lineage and harmonization baselines in `PROJECT_CONTEXT.md`, and clarify that
+  documentation and repository guidance remain active project rules.
 - Align the collaboration-model version in `PROJECT_CONTEXT.md` with the
   current template baseline.
 - Separate assistant access, Git versioning and publication approval for

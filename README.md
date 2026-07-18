@@ -102,7 +102,7 @@ Recognized control words are `explicit` and `explicitly` in English-language ins
 8. Establish the initial roadmap from the maintainer intent and record it in `PROJECT_CONTEXT.md` or a dedicated roadmap document.
 9. Review the core project documents.
 10. Review `CODEX.md` if Codex will be used for local project work.
-11. Review template-only setup documents and decide whether to remove or retain them.
+11. Record initialization provenance and the source-template baseline.
 12. Continue development according to `ChatGPT.md`.
 
 ## Documents That Usually Remain
@@ -118,16 +118,22 @@ The following documents usually remain part of a derived project:
 - `PHILOSOPHY.md`
 - `LICENSE`
 
-## Template-Only Documents
+## Initialization Provenance
 
-The following documents primarily support project initialization:
+The following documents primarily support project initialization and should
+normally remain in a derived repository as a record of its methodological
+starting point:
 
 - `PROJECT_SETUP.md`
 - `INITIAL_PROMPT.md`
-- `DOCUMENTATION.md`
-- `REPOSITORY.md`
 
-After the initial setup is complete, these documents may be removed from the derived project unless they remain useful there. They may also be retained for onboarding, traceability or future re-initialization. If retained, keep their original names and optionally document their setup status inside the file or in `PROJECT_CONTEXT.md`.
+Record initialization status, initial template version and commit, later
+harmonization baselines and intentional deviations in `PROJECT_CONTEXT.md`.
+Remove either initialization document only as a deliberate, documented
+maintainer exception.
+
+`DOCUMENTATION.md` and `REPOSITORY.md` are ongoing project rules. Adapt and
+maintain them in the derived project.
 
 Keep `CONTINUATION_PROMPT.md` in the derived project for repeatable
 context-window and session handoffs.

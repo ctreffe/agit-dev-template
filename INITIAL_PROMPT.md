@@ -62,17 +62,17 @@ After I provide the required information, update the project-specific files:
 Preserve the collaboration model in ChatGPT.md and the local Codex policy in
 CODEX.md unless I ask to change them.
 
-Review template-only initialization files and recommend whether they should be
-removed or retained for onboarding, traceability or future re-initialization:
+Retain the initialization artifacts under their original names as provenance:
 
 - PROJECT_SETUP.md
 - INITIAL_PROMPT.md
-- DOCUMENTATION.md
-- REPOSITORY.md
 
-Do not rename retained initialization files. If retention is useful, add a
-short status note inside the retained file or document the decision in
-PROJECT_CONTEXT.md.
+In PROJECT_CONTEXT.md, record initialization status and date, the source
+template version and commit, the latest template harmonization baseline and any
+intentional template deviations. Treat DOCUMENTATION.md and REPOSITORY.md as
+ongoing project rules that must be adapted and maintained. Remove an
+initialization artifact only if I make a deliberate exception and the reason is
+documented.
 
 Do not stage, commit, tag, push, pull, merge, reset, rebase, switch branches or
 otherwise modify Git history unless I instruct you to perform that specific Git

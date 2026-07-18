@@ -101,7 +101,7 @@ Anerkannte Kontrollwörter sind `explicit` und `explicitly` in englischsprachige
 8. Initiale Roadmap aus dem Maintainer-Intent ableiten und in `PROJECT_CONTEXT.md` oder einem eigenen Roadmap-Dokument festhalten.
 9. Kerndokumente prüfen.
 10. `CODEX.md` prüfen, wenn Codex für lokale Projektarbeit verwendet wird.
-11. Template-spezifische Setup-Dokumente entfernen, sobald die Projekteinrichtung abgeschlossen ist.
+11. Initialisierungsherkunft und Ausgangsstand des Templates dokumentieren.
 12. Entwicklung gemäß `ChatGPT.md` fortsetzen.
 
 ## Dokumente, die normalerweise bleiben
@@ -117,15 +117,21 @@ Die folgenden Dokumente bleiben normalerweise Teil eines abgeleiteten Projekts:
 - `PHILOSOPHY.md`
 - `LICENSE`
 
-## Template-spezifische Dokumente
+## Initialisierungsnachweis
 
-Die folgenden Dokumente unterstützen vor allem die Projekteinrichtung:
+Die folgenden Dokumente unterstützen vor allem die Projekteinrichtung und
+sollten als Nachweis des methodischen Ausgangspunkts erhalten bleiben:
 
 - `PROJECT_SETUP.md`
-- `DOCUMENTATION.md`
-- `REPOSITORY.md`
+- `INITIAL_PROMPT.md`
 
-Nach Abschluss der Ersteinrichtung können diese Dokumente aus dem abgeleiteten Projekt entfernt werden, sofern sie dort nicht weiterhin nützlich sind.
+Initialisierungsstatus, ursprüngliche Template-Version und ursprünglicher
+Template-Commit, spätere Harmonisierungsstände sowie bewusste Abweichungen
+werden in `PROJECT_CONTEXT.md` festgehalten. Eine Initialisierungsdatei wird nur
+als bewusste und dokumentierte Maintainer-Ausnahme entfernt.
+
+`DOCUMENTATION.md` und `REPOSITORY.md` enthalten fortlaufend geltende
+Projektregeln und werden im abgeleiteten Projekt angepasst und gepflegt.
 
 ## Kontinuierliche Weiterentwicklung
 

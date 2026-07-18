@@ -346,13 +346,17 @@ The AI Collaboration Note in `README.md` and `README.de.md` is a required reposi
 
 # Derived Projects
 
-Repositories created from the AGIT Dev Template should review which template documents remain useful after initial setup.
+Repositories created from the AGIT Dev Template should preserve their
+initialization provenance and maintain their project rules after setup.
 
-In most derived projects, the following documents are part of the setup workflow and may be removed after initialization:
+Keep these initialization artifacts under their original names unless the
+maintainer documents a deliberate exception:
 
 - `PROJECT_SETUP.md`
-- `DOCUMENTATION.md`
-- `REPOSITORY.md`
+- `INITIAL_PROMPT.md`
+
+Record the source-template baseline, initialization status, later harmonization
+baselines and intentional deviations in `PROJECT_CONTEXT.md`.
 
 The following documents usually remain part of the derived project:
 
@@ -363,4 +367,6 @@ The following documents usually remain part of the derived project:
 - `ChatGPT.md`
 - `CODEX.md` when Codex is used for local project work
 - `PHILOSOPHY.md`
+- `DOCUMENTATION.md`
+- `REPOSITORY.md`
 - `LICENSE`
