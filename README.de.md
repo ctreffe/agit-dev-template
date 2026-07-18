@@ -83,11 +83,18 @@ Der bevorzugte Ablauf ist:
 
 Aufforderungen wie „erstelle den Commit“ bedeuten, dass das angeforderte repository-ready Ergebnis vorbereitet und nicht nur beschrieben werden soll. Sie erlauben dem Assistant keine Git-History-Befehle, sofern die Anfrage kein anerkanntes Kontrollwort enthält. Artefaktintegrität ist Teil des Workflows: lokale Arbeitsbaumänderungen, erzeugte Archive und vorbereitete Repository-Aktualisierungen müssen tatsächlich existieren, bevor sie als abgeschlossen gemeldet werden.
 
-## Kontrollwörter für Git-History-Aktionen
+## Git-Index und geschützte Git-Aktionen
 
-AI Assistants dürfen Git-History-Aktionen wie Staging, Commit, Tag, Push, Pull, Merge, Rebase, Reset oder Branch-Wechsel nur ausführen, wenn die Maintainer-Anweisung für genau diese Aktion ein anerkanntes Kontrollwort enthält.
+Staging und Unstaging sind Index-Aktionen und benötigen kein Kontrollwort. Sie
+erfordern dennoch eine konkrete Maintainer-Anweisung oder die Autorisierung des
+zugehörigen Commits; vorhandenes partielles Staging muss erhalten bleiben.
 
-Anerkannte Kontrollwörter sind `explicit` und `explicitly` in englischsprachigen Anweisungen sowie die deutsche Wortfamilie `explizit`, einschließlich gebeugter Formen wie `explizite`, `expliziten`, `expliziter` und `explizites`, in deutschsprachigen Anweisungen. Anfragen ohne eines dieser Kontrollwörter erlauben nur Vorbereitung und Anleitung.
+AI Assistants dürfen Commits, Amendments, Tags, Pushes, Pulls, Merges, Rebases,
+Resets, Branch-Wechsel, Stash-Manipulationen oder andere geschützte Git-Aktionen
+nur ausführen, wenn die Maintainer-Anweisung für genau diese Aktion ein
+anerkanntes Kontrollwort enthält.
+
+Anerkannte Kontrollwörter sind `explicit` und `explicitly` in englischsprachigen Anweisungen sowie die deutsche Wortfamilie `explizit`, einschließlich gebeugter Formen wie `explizite`, `expliziten`, `expliziter` und `explizites`, in deutschsprachigen Anweisungen. Anfragen zu geschützten Git-Aktionen ohne eines dieser Kontrollwörter erlauben nur Vorbereitung und Anleitung.
 
 ## Verwendung des Templates
 
@@ -142,7 +149,7 @@ ausgeführt wird und welchen Projektzeitraum oder Umfang sie betrachtet.
 
 Retrospektivbefunde sind zunächst Template-Kandidaten. Der Assistant darf eine
 konkrete Template-Änderung nur mit anerkannter Kontrollwortfreigabe umsetzen;
-Git-History-Aktionen bleiben davon getrennt kontrolliert. Betrifft eine
+Geschützte Git-Aktionen bleiben davon getrennt kontrolliert. Betrifft eine
 autorisierte Änderung zentrale Prozessregeln, werden alle betroffenen Dokumente
 harmonisiert, statt nur isolierte Notizen zu ergänzen.
 

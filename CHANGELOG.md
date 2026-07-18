@@ -6,6 +6,11 @@ This project follows Semantic Versioning.
 
 ## [Unreleased]
 
+### Changed
+
+- Upgrade the Collaboration Model to v1.19 and classify staging and unstaging
+  as specifically requested index operations outside the control-word rule.
+
 ## [v1.2.0] - 2026-07-19
 
 ### Added

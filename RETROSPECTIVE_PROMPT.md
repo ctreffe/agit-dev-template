@@ -56,9 +56,11 @@ template change with `explicit`, `explicitly` or the German word family
 not template-change permission. If this repository is itself a template, the
 same control-word rule applies to changes in its reusable collaboration model.
 
-Template-edit permission is separate from Git history permission. Each stage,
-commit, tag, push, pull, merge, rebase, reset or branch action still requires a
-specific maintainer instruction containing a recognized control word.
+Template-edit permission does not authorize Git index or protected Git actions.
+Staging and unstaging require a specific maintainer instruction but no control
+word. Committing, amending, tagging, pushing, pulling, merging, rebasing,
+resetting, switching branches and manipulating stashes require a maintainer
+instruction for that specific action containing a recognized control word.
 
 Before edits, report:
 

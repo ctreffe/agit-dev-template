@@ -64,7 +64,11 @@ If my continuation instruction also gives a concrete safe task, proceed after
 this reconstruction; otherwise wait for my confirmation of the proposed next
 step.
 
-Do not perform Git history actions unless I instruct you to perform the
+Staging and unstaging do not require a control word, but perform them only when
+I specifically request the index action or authorize the corresponding commit.
+Preserve existing staged selections and unrelated changes.
+
+Do not perform a protected Git action unless I instruct you to perform the
 specific action with a recognized control word: `explicit`, `explicitly` or the
 German word family `explizit`.
 ```

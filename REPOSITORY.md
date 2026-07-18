@@ -66,22 +66,28 @@ Repository guidance should avoid assuming command-line Git usage whenever practi
 
 Command-line Git may still be used when needed, but documentation should not depend on it unless there is a clear reason.
 
-When Codex is used locally, `CODEX.md` defines the allowed Git usage. By default, Codex may use Git only for read-only inspection, while the maintainer controls staging, commits, tags, pushes and other repository state changes.
+When Codex is used locally, `CODEX.md` defines the allowed Git usage. By
+default, Codex may inspect Git state. Specifically requested staging and
+unstaging do not require a control word; protected Git actions do.
 
 This is a hard collaboration rule, not only a Codex implementation detail.
 Assistants may prepare working tree changes, propose commit boundaries and
-suggest commit summaries and descriptions. They must not stage files, create
-commits, amend commits, rebase, reset, revert, create or delete branches, create
-or delete tags, push, pull, merge or otherwise change Git history unless the
+suggest commit summaries and descriptions. Staging and unstaging require a
+specific maintainer request or authorization of the corresponding commit, but
+no control word; existing staged selections and unrelated changes must be
+preserved. Assistants must not create commits, amend commits, rebase, reset,
+revert, create or delete branches, create
+or delete tags, push, pull, merge, manipulate stashes or perform another
+protected Git action unless the
 maintainer instructs the assistant to perform that specific action and uses a
 recognized control word: `explicit` or `explicitly` in English, or the German
 word family `explizit`, including `explizite`, `expliziten`, `expliziter` and
 `explizites`.
 
-Approval for file edits is not approval for Git history actions. Approval for
-one history action is not approval for another. Requests such as "commit this",
+Approval for file edits is not approval for protected Git actions. Approval for
+one protected action is not approval for another. Requests such as "commit this",
 "create the commit", "tag this" or "push this" do not authorize the assistant to
-run Git history commands unless they contain a recognized control word.
+run protected Git commands unless they contain a recognized control word.
 
 ---
 

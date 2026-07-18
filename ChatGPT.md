@@ -1,6 +1,6 @@
 # ChatGPT.md
 
-# Collaboration Model v1.18
+# Collaboration Model v1.19
 
 **Status:** Stable  
 **Applies to:** AGIT software projects  
@@ -163,17 +163,20 @@ A feature commit should represent a validated logical step. A milestone commit
 should represent the explicit conclusion of a roadmap milestone. The maintainer
 controls when these commits are actually created unless the maintainer gives an
 instruction with a recognized control word for the assistant to perform a
-specific Git history action.
+specific protected Git action.
 
 ---
 
-# Git History Authority
+# Git Index and Protected Git Action Authority
 
-The assistant has no default permission to perform Git history actions.
+Staging and unstaging are Git index operations, not history actions. They do
+not require a control word. The assistant may change the index only when the
+maintainer specifically requests staging or unstaging, or authorizes the
+corresponding commit. Existing staged selections and unrelated changes must be
+preserved.
 
-Git history actions include, but are not limited to:
+Protected Git actions include, but are not limited to:
 
-- staging files
 - creating commits
 - amending commits
 - rebasing
@@ -189,7 +192,7 @@ The assistant may inspect Git status, diffs and logs when useful. The assistant
 may prepare file changes, propose commit boundaries and suggest commit summaries
 and descriptions.
 
-The assistant must not perform Git history actions unless the maintainer
+The assistant must not perform protected Git actions unless the maintainer
 instructs the assistant to perform that specific action and uses a recognized
 control word.
 
@@ -198,10 +201,10 @@ instructions, and the German word family `explizit`, including inflected forms
 such as `explizite`, `expliziten`, `expliziter` and `explizites`, in
 German-language instructions.
 
-Maintainer approval for file edits does not imply approval for Git history
+Maintainer approval for file edits does not imply approval for protected Git
 actions. A request to create, implement, build, organize, document or prepare a
-commit does not imply permission to run Git history commands. Approval for one
-class of Git history action does not imply approval for another; local commits,
+commit does not imply permission to run protected Git commands. Approval for one
+class of protected Git action does not imply approval for another; local commits,
 tags and pushes each require their own maintainer instruction with a recognized
 control word.
 
@@ -440,7 +443,7 @@ Create the commit.
 ```
 
 only authorizes an actual Git commit when the maintainer asks the assistant to
-perform that Git history action and uses a recognized control word. Otherwise,
+perform that protected Git action and uses a recognized control word. Otherwise,
 commit-related wording means:
 
 - modify the required files
@@ -606,9 +609,9 @@ GitHub Desktop is the preferred Git client for the repository maintainer.
 
 The assistant should therefore avoid assuming command-line Git usage whenever practical and should provide guidance that works naturally with GitHub Desktop.
 
-The maintainer controls staging, commits, tags, pushes and other Git history
-actions by default. The assistant may inspect Git state and prepare
-repository-ready changes, but must not perform Git history actions unless the
+Staging and unstaging follow the index rules above. The assistant may inspect
+Git state and prepare repository-ready changes, but must not perform protected
+Git actions unless the
 maintainer instructs the assistant to perform that specific action with a
 recognized control word.
 
@@ -794,7 +797,8 @@ A retrospective result is only a template candidate. The assistant must not
 modify the source-template repository unless the maintainer authorizes that
 specific template change with `explicit`, `explicitly` or the German word
 family `explizit`. Template-edit permission does not authorize Git history;
-each stage, commit, tag, push, pull, merge, rebase, reset or branch action
+staging or unstaging requires a specific request but no control word. Each
+commit, amend, tag, push, pull, merge, rebase, reset, branch or stash action
 requires its own specific control-word instruction.
 
 Retrospective updates should:
@@ -891,5 +895,9 @@ Version 1.18 formalizes human code readership, English documentation standards
 for assistant-authored code, and the expectation that roadmap milestones
 advance through regular validated commits before a separate milestone closure
 commit.
+
+Version 1.19 distinguishes specifically requested staging and unstaging from
+protected Git actions. Index operations do not require a control word, but must
+preserve existing staged selections and unrelated changes.
 
 Future AGIT projects should adopt the latest version from this repository.

@@ -84,7 +84,11 @@ the affected behavior and documentation. Update the last harmonization baseline
 and deviations in PROJECT_CONTEXT.md only after the comparison and integration
 actually succeed.
 
-Do not perform a Git history action unless I instruct you to perform that
+Staging and unstaging do not require a control word, but perform them only when
+I specifically request the index action or authorize the corresponding commit.
+Preserve existing staged selections and unrelated changes.
+
+Do not perform a protected Git action unless I instruct you to perform that
 specific action with a recognized control word: `explicit`, `explicitly` or the
 German word family `explizit`.
 ```

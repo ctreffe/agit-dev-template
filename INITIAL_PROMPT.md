@@ -5,7 +5,7 @@ Use this prompt as the first instruction to the AI assistant after creating a ne
 The purpose is to make the first session reproducible: the assistant should
 read the repository, understand all template rules, ask for the required
 maintainer-owned information, initialize the project files and prepare the first
-project-specific setup state without taking Git history actions unless the
+project-specific setup state without taking protected Git actions unless the
 instruction for the specific action contains a recognized control word.
 
 ---
@@ -74,8 +74,13 @@ ongoing project rules that must be adapted and maintained. Remove an
 initialization artifact only if I make a deliberate exception and the reason is
 documented.
 
-Do not stage, commit, tag, push, pull, merge, reset, rebase, switch branches or
-otherwise modify Git history unless I instruct you to perform that specific Git
+Staging and unstaging do not require a control word, but perform them only when
+I specifically request the index action or authorize the corresponding commit.
+Preserve existing staged selections and unrelated changes.
+
+Do not commit, amend, tag, push, pull, merge, reset, rebase, switch branches,
+manipulate stashes or perform another protected Git action unless I instruct
+you to perform that specific Git
 action and use a recognized control word: `explicit` or `explicitly` in
 English, or the German word family `explizit`.
 
