@@ -104,12 +104,19 @@ git describe --tags
 git rev-parse
 ```
 
-Codex must not use Git to modify repository history, staging state, branches, tags or working tree contents.
-
-Forbidden Git actions include:
+Index commands allowed only under the specifically requested index rule are:
 
 ```text
-git add
+git add -- <paths>
+git restore --staged -- <paths>
+```
+
+Codex must not use Git to modify repository history, branches, tags or working
+tree contents without the required protected-action authorization.
+
+Protected Git actions requiring a control word include:
+
+```text
 git commit
 git push
 git pull
