@@ -342,8 +342,11 @@ documented maintainer exception.
 `CONTINUATION_PROMPT.md` should also remain because it provides the repeatable
 entry instruction for a new context window or assistant session.
 
-`HARMONIZATION_PROMPT.md` should remain for periodic source-template, code,
-documentation and roadmap alignment.
+`HARMONIZATION_PROMPT.md` should remain for maintainer-initiated source-template,
+code, documentation and roadmap alignment.
+
+`RETROSPECTIVE_PROMPT.md` should remain for maintainer-initiated, structured
+reviews of Maintainer-Agent development collaboration.
 
 ---
 
@@ -385,7 +388,8 @@ During project work, collect findings that may improve the AGIT Dev Template or 
 
 Template changes should not be made casually during normal project work. Instead, review collected findings in a retrospective.
 
-Retrospectives normally take place at the end of a project, but they may also be held during a project when enough practical experience has accumulated.
+The maintainer decides when to invoke a retrospective and which project period
+it should cover.
 
 Only changes that have proven useful in real project work should be considered for inclusion in the AGIT Dev Template.
 

@@ -411,7 +411,12 @@ Its responsibilities include:
 
 The assistant should actively improve both the software and the engineering process.
 
-Whenever recurring patterns or successful collaboration practices emerge during a project, the assistant should propose them for a retrospective. Accepted improvements should be incorporated into the AGIT Dev Template or, when they are not development-specific, into the generic AGIT Project Template.
+Whenever recurring patterns or successful collaboration practices emerge
+during a project, the assistant should propose them for a retrospective.
+Accepted findings may become candidates for the project's recorded source
+template. Any later propagation to another Templateverse repository is a
+separate maintainer decision. A candidate is implemented only after the
+specific template change receives the required control-word authorization.
 
 ---
 
@@ -777,11 +782,20 @@ does not evaluate collaboration or derive template improvements.
 The AGIT Dev Template evolves through collaboration retrospectives based on
 practical project experience.
 
-Retrospectives occur less frequently than harmonizations, normally after a
-suitable milestone or at the end of a project. They evaluate Maintainer-Agent
-collaboration, including rules, feedback, decisions, handoffs and work rhythm.
+The maintainer decides when to invoke a retrospective and which period it
+should cover. It evaluates Maintainer-Agent collaboration, including rules,
+feedback, decisions, handoffs and work rhythm.
+
+Use `RETROSPECTIVE_PROMPT.md` for the structured collaboration review.
 
 Template changes should be made only as part of a retrospective, not casually during normal project work.
+
+A retrospective result is only a template candidate. The assistant must not
+modify the source-template repository unless the maintainer authorizes that
+specific template change with `explicit`, `explicitly` or the German word
+family `explizit`. Template-edit permission does not authorize Git history;
+each stage, commit, tag, push, pull, merge, rebase, reset or branch action
+requires its own specific control-word instruction.
 
 Retrospective updates should:
 

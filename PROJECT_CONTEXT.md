@@ -52,6 +52,12 @@ Last template harmonization:
 <not yet performed | template version, commit hash and date>
 ```
 
+Last collaboration retrospective:
+
+```text
+<not yet performed | reviewed period or milestone, date and relevant record>
+```
+
 Intentional template deviations and relevant Decision Records:
 
 ```text
@@ -263,6 +269,7 @@ Use this section as a navigation aid.
 - `INITIAL_PROMPT.md` — retained first prompt for reproducible project initialization
 - `CONTINUATION_PROMPT.md` — re-entry prompt for a new context window or assistant session
 - `HARMONIZATION_PROMPT.md` — source-template, code, documentation and roadmap harmonization
+- `RETROSPECTIVE_PROMPT.md` — structured Maintainer-Agent development-collaboration review
 - `CHANGELOG.md` — version history
 - `PHILOSOPHY.md` — shared AGIT engineering philosophy
 - `ChatGPT.md` — AGIT Collaboration Model

@@ -51,6 +51,12 @@ derived project with its recorded source template, reconciles code, tests,
 documentation and repository state, and reviews roadmap fit without evaluating
 collaboration or deriving template improvements.
 
+## RETROSPECTIVE_PROMPT.md
+
+The repeatable Maintainer-Agent development-collaboration review. It separates
+practices to retain, project collaboration changes, content implications for
+later harmonization and abstracted template candidates.
+
 ## CHANGELOG.md
 
 The version history.
@@ -263,7 +269,9 @@ For milestone-driven implementation, document the final validated state rather t
 
 # Retrospective Updates
 
-Template updates should be made through retrospectives based on real project experience.
+Use `RETROSPECTIVE_PROMPT.md` for collaboration retrospectives based on real
+project experience. Template findings remain candidates until the maintainer
+authorizes a specific template change with a recognized control word.
 
 A retrospective update should not simply add a new section to every document.
 

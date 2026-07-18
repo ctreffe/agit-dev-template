@@ -8,6 +8,8 @@ This project follows Semantic Versioning.
 
 ### Added
 
+- Add `RETROSPECTIVE_PROMPT.md` for evidence-based development-collaboration
+  review and controlled template-learning candidates.
 - Add `HARMONIZATION_PROMPT.md` for source-template comparison, development
   consistency review and roadmap alignment.
 - Add `CONTINUATION_PROMPT.md` for reproducible development-project re-entry in

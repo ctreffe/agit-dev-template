@@ -135,11 +135,16 @@ Projektregeln und werden im abgeleiteten Projekt angepasst und gepflegt.
 
 ## Kontinuierliche Weiterentwicklung
 
-Das AGIT Dev Template entwickelt sich durch Projektretrospektiven weiter.
+Das AGIT Dev Template entwickelt sich durch Collaboration-Retrospektiven weiter.
 
-Retrospektiven finden normalerweise am Ende eines Projekts statt, können aber auch während eines Projekts eingeschoben werden, wenn ausreichend praktische Erkenntnisse vorliegen.
+Der Maintainer entscheidet, wann eine Harmonisierung oder Retrospektive
+ausgeführt wird und welchen Projektzeitraum oder Umfang sie betrachtet.
 
-Änderungen am Template sollen ausschließlich im Rahmen einer solchen Retrospektive erfolgen. Wenn eine Retrospektive zentrale Prozessregeln verändert, sollen betroffene Dokumente harmonisiert werden, statt nur isolierte Notizen zu ergänzen.
+Retrospektivbefunde sind zunächst Template-Kandidaten. Der Assistant darf eine
+konkrete Template-Änderung nur mit anerkannter Kontrollwortfreigabe umsetzen;
+Git-History-Aktionen bleiben davon getrennt kontrolliert. Betrifft eine
+autorisierte Änderung zentrale Prozessregeln, werden alle betroffenen Dokumente
+harmonisiert, statt nur isolierte Notizen zu ergänzen.
 
 ## Kerndokumente des Templates
 
@@ -148,6 +153,7 @@ Retrospektiven finden normalerweise am Ende eines Projekts statt, können aber a
 - [INITIAL_PROMPT.md](INITIAL_PROMPT.md) – erster Prompt für reproduzierbare Projektinitialisierung
 - [CONTINUATION_PROMPT.md](CONTINUATION_PROMPT.md) – Wiedereinstiegsprompt für ein neues Kontextfenster oder eine neue Assistant-Session
 - [HARMONIZATION_PROMPT.md](HARMONIZATION_PROMPT.md) – Abgleich mit dem Quell-Template sowie Code-, Dokumentations- und Roadmap-Harmonisierung
+- [RETROSPECTIVE_PROMPT.md](RETROSPECTIVE_PROMPT.md) – Maintainer-initiierter Review der Entwicklungszusammenarbeit
 - [ChatGPT.md](ChatGPT.md) – Collaboration Model
 - [CODEX.md](CODEX.md) – lokale Codex Operating Policy
 - [PHILOSOPHY.md](PHILOSOPHY.md) – Projektphilosophie

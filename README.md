@@ -140,11 +140,16 @@ context-window and session handoffs.
 
 ## Continuous Improvement
 
-The AGIT Dev Template evolves through project retrospectives.
+The AGIT Dev Template evolves through collaboration retrospectives.
 
-Retrospectives normally take place at the end of a project, but they may also be held during a project when enough practical findings have accumulated.
+The maintainer decides when to invoke a harmonization or retrospective and
+which project period or scope it should cover.
 
-Template changes should be made only as part of such a retrospective. When a retrospective changes core process guidance, affected documents should be harmonized instead of receiving isolated notes.
+Retrospective findings are template candidates. The assistant may implement a
+specific template change only with recognized control-word authorization. Git
+history actions remain separately controlled. When an authorized change affects
+core process guidance, affected documents should be harmonized instead of
+receiving isolated notes.
 
 ## Core Template Documents
 
@@ -153,6 +158,7 @@ Template changes should be made only as part of such a retrospective. When a ret
 - [INITIAL_PROMPT.md](INITIAL_PROMPT.md) – first prompt for reproducible project initialization
 - [CONTINUATION_PROMPT.md](CONTINUATION_PROMPT.md) – re-entry prompt for a new context window or assistant session
 - [HARMONIZATION_PROMPT.md](HARMONIZATION_PROMPT.md) – source-template, code, documentation and roadmap harmonization
+- [RETROSPECTIVE_PROMPT.md](RETROSPECTIVE_PROMPT.md) – Maintainer-initiated development-collaboration review
 - [ChatGPT.md](ChatGPT.md) – Collaboration Model
 - [CODEX.md](CODEX.md) – local Codex operating policy
 - [PHILOSOPHY.md](PHILOSOPHY.md) – project philosophy
