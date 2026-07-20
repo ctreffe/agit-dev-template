@@ -38,6 +38,27 @@ A good repository description helps a visitor quickly understand the scope of th
 
 ---
 
+# README Badge Policy
+
+Template repositories use a compact badge block directly below the README
+title and before the AI Collaboration Note. The standard semantic order is
+status, version and license, followed only by badges for real build, test or
+documentation automation.
+
+Status links to `VERSION`, version links to `CHANGELOG.md` and license links to
+`LICENSE`. Public repositories may use dynamic GitHub metadata; private or
+proprietary repositories may use static badges updated during milestone
+closure. Avoid a last-commit badge because recent activity is not a quality,
+validation or release signal.
+
+Derived projects adapt the badges to their own documented status, completed
+version, actual license and available automation. They do not retain the AGIT
+Dev Template version as the project version and do not advertise checks or
+releases that do not exist. English and German badge blocks remain identical
+when both READMEs are maintained.
+
+---
+
 # Repository as Source of Truth
 
 The repository is the authoritative project state.

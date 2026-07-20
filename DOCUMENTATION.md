@@ -28,6 +28,20 @@ A German translation of the README where useful.
 
 It should follow the structure of `README.md` and should not drift into a separate document.
 
+## README Badge Block
+
+Place badges directly below the title and before the AI Collaboration Note.
+Use status, version and license in that order, followed only by badges backed
+by real build, test or documentation automation. Link the standard badges to
+`VERSION`, `CHANGELOG.md` and `LICENSE` respectively.
+
+Badges communicate maintained project state; they are not decoration. Derived
+projects must replace template values with their own status, completed version,
+actual license and existing workflows. Avoid a last-commit badge because recent
+activity does not establish quality, validation or release readiness. Keep
+English and German badge blocks identical and update static badges with the
+metadata they represent.
+
 ## PROJECT_CONTEXT.md
 
 The current-state entry point for resuming work.

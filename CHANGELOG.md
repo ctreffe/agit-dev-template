@@ -8,6 +8,9 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Standardize template README badges as status, version and license links and
+  document how derived projects adapt badges without inheriting template state
+  or advertising nonexistent automation.
 - Upgrade the Collaboration Model to v1.19 and classify staging and unstaging
   as specifically requested index operations outside the control-word rule.
 

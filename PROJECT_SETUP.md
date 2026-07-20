@@ -75,6 +75,28 @@ Before completing project setup, verify that:
 - both notes point to `ChatGPT.md`
 - no generated project update has replaced the note with a shortened variant
 
+## README Badge Policy
+
+Place the badge block directly below the README title and before the AI
+Collaboration Note. Use this semantic order when the corresponding information
+applies:
+
+1. status
+2. version
+3. license
+4. real build, test or documentation automation
+
+Derived projects must replace the template badges with project-specific
+information. Status must have a documented meaning, version must describe the
+latest completed project state and license must match the repository. Add a
+release or automation badge only when the corresponding tags, releases or
+workflows actually exist. Do not use a last-commit badge by default because
+recent activity is not evidence of quality or readiness.
+
+Keep English and German badge blocks identical when both READMEs are present.
+Record the AGIT Dev Template version and commit in `PROJECT_CONTEXT.md`, not as
+the derived project's version badge.
+
 ---
 
 # 4. Capture Maintainer Project Intent

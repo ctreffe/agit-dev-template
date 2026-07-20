@@ -1,8 +1,8 @@
 # AGIT Dev Template
 
-![License](https://img.shields.io/github/license/ctreffe/agit-dev-template)
-![Release](https://img.shields.io/github/v/tag/ctreffe/agit-dev-template)
-![Last Commit](https://img.shields.io/github/last-commit/ctreffe/agit-dev-template)
+[![Status](https://img.shields.io/badge/status-stable-green)](VERSION)
+[![Version](https://img.shields.io/github/v/tag/ctreffe/agit-dev-template?label=version)](CHANGELOG.md)
+[![License](https://img.shields.io/github/license/ctreffe/agit-dev-template)](LICENSE)
 
 > [!NOTE]
 > **AI Collaboration**
