@@ -202,7 +202,11 @@ Prefer local environments such as `.venv/` and `node_modules/` over global insta
 
 Development projects should retain practices that have proven useful and remove unnecessary complexity. Validated negative results, recurring validation problems and maintainability lessons are legitimate project knowledge.
 
-Use harmonization to reconcile project content, implementation and roadmap. Use retrospectives to evaluate collaboration and propose transferable template improvements. Template changes should update affected guidance coherently and should not overfit one project experience.
+Use harmonization to reconcile project content, implementation, tests, documentation and roadmap. Use retrospectives separately to evaluate collaboration, engineering handoffs, validation strategy and work rhythm. A finding becomes a template candidate only after its transferability, maintenance cost and effect on different development projects have been considered.
+
+The maintainer coordinates cross-template evolution in a private governance repository named `agit-templateverse`. It records shared conventions, deliberate specializations and evidence from derived projects. The repository is intentionally not linked because template users do not need access to it.
+
+Governance coordination does not create hidden engineering requirements. Every change that affects this template must be represented here through maintained guidance, Decision Records where appropriate, the changelog and release history. Reusable improvements must keep code, tests, configuration and user-facing documentation aligned and must not overfit one implementation experience.
 
 ## License
 

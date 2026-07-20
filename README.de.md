@@ -202,7 +202,11 @@ Bevorzuge lokale Umgebungen wie `.venv/` und `node_modules/` gegenüber globaler
 
 Entwicklungsprojekte sollten bewährte Praktiken bewahren und unnötige Komplexität entfernen. Validierte negative Ergebnisse, wiederkehrende Validierungsprobleme und Wartbarkeitserkenntnisse sind legitimes Projektwissen.
 
-Nutze Harmonisierung, um Projektinhalt, Implementierung und Roadmap abzugleichen. Nutze Retrospektiven, um Zusammenarbeit zu bewerten und übertragbare Template-Verbesserungen vorzuschlagen. Template-Änderungen sollen betroffene Leitlinien kohärent aktualisieren und nicht eine einzelne Projekterfahrung überpassen.
+Nutze Harmonisierung, um Projektinhalt, Implementierung, Tests, Dokumentation und Roadmap abzugleichen. Nutze Retrospektiven separat, um Zusammenarbeit, Engineering-Übergaben, Validierungsstrategie und Arbeitsrhythmus zu bewerten. Ein Befund wird erst dann zum Template-Kandidaten, wenn seine Übertragbarkeit, Wartungskosten und Auswirkungen auf unterschiedliche Entwicklungsprojekte geprüft wurden.
+
+Der Maintainer koordiniert die templateübergreifende Weiterentwicklung in einem privaten Governance-Repository namens `agit-templateverse`. Es dokumentiert gemeinsame Konventionen, bewusste Spezialisierungen und Evidenz aus abgeleiteten Projekten. Das Repository wird bewusst nicht verlinkt, da Template-Nutzer:innen keinen Zugriff darauf benötigen.
+
+Die Governance-Koordination erzeugt keine verborgenen Engineering-Anforderungen. Jede Änderung, die dieses Template betrifft, muss hier durch gepflegte Leitlinien, gegebenenfalls Decision Records, den Changelog und die Release-Historie abgebildet werden. Wiederverwendbare Verbesserungen müssen Code, Tests, Konfiguration und nutzerorientierte Dokumentation aufeinander abgestimmt halten und dürfen nicht eine einzelne Implementierungserfahrung überpassen.
 
 ## Lizenz
 
