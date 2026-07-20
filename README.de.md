@@ -137,6 +137,7 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record, wenn 
 
 ### Zusammenarbeit und Engineering-Regeln
 
+- **`AGENTS.md`** ist der kompakte, automatisch geladene Einstiegspunkt für KI-Agenten. Die Datei führt zu den vollständigen Engineering-, Kollaborations- und Validierungsleitlinien, ohne sie zu duplizieren.
 - **`ChatGPT.md`** definiert das Entwicklungskollaborationsmodell, den Roadmap-Rhythmus, die Validierungspartnerschaft und Erwartungen an repository-fertige Übergaben.
 - **`CODEX.md`** definiert lokale Tool-, Netzwerk-, Offenlegungs-, Multi-Repository- und Git-Regeln für Codex auf dem Maintainer-System.
 - **`PHILOSOPHY.md`** hält die Engineering-Werte hinter dem Template fest, darunter Einfachheit, Wartbarkeit, Transparenz, validiertes Lernen und Integrität.
@@ -163,7 +164,7 @@ In einem abgeleiteten Entwicklungsprojekt:
 - ersetze Template-Identität und Platzhalterinhalte durch konkreten Projektnamen, Zweck, Setup und Nutzung;
 - fülle `PROJECT_CONTEXT.md` aus und pflege die Datei kontinuierlich;
 - passe `DOCUMENTATION.md` und `REPOSITORY.md` als laufende Regeln an;
-- behalte normalerweise `ChatGPT.md`, `CODEX.md` und `PHILOSOPHY.md`;
+- behalte normalerweise `AGENTS.md`, `ChatGPT.md`, `CODEX.md` und `PHILOSOPHY.md` und passe sie an;
 - behalte `PROJECT_SETUP.md`, `INITIAL_PROMPT.md` und die drei Prompts für spätere Sitzungen als Provenienz und wiederholbare Betriebswerkzeuge;
 - ergänze die vom Projekt benötigte Quellen-, Test-, Konfigurations- und Dokumentationsstruktur;
 - erstelle echte Decision Records nur für folgenreiche Entscheidungen;

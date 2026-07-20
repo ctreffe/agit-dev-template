@@ -6,6 +6,16 @@ This project follows Semantic Versioning.
 
 ## [Unreleased]
 
+### Added
+
+- Add `AGENTS.md` as the concise, automatically loaded entry point that routes
+  AI agents to the complete engineering rules and validation guidance.
+
+### Changed
+
+- Align the initialization and continuation prompts with `AGENTS.md`: setup is
+  an explicit one-time workflow, while continuation only reconstructs state.
+
 ## [v1.3.0] - 2026-07-20
 
 ### Changed

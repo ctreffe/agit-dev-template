@@ -173,6 +173,7 @@ The following documents usually remain in the derived project:
 - `README.md`
 - `README.de.md` where useful
 - `CHANGELOG.md`
+- `AGENTS.md` as the automatic agent entry point
 - `ChatGPT.md`
 - `CODEX.md` when Codex will be used for local project work
 - `PHILOSOPHY.md`

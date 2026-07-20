@@ -137,6 +137,7 @@ Templates live in [decisions/](decisions/). Create a record when future maintain
 
 ### Collaboration and Engineering Rules
 
+- **`AGENTS.md`** is the concise, automatically loaded entry point for AI agents. It routes them to the complete engineering, collaboration and validation guidance without duplicating it.
 - **`ChatGPT.md`** defines the development collaboration model, roadmap rhythm, validation partnership and repository-ready delivery expectations.
 - **`CODEX.md`** defines local tool, network, disclosure, multi-repository and Git rules for Codex on the maintainer machine.
 - **`PHILOSOPHY.md`** records the engineering values behind the template, including simplicity, maintainability, transparency, validated learning and integrity.
@@ -163,7 +164,7 @@ In a derived development project:
 - replace template identity and placeholder content with the concrete project name, purpose, setup and usage;
 - fill and continuously maintain `PROJECT_CONTEXT.md`;
 - adapt `DOCUMENTATION.md` and `REPOSITORY.md` as ongoing rules;
-- normally retain `ChatGPT.md`, `CODEX.md` and `PHILOSOPHY.md`;
+- normally retain and adapt `AGENTS.md`, `ChatGPT.md`, `CODEX.md` and `PHILOSOPHY.md`;
 - retain `PROJECT_SETUP.md`, `INITIAL_PROMPT.md` and the three later-session prompts as provenance and repeatable operating tools;
 - add the source, test, configuration and documentation structure required by the project;
 - create real Decision Records only for consequential decisions;

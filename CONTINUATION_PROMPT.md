@@ -12,6 +12,10 @@ the new context window.
 ```text
 We are continuing an existing development project in a new context window.
 
+Apply AGENTS.md as the durable repository operating baseline. If it was not
+loaded automatically, read it first. This prompt defines the re-entry procedure
+for the current session.
+
 Do not re-initialize the project and do not rely on earlier chat history.
 Reconstruct the implementation and repository state before changing code.
 
@@ -27,8 +31,9 @@ Read the repository in this order:
 5. Subject to the sensitivity rules below, read only the implementation, tests,
    examples and configuration files needed to understand the active step. Use
    REPOSITORY.md, DOCUMENTATION.md and PHILOSOPHY.md to resolve project-wide
-   expectations. Do not repeat PROJECT_SETUP.md or INITIAL_PROMPT.md unless
-   setup is incomplete or relevant to the requested work.
+   expectations. Do not execute PROJECT_SETUP.md or INITIAL_PROMPT.md as part
+   of continuation. If initialization appears incomplete, report that state
+   and propose returning to INITIAL_PROMPT.md as a separate workflow.
 
 Use read-only Git commands to check the branch, working tree, recent commits,
 latest relevant tag and staged or unstaged changes. Reconcile this evidence

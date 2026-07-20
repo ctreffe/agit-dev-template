@@ -83,6 +83,12 @@ The AGIT Collaboration Model.
 
 It describes how the maintainer and AI assistant collaborate, including repository-ready delivery, roadmap-first work and validation expectations.
 
+## AGENTS.md
+
+The concise, automatically loaded agent entry point. It routes agents to the
+complete engineering, collaboration and validation guidance without duplicating
+`ChatGPT.md` or `CODEX.md`.
+
 ## CODEX.md
 
 The local Codex operating policy.
