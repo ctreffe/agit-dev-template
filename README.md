@@ -15,7 +15,11 @@
 >
 > Its collaboration model is maintained in [ChatGPT.md](ChatGPT.md).
 
-[Deutsche Dokumentation](README.de.md) · The English README is authoritative; the German README is maintained as a close translation.
+---
+
+**Language:** [Deutsche Dokumentation](README.de.md)
+
+---
 
 ## Contents
 
@@ -62,19 +66,20 @@ Use the generic Project Template when the project is still primarily discovery, 
 
 ## Project Initialization
 
-Initialization adapts the reusable engineering rules to a concrete development project.
+After creating the repository, the maintainer needs to invoke only [INITIAL_PROMPT.md](INITIAL_PROMPT.md). The agent reads the repository and its setup guidance, then leads the complete initialization. The maintainer does not need to open or execute `PROJECT_SETUP.md` separately.
 
-1. Create a repository from this template and identify the authoritative local baseline.
-2. Start the first assistant session with [INITIAL_PROMPT.md](INITIAL_PROMPT.md).
-3. Follow [PROJECT_SETUP.md](PROJECT_SETUP.md).
-4. Provide the maintainer-owned problem context, desired end state, users, operating environment, boundaries and non-goals.
-5. Define the first roadmap, validation model, code readership and repository language.
-6. Establish rules for secrets, logs, dumps, screenshots, fixtures and generated artifacts before they enter the working tree.
-7. Adapt both README files, ongoing repository rules and user-facing setup guidance.
-8. Complete [PROJECT_CONTEXT.md](PROJECT_CONTEXT.md) with the baseline, initial roadmap, validation status and source-template provenance.
-9. Prepare and validate the first small project-specific change before the initialization commit.
+The agent then:
 
-Initialization is incomplete while required architecture, validation, sensitive-input or maintainer-owned project decisions remain placeholders. Keep `PROJECT_SETUP.md` and `INITIAL_PROMPT.md` as provenance unless the maintainer documents a deliberate exception.
+1. reads the collaboration, engineering, setup, documentation, repository and decision rules;
+2. inspects the repository baseline without altering Git history;
+3. presents concise questions about the problem, desired end state, users, environment, boundaries, roadmap, validation model and code readership;
+4. asks for maintainer-owned architecture, sensitive-input and project decisions instead of inventing them;
+5. adapts the README files, project context, repository rules and project structure after the maintainer answers;
+6. establishes rules for secrets, logs, dumps, screenshots, fixtures and generated artifacts;
+7. validates the initial technical baseline and prepares the first small project-specific change; and
+8. hands back the initialized state with checks, unresolved decisions and suggested commit metadata.
+
+`PROJECT_SETUP.md` remains the agent's detailed checklist and an initialization provenance artifact. `INITIAL_PROMPT.md` is the single user-facing entry point that activates it.
 
 ## Recommended Workflow
 
@@ -120,7 +125,7 @@ Templates live in [decisions/](decisions/). Create a record when future maintain
 
 ### Entry Points and Project Memory
 
-- **`README.md` and `README.de.md`** introduce the software project and explain setup, configuration, use and navigation. English is authoritative, while German is maintained as a close translation when retained.
+- **`README.md` and `README.de.md`** introduce the software project and explain setup, configuration, use and navigation in English and German.
 - **`PROJECT_CONTEXT.md`** is the primary re-entry point for current intent, status, roadmap, baseline, validation and next steps. It should describe the present engineering state, not duplicate the changelog or architecture history.
 - **`CHANGELOG.md` and `VERSION`** record completed changes and the latest completed version. They are milestone artifacts and should not imply a release state that has not been validated.
 
@@ -162,26 +167,26 @@ Record the source-template version and commit, initialization status, last harmo
 
 ## How to Use This Template
 
-1. Initialize the repository with `INITIAL_PROMPT.md` and `PROJECT_SETUP.md`.
-2. Capture maintainer intent and derive a validation-oriented roadmap.
-3. Establish the code, test, documentation and local-tool structure needed by the concrete project.
-4. Keep private inputs outside Git and prefer sanitized fixtures that reproduce behavior without unnecessary disclosure.
-5. Implement one logical change at a time and validate it before recommending a commit.
-6. Document public behavior, configuration, commands, risks and troubleshooting when they affect use.
-7. Record durable architectural, project and documentation decisions in `decisions/`.
-8. Keep `PROJECT_CONTEXT.md` current and start later sessions with `CONTINUATION_PROMPT.md`.
-9. Use harmonization for deliberate project and template alignment; use retrospectives separately for collaboration learning.
+1. Create a repository from the template and give the agent the instruction in `INITIAL_PROMPT.md`.
+2. Answer the numbered questions the agent presents; it reads and applies `PROJECT_SETUP.md` and the remaining setup guidance automatically.
+3. Review the initialized repository state, validation results and proposed first commit.
+4. Let the agent capture maintainer intent and derive a validation-oriented roadmap.
+5. Establish the code, test, documentation and local-tool structure needed by the concrete project.
+6. Keep private inputs outside Git and prefer sanitized fixtures that reproduce behavior without unnecessary disclosure.
+7. Implement one logical change at a time and validate it before recommending a commit.
+8. Document public behavior, configuration, commands, risks and troubleshooting when they affect use.
+9. Record durable decisions, keep `PROJECT_CONTEXT.md` current and use the continuation, harmonization and retrospective prompts when appropriate.
 10. Close milestones only after implementation, validation, documentation and version metadata form one coherent state.
 
 ## Maintainer Tool Setup
 
 Install only the tools required by the derived project. A practical baseline for local Codex-supported development is:
 
-- Git for Windows and GitHub Desktop;
-- PowerShell;
-- `rg` or another fast local search tool;
-- Python with a project-local virtual environment when needed;
-- Node.js with project-local dependencies when needed;
+- [Git for Windows](https://gitforwindows.org/) and [GitHub Desktop](https://desktop.github.com/download/);
+- [PowerShell](https://learn.microsoft.com/powershell/scripting/install/installing-powershell-on-windows);
+- [ripgrep (`rg`)](https://github.com/BurntSushi/ripgrep/releases) or another fast local search tool;
+- [Python](https://www.python.org/downloads/) with a project-local virtual environment when needed;
+- [Node.js](https://nodejs.org/en/download/) with project-local dependencies when needed;
 - project-specific test, lint, render or build tools.
 
 Prefer local environments such as `.venv/` and `node_modules/` over global installation. Keep environment files, caches, logs, raw inputs and generated working artifacts ignored unless the project deliberately versions a reviewed artifact.

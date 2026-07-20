@@ -2,6 +2,8 @@
 
 Use this prompt as the first instruction to the AI assistant after creating a new project repository from the AGIT Dev Template.
 
+For normal initialization, the maintainer only needs to give the prompt below to the assistant. The assistant reads and applies `PROJECT_SETUP.md` and the other setup files, presents every required maintainer decision and performs the repository updates; the maintainer does not execute those files separately.
+
 The purpose is to make the first session reproducible: the assistant should
 read the repository, understand all template rules, ask for the required
 maintainer-owned information, initialize the project files and prepare the first

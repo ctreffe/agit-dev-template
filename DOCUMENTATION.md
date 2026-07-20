@@ -26,7 +26,7 @@ It explains what the project is, who it is for, how to get started and where to 
 
 A German translation of the README where useful.
 
-It should follow the structure of `README.md` and should not drift into a separate document.
+In this template repository, `README.md` is authoritative and `README.de.md` is maintained as a close structural and semantic translation. Derived projects may choose a different authority model, but they must document it and keep parallel README files aligned rather than allowing them to become separate documents.
 
 ## README Badge Block
 
