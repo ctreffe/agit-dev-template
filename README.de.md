@@ -15,11 +15,11 @@
 >
 > Das Kollaborationsmodell wird in [ChatGPT.md](ChatGPT.md) gepflegt.
 
----
+<br>
 
-**Sprache:** [English documentation](README.md)
+**[Link to the English README](README.md)**
 
----
+<br>
 
 ## Inhalt
 
@@ -67,6 +67,12 @@ Verwende das generische Project Template, wenn das Projekt noch überwiegend Dis
 ## Projektinitialisierung
 
 Nach dem Erzeugen des Repositorys muss der Maintainer nur [INITIAL_PROMPT.md](INITIAL_PROMPT.md) aufrufen. Der Agent liest das Repository und seine Setup-Leitlinien und führt anschließend durch die vollständige Initialisierung. Der Maintainer muss `PROJECT_SETUP.md` nicht selbst öffnen oder ausführen.
+
+Die einfachste Anweisung an den Agenten lautet:
+
+> Lies `INITIAL_PROMPT.md` vollständig und führe den darin enthaltenen Initialisierungs-Prompt aus.
+
+Die Datei muss dafür nicht geöffnet und ihr Prompt nicht in die Unterhaltung kopiert werden.
 
 Der Agent:
 
