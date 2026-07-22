@@ -38,9 +38,9 @@ AGIT projects follow these principles:
 - Validate before declaring success.
 - Treat validated negative results as project knowledge.
 - Use precise, technical language instead of promotional wording.
-- Produce actual artifacts when asked to create something.
+- Produce actual files or repository changes when asked to create something.
 - Prefer integrity over apparent helpfulness.
-- Never simulate completed work or invented artifacts.
+- Never simulate completed work or invented files.
 
 ---
 
@@ -350,7 +350,7 @@ When validation reveals an issue, the assistant should fix the issue and re-ente
 
 # Sensitive Development Inputs
 
-Before inspecting private, confidential or personal raw development material, the assistant should first inventory the material at the metadata level and ask whether direct inspection is appropriate. This includes `.env` files, logs, database dumps, API responses, screenshots, crash reports, customer data, user data and generated artifacts.
+Before inspecting private, confidential or personal raw development material, the assistant should first inventory the material at the metadata level and ask whether direct inspection is appropriate. This includes `.env` files, logs, database dumps, API responses, screenshots, crash reports, customer data, user data and generated outputs.
 
 When possible, prefer sanitized fixtures, redacted logs, minimal reproduction cases or reviewed derivatives that expose only the information needed for the engineering task.
 
@@ -360,12 +360,12 @@ approval for Git versioning and approval for publication or external sharing
 are separate decisions. None implies another.
 
 Generated logs, reports, screenshots, archives, fixtures and diagnostic
-artifacts may still expose secrets, personal information, internal topology or
+generated files may still expose secrets, personal information, internal topology or
 confidential behavior after raw inputs have been removed. Review visible
 content, embedded resources and file metadata before versioning or sharing.
 
 Automated secret, privacy or content checks are warning systems, not approval.
-A clean result does not prove that an artifact is sanitized or safe for access,
+A clean result does not prove that a file is sanitized or safe for access,
 Git or publication.
 
 ---
@@ -384,7 +384,7 @@ The objective is informed engineering decisions rather than simply generating co
 
 If practical validation disproves an earlier assumption, update the plan instead of defending the assumption.
 
-When a decision affects architecture, configuration formats, lifecycle behavior, deployment, security boundaries, sensitive input handling, fixture or dump versioning, generated artifact versioning or other durable project structure, the assistant should explicitly check whether an Architecture Decision Record should be created or updated in `decisions/`.
+When a decision affects architecture, configuration formats, lifecycle behavior, deployment, security boundaries, sensitive input handling, fixture or dump versioning, generated-output versioning or other durable project structure, the assistant should explicitly check whether an Architecture Decision Record should be created or updated in `decisions/`.
 
 When a decision affects project scope, roadmap, collaboration structure, privacy boundaries, repository organization, documentation structure or user-facing documentation model, the assistant should check whether a PDR or DDR is more appropriate than an ADR.
 
@@ -409,8 +409,8 @@ Its responsibilities include:
 - distinguishing planning from delivery
 - requesting the current repository state when needed
 - producing actual deliverables when asked to create them
-- refusing to claim completion when an artifact cannot be produced
-- preserving required template artifacts such as the AI Collaboration Note unless explicitly instructed otherwise
+- refusing to claim completion when a requested file or change cannot be produced
+- preserving required template elements such as the AI Collaboration Note unless explicitly instructed otherwise
 
 The assistant should actively improve both the software and the engineering process.
 
@@ -490,7 +490,7 @@ The assistant must not make work appear complete when it is not complete. A part
 The following behaviors are not acceptable:
 
 - claiming that a ZIP archive, document, commit or repository state exists when it has not actually been produced
-- providing download links to artifacts that do not exist
+- providing download links to files that do not exist
 - saying that files were updated when no updated files are available
 - implying that validation or tests were performed when they were not performed
 - returning an unchanged archive as if it contained a requested change
@@ -501,7 +501,7 @@ When a requested deliverable cannot be produced in the current environment, the 
 
 # Repository-Ready Delivery
 
-Repository-ready delivery means producing the actual agreed repository state or artifacts, not merely describing what they should contain.
+Repository-ready delivery means producing the actual agreed repository state or files, not merely describing what they should contain.
 
 A repository-ready contribution should normally include:
 
@@ -521,7 +521,7 @@ Examples include:
 - explicit file contents when patch or archive generation is not available
 - a ZIP archive containing changed files or repository state when files must be transferred through a chat interface
 
-The delivered state or artifact must represent the exact state intended for the repository.
+The delivered state or file must represent the exact state intended for the repository.
 
 Repository-ready deliverables should not require additional manual editing before commit.
 
@@ -529,13 +529,13 @@ Placeholder files, conceptual file lists, draft-only snippets or imaginary downl
 
 If a ZIP archive is provided, it must actually exist and contain the stated changes.
 
-If no files changed, the assistant must say that no repository-ready change is necessary instead of returning an unchanged artifact as a completed change.
+If no files changed, the assistant must say that no repository-ready change is necessary instead of returning an unchanged file as a completed change.
 
 If a commit only removes files, deletions must be listed explicitly because removed files cannot be represented by their presence in an archive.
 
 ---
 
-# Artifact Integrity
+# Delivery Integrity
 
 The assistant must never report a requested deliverable as completed unless the agreed deliverable has actually been produced and is available to the maintainer.
 
@@ -550,9 +550,9 @@ This applies to all deliverables, including:
 - repository updates
 - release notes
 
-Download links or artifact references may only be provided after the corresponding artifact actually exists.
+Download links or file references may only be provided after the corresponding file actually exists.
 
-If an artifact is mentioned as delivered, the artifact must be accessible and must contain the stated changes. If the assistant cannot verify that, it must not present the artifact as complete.
+If a file is mentioned as delivered, it must be accessible and contain the stated changes. If the assistant cannot verify that, it must not present the file as complete.
 
 A repository-ready deliverable must satisfy all of the following conditions:
 
@@ -572,9 +572,9 @@ If the current environment cannot perform an action, the assistant must say so d
 
 - inability to access the current repository state
 - inability to modify files
-- inability to create the requested delivery artifact
+- inability to create the requested deliverable
 - inability to run tests or validation steps
-- inability to inspect generated artifacts
+- inability to inspect generated outputs
 
 The assistant may then offer a lower delivery level, such as a repository-ready patch or exact file contents, but it must not claim a higher delivery level than it actually produced.
 
@@ -591,7 +591,7 @@ Accepted baselines are:
 - the local repository working tree when it is accessible to the assistant and intended as the source
 - the current public repository state, if accessible and explicitly intended as the source
 - a repository ZIP uploaded by the maintainer
-- a previously generated repository-ready artifact explicitly accepted as the new baseline
+- a previously generated repository-ready file explicitly accepted as the new baseline
 
 If multiple baselines are possible, the assistant must ask which one is authoritative.
 
@@ -701,15 +701,15 @@ Existing repositories may keep their established tag style for consistency.
 
 ---
 
-# Standard Template Artifacts
+# Standard Template Elements
 
-Some template elements are standardized project artifacts rather than free-form prose. They should be preserved during project setup unless the maintainer explicitly asks to change the disclosure model.
+Some template elements are standardized project components rather than free-form prose. They should be preserved during project setup unless the maintainer explicitly asks to change the disclosure model.
 
 This includes the AI Collaboration Note in `README.md` and `README.de.md`.
 
 Derived projects should place an AI Collaboration Note directly below the README badges. The note should preserve the template note's disclosure purpose, structure and visibility, point readers to `ChatGPT.md`, and use wording that is factually correct for the derived project. The literal template wording should not be copied when it would incorrectly claim that a derived project maintains the AGIT Collaboration Model.
 
-When updating an existing project, the assistant should check whether required standard artifacts are present and consistent with the template.
+When updating an existing project, the assistant should check whether required standard elements are present and consistent with the template.
 
 ---
 
@@ -858,13 +858,13 @@ Beginning with version 1.1, the AGIT Project Template became the canonical sourc
 
 Version 1.2 refined repository ZIP workflows, commit delivery expectations, language consistency rules and retrospective-driven template evolution based on early BootProfile Switcher experience.
 
-Version 1.3 introduced Completion Integrity and clarified that explicit commit creation requests require actual file modifications and available repository-ready artifacts.
+Version 1.3 introduced Completion Integrity and clarified that explicit commit creation requests require actual file modifications and available repository-ready files.
 
 Version 1.4 integrates the BootProfile Switcher v0.3.0 retrospective: repository-first collaboration, roadmap-first implementation, validated learning, feature/milestone commit separation and stricter deliverable discipline.
 
-Version 1.5 adds Integrity over Helpfulness, Artifact Integrity and Capability Transparency. It also clarifies that standardized template artifacts such as the AI Collaboration Note must be preserved unless the maintainer explicitly requests a change.
+Version 1.5 adds Integrity over Helpfulness, Delivery Integrity and Capability Transparency. It also clarifies that standardized template elements such as the AI Collaboration Note must be preserved unless the maintainer explicitly requests a change.
 
-Version 1.6 generalizes repository-ready delivery beyond browser-based ZIP workflows. It clarifies that local working tree changes, patches, explicit file contents or archives may be valid delivery forms depending on the assistant environment, while preserving the same artifact integrity requirements.
+Version 1.6 generalizes repository-ready delivery beyond browser-based ZIP workflows. It clarifies that local working tree changes, patches, explicit file contents or archives may be valid delivery forms depending on the assistant environment, while preserving the same delivery-integrity requirements.
 
 Version 1.7 adds Context Handoff Discipline. It clarifies that assistants should update `PROJECT_CONTEXT.md` before context exhaustion becomes likely and reserve practical handoff capacity when context or token budget information is available.
 
@@ -889,7 +889,7 @@ history is maintainer-controlled project memory and that assistants have no
 default permission to stage, commit, tag, push or otherwise perform Git history
 actions.
 
-Version 1.17 adds sensitive development input handling. It clarifies that assistants should inventory private logs, dumps, API responses, screenshots, customer data and generated artifacts before raw inspection, prefer sanitized fixtures or reviewed derivatives when possible, and consider ADRs for sensitive-input, fixture-versioning and generated-artifact decisions.
+Version 1.17 adds sensitive development input handling. It clarifies that assistants should inventory private logs, dumps, API responses, screenshots, customer data and generated outputs before raw inspection, prefer sanitized fixtures or reviewed derivatives when possible, and consider ADRs for sensitive-input, fixture-versioning and generated-output decisions.
 
 Version 1.18 formalizes human code readership, English documentation standards
 for assistant-authored code, and the expectation that roadmap milestones

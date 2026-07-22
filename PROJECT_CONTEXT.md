@@ -137,13 +137,13 @@ Assistant-access approval:
 Git-versioning approval:
 
 ```text
-<exact fixtures, derivatives or generated artifacts approved for Git, or none>
+<exact fixtures, derivatives or generated outputs approved for Git, or none>
 ```
 
 Publication or external-sharing approval:
 
 ```text
-<exact artifacts and audience, or none>
+<exact files or outputs and audience, or none>
 ```
 
 The maintainer should provide this section at project start. It should guide the initial roadmap and help future sessions understand why the roadmap has its current shape.
@@ -183,7 +183,7 @@ Status:
 Current working baseline:
 
 ```text
-<local working tree | public repository main branch | uploaded ZIP filename | accepted generated artifact>
+<local working tree | public repository main branch | uploaded ZIP filename | accepted generated output>
 ```
 
 Baseline notes:
@@ -302,9 +302,9 @@ Current collaboration notes:
 - A public repository may be used as the working baseline when accessible.
 - A current ZIP archive should be provided when the assistant cannot reliably access the repository state.
 - Explicit create or commit requests require actual repository-ready deliverables.
-- Integrity has priority over apparent helpfulness: artifacts must exist before they are reported as delivered.
+- Integrity has priority over apparent helpfulness: files and changes must exist before they are reported as delivered.
 - Capability limitations should be stated directly instead of hidden behind simulated completion.
-- Required template artifacts such as the AI Collaboration Note should remain visible and factually accurate unless intentionally modified.
+- Required template elements such as the AI Collaboration Note should remain visible and factually accurate unless intentionally modified.
 - `PROJECT_SETUP.md` and `INITIAL_PROMPT.md` remain as initialization provenance unless the maintainer documents a deliberate exception.
 - If Codex is used locally, `CODEX.md` defines the local operating policy.
 - Long-running sessions should update `PROJECT_CONTEXT.md` before context exhaustion becomes likely.
@@ -317,7 +317,7 @@ Current collaboration notes:
 - User-facing documentation should explain setup, configuration, productive usage, reference surfaces and troubleshooting where relevant.
 - Substantial modules, integrations or workflows should use dedicated documentation instead of overloading the README.
 - Substantial production components should include a demonstration, example configuration or validation path when applicable.
-- Before preparing a milestone commit, documentation should be checked for version, status, roadmap, changelog, README, dedicated-documentation links, setup guidance, validation freshness and sensitive input or generated artifact handling.
+- Before preparing a milestone commit, documentation should be checked for version, status, roadmap, changelog, README, dedicated-documentation links, setup guidance, validation freshness and sensitive input or generated-output handling.
 - When validation requires maintainer-local or elevated execution, the assistant should provide exact steps, interpret the output and document relevant validation results.
 - Feature commits and milestone commits should remain separate.
 - After a milestone commit or tag exists, `PROJECT_CONTEXT.md` should be updated if it still describes pre-commit or pre-tag review work as the current focus.

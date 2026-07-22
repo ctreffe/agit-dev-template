@@ -25,7 +25,7 @@ Records remain authoritative. Never copy template changes blindly.
    architecture, source, test, configuration and user-documentation files.
 4. Inspect branch, working tree, recent commits, relevant tags and staged or
    unstaged changes with read-only Git commands. Preserve uncommitted work.
-5. Apply sensitive-input, secret, fixture, generated-artifact and publication
+5. Apply sensitive-input, secret, fixture, generated-output and publication
    rules before opening or validating project materials.
 
 For a derived project, locate the exact source template and last recorded
@@ -54,7 +54,7 @@ Perform an internal development consistency pass across:
 - public behavior, setup, usage, reference and troubleshooting documentation
 - dependency, environment, build, packaging and release guidance
 - human-readable English code documentation for assistant-authored code
-- sensitive inputs, sanitized fixtures, generated artifacts and ignore rules
+- sensitive inputs, sanitized fixtures, generated outputs and ignore rules
 - actual test or validation evidence versus documented claims
 - working-commit state versus milestone-closure state
 

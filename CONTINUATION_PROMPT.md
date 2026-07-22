@@ -60,7 +60,7 @@ substantive edits, provide a concise numbered re-entry report containing:
 3. working-tree changes and their apparent relationship to the active work
 4. latest validated baseline, checks performed and checks still needed
 5. relevant architecture decisions, code-readership expectations and docs
-6. sensitive-input, fixture and generated-artifact boundaries
+6. sensitive-input, fixture and generated-output boundaries
 7. open decisions, risks, blockers or repository inconsistencies
 8. the smallest useful next implementation step and its validation path
 9. only blocking maintainer questions

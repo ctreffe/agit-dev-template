@@ -53,11 +53,11 @@ When a project uses AI assistance, the repository should make that collaboration
 
 Integrity is more important than appearing helpful.
 
-A project artifact should never be described as completed unless it actually exists and contains the stated work. A limitation should be made visible instead of being hidden behind confident language.
+A project file or deliverable should never be described as completed unless it actually exists and contains the stated work. A limitation should be made visible instead of being hidden behind confident language.
 
 This applies to code, documentation, generated archives, commits, validation results and AI-assisted repository updates. Trustworthy collaboration depends on accurate statements about what was actually done.
 
-Standard template artifacts should also be preserved with care. When a project inherits a required template element, such as the AI Collaboration Note in the README files, it should keep the required disclosure visible and factually accurate. Project-specific wording may be adapted when literal template text would be misleading.
+Standard template elements should also be preserved with care. When a project inherits a required template element, such as the AI Collaboration Note in the README files, it should keep the required disclosure visible and factually accurate. Project-specific wording may be adapted when literal template text would be misleading.
 
 ---
 
@@ -155,7 +155,7 @@ The repository is the durable project memory.
 
 Chats, notes and experiments are useful, but the repository should contain the information needed to understand and continue the project.
 
-Important outcomes should be reflected in one or more durable artifacts:
+Important outcomes should be reflected in one or more durable files or records:
 
 - code
 - documentation

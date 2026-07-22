@@ -74,7 +74,7 @@ Allowed by default:
 - use Node.js tooling when already present or project-local
 - use `rg` or equivalent local search tools
 - run project-local tests, linters, formatters and validation scripts
-- create local archives or generated artifacts when explicitly relevant to the requested work
+- create local archives or generated outputs when explicitly relevant to the requested work
 - use local PDF, document, spreadsheet or image tooling for local files supplied by the maintainer
 
 Codex should report important command results that affect the conclusion of the work.
@@ -173,12 +173,12 @@ Default rules:
 - Prefer official sources when external research is needed.
 - Use web search only when current information is needed, when the maintainer requests it or when local context is insufficient.
 - Treat package installation as network activity that may disclose package names, versions and environment metadata to package sources.
-- Keep generated ZIP files, reports and artifacts local unless the maintainer explicitly requests external sharing.
+- Keep generated ZIP files, reports and other outputs local unless the maintainer explicitly requests external sharing.
 
 Assistant access, Git versioning and publication or external sharing require
 separate maintainer decisions. Approval for one does not authorize another.
 Automated privacy, secret or content checks are warning systems and do not by
-themselves establish that an artifact is sanitized or safe.
+themselves establish that a file is sanitized or safe.
 
 If data disclosure is possible, Codex should state that before using the external tool.
 
@@ -197,7 +197,7 @@ Codex must not perform the following actions unless the maintainer overrides the
 - credential, token or security configuration changes
 - upload of private repository data
 - modification of unrelated repositories in a multi-repository workspace
-- simulated completion of artifacts that do not actually exist
+- simulated completion of files or changes that do not actually exist
 
 Integrity has priority over appearing helpful.
 
@@ -216,11 +216,11 @@ node_modules/
 .codex-cache/
 .codex-tmp/
 .codex-output/
-artifacts/
+generated/
 deliverables/
 ```
 
-These directories are local working artifacts and should normally be ignored by Git.
+These directories contain local working files and should normally be ignored by Git.
 
 Codex may create a project-local Python virtual environment when Python work is required and the environment is ignored by Git.
 

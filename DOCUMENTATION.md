@@ -109,7 +109,7 @@ Use `decisions/` as the shared location for durable decision reasoning.
 
 Choose the record type by decision subject:
 
-- ADRs for architecture, configuration formats, lifecycle behavior, deployment, security boundaries, sensitive input handling, fixture or dump versioning, generated artifact versioning or another durable part of the technical project structure.
+- ADRs for architecture, configuration formats, lifecycle behavior, deployment, security boundaries, sensitive input handling, fixture or dump versioning, generated-output versioning or another durable part of the technical project structure.
 - PDRs for project scope, roadmap, collaboration, privacy, repository structure, release model or governance decisions.
 - DDRs for user-facing documentation, reference structure, terminology, examples, screenshots or documentation QA decisions.
 
@@ -203,13 +203,13 @@ The milestone commit should contain the coherent completed state. Avoid relying 
 
 ---
 
-# Standard Documentation Artifacts
+# Standard Documentation Elements
 
-Some documentation elements are standardized template artifacts. They should be reused consistently in derived projects rather than removed during setup.
+Some documentation elements are standardized template components. They should be reused consistently in derived projects rather than removed during setup.
 
-The AI Collaboration Note in `README.md` and `README.de.md` is such an artifact. It should appear directly below the README badges and preserve the template note's disclosure purpose, structure and visibility. Derived projects should adapt project-specific wording when the literal template wording would be inaccurate, while still linking to `ChatGPT.md`.
+The AI Collaboration Note in `README.md` and `README.de.md` is such an element. It should appear directly below the README badges and preserve the template note's disclosure purpose, structure and visibility. Derived projects should adapt project-specific wording when the literal template wording would be inaccurate, while still linking to `ChatGPT.md`.
 
-When repository documentation is updated with AI assistance, the assistant should preserve standardized artifacts unless explicitly instructed to change them.
+When repository documentation is updated with AI assistance, the assistant should preserve standardized elements unless explicitly instructed to change them.
 
 ---
 

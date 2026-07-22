@@ -8,11 +8,15 @@ This project follows Semantic Versioning.
 
 ### Added
 
+- Add an inventory-based workflow for external files and sources with
+  `intake`, `restricted`, `local` and `versioned` input zones.
 - Add `AGENTS.md` as the concise, automatically loaded entry point that routes
   AI agents to the complete engineering rules and validation guidance.
 
 ### Changed
 
+- Replace abstract artifact terminology in active guidance with clearer terms
+  for files, records, inputs, outputs and deliverables.
 - Align the initialization and continuation prompts with `AGENTS.md`: setup is
   an explicit one-time workflow, while continuation only reconstructs state.
 - Expand continuous-improvement guidance with engineering evidence,

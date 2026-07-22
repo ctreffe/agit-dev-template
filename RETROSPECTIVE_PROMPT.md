@@ -20,7 +20,7 @@ content. Hand project-content implications to a later harmonization.
    and collaboration-related Decision Records.
 3. Read CONTINUATION_PROMPT.md and HARMONIZATION_PROMPT.md to preserve prompt
    boundaries.
-4. Inspect relevant commit history, validation handoffs, review artifacts and
+4. Inspect relevant commit history, validation handoffs, review records and
    documented decisions with read-only commands and subject to documented
    access boundaries. Preserve uncommitted work.
 5. Use current-session evidence and maintainer reports, but do not claim access
@@ -41,7 +41,7 @@ Evaluate:
 - accuracy of commit summaries, descriptions and completion claims
 - human readability of assistant-authored code and English documentation
 - validation partnership when local or elevated execution is required
-- handling of secrets, logs, dumps, fixtures and generated artifacts
+- handling of secrets, logs, dumps, fixtures and generated outputs
 - tool, capability and Git-authority boundaries
 - practices to retain and recurring causes of friction or rework
 

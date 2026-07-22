@@ -28,6 +28,7 @@
 - [AGIT Templateverse](#agit-templateverse)
 - [Wann dieses Template geeignet ist](#wann-dieses-template-geeignet-ist)
 - [Projektinitialisierung](#projektinitialisierung)
+- [Externe Dateien und Quellen](#externe-dateien-und-quellen)
 - [Empfohlener Workflow](#empfohlener-workflow)
 - [Git-Index und geschützte Git-Aktionen](#git-index-und-geschützte-git-aktionen)
 - [Decision Records](#decision-records)
@@ -42,11 +43,11 @@
 
 Das AGIT Dev Template ist der Ausgangspunkt für entwicklungsorientierte Projekte mit Code, Skripten, Automatisierung, technischer Architektur, Validierung, Releases und benutzerorientierter technischer Dokumentation. Es stellt eine wiederverwendbare Repository-Grundlage und Kollaborationsmethode bereit, kein Programmierframework oder Anwendungsgerüst.
 
-Das Template verbindet die vom Maintainer definierte Intention mit Roadmap-orientierter Implementierung, kleinen prüfbaren Änderungen, expliziter Validierung, dauerhaftem Projektkontext, dokumentierten technischen Entscheidungen und repository-fertiger Übergabe. Es baut auf dem generischen AGIT Project Template auf und ergänzt Engineering-spezifische Anforderungen an Codelesbarkeit, sensible Inputs, erzeugte Artefakte und Release-Disziplin.
+Das Template verbindet die vom Maintainer definierte Intention mit Roadmap-orientierter Implementierung, kleinen prüfbaren Änderungen, expliziter Validierung, dauerhaftem Projektkontext, dokumentierten technischen Entscheidungen und repository-fertiger Übergabe. Es baut auf dem generischen AGIT Project Template auf und ergänzt Engineering-spezifische Anforderungen an Codelesbarkeit, sensible Inputs, erzeugte Outputs und Release-Disziplin.
 
 ## Kernprinzip
 
-Der Maintainer verantwortet Projektrichtung, Architektur und Release-Entscheidungen. Der Assistant kann beim Entwerfen, Implementieren, Testen, Dokumentieren und Prüfen helfen, muss aber die Autorität des Maintainers wahren, Annahmen und Einschränkungen sichtbar machen und darf abgeschlossenen Code, Validierungen, Commits oder Artefakte niemals simulieren.
+Der Maintainer verantwortet Projektrichtung, Architektur und Release-Entscheidungen. Der Assistant kann beim Entwerfen, Implementieren, Testen, Dokumentieren und Prüfen helfen, muss aber die Autorität des Maintainers wahren, Annahmen und Einschränkungen sichtbar machen und darf abgeschlossenen Code, Validierungen, Commits oder Dateien niemals simulieren.
 
 Das Repository ist der maßgebliche Engineering-Zustand. Code und Dokumentation sollen für künftige Maintainer ohne private Chatverläufe verständlich sein, und eine Änderung ist nicht abgeschlossen, nur weil sie einmal funktioniert hat.
 
@@ -81,11 +82,22 @@ Der Agent:
 3. legt kompakte Fragen zu Problem, gewünschtem Endzustand, Nutzer:innen, Umgebung, Grenzen, Roadmap, Validierungsmodell und Code-Leserschaft vor;
 4. fragt vom Maintainer zu treffende Architektur-, sensible Input- und Projektentscheidungen ab, statt sie zu erfinden;
 5. passt nach den Antworten README-Dateien, Projektkontext, Repository-Regeln und Projektstruktur an;
-6. legt Regeln für Secrets, Logs, Dumps, Screenshots, Fixtures und erzeugte Artefakte fest;
+6. legt Regeln für Secrets, Logs, Dumps, Screenshots, Fixtures, externe Dateien und erzeugte Outputs fest;
 7. validiert die initiale technische Baseline und bereitet die erste kleine projektspezifische Änderung vor; und
 8. übergibt den initialisierten Stand mit Prüfergebnissen, offenen Entscheidungen und vorgeschlagenen Commit-Metadaten.
 
-`PROJECT_SETUP.md` bleibt die ausführliche Checkliste des Agenten und ein Provenienzartefakt der Initialisierung. `INITIAL_PROMPT.md` ist der einzige benutzerorientierte Einstiegspunkt, der sie aktiviert.
+`PROJECT_SETUP.md` bleibt die ausführliche Checkliste des Agenten und dokumentiert die Methode der Initialisierung. `INITIAL_PROMPT.md` ist der einzige benutzerorientierte Einstiegspunkt, der sie aktiviert.
+
+## Externe Dateien und Quellen
+
+Lege neu erhaltene Dateien zunächst in `input/intake/` ab, bevor über ihre Verwendung entschieden wird. Dokumentiere sichere Metadaten, Provenienz und Klassifizierung in `input/INVENTORY.md`; verwende die ignorierte Datei `input/INVENTORY.local.md`, wenn Dateinamen, Pfade oder andere Angaben selbst sensibel sind.
+
+- **`input/intake/`** ist der ignorierte Eingangsbereich für noch nicht klassifizierte Dateien. Ihre bloße Anwesenheit erlaubt keinen Zugriff durch den Assistant.
+- **`input/restricted/`** ist ignoriert und für Dateien bestimmt, die nur der Maintainer oder ausdrücklich freigegebene lokale Prüfungen lesen dürfen.
+- **`input/local/`** ist ignoriert und enthält Dateien, die der Assistant lokal verarbeiten darf, die aber nicht in Git gelangen dürfen.
+- **`input/versioned/`** enthält geprüfte externe Dateien, die versioniert werden dürfen. Verschiebe sie in einen projektspezifischen Quellen-, Fixture- oder Konfigurationsordner, wenn dieser ihre dauerhafte Rolle klarer ausdrückt, und bewahre die Provenienz im Inventar.
+
+Assistant-Zugriff, Git-Versionierung und externe Weitergabe sind drei getrennte Entscheidungen. Eine Verschiebung dokumentiert die Klassifizierung, erweitert aber keine Berechtigung. Technisch festgelegte Laufzeitorte wie `.env`, Anwendungs-Logverzeichnisse oder lokale Datenbanken dürfen dort bleiben, wo die Software sie benötigt; ihre Klassifizierung und Ignore-Regeln sollten dennoch dokumentiert werden.
 
 ## Empfohlener Workflow
 
@@ -121,7 +133,7 @@ Reguläre Engineering-Commits verwenden Präfixe wie `feat:`, `fix:`, `docs:`, `
 
 Wähle den Record-Typ nach dem Entscheidungsgegenstand:
 
-- **ADR — Architecture Decision Record:** Architektur, Schnittstellen, Konfigurationsformate, Lebenszyklusverhalten, Deployment, Sicherheitsgrenzen, Behandlung sensibler Inputs, Fixture-Versionierung oder Richtlinien für erzeugte Artefakte.
+- **ADR — Architecture Decision Record:** Architektur, Schnittstellen, Konfigurationsformate, Lebenszyklusverhalten, Deployment, Sicherheitsgrenzen, Behandlung sensibler Inputs, Fixture-Versionierung oder Richtlinien für erzeugte Outputs.
 - **PDR — Project Decision Record:** Umfang, Roadmap, Zusammenarbeit, Datenschutz, Repository-Struktur, Release-Modell oder Governance.
 - **DDR — Documentation Decision Record:** Benutzerdokumentation, Referenzstruktur, Terminologie, Beispiele, Screenshots oder Dokumentations-QA.
 
@@ -133,7 +145,7 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record, wenn 
 
 - **`README.md` und `README.de.md`** führen auf Englisch und Deutsch in das Softwareprojekt ein und erklären Setup, Konfiguration, Nutzung und Navigation.
 - **`PROJECT_CONTEXT.md`** ist der primäre Wiedereinstiegspunkt für aktuelle Intention, Status, Roadmap, Baseline, Validierung und nächste Schritte. Die Datei soll den gegenwärtigen Engineering-Zustand beschreiben, nicht Changelog oder Architekturhistorie duplizieren.
-- **`CHANGELOG.md` und `VERSION`** halten abgeschlossene Änderungen und die letzte abgeschlossene Version fest. Sie sind Milestone-Artefakte und dürfen keinen noch nicht validierten Release-Zustand suggerieren.
+- **`CHANGELOG.md` und `VERSION`** halten abgeschlossene Änderungen und die letzte abgeschlossene Version fest. Sie sind Milestone-Nachweise und dürfen keinen noch nicht validierten Release-Zustand suggerieren.
 
 ### Zusammenarbeit und Engineering-Regeln
 
@@ -151,11 +163,12 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record, wenn 
 - **`HARMONIZATION_PROMPT.md`** vergleicht ein abgeleitetes Projekt mit seiner aufgezeichneten Source-Template-Baseline und gleicht Code, Tests, Dokumentation und Roadmap ab, ohne Änderungen blind zu kopieren.
 - **`RETROSPECTIVE_PROMPT.md`** bewertet Kollaborationspraktiken getrennt vom Projektinhalt und erzeugt kontrollierte Kandidaten für Projekt- oder Template-Verbesserungen.
 
-### Entscheidungen und projektspezifischer Code
+### Entscheidungen, externe Inputs und projektspezifischer Code
 
 - **`decisions/`** enthält wiederverwendbare ADR-, PDR- und DDR-Vorlagen und in abgeleiteten Projekten akzeptierte dauerhafte Entscheidungen. Der Ordner soll nicht zum Protokoll jeder kleinen Implementierungsentscheidung werden.
+- **`input/`** stellt den inventarbasierten Eingangs- und Klassifizierungsworkflow für externe Dateien und Quellen bereit. Ignorierte Zonen halten ungeprüfte, beschränkte und nur lokale Inputs aus Git heraus.
 - **Projektspezifische Quellen, Tests, Skripte und Konfigurationen** werden während der Initialisierung entsprechend der vom Maintainer gewählten Technologie und Architektur ergänzt. Ihre Struktur sollte dokumentiert werden, wenn Namen und Aufbau allein für neue Mitwirkende nicht ausreichend verständlich sind.
-- **Projektlokale Umgebungen und erzeugte Artefakte** verwenden normalerweise ignorierte Orte wie `.venv/`, `node_modules/`, `artifacts/` oder `deliverables/`. Dokumentiere, ob erzeugte Outputs reproduzierbare lokale Dateien, Review-Artefakte oder Release-Deliverables sind.
+- **Projektlokale Umgebungen und erzeugte Outputs** verwenden normalerweise ignorierte Orte wie `.venv/`, `node_modules/`, `generated/` oder `deliverables/`. Dokumentiere, ob erzeugte Outputs reproduzierbare lokale Dateien, Review-Dateien oder Release-Deliverables sind.
 
 ## Template- und abgeleitete Projektdateien
 
@@ -179,7 +192,7 @@ Halte Source-Template-Version und -Commit, Initialisierungsstatus, letzte Harmon
 3. Prüfe den initialisierten Repository-Stand, die Validierungsergebnisse und den vorgeschlagenen ersten Commit.
 4. Lass den Agenten die Maintainer-Intention erfassen und eine validierungsorientierte Roadmap ableiten.
 5. Richte die für das konkrete Projekt benötigte Code-, Test-, Dokumentations- und lokale Toolstruktur ein.
-6. Halte private Inputs außerhalb von Git und bevorzuge bereinigte Fixtures, die Verhalten ohne unnötige Offenlegung reproduzieren.
+6. Klassifiziere externe Dateien über `input/`, halte beschränkte und nur lokale Inputs außerhalb von Git und bevorzuge bereinigte Fixtures, die Verhalten ohne unnötige Offenlegung reproduzieren.
 7. Implementiere jeweils eine logische Änderung und validiere sie vor einer Commit-Empfehlung.
 8. Dokumentiere öffentliches Verhalten, Konfiguration, Befehle, Risiken und Fehlerbehebung, wenn sie die Nutzung beeinflussen.
 9. Dokumentiere dauerhafte Entscheidungen, halte `PROJECT_CONTEXT.md` aktuell und nutze die Prompts für Fortsetzung, Harmonisierung und Retrospektive nach Bedarf.
@@ -196,7 +209,7 @@ Installiere nur die Werkzeuge, die das abgeleitete Projekt benötigt. Eine prakt
 - [Node.js](https://nodejs.org/en/download/) mit projektlokalen Abhängigkeiten, falls benötigt;
 - projektspezifische Test-, Lint-, Render- oder Build-Werkzeuge.
 
-Bevorzuge lokale Umgebungen wie `.venv/` und `node_modules/` gegenüber globaler Installation. Halte Umgebungsdateien, Caches, Logs, Rohinputs und erzeugte Arbeitsartefakte ignoriert, sofern das Projekt nicht bewusst ein geprüftes Artefakt versioniert.
+Bevorzuge lokale Umgebungen wie `.venv/` und `node_modules/` gegenüber globaler Installation. Halte Umgebungsdateien, Caches, Logs, ungeprüfte Inputs und erzeugte Arbeitsdateien ignoriert, sofern das Projekt nicht bewusst eine geprüfte Datei oder einen geprüften Output versioniert.
 
 ## Kontinuierliche Verbesserung
 

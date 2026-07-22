@@ -63,14 +63,14 @@ when both READMEs are maintained.
 
 The repository is the authoritative project state.
 
-Project decisions, current status and reusable knowledge should be captured in repository artifacts rather than relying on chat history.
+Project decisions, current status and reusable knowledge should be captured in repository files and records rather than relying on chat history.
 
 When AI assistance is used, work should begin from a clearly identified repository baseline:
 
 - the local repository working tree, if accessible to the assistant and intended as the source of truth
 - the current public repository state, if accessible
 - a ZIP archive supplied by the maintainer
-- a previously generated artifact explicitly accepted as the new baseline
+- a previously generated file explicitly accepted as the new baseline
 
 If the baseline is unclear, do not prepare repository-ready changes until it is clarified.
 
@@ -143,28 +143,37 @@ Unrelated changes should be split into separate commits whenever practical.
 
 ---
 
-# Raw Inputs, Sanitized Fixtures and Generated Artifacts
+# External Files, Fixtures and Generated Outputs
 
-Development repositories should distinguish raw local inputs, sanitized fixtures and generated artifacts.
+Use `input/intake/`, `input/restricted/`, `input/local/` and
+`input/versioned/` to classify external files and sources. Record safe
+provenance and handling decisions in `input/INVENTORY.md`; use the ignored
+`input/INVENTORY.local.md` for sensitive names, paths or details.
 
-Raw local inputs include `.env` files, logs, database dumps, API responses, screenshots, crash reports and customer or user data. They may be private, confidential or personal. Assistants should not inspect such material by default; first document the inventory and ask whether raw inspection is appropriate.
+Logs, database dumps, API responses, screenshots, crash reports and customer
+or user data may be private, confidential or personal. Their presence does not
+authorize assistant inspection. Sanitized fixtures or reviewed derivatives are
+preferred when they reproduce behavior without unnecessary disclosure.
 
-Sanitized fixtures or reviewed derivatives are preferred when they can reproduce behavior without exposing sensitive material.
-
-Generated artifacts should be clearly treated as outputs. Document whether they are versioned review artifacts, release artifacts or regenerated locally. Review logs, reports, screenshots, archives, embedded resources and file metadata for disclosure risks before versioning or sharing them.
+Generated files should be clearly treated as outputs. Document whether they
+are versioned review files, release deliverables or regenerated locally. Review
+logs, reports, screenshots, archives, embedded resources and file metadata for
+disclosure risks before versioning or sharing them.
 
 Assistant access, Git versioning and publication or external sharing are
-separate approval decisions. A sanitized fixture or reviewed derivative may be
-suitable for one purpose without being suitable for the others.
+separate approval decisions. A reviewed file may be suitable for one purpose
+without being suitable for the others. Moving a file between input zones
+records classification but does not grant broader authorization.
 
-`.gitignore` rules and documentation should be updated together when private local inputs or generated artifacts are required.
+`.gitignore` rules, the input inventory and documentation should be updated
+together. Fixed runtime locations such as `.env`, application log directories
+or local databases may remain where the software requires them, but their
+classification and ignore rules should still be documented.
 
-Sensitive raw inputs should remain outside Git by default. Establish ignore
-rules and an input inventory before copying logs, dumps, screenshots, customer
-data or other sensitive material into the repository working tree. Before a
-commit is prepared, review new and untracked files for secrets, personal data,
-confidential content and accidental raw-input inclusion. Prefer sanitized
-fixtures or reviewed derivatives whenever they reproduce the required behavior.
+Before a commit is prepared, review new and untracked files for secrets,
+personal data, confidential content and accidental input inclusion. Prefer
+sanitized fixtures or reviewed derivatives whenever they reproduce the
+required behavior.
 
 Automated secret, privacy or content checks may identify risks, but a clean
 result does not authorize access, versioning or publication.
@@ -242,11 +251,11 @@ Repository-ready deliverables should represent the final agreed state of the cha
 
 The delivery form may be local working tree changes, a patch, explicit file contents or a ZIP archive, depending on the assistant environment and the maintainer's request.
 
-If an archive is used, it must actually contain the stated changes. Artifact existence and contents are part of repository integrity, not optional presentation details.
+If an archive is used, it must actually contain the stated changes. File existence and contents are part of repository integrity, not optional presentation details.
 
 If no files changed, the assistant should say so instead of returning an unchanged archive as a completed deliverable.
 
-The assistant must not claim that a ZIP, patch, commit or generated file exists unless it has actually been produced and is available for review. If the current environment cannot produce the requested artifact, the limitation should be stated before offering an alternative delivery mode.
+The assistant must not claim that a ZIP, patch, commit or generated file exists unless it has actually been produced and is available for review. If the current environment cannot produce the requested deliverable, the limitation should be stated before offering an alternative delivery mode.
 
 If the current repository state is unclear, the assistant should request an explicit repository baseline before preparing repository-ready deliverables.
 
@@ -260,7 +269,7 @@ Validation may include:
 
 - running scripts or tests
 - testing on a real system
-- reviewing generated artifacts
+- reviewing generated outputs
 - verifying documentation consistency
 - checking whether the roadmap objective has been met
 
@@ -363,11 +372,11 @@ Translations should be complete and consistent, not partially localized copies.
 
 ---
 
-# Standard Template Artifacts
+# Standard Template Elements
 
-Derived repositories should preserve required template artifacts unless intentionally changed.
+Derived repositories should preserve required template elements unless intentionally changed.
 
-The AI Collaboration Note in `README.md` and `README.de.md` is a required repository-visible artifact for AGIT projects. It should remain directly below the README badges and preserve the original disclosure purpose. Derived projects may adapt project-specific wording when the literal template wording would be inaccurate, but the note should still clearly disclose AI collaboration and point readers to `ChatGPT.md`.
+The AI Collaboration Note in `README.md` and `README.de.md` is a required repository-visible element for AGIT projects. It should remain directly below the README badges and preserve the original disclosure purpose. Derived projects may adapt project-specific wording when the literal template wording would be inaccurate, but the note should still clearly disclose AI collaboration and point readers to `ChatGPT.md`.
 
 ---
 
@@ -376,7 +385,7 @@ The AI Collaboration Note in `README.md` and `README.de.md` is a required reposi
 Repositories created from the AGIT Dev Template should preserve their
 initialization provenance and maintain their project rules after setup.
 
-Keep these initialization artifacts under their original names unless the
+Keep these initialization files under their original names unless the
 maintainer documents a deliberate exception:
 
 - `PROJECT_SETUP.md`

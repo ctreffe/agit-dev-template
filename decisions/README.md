@@ -4,7 +4,7 @@ This directory is the default location for durable decision records in developme
 
 Use the record type that matches the decision:
 
-- `ADR` - Architecture Decision Record for architecture, implementation structure, configuration formats, lifecycle behavior, deployment, security, tooling, fixtures or generated-artifact decisions.
+- `ADR` - Architecture Decision Record for architecture, implementation structure, configuration formats, lifecycle behavior, deployment, security, tooling, fixtures or generated-output decisions.
 - `PDR` - Project Decision Record for scope, roadmap, collaboration, privacy, repository structure, release model or governance decisions.
 - `DDR` - Documentation Decision Record for user-facing documentation, reference structure, terminology, examples, screenshots or documentation QA decisions.
 

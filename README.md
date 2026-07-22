@@ -28,6 +28,7 @@
 - [AGIT Templateverse](#agit-templateverse)
 - [When to Use This Template](#when-to-use-this-template)
 - [Project Initialization](#project-initialization)
+- [External Files and Sources](#external-files-and-sources)
 - [Recommended Workflow](#recommended-workflow)
 - [Git Index and Protected Git Actions](#git-index-and-protected-git-actions)
 - [Decision Records](#decision-records)
@@ -42,11 +43,11 @@
 
 The AGIT Dev Template is the starting point for development-oriented projects involving code, scripts, automation, technical architecture, validation, releases and user-facing technical documentation. It provides a reusable repository foundation and collaboration method rather than a programming framework or application scaffold.
 
-The template combines maintainer-owned intent with roadmap-first implementation, small reviewable changes, explicit validation, durable project context, documented technical decisions and repository-ready delivery. It builds on the generic AGIT Project Template and adds engineering-specific expectations for code readability, sensitive inputs, generated artifacts and release discipline.
+The template combines maintainer-owned intent with roadmap-first implementation, small reviewable changes, explicit validation, durable project context, documented technical decisions and repository-ready delivery. It builds on the generic AGIT Project Template and adds engineering-specific expectations for code readability, sensitive inputs, generated outputs and release discipline.
 
 ## Core Principle
 
-The maintainer owns the project direction, architecture and release decisions. The assistant may help design, implement, test, document and review changes, but must preserve maintainer authority, make assumptions and limitations visible and never simulate completed code, validation, commits or artifacts.
+The maintainer owns the project direction, architecture and release decisions. The assistant may help design, implement, test, document and review changes, but must preserve maintainer authority, make assumptions and limitations visible and never simulate completed code, validation, commits or files.
 
 The repository is the authoritative engineering state. Code and documentation should be understandable to future maintainers without private chat history, and a change is not complete merely because it worked once.
 
@@ -81,11 +82,22 @@ The agent then:
 3. presents concise questions about the problem, desired end state, users, environment, boundaries, roadmap, validation model and code readership;
 4. asks for maintainer-owned architecture, sensitive-input and project decisions instead of inventing them;
 5. adapts the README files, project context, repository rules and project structure after the maintainer answers;
-6. establishes rules for secrets, logs, dumps, screenshots, fixtures and generated artifacts;
+6. establishes rules for secrets, logs, dumps, screenshots, fixtures, external files and generated outputs;
 7. validates the initial technical baseline and prepares the first small project-specific change; and
 8. hands back the initialized state with checks, unresolved decisions and suggested commit metadata.
 
-`PROJECT_SETUP.md` remains the agent's detailed checklist and an initialization provenance artifact. `INITIAL_PROMPT.md` is the single user-facing entry point that activates it.
+`PROJECT_SETUP.md` remains the agent's detailed checklist and a provenance record of the initialization method. `INITIAL_PROMPT.md` is the single user-facing entry point that activates it.
+
+## External Files and Sources
+
+Place newly received files in `input/intake/` before deciding how they may be used. Record safe metadata, provenance and the resulting classification in `input/INVENTORY.md`; use the ignored `input/INVENTORY.local.md` when filenames, paths or other details are themselves sensitive.
+
+- **`input/intake/`** is the ignored arrival area for files that have not yet been classified. Presence never authorizes assistant access.
+- **`input/restricted/`** is ignored and reserved for files that only the maintainer, or explicitly approved local checks, may inspect.
+- **`input/local/`** is ignored and holds files the assistant may process locally but that must not enter Git.
+- **`input/versioned/`** contains reviewed external files that may be committed. Move files from here into a project-specific source, fixture or configuration location when that location communicates their durable role more clearly, while preserving provenance in the inventory.
+
+Assistant access, Git versioning and external sharing are three separate decisions. A move between folders documents classification; it does not grant broader permission. Fixed runtime locations such as `.env`, application log directories or local databases may remain where the software requires them, but their classification and ignore rules should still be documented.
 
 ## Recommended Workflow
 
@@ -121,7 +133,7 @@ Regular engineering commits use prefixes such as `feat:`, `fix:`, `docs:`, `refa
 
 Choose the record type by decision subject:
 
-- **ADR — Architecture Decision Record:** architecture, interfaces, configuration formats, lifecycle behavior, deployment, security boundaries, sensitive-input handling, fixture versioning or generated-artifact policy.
+- **ADR — Architecture Decision Record:** architecture, interfaces, configuration formats, lifecycle behavior, deployment, security boundaries, sensitive-input handling, fixture versioning or generated-output policy.
 - **PDR — Project Decision Record:** scope, roadmap, collaboration, privacy, repository structure, release model or governance.
 - **DDR — Documentation Decision Record:** user documentation, reference structure, terminology, examples, screenshots or documentation QA.
 
@@ -133,7 +145,7 @@ Templates live in [decisions/](decisions/). Create a record when future maintain
 
 - **`README.md` and `README.de.md`** introduce the software project and explain setup, configuration, use and navigation in English and German.
 - **`PROJECT_CONTEXT.md`** is the primary re-entry point for current intent, status, roadmap, baseline, validation and next steps. It should describe the present engineering state, not duplicate the changelog or architecture history.
-- **`CHANGELOG.md` and `VERSION`** record completed changes and the latest completed version. They are milestone artifacts and should not imply a release state that has not been validated.
+- **`CHANGELOG.md` and `VERSION`** record completed changes and the latest completed version. They are milestone records and should not imply a release state that has not been validated.
 
 ### Collaboration and Engineering Rules
 
@@ -151,11 +163,12 @@ Templates live in [decisions/](decisions/). Create a record when future maintain
 - **`HARMONIZATION_PROMPT.md`** compares a derived project with its recorded source-template baseline and reconciles code, tests, documentation and roadmap without copying changes blindly.
 - **`RETROSPECTIVE_PROMPT.md`** evaluates collaboration practices separately from project content and produces controlled candidates for project or template improvement.
 
-### Decisions and Project-Specific Code
+### Decisions, External Inputs and Project-Specific Code
 
 - **`decisions/`** contains reusable ADR, PDR and DDR templates and, in derived projects, accepted durable decisions. The folder should not become a log of every minor implementation choice.
+- **`input/`** provides the inventory-based intake and classification workflow for external files and sources. Ignored zones keep unreviewed, restricted and local-only inputs out of Git.
 - **Project-specific source, tests, scripts and configuration** are added during initialization according to the technology and architecture chosen by the maintainer. Their layout should be documented when names and structure alone are insufficient for a new contributor.
-- **Project-local environments and generated artifacts** normally use ignored locations such as `.venv/`, `node_modules/`, `artifacts/` or `deliverables/`. Document whether generated outputs are reproducible local files, review artifacts or release deliverables.
+- **Project-local environments and generated outputs** normally use ignored locations such as `.venv/`, `node_modules/`, `generated/` or `deliverables/`. Document whether generated outputs are reproducible local files, review files or release deliverables.
 
 ## Template and Derived Project Files
 
@@ -179,7 +192,7 @@ Record the source-template version and commit, initialization status, last harmo
 3. Review the initialized repository state, validation results and proposed first commit.
 4. Let the agent capture maintainer intent and derive a validation-oriented roadmap.
 5. Establish the code, test, documentation and local-tool structure needed by the concrete project.
-6. Keep private inputs outside Git and prefer sanitized fixtures that reproduce behavior without unnecessary disclosure.
+6. Classify external files through `input/`, keep restricted and local-only inputs outside Git and prefer sanitized fixtures that reproduce behavior without unnecessary disclosure.
 7. Implement one logical change at a time and validate it before recommending a commit.
 8. Document public behavior, configuration, commands, risks and troubleshooting when they affect use.
 9. Record durable decisions, keep `PROJECT_CONTEXT.md` current and use the continuation, harmonization and retrospective prompts when appropriate.
@@ -196,7 +209,7 @@ Install only the tools required by the derived project. A practical baseline for
 - [Node.js](https://nodejs.org/en/download/) with project-local dependencies when needed;
 - project-specific test, lint, render or build tools.
 
-Prefer local environments such as `.venv/` and `node_modules/` over global installation. Keep environment files, caches, logs, raw inputs and generated working artifacts ignored unless the project deliberately versions a reviewed artifact.
+Prefer local environments such as `.venv/` and `node_modules/` over global installation. Keep environment files, caches, logs, unreviewed inputs and generated working files ignored unless the project deliberately versions a reviewed file or output.
 
 ## Continuous Improvement
 

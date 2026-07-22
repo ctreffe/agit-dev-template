@@ -61,7 +61,7 @@ If both are kept, maintain them as structurally aligned translations.
 
 Every AGIT project README should include an AI Collaboration Note directly below the badges.
 
-The note is a standardized disclosure artifact. It should preserve the purpose, position and level of visibility of the template note, but the wording must remain factually correct for the derived project.
+The note is a standardized disclosure element. It should preserve the purpose, position and level of visibility of the template note, but the wording must remain factually correct for the derived project.
 
 For the AGIT Dev Template itself, the note states that the repository maintains the AGIT Dev Template. For derived projects, adapt that project-specific sentence so it accurately describes the collaboration in the derived repository, while still pointing readers to `ChatGPT.md`.
 
@@ -113,7 +113,7 @@ At minimum, clarify:
 - the intended users, maintainers or operating environment
 - the desired end state
 - important boundaries, risks and intentional non-goals
-- private input, fixture, dump, log, screenshot or generated-artifact handling,
+- external-file, fixture, dump, log, screenshot or generated-output handling,
   including separate assistant-access, Git-versioning and publication decisions
 - who will inspect, review, debug, maintain or extend the code, what technical
   and domain knowledge those readers have, and whether English is the
@@ -121,7 +121,7 @@ At minimum, clarify:
 - how these points shape the first roadmap milestones
 
 Automated secret or sensitivity checks may support this review, but their
-results are warnings rather than proof that an artifact is sanitized or safe.
+results are warnings rather than proof that a file is sanitized or safe.
 
 The roadmap should be derived from this intent instead of from isolated technical ideas.
 
@@ -262,7 +262,7 @@ Common tools include:
 
 Codex should prefer project-local tool environments over global tool changes.
 
-Typical local tool artifacts include:
+Typical local tool directories and outputs include:
 
 ```text
 .venv/
@@ -271,7 +271,7 @@ node_modules/
 .codex-cache/
 .codex-tmp/
 .codex-output/
-artifacts/
+generated/
 deliverables/
 ```
 
@@ -348,14 +348,14 @@ defined and reviewed versioned milestone.
 
 # 16. Record Initialization Provenance
 
-Keep the initialization artifacts under their original names:
+Keep the initialization files under their original names:
 
 - `PROJECT_SETUP.md`
 - `INITIAL_PROMPT.md`
 
 Record initialization status and date, source template version and commit, later
 harmonization baseline and intentional template deviations in
-`PROJECT_CONTEXT.md`. Remove an initialization artifact only as a deliberate,
+`PROJECT_CONTEXT.md`. Remove an initialization file only as a deliberate,
 documented maintainer exception.
 
 `DOCUMENTATION.md` and `REPOSITORY.md` remain active project rules.
@@ -388,12 +388,12 @@ When working with AI assistance:
 - establish or review the current roadmap
 - agree on the next roadmap step
 - implement small changes
-- check whether important architecture, configuration-format, lifecycle, deployment, security, sensitive-input, fixture-versioning, generated-artifact, project-scope or documentation decisions need a decision record in `decisions/`
+- check whether important architecture, configuration-format, lifecycle, deployment, security, sensitive-input, fixture-versioning, generated-output, project-scope or documentation decisions need a decision record in `decisions/`
 - keep user-facing setup, usage, reference and troubleshooting documentation aligned with behavior
 - validate before commit whenever practical
 - use small implement-validate-adjust-prepare loops during active milestones
 - request repository-ready deliverables only after the plan is clear
-- require actual artifacts, not simulated completion
+- require actual files or repository changes, not simulated completion
 - provide commit-ready guidance with a clear summary and description
 - keep feature commits separate from milestone commits
 - document assistant-written code well enough that maintainers and future contributors can understand it without chat history

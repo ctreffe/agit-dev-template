@@ -28,8 +28,10 @@ maintainer decision when it could materially affect the result.
 - Prefer the smallest maintainable implementation that satisfies the stated
   goal and preserves human code readability.
 - Keep code, tests, configuration and user-facing documentation synchronized.
-- Keep private inputs, secrets, logs, dumps and generated working artifacts out
+- Keep private inputs, secrets, logs, dumps and generated working files out
   of Git unless a separate reviewed decision permits them.
+- Classify new external files through `input/`; presence in `input/intake/`
+  never authorizes assistant access.
 - Use project-local environments and existing tools; do not add or update
   dependencies without a concrete need and maintainer approval.
 - Follow the authorization rules in `CODEX.md`; an edit request does not by
