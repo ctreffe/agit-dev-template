@@ -8,6 +8,10 @@ This project follows Semantic Versioning.
 
 ### Added
 
+- Add `CREATE_LOCAL_PROJECT_PROMPT.md` for independent local-only projects.
+
+### Added
+
 - Add an inventory-based workflow for external files and sources with
   `intake`, `restricted`, `local` and `versioned` input zones.
 - Add `AGENTS.md` as the concise, automatically loaded entry point that routes
