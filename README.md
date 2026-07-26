@@ -29,6 +29,8 @@
 - [When to Use This Template](#when-to-use-this-template)
 - [Project Initialization](#project-initialization)
 - [External Files and Sources](#external-files-and-sources)
+- [Temporary Working Files](#temporary-working-files)
+- [Project Materials](#project-materials)
 - [Recommended Workflow](#recommended-workflow)
 - [Git Index and Protected Git Actions](#git-index-and-protected-git-actions)
 - [Decision Records](#decision-records)
@@ -95,14 +97,47 @@ remote, then invokes `INITIAL_PROMPT.md`; it is not a second initialization.
 
 ## External Files and Sources
 
-Place newly received files in `input/intake/` before deciding how they may be used. Record safe metadata, provenance and the resulting classification in `input/INVENTORY.md`; use the ignored `input/INVENTORY.local.md` when filenames, paths or other details are themselves sensitive.
+Place newly received files in `input/intake/` before deciding how they may be used. Record safe metadata, provenance and the resulting classification in `input/CATALOG.md`; use the ignored `input/CATALOG.local.md` when filenames, paths or other details are themselves sensitive.
+
+Catalog unchanged external services, datasets and URLs even when their content
+remains outside the repository. Use stable public URLs directly and resolve
+logical private or device-specific locations through ignored
+`input/PATHS.local.md`.
 
 - **`input/intake/`** is the ignored arrival area for files that have not yet been classified. Presence never authorizes assistant access.
 - **`input/restricted/`** is ignored and reserved for files that only the maintainer, or explicitly approved local checks, may inspect.
 - **`input/local/`** is ignored and holds files the assistant may process locally but that must not enter Git.
-- **`input/versioned/`** contains reviewed external files that may be committed. Move files from here into a project-specific source, fixture or configuration location when that location communicates their durable role more clearly, while preserving provenance in the inventory.
+- **`input/versioned/`** contains reviewed external files that may be committed. Move files from here into a project-specific source, fixture or configuration location when that location communicates their durable role more clearly, while preserving provenance in the catalog.
 
 Assistant access, Git versioning and external sharing are three separate decisions. A move between folders documents classification; it does not grant broader permission. Fixed runtime locations such as `.env`, application log directories or local databases may remain where the software requires them, but their classification and ignore rules should still be documented.
+
+## Temporary Working Files
+
+Use `temp/` for disposable intermediate engineering files. All contents outside
+`temp/restricted/` are assistant-readable; that restricted directory must not
+be enumerated or read. All temporary content is ignored, must never be versioned
+and is not cataloged. Promote retained files deliberately to `materials/` or an
+authoritative engineering location.
+
+## Project Materials
+
+Keep files in `input/` unchanged. A converted export, sanitized reproduction,
+cropped screenshot, diagnostic extract or any other content change is a new
+project material, not a modified input. `materials/` retains such working files
+while they remain useful but have not become authoritative source code, tests,
+fixtures or configuration.
+
+Every cataloged material is assistant-readable. Record provenance and creation
+or transformation in `materials/CATALOG.md`, using `Based on` input or material
+IDs. Store files as **`local`** in ignored `materials/local/`, as
+**`versioned`** in `materials/versioned/`, or as **`external`** at a stable
+logical location in the catalog. Resolve external locations per machine in
+ignored `materials/PATHS.local.md`, copied from the versioned example.
+
+Access does not authorize Git versioning or sharing. Promote a material to
+source, tests, fixtures or configuration only when that location better
+expresses its durable engineering role, preserving provenance. Build outputs,
+caches and disposable diagnostics do not belong in `materials/`.
 
 ## Recommended Workflow
 
@@ -171,7 +206,12 @@ Templates live in [decisions/](decisions/). Create a record when future maintain
 ### Decisions, External Inputs and Project-Specific Code
 
 - **`decisions/`** contains reusable ADR, PDR and DDR templates and, in derived projects, accepted durable decisions. The folder should not become a log of every minor implementation choice.
-- **`input/`** provides the inventory-based intake and classification workflow for external files and sources. Ignored zones keep unreviewed, restricted and local-only inputs out of Git.
+- **`input/`** provides the catalog-based intake and classification workflow for external files and sources. Ignored zones keep unreviewed, restricted and local-only inputs out of Git.
+- **`materials/`** catalogs retained assistant-readable engineering files in
+  local, versioned or external storage before deliberate promotion to a more
+  authoritative project role.
+- **`temp/`** holds ignored, never-versioned engineering intermediates, with
+  `temp/restricted/` as the inaccessible exception.
 - **Project-specific source, tests, scripts and configuration** are added during initialization according to the technology and architecture chosen by the maintainer. Their layout should be documented when names and structure alone are insufficient for a new contributor.
 - **Project-local environments and generated outputs** normally use ignored locations such as `.venv/`, `node_modules/`, `generated/` or `deliverables/`. Document whether generated outputs are reproducible local files, review files or release deliverables.
 

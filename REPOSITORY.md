@@ -143,12 +143,28 @@ Unrelated changes should be split into separate commits whenever practical.
 
 ---
 
+# Temporary Working Files
+
+`temp/` is fully ignored and never versioned. All contents outside
+`temp/restricted/` are assistant-readable disposable engineering intermediates; assistants must not
+enumerate or read `temp/restricted/`. Promote anything retained deliberately.
+
+# Project Materials
+
+Keep external content under `input/` unchanged. Retain useful converted,
+sanitized, extracted or project-created working files in `materials/` and
+register them with provenance in `materials/CATALOG.md`. Registered materials
+are assistant-readable and may be stored as `local`, `versioned` or `external`.
+Promote them to source, tests, fixtures or configuration only when that durable
+engineering role is established. Caches and disposable diagnostics are not
+materials.
+
 # External Files, Fixtures and Generated Outputs
 
 Use `input/intake/`, `input/restricted/`, `input/local/` and
 `input/versioned/` to classify external files and sources. Record safe
-provenance and handling decisions in `input/INVENTORY.md`; use the ignored
-`input/INVENTORY.local.md` for sensitive names, paths or details.
+provenance and handling decisions in `input/CATALOG.md`; use the ignored
+`input/CATALOG.local.md` for sensitive names, paths or details.
 
 Logs, database dumps, API responses, screenshots, crash reports and customer
 or user data may be private, confidential or personal. Their presence does not
@@ -165,7 +181,7 @@ separate approval decisions. A reviewed file may be suitable for one purpose
 without being suitable for the others. Moving a file between input zones
 records classification but does not grant broader authorization.
 
-`.gitignore` rules, the input inventory and documentation should be updated
+`.gitignore` rules, the input catalog and documentation should be updated
 together. Fixed runtime locations such as `.env`, application log directories
 or local databases may remain where the software requires them, but their
 classification and ignore rules should still be documented.

@@ -29,6 +29,8 @@
 - [Wann dieses Template geeignet ist](#wann-dieses-template-geeignet-ist)
 - [Projektinitialisierung](#projektinitialisierung)
 - [Externe Dateien und Quellen](#externe-dateien-und-quellen)
+- [Temporäre Arbeitsdateien](#temporäre-arbeitsdateien)
+- [Projektmaterialien](#projektmaterialien)
 - [Empfohlener Workflow](#empfohlener-workflow)
 - [Git-Index und geschützte Git-Aktionen](#git-index-und-geschützte-git-aktionen)
 - [Decision Records](#decision-records)
@@ -95,14 +97,51 @@ und ruft anschließend `INITIAL_PROMPT.md` auf; er ist keine zweite Initialisier
 
 ## Externe Dateien und Quellen
 
-Lege neu erhaltene Dateien zunächst in `input/intake/` ab, bevor über ihre Verwendung entschieden wird. Dokumentiere sichere Metadaten, Provenienz und Klassifizierung in `input/INVENTORY.md`; verwende die ignorierte Datei `input/INVENTORY.local.md`, wenn Dateinamen, Pfade oder andere Angaben selbst sensibel sind.
+Lege neu erhaltene Dateien zunächst in `input/intake/` ab, bevor über ihre Verwendung entschieden wird. Dokumentiere sichere Metadaten, Provenienz und Klassifizierung in `input/CATALOG.md`; verwende die ignorierte Datei `input/CATALOG.local.md`, wenn Dateinamen, Pfade oder andere Angaben selbst sensibel sind.
+
+Katalogisiere unveränderte externe Dienste, Datensätze und URLs auch dann, wenn
+ihre Inhalte außerhalb des Repositorys bleiben. Nutze stabile öffentliche URLs
+direkt und löse logische private oder gerätespezifische Orte über die ignorierte
+`input/PATHS.local.md` auf.
 
 - **`input/intake/`** ist der ignorierte Eingangsbereich für noch nicht klassifizierte Dateien. Ihre bloße Anwesenheit erlaubt keinen Zugriff durch den Assistant.
 - **`input/restricted/`** ist ignoriert und für Dateien bestimmt, die nur der Maintainer oder ausdrücklich freigegebene lokale Prüfungen lesen dürfen.
 - **`input/local/`** ist ignoriert und enthält Dateien, die der Assistant lokal verarbeiten darf, die aber nicht in Git gelangen dürfen.
-- **`input/versioned/`** enthält geprüfte externe Dateien, die versioniert werden dürfen. Verschiebe sie in einen projektspezifischen Quellen-, Fixture- oder Konfigurationsordner, wenn dieser ihre dauerhafte Rolle klarer ausdrückt, und bewahre die Provenienz im Inventar.
+- **`input/versioned/`** enthält geprüfte externe Dateien, die versioniert werden dürfen. Verschiebe sie in einen projektspezifischen Quellen-, Fixture- oder Konfigurationsordner, wenn dieser ihre dauerhafte Rolle klarer ausdrückt, und bewahre die Provenienz im Katalog.
 
 Assistant-Zugriff, Git-Versionierung und externe Weitergabe sind drei getrennte Entscheidungen. Eine Verschiebung dokumentiert die Klassifizierung, erweitert aber keine Berechtigung. Technisch festgelegte Laufzeitorte wie `.env`, Anwendungs-Logverzeichnisse oder lokale Datenbanken dürfen dort bleiben, wo die Software sie benötigt; ihre Klassifizierung und Ignore-Regeln sollten dennoch dokumentiert werden.
+
+## Temporäre Arbeitsdateien
+
+Verwende `temp/` für wegwerfbare Engineering-Zwischendateien. Alle Inhalte
+außerhalb von `temp/restricted/` sind für den Assistant lesbar; dieses
+Restricted-Verzeichnis darf weder aufgelistet noch gelesen werden. Sämtliche temporären Inhalte werden
+ignoriert, dürfen niemals versioniert werden und werden nicht katalogisiert.
+Überführe dauerhafte Dateien bewusst nach `materials/` oder an einen
+maßgeblichen Engineering-Ort.
+
+## Projektmaterialien
+
+Dateien in `input/` bleiben inhaltlich unverändert. Ein konvertierter Export,
+eine bereinigte Reproduktionsdatei, ein zugeschnittener Screenshot, ein
+Diagnoseauszug oder jede andere Inhaltsänderung ist neues Projektmaterial und
+kein veränderter Input. `materials/` bewahrt solche Arbeitsdateien auf, solange
+sie nützlich bleiben, aber noch keine maßgebliche Quelle, Tests, Fixtures oder
+Konfiguration sind.
+
+Jedes katalogisierte Material ist für den Assistant lesbar. Dokumentiere
+Provenienz und Erstellung oder Transformation in `materials/CATALOG.md` und
+verwende `Based on` mit Input- oder Material-IDs. Speichere Dateien als
+**`local`** im ignorierten `materials/local/`, als **`versioned`** in
+`materials/versioned/` oder als **`external`** an einem stabilen logischen Ort
+im Katalog. Löse externe Orte je Rechner über die ignorierte
+`materials/PATHS.local.md` auf, ausgehend von der versionierten Beispieldatei.
+
+Zugriff autorisiert weder Git-Versionierung noch Weitergabe. Überführe Material
+erst dann in Source, Tests, Fixtures oder Konfiguration, wenn dieser Ort seine
+dauerhafte Engineering-Rolle besser ausdrückt, und bewahre die Provenienz.
+Build-Outputs, Caches und wegwerfbare Diagnosedateien gehören nicht nach
+`materials/`.
 
 ## Empfohlener Workflow
 
@@ -172,6 +211,12 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record, wenn 
 
 - **`decisions/`** enthält wiederverwendbare ADR-, PDR- und DDR-Vorlagen und in abgeleiteten Projekten akzeptierte dauerhafte Entscheidungen. Der Ordner soll nicht zum Protokoll jeder kleinen Implementierungsentscheidung werden.
 - **`input/`** stellt den inventarbasierten Eingangs- und Klassifizierungsworkflow für externe Dateien und Quellen bereit. Ignorierte Zonen halten ungeprüfte, beschränkte und nur lokale Inputs aus Git heraus.
+- **`materials/`** katalogisiert dauerhafte, für den Assistant lesbare
+  Engineering-Dateien in lokaler, versionierter oder externer Speicherung vor
+  einer bewussten Überführung in eine maßgeblichere Projektrolle.
+- **`temp/`** enthält ignorierte, niemals versionierte
+  Engineering-Zwischenstände; `temp/restricted/` bildet die nicht zugängliche
+  Ausnahme.
 - **Projektspezifische Quellen, Tests, Skripte und Konfigurationen** werden während der Initialisierung entsprechend der vom Maintainer gewählten Technologie und Architektur ergänzt. Ihre Struktur sollte dokumentiert werden, wenn Namen und Aufbau allein für neue Mitwirkende nicht ausreichend verständlich sind.
 - **Projektlokale Umgebungen und erzeugte Outputs** verwenden normalerweise ignorierte Orte wie `.venv/`, `node_modules/`, `generated/` oder `deliverables/`. Dokumentiere, ob erzeugte Outputs reproduzierbare lokale Dateien, Review-Dateien oder Release-Deliverables sind.
 

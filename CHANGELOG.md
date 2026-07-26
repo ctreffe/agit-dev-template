@@ -8,17 +8,24 @@ This project follows Semantic Versioning.
 
 ### Added
 
+- Replace the input inventory files with an external-file and source catalog,
+  portable local path mapping and support for unchanged external sources.
+- Add a shared, never-versioned `temp/` area with a restricted access boundary.
+- Add a cataloged project-material workflow for retained engineering files in
+  local, versioned or external storage.
 - Add `CREATE_LOCAL_PROJECT_PROMPT.md` for independent local-only projects.
 
 ### Added
 
-- Add an inventory-based workflow for external files and sources with
+- Add a catalog-based workflow for external files and sources with
   `intake`, `restricted`, `local` and `versioned` input zones.
 - Add `AGENTS.md` as the concise, automatically loaded entry point that routes
   AI agents to the complete engineering rules and validation guidance.
 
 ### Changed
 
+- Keep external input unchanged and distinguish project materials from source,
+  tests, fixtures, configuration, caches and build outputs.
 - Replace abstract artifact terminology in active guidance with clearer terms
   for files, records, inputs, outputs and deliverables.
 - Align the initialization and continuation prompts with `AGENTS.md`: setup is

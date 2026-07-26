@@ -113,8 +113,13 @@ At minimum, clarify:
 - the intended users, maintainers or operating environment
 - the desired end state
 - important boundaries, risks and intentional non-goals
-- external-file, fixture, dump, log, screenshot or generated-output handling,
-  including separate assistant-access, Git-versioning and publication decisions
+- immutable external-input handling and the cataloged project-material workflow
+  for retained transformed or created files, including separate
+  assistant-access, local/versioned/external storage and publication decisions
+- fixture, dump, log, screenshot and generated-output handling, including when
+  materials are promoted to a durable engineering role
+- disposable `temp/` intermediates, which are always ignored and never
+  versioned, plus the inaccessible `temp/restricted/` boundary
 - who will inspect, review, debug, maintain or extend the code, what technical
   and domain knowledge those readers have, and whether English is the
   repository standard for code comments and documentation

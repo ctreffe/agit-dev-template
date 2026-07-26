@@ -37,7 +37,20 @@ deliverables/
 !/input/restricted/README.md
 /input/local/**
 !/input/local/README.md
-/input/INVENTORY.local.md
+/input/CATALOG.local.md
+/input/PATHS.local.md
+
+# Project materials
+/materials/local/**
+!/materials/local/README.md
+/materials/PATHS.local.md
+
+# Temporary working files
+/temp/*
+!/temp/README.md
+!/temp/restricted/
+/temp/restricted/*
+!/temp/restricted/README.md
 
 # Temporary files
 *.tmp

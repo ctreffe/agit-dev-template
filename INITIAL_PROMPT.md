@@ -76,9 +76,19 @@ router to authoritative guidance, including its safety and domain boundaries.
 Establish the external-file workflow during initialization. Use
 `input/intake/` for unclassified arrivals, classify them into
 `input/restricted/`, `input/local/` or `input/versioned/`, and maintain safe
-metadata in `input/INVENTORY.md`. Treat assistant access, Git versioning and
+metadata in `input/CATALOG.md`. Treat assistant access, Git versioning and
 external sharing as separate decisions. Document required runtime-path
 exceptions such as `.env`, application logs or local databases.
+
+Keep `input/` content unchanged. Establish `materials/` and its catalog for
+retained created or transformed engineering files. Registered materials are
+assistant-readable; decide local, versioned or external storage separately and
+preserve provenance when promoting a file into a durable engineering role.
+
+Establish ignored `temp/` for disposable engineering intermediates. All
+contents outside `temp/restricted/` are assistant-readable and never
+versionable; that directory is unavailable to assistants. Promote anything
+retained deliberately.
 
 Retain the initialization files under their original names as provenance:
 
