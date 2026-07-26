@@ -94,6 +94,9 @@ For a project that should remain local and have no remote, begin in this
 checked-out template with [CREATE_LOCAL_PROJECT_PROMPT.md](CREATE_LOCAL_PROJECT_PROMPT.md).
 It verifies the destination, creates an independent local clone without a
 remote, then invokes `INITIAL_PROMPT.md`; it is not a second initialization.
+After successful initialization, the project's copy of the creation prompt and
+its template-only references are removed, while the initialization files remain
+as provenance.
 
 ## External Files and Sources
 

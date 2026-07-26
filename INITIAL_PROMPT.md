@@ -106,6 +106,15 @@ Staging and unstaging do not require a control word, but perform them only when
 I specifically request the index action or authorize the corresponding commit.
 Preserve existing staged selections and unrelated changes.
 
+Only after initialization has completed successfully, remove
+`CREATE_LOCAL_PROJECT_PROMPT.md` from this project and remove its template-only
+references from `AGENTS.md`, `README.md` and `README.de.md` where those files
+exist. This creation helper belongs to the source template and is not retained
+project provenance. Keep `INITIAL_PROMPT.md`, `PROJECT_SETUP.md` and the other
+initialization files. If initialization stops or remains incomplete, leave the
+creation prompt and its references in place and report the cleanup as pending.
+Validate local Markdown references after the cleanup.
+
 Do not commit, amend, tag, push, pull, merge, reset, rebase, switch branches,
 manipulate stashes or perform another protected Git action unless I instruct
 you to perform that specific Git

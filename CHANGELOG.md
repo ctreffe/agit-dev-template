@@ -8,6 +8,8 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Remove the project copy of `CREATE_LOCAL_PROJECT_PROMPT.md` and its
+  template-only references after successful initialization.
 - Clarify that generation alone does not make a file an output and distinguish
   retained engineering materials from project deliverables by workflow role.
 

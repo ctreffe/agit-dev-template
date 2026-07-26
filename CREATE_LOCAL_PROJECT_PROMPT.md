@@ -46,4 +46,14 @@ Find its unambiguous `INITIAL_PROMPT.md`, report that you found it, and execute
 its initialization workflow. If it is missing or ambiguous, stop and ask me
 which initialization instruction to use. Preserve all local access, privacy,
 source, Git-index and protected-Git-action rules of the new project.
+
+Only after initialization has completed successfully, remove the new project's
+copy of `CREATE_LOCAL_PROJECT_PROMPT.md` and remove its template-only references
+from `AGENTS.md`, `README.md` and `README.de.md` where those files exist. Keep
+`INITIAL_PROMPT.md`, `PROJECT_SETUP.md` and the other initialization files as
+provenance. If initialization stops or remains incomplete, leave the creation
+prompt and its references in place and report that cleanup as pending. Finally,
+validate the new project's local Markdown references and report the cleanup and
+resulting working-tree state. Never remove the creation prompt from the source
+template.
 ```
