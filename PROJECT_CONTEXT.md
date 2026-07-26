@@ -128,6 +128,12 @@ Sensitive development inputs and Git rules:
 <which logs, dumps, screenshots, customer data or other raw inputs must remain local; applicable .gitignore rules>
 ```
 
+External input catalog and location mapping:
+
+```text
+<input/CATALOG.md entries and any required input/PATHS.local.md mappings>
+```
+
 Assistant-access approval:
 
 ```text
@@ -138,6 +144,18 @@ Git-versioning approval:
 
 ```text
 <exact fixtures, derivatives or generated outputs approved for Git, or none>
+```
+
+Retained project materials and storage states:
+
+```text
+<materials/CATALOG.md entries, source relationships and local | versioned | external states>
+```
+
+Promotion into maintained engineering files:
+
+```text
+<materials promoted into source, tests, fixtures, configuration or documentation>
 ```
 
 Publication or external-sharing approval:
@@ -276,6 +294,10 @@ Use this section as a navigation aid.
 - `CODEX.md` — local Codex operating policy, if Codex is used
 - `<architecture document>` — system structure, if applicable
 - `decisions/` — Decision Records, if used
+- `input/` — unchanged external files and sources plus their catalog
+- `temp/` — never-versioned intermediate files
+- `materials/` — retained assistant-readable engineering files and catalog
+- `output/` — generated deliverables
 
 Remove or adapt entries that do not apply to the derived project.
 
@@ -292,7 +314,7 @@ AGIT Dev Template version:
 Collaboration Model version:
 
 ```text
-v1.19
+v1.20
 ```
 
 Current collaboration notes:

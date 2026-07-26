@@ -6,6 +6,8 @@ This project follows Semantic Versioning.
 
 ## [Unreleased]
 
+## [v1.4.0] - 2026-07-26
+
 ### Added
 
 - Replace the input inventory files with an external-file and source catalog,
@@ -14,9 +16,6 @@ This project follows Semantic Versioning.
 - Add a cataloged project-material workflow for retained engineering files in
   local, versioned or external storage.
 - Add `CREATE_LOCAL_PROJECT_PROMPT.md` for independent local-only projects.
-
-### Added
-
 - Add a catalog-based workflow for external files and sources with
   `intake`, `restricted`, `local` and `versioned` input zones.
 - Add `AGENTS.md` as the concise, automatically loaded entry point that routes
@@ -24,6 +23,9 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Upgrade the Collaboration Model to v1.20.
+- Align the project-context template with input catalogs, temporary files,
+  retained engineering materials and promotion into maintained code assets.
 - Keep external input unchanged and distinguish project materials from source,
   tests, fixtures, configuration, caches and build outputs.
 - Replace abstract artifact terminology in active guidance with clearer terms

@@ -1,6 +1,6 @@
 # ChatGPT.md
 
-# Collaboration Model v1.19
+# Collaboration Model v1.20
 
 **Status:** Stable  
 **Applies to:** AGIT software projects  
