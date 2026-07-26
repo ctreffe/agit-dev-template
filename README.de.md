@@ -143,6 +143,15 @@ dauerhafte Engineering-Rolle besser ausdrückt, und bewahre die Provenienz.
 Build-Outputs, Caches und wegwerfbare Diagnosedateien gehören nicht nach
 `materials/`.
 
+Nicht die Erzeugungsweise, sondern die aktuelle Projektrolle bestimmt den
+Ablageort. Bewahre eine erzeugte Datei in `materials/` auf, wenn sie als
+dauerhafte Arbeits- oder Quelldatei in weitere Engineering-Schritte eingeht.
+Lege sie in `output/` oder einem anderen dokumentierten Deliverable-Ort ab,
+wenn sie als Projektergebnis zur Nutzung, Prüfung, Übergabe, Veröffentlichung
+oder Auslieferung bestimmt ist. Wegwerfbare Erzeugungszwischenstände bleiben in
+`temp/`; Source, Tests, Fixtures und Konfiguration behalten ihre maßgeblichen
+Orte.
+
 ## Empfohlener Workflow
 
 Entwicklung erfolgt in kleinen, validierten Schleifen:

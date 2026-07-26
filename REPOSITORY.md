@@ -171,10 +171,14 @@ or user data may be private, confidential or personal. Their presence does not
 authorize assistant inspection. Sanitized fixtures or reviewed derivatives are
 preferred when they reproduce behavior without unnecessary disclosure.
 
-Generated files should be clearly treated as outputs. Document whether they
-are versioned review files, release deliverables or regenerated locally. Review
-logs, reports, screenshots, archives, embedded resources and file metadata for
-disclosure risks before versioning or sharing them.
+Generation alone does not make a file an output. Retained generated working or
+source files belong in `materials/` until they gain an authoritative engineering
+location; generated project results intended for use, review, handoff, release
+or delivery belong in `output/` or another documented deliverable location.
+Document whether outputs are versioned review files, release deliverables or
+regenerated locally. Review logs, reports, screenshots, archives, embedded
+resources and file metadata for disclosure risks before versioning or sharing
+them.
 
 Assistant access, Git versioning and publication or external sharing are
 separate approval decisions. A reviewed file may be suitable for one purpose

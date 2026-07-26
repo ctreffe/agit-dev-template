@@ -6,6 +6,11 @@ This project follows Semantic Versioning.
 
 ## [Unreleased]
 
+### Changed
+
+- Clarify that generation alone does not make a file an output and distinguish
+  retained engineering materials from project deliverables by workflow role.
+
 ## [v1.4.0] - 2026-07-26
 
 ### Added

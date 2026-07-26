@@ -139,6 +139,13 @@ source, tests, fixtures or configuration only when that location better
 expresses its durable engineering role, preserving provenance. Build outputs,
 caches and disposable diagnostics do not belong in `materials/`.
 
+Generation method does not determine location. Keep a generated file in
+`materials/` when it is a durable working or source file consumed by later
+engineering steps. Place it in `output/` or another documented deliverable
+location when it is a project result intended for use, review, handoff, release
+or delivery. Disposable generation intermediates remain in `temp/`; source,
+tests, fixtures and configuration keep their authoritative locations.
+
 ## Recommended Workflow
 
 Development proceeds through small, validated loops:
