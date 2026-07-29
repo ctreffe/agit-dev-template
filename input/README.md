@@ -1,5 +1,9 @@
 # External Files and Sources
 
+For synchronized external input roots and their mirrored access boundaries,
+follow [SYNCHRONIZED_STORAGE.md](../SYNCHRONIZED_STORAGE.md). Mapping a root
+does not authorize its contents or unrelated synchronized folders.
+
 Use `input/` for externally supplied development files such as logs, dumps,
 API responses, screenshots, exports and reproduction material. New or uncertain
 files start in `intake/`; already classified files may go directly to

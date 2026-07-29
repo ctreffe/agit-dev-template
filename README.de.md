@@ -114,6 +114,12 @@ direkt und löse logische private oder gerätespezifische Orte über die ignorie
 
 Assistant-Zugriff, Git-Versionierung und externe Weitergabe sind drei getrennte Entscheidungen. Eine Verschiebung dokumentiert die Klassifizierung, erweitert aber keine Berechtigung. Technisch festgelegte Laufzeitorte wie `.env`, Anwendungs-Logverzeichnisse oder lokale Datenbanken dürfen dort bleiben, wo die Software sie benötigt; ihre Klassifizierung und Ignore-Regeln sollten dennoch dokumentiert werden.
 
+Für große, nicht in Git versionierte Dateien, die auf mehreren Rechnern
+verfügbar bleiben müssen, gilt der anbieterneutrale Workflow in
+[SYNCHRONIZED_STORAGE.md](SYNCHRONIZED_STORAGE.md). Synchronisierte Dateien
+bleiben externer Speicher; Synchronisierung ist weder Git-Versionierung,
+Backup, Assistant-Zugriff noch Publikationsfreigabe.
+
 ## Temporäre Arbeitsdateien
 
 Verwende `temp/` für wegwerfbare Engineering-Zwischendateien. Alle Inhalte

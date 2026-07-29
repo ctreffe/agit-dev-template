@@ -422,3 +422,12 @@ it should cover.
 Only changes that have proven useful in real project work should be considered for inclusion in the AGIT Dev Template.
 
 When a retrospective changes core process guidance, update all affected template documents consistently instead of appending isolated notes.
+
+# 19. Configure Synchronized External Storage When Needed
+
+If large non-Git engineering files must be available on several devices, apply
+`SYNCHRONIZED_STORAGE.md`. Decide provider transmission, stable project ID,
+input and material scope, availability checks, conflict handling and backup.
+Create ignored `sync:` mappings on every device. Do not use synchronized
+storage as a substitute for maintained source, tests, fixtures, configuration,
+runtime paths or build outputs, and do not synchronize `temp/`.

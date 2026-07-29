@@ -69,6 +69,11 @@ If my continuation instruction also gives a concrete safe task, proceed after
 this reconstruction; otherwise wait for my confirmation of the proposed next
 step.
 
+If `PROJECT_CONTEXT.md` records synchronized external storage, read
+`SYNCHRONIZED_STORAGE.md` and the exact ignored device mappings before file
+access. Verify the project marker, local availability and sync state without
+enumerating unrelated roots or weakening input access boundaries.
+
 Staging and unstaging do not require a control word, but perform them only when
 I specifically request the index action or authorize the corresponding commit.
 Preserve existing staged selections and unrelated changes.

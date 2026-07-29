@@ -114,6 +114,11 @@ logical private or device-specific locations through ignored
 
 Assistant access, Git versioning and external sharing are three separate decisions. A move between folders documents classification; it does not grant broader permission. Fixed runtime locations such as `.env`, application log directories or local databases may remain where the software requires them, but their classification and ignore rules should still be documented.
 
+For large non-Git files that must remain available across devices, use the
+provider-neutral workflow in [SYNCHRONIZED_STORAGE.md](SYNCHRONIZED_STORAGE.md).
+Synchronized files remain external storage; synchronization is not Git
+versioning, backup, assistant access or publication approval.
+
 ## Temporary Working Files
 
 Use `temp/` for disposable intermediate engineering files. All contents outside

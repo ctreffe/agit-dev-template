@@ -134,6 +134,12 @@ External input catalog and location mapping:
 <input/CATALOG.md entries and any required input/PATHS.local.md mappings>
 ```
 
+Synchronized external storage:
+
+```text
+<not used | project ID, sync: roots, mapped engineering files, availability, conflict and backup notes>
+```
+
 Assistant-access approval:
 
 ```text
@@ -286,6 +292,7 @@ Use this section as a navigation aid.
 - `PROJECT_SETUP.md` — retained initialization method and provenance
 - `INITIAL_PROMPT.md` — retained first prompt for reproducible project initialization
 - `CONTINUATION_PROMPT.md` — re-entry prompt for a new context window or assistant session
+- `SYNCHRONIZED_STORAGE.md` — provider-neutral external storage and per-device mapping workflow
 - `HARMONIZATION_PROMPT.md` — source-template, code, documentation and roadmap harmonization
 - `RETROSPECTIVE_PROMPT.md` — structured Maintainer-Agent development-collaboration review
 - `CHANGELOG.md` — version history
