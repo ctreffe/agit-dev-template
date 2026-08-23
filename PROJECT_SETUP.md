@@ -22,7 +22,7 @@ After creating the repository, establish the first working baseline:
 - use the public repository `main` branch if it is accessible and intended as the source of truth, or
 - download the repository as a ZIP archive and use that ZIP as the working baseline.
 
-When using AI assistance, make the baseline explicit before requesting repository-ready changes. Begin the first assistant session with `INITIAL_PROMPT.md` when practical.
+When using AI assistance, make the baseline explicit before requesting repository-ready changes. Invoke `$start-project` for the one-time initialization.
 
 ---
 
@@ -356,7 +356,6 @@ defined and reviewed versioned milestone.
 Keep the initialization files under their original names:
 
 - `PROJECT_SETUP.md`
-- `INITIAL_PROMPT.md`
 
 Record initialization status and date, source template version and commit, later
 harmonization baseline and intentional template deviations in
@@ -367,20 +366,19 @@ documented maintainer exception.
 
 `PROJECT_CONTEXT.md` should remain because it documents the current project state and supports future project resumption.
 
-`CONTINUATION_PROMPT.md` should also remain because it provides the repeatable
-entry instruction for a new context window or assistant session.
-
-`HARMONIZATION_PROMPT.md` should remain for maintainer-initiated source-template,
-code, documentation and roadmap alignment.
-
-`RETROSPECTIVE_PROMPT.md` should remain for maintainer-initiated, structured
-reviews of Maintainer-Agent development collaboration.
+The repository skills and `TASK_HANDOFF.md` should remain after initialization.
+Routine tasks use `start-task`; invoke `$review-project`, `$sync-template`,
+`$check-consistency` and `$perform-retrospective` explicitly only when their
+specialized outcome is required. Remove the project copy of
+`$create-local-project` after successful initialization.
 
 ---
 
 # 17. Start Development
 
-After the initial setup commit, continue development according to the Collaboration Model in `ChatGPT.md`. Begin a new context window or assistant session with `CONTINUATION_PROMPT.md`.
+After the initial setup commit, continue development according to the
+Collaboration Model in `ChatGPT.md`. Begin each bounded new task through
+`start-task` and use `TASK_HANDOFF.md` for a versioned checkpoint.
 
 When using Codex locally, also follow `CODEX.md`.
 

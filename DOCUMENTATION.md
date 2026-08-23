@@ -52,24 +52,13 @@ For active milestone work, it should also capture validation notes, immediate va
 
 For new projects, it should capture the maintainer's project intent, problem context, desired end state and boundaries before the initial roadmap. The roadmap should be clear enough that future sessions can understand the intended milestone sequence and why the next step matters.
 
-## CONTINUATION_PROMPT.md
+## Repository Skills
 
-The repeatable re-entry instruction for a new context window or assistant
-session. It tells the assistant how to reconstruct the Git, implementation,
-validation and documentation baseline before continuing development.
+`.agents/skills/` contains the lean automatic task lifecycle and commit
+workflows plus explicit initialization, neutral review, source-template
+synchronization, internal consistency and retrospective workflows.
 
-## HARMONIZATION_PROMPT.md
-
-The repeatable development-content alignment instruction. It compares a
-derived project with its recorded source template, reconciles code, tests,
-documentation and repository state, and reviews roadmap fit without evaluating
-collaboration or deriving template improvements.
-
-## RETROSPECTIVE_PROMPT.md
-
-The repeatable Maintainer-Agent development-collaboration review. It separates
-practices to retain, project collaboration changes, content implications for
-later harmonization and abstracted template candidates.
+`TASK_HANDOFF.md` is the compact versioned checkpoint for current task state.
 
 ## CHANGELOG.md
 
@@ -289,7 +278,7 @@ For milestone-driven implementation, document the final validated state rather t
 
 # Retrospective Updates
 
-Use `RETROSPECTIVE_PROMPT.md` for collaboration retrospectives based on real
+Use `$perform-retrospective` for collaboration retrospectives based on real
 project experience. Template findings remain candidates until the maintainer
 authorizes a specific template change with a recognized control word.
 

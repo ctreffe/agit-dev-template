@@ -69,13 +69,13 @@ Use the generic Project Template when the project is still primarily discovery, 
 
 ## Project Initialization
 
-After creating the repository, the maintainer needs to invoke only [INITIAL_PROMPT.md](INITIAL_PROMPT.md). The agent reads the repository and its setup guidance, then leads the complete initialization. The maintainer does not need to open or execute `PROJECT_SETUP.md` separately.
+After creating the repository, the maintainer invokes `$start-project`. The skill reads the repository and its setup guidance, then leads the complete initialization. The maintainer does not need to open or execute `PROJECT_SETUP.md` separately.
 
 The simplest instruction to the agent is:
 
-> Read `INITIAL_PROMPT.md` in full and carry out the initialization prompt it contains.
+> `$start-project`
 
-There is no need to open the file and copy its prompt into the conversation.
+There is no initialization prompt to open or copy into the conversation.
 
 The agent then:
 
@@ -88,12 +88,12 @@ The agent then:
 7. validates the initial technical baseline and prepares the first small project-specific change; and
 8. hands back the initialized state with checks, unresolved decisions and suggested commit metadata.
 
-`PROJECT_SETUP.md` remains the agent's detailed checklist and a provenance record of the initialization method. `INITIAL_PROMPT.md` is the single user-facing entry point that activates it.
+`PROJECT_SETUP.md` remains the agent's detailed checklist and a provenance record of the initialization method. `$start-project` is the single executable entry point that activates it.
 
-For a project that should remain local and have no remote, begin in this
-checked-out template with [CREATE_LOCAL_PROJECT_PROMPT.md](CREATE_LOCAL_PROJECT_PROMPT.md).
-It verifies the destination, creates an independent local clone without a
-remote, then invokes `INITIAL_PROMPT.md`; it is not a second initialization.
+For a project that should remain local and have no remote, invoke
+`$create-local-project` explicitly in this checked-out template. It verifies
+the destination, creates an independent local clone without a remote and then
+invokes `$start-project`; it is not a second initialization.
 After successful initialization, the project's copy of the creation prompt and
 its template-only references are removed, while the initialization files remain
 as provenance.
@@ -172,7 +172,10 @@ Intent -> Roadmap -> Implement -> Validate -> Adjust -> Document -> Prepare comm
 8. Prepare a regular working commit with an appropriate Conventional Commit prefix.
 9. Close a satisfied milestone separately by harmonizing version, changelog, project context and validated status.
 
-Use [CONTINUATION_PROMPT.md](CONTINUATION_PROMPT.md) for reproducible re-entry, [HARMONIZATION_PROMPT.md](HARMONIZATION_PROMPT.md) for project-content and roadmap alignment and [RETROSPECTIVE_PROMPT.md](RETROSPECTIVE_PROMPT.md) for a separate evaluation of Maintainer-Agent collaboration.
+Routine new tasks use `start-task`. Invoke `$review-project` for a comprehensive
+neutral inventory, `$sync-template` for source-template adoption,
+`$check-consistency` for internal diagnosis and `$perform-retrospective` for a
+separate evaluation of Maintainer-Agent collaboration.
 
 ## Git Index and Protected Git Actions
 
@@ -213,10 +216,12 @@ Templates live in [decisions/](decisions/). Create a record when future maintain
 
 ### Setup, Continuation and Review
 
-- **`PROJECT_SETUP.md` and `INITIAL_PROMPT.md`** guide the first initialization and preserve its methodological baseline. Derived projects normally keep them under their original names.
-- **`CONTINUATION_PROMPT.md`** reconstructs Git, implementation, validation and documentation state before work continues in a new session.
-- **`HARMONIZATION_PROMPT.md`** compares a derived project with its recorded source-template baseline and reconciles code, tests, documentation and roadmap without copying changes blindly.
-- **`RETROSPECTIVE_PROMPT.md`** evaluates collaboration practices separately from project content and produces controlled candidates for project or template improvement.
+- **`PROJECT_SETUP.md`** guides the first initialization and preserves its methodological baseline. `$start-project` is the explicit executable entry point.
+- **`.agents/skills/`** contains lean automatic task lifecycle and commit
+  workflows plus explicit initialization, review, synchronization, consistency
+  and retrospective workflows.
+- **`TASK_HANDOFF.md`** carries the compact versioned task checkpoint across
+  sessions and computers without duplicating project history.
 
 ### Decisions, External Inputs and Project-Specific Code
 
@@ -238,7 +243,7 @@ In a derived development project:
 - fill and continuously maintain `PROJECT_CONTEXT.md`;
 - adapt `DOCUMENTATION.md` and `REPOSITORY.md` as ongoing rules;
 - normally retain and adapt `AGENTS.md`, `ChatGPT.md`, `CODEX.md` and `PHILOSOPHY.md`;
-- retain `PROJECT_SETUP.md`, `INITIAL_PROMPT.md` and the three later-session prompts as provenance and repeatable operating tools;
+- retain `PROJECT_SETUP.md` and the applicable repository skills as provenance and repeatable operating tools;
 - add the source, test, configuration and documentation structure required by the project;
 - create real Decision Records only for consequential decisions;
 - keep the standardized AI Collaboration Note visible and factually accurate.
@@ -247,7 +252,7 @@ Record the source-template version and commit, initialization status, last harmo
 
 ## How to Use This Template
 
-1. Create a repository from the template and give the agent the instruction in `INITIAL_PROMPT.md`.
+1. Create a repository from the template and invoke `$start-project`.
 2. Answer the numbered questions the agent presents; it reads and applies `PROJECT_SETUP.md` and the remaining setup guidance automatically.
 3. Review the initialized repository state, validation results and proposed first commit.
 4. Let the agent capture maintainer intent and derive a validation-oriented roadmap.

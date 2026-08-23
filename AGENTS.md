@@ -13,10 +13,13 @@ repository's authoritative guidance and does not replace that guidance.
    and `PHILOSOPHY.md` as relevant to the task.
 4. Inspect the actual source, tests, configuration and Decision Records affected
    by the requested change before designing an implementation.
-5. For initialization, continuation, harmonization or retrospective work,
-   follow the corresponding prompt file instead of reconstructing its workflow.
-6. To create a locally versioned project without a remote, use
-   `CREATE_LOCAL_PROJECT_PROMPT.md` from this checked-out template.
+5. Use the repository skills under `.agents/skills/`. Routine task entry,
+   handoff, commit preparation and decision recording route automatically;
+   invoke `$start-project`,
+   `$review-project`, `$sync-template`, `$check-consistency` or
+   `$perform-retrospective` explicitly for those specialized workflows.
+6. To create a locally versioned project without a remote, invoke
+   `$create-local-project` explicitly from this checked-out template.
 
 If repository guidance appears inconsistent, report the conflict and ask for a
 maintainer decision when it could materially affect the result.

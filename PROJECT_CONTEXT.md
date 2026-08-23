@@ -64,7 +64,7 @@ Intentional template deviations and relevant Decision Records:
 <none | concise list>
 ```
 
-Keep `PROJECT_SETUP.md` and `INITIAL_PROMPT.md` as initialization provenance.
+Keep `PROJECT_SETUP.md` as initialization provenance.
 
 ---
 
@@ -290,11 +290,12 @@ Use this section as a navigation aid.
 
 - `README.md` — project overview and user-facing entry point
 - `PROJECT_SETUP.md` — retained initialization method and provenance
-- `INITIAL_PROMPT.md` — retained first prompt for reproducible project initialization
-- `CONTINUATION_PROMPT.md` — re-entry prompt for a new context window or assistant session
+- `TASK_HANDOFF.md` — compact versioned task checkpoint
+- `.agents/skills/` — automatic lifecycle and explicit specialized workflows
 - `SYNCHRONIZED_STORAGE.md` — provider-neutral external storage and per-device mapping workflow
-- `HARMONIZATION_PROMPT.md` — source-template, code, documentation and roadmap harmonization
-- `RETROSPECTIVE_PROMPT.md` — structured Maintainer-Agent development-collaboration review
+- `$sync-template` — source-template comparison and selected adoption
+- `$check-consistency` — internal code, documentation and roadmap diagnosis
+- `$perform-retrospective` — structured development-collaboration review
 - `CHANGELOG.md` — version history
 - `PHILOSOPHY.md` — shared AGIT engineering philosophy
 - `ChatGPT.md` — AGIT Collaboration Model
@@ -334,7 +335,7 @@ Current collaboration notes:
 - Integrity has priority over apparent helpfulness: files and changes must exist before they are reported as delivered.
 - Capability limitations should be stated directly instead of hidden behind simulated completion.
 - Required template elements such as the AI Collaboration Note should remain visible and factually accurate unless intentionally modified.
-- `PROJECT_SETUP.md` and `INITIAL_PROMPT.md` remain as initialization provenance unless the maintainer documents a deliberate exception.
+- `PROJECT_SETUP.md` remains as initialization provenance unless the maintainer documents a deliberate exception.
 - If Codex is used locally, `CODEX.md` defines the local operating policy.
 - Long-running sessions should update `PROJECT_CONTEXT.md` before context exhaustion becomes likely.
 - When a change is approaching commit readiness, the assistant should provide concise numbered next steps for decisions, validation, review and commit actions whenever practical.

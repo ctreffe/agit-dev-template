@@ -102,9 +102,10 @@ The document should describe the current state, not the full history. History be
 
 At the start of a new AI-assisted session, the assistant should read or reconstruct `PROJECT_CONTEXT.md` before proposing implementation work.
 
-Begin a new context window or assistant session with
-`CONTINUATION_PROMPT.md`. It defines the ordered re-entry review, read-only Git
-baseline check and numbered handoff that should precede substantive work.
+Begin an ordinary bounded task through the automatically discoverable
+`start-task` skill and use `TASK_HANDOFF.md` when present. Invoke
+`$review-project` explicitly when a comprehensive neutral inventory of Git,
+implementation, validation and documentation state is needed.
 
 ---
 
@@ -776,11 +777,11 @@ However, documents should be fully harmonized when a retrospective changes core 
 
 # Retrospectives and Template Evolution
 
-Use `HARMONIZATION_PROMPT.md` for project-content alignment. Harmonization
-compares a derived project with its recorded source template, reconciles code,
-tests, documentation and repository state, and reviews roadmap fit. The
-concrete project and its Decision Records remain authoritative. Harmonization
-does not evaluate collaboration or derive template improvements.
+Invoke `$sync-template` for source-template comparison and selected adoption.
+Invoke `$check-consistency` separately to diagnose contradictions among code,
+tests, documentation, decisions, validation and roadmap. The concrete project
+and its Decision Records remain authoritative. Neither workflow evaluates
+collaboration or derives template improvements.
 
 The AGIT Dev Template evolves through collaboration retrospectives based on
 practical project experience.
@@ -789,7 +790,7 @@ The maintainer decides when to invoke a retrospective and which period it
 should cover. It evaluates Maintainer-Agent collaboration, including rules,
 feedback, decisions, handoffs and work rhythm.
 
-Use `RETROSPECTIVE_PROMPT.md` for the structured collaboration review.
+Use `$perform-retrospective` for the structured collaboration review.
 
 Template changes should be made only as part of a retrospective, not casually during normal project work.
 

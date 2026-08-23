@@ -74,8 +74,9 @@ When AI assistance is used, work should begin from a clearly identified reposito
 
 If the baseline is unclear, do not prepare repository-ready changes until it is clarified.
 
-Use `CONTINUATION_PROMPT.md` at the start of a new context window or assistant
-session to reconcile `PROJECT_CONTEXT.md` with current read-only Git evidence.
+Use `start-task` for lean bounded entry and `TASK_HANDOFF.md` for current task
+state. Invoke `$review-project` explicitly to reconcile the comprehensive
+project context with current read-only Git evidence.
 
 ---
 
@@ -409,7 +410,6 @@ Keep these initialization files under their original names unless the
 maintainer documents a deliberate exception:
 
 - `PROJECT_SETUP.md`
-- `INITIAL_PROMPT.md`
 
 Record the source-template baseline, initialization status, later harmonization
 baselines and intentional deviations in `PROJECT_CONTEXT.md`.

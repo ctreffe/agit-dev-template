@@ -8,11 +8,16 @@ This project follows Semantic Versioning.
 
 ### Added
 
+- Add repository-scoped collaboration skills and a tracked compact
+  `TASK_HANDOFF.md` for the development-project lifecycle.
 - Add provider-neutral synchronized external project storage for large non-Git
   input and materials that must remain available across devices.
 
 ### Changed
 
+- Replace the root initialization, continuation, harmonization, retrospective
+  and local-project creation prompts with `$start-project` and scoped skills;
+  retain `PROJECT_SETUP.md` as initialization method and provenance.
 - Remove the project copy of `CREATE_LOCAL_PROJECT_PROMPT.md` and its
   template-only references after successful initialization.
 - Clarify that generation alone does not make a file an output and distinguish

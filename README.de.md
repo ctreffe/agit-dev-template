@@ -69,13 +69,13 @@ Verwende das generische Project Template, wenn das Projekt noch überwiegend Dis
 
 ## Projektinitialisierung
 
-Nach dem Erzeugen des Repositorys muss der Maintainer nur [INITIAL_PROMPT.md](INITIAL_PROMPT.md) aufrufen. Der Agent liest das Repository und seine Setup-Leitlinien und führt anschließend durch die vollständige Initialisierung. Der Maintainer muss `PROJECT_SETUP.md` nicht selbst öffnen oder ausführen.
+Nach dem Erzeugen des Repositorys ruft der Maintainer `$start-project` auf. Der Skill liest das Repository und seine Setup-Leitlinien und führt anschließend durch die vollständige Initialisierung. Der Maintainer muss `PROJECT_SETUP.md` nicht selbst öffnen oder ausführen.
 
 Die einfachste Anweisung an den Agenten lautet:
 
-> Lies `INITIAL_PROMPT.md` vollständig und führe den darin enthaltenen Initialisierungs-Prompt aus.
+> `$start-project`
 
-Die Datei muss dafür nicht geöffnet und ihr Prompt nicht in die Unterhaltung kopiert werden.
+Es muss kein Initialisierungs-Prompt geöffnet oder in die Unterhaltung kopiert werden.
 
 Der Agent:
 
@@ -88,12 +88,12 @@ Der Agent:
 7. validiert die initiale technische Baseline und bereitet die erste kleine projektspezifische Änderung vor; und
 8. übergibt den initialisierten Stand mit Prüfergebnissen, offenen Entscheidungen und vorgeschlagenen Commit-Metadaten.
 
-`PROJECT_SETUP.md` bleibt die ausführliche Checkliste des Agenten und dokumentiert die Methode der Initialisierung. `INITIAL_PROMPT.md` ist der einzige benutzerorientierte Einstiegspunkt, der sie aktiviert.
+`PROJECT_SETUP.md` bleibt die ausführliche Checkliste des Agenten und dokumentiert die Methode der Initialisierung. `$start-project` ist der einzige ausführbare Einstiegspunkt, der sie aktiviert.
 
-Soll ein Projekt lokal bleiben und keinen Remote erhalten, beginne in diesem
-ausgecheckten Template mit [CREATE_LOCAL_PROJECT_PROMPT.md](CREATE_LOCAL_PROJECT_PROMPT.md).
-Der Prompt prüft das Ziel, erzeugt einen unabhängigen lokalen Clone ohne Remote
-und ruft anschließend `INITIAL_PROMPT.md` auf; er ist keine zweite Initialisierung.
+Soll ein Projekt lokal bleiben und keinen Remote erhalten, rufe in diesem
+ausgecheckten Template ausdrücklich `$create-local-project` auf. Der Skill
+prüft das Ziel, erzeugt einen unabhängigen lokalen Clone ohne Remote und ruft
+anschließend `$start-project` auf; er ist keine zweite Initialisierung.
 Nach erfolgreicher Initialisierung werden die Projektkopie des Erstellungs-
 Prompts und ihre reinen Template-Verweise entfernt; die Initialisierungsdateien
 bleiben dagegen als Provenienz erhalten.
@@ -179,7 +179,10 @@ Intention -> Roadmap -> Implementieren -> Validieren -> Anpassen -> Dokumentiere
 8. Bereite einen regulären Arbeits-Commit mit passendem Conventional-Commit-Präfix vor.
 9. Schließe einen erfüllten Milestone separat ab, indem Version, Changelog, Projektkontext und validierter Status harmonisiert werden.
 
-Verwende [CONTINUATION_PROMPT.md](CONTINUATION_PROMPT.md) für einen reproduzierbaren Wiedereinstieg, [HARMONIZATION_PROMPT.md](HARMONIZATION_PROMPT.md) für die Abstimmung von Projektinhalt und Roadmap und [RETROSPECTIVE_PROMPT.md](RETROSPECTIVE_PROMPT.md) für eine separate Bewertung der Maintainer-Agent-Zusammenarbeit.
+Reguläre neue Aufgaben verwenden `start-task`. Rufe `$review-project` für eine
+umfassende neutrale Bestandsaufnahme, `$sync-template` für die Übernahme aus
+dem Quelltemplate, `$check-consistency` für interne Diagnose und
+`$perform-retrospective` für eine separate Bewertung der Zusammenarbeit auf.
 
 ## Git-Index und geschützte Git-Aktionen
 
@@ -220,10 +223,12 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record, wenn 
 
 ### Setup, Fortsetzung und Review
 
-- **`PROJECT_SETUP.md` und `INITIAL_PROMPT.md`** leiten die erste Initialisierung an und bewahren ihre methodische Baseline. Abgeleitete Projekte behalten sie normalerweise unter ihren ursprünglichen Namen.
-- **`CONTINUATION_PROMPT.md`** rekonstruiert Git-, Implementierungs-, Validierungs- und Dokumentationszustand, bevor die Arbeit in einer neuen Sitzung fortgesetzt wird.
-- **`HARMONIZATION_PROMPT.md`** vergleicht ein abgeleitetes Projekt mit seiner aufgezeichneten Source-Template-Baseline und gleicht Code, Tests, Dokumentation und Roadmap ab, ohne Änderungen blind zu kopieren.
-- **`RETROSPECTIVE_PROMPT.md`** bewertet Kollaborationspraktiken getrennt vom Projektinhalt und erzeugt kontrollierte Kandidaten für Projekt- oder Template-Verbesserungen.
+- **`PROJECT_SETUP.md`** leitet die erste Initialisierung an und bewahrt ihre methodische Baseline. `$start-project` ist der explizite ausführbare Einstiegspunkt.
+- **`.agents/skills/`** enthält schlanke automatische Aufgaben- und
+  Commit-Abläufe sowie ausdrückliche Initialisierungs-, Review-,
+  Synchronisierungs-, Konsistenz- und Retrospektivabläufe.
+- **`TASK_HANDOFF.md`** trägt den kompakten versionierten Aufgaben-Checkpoint
+  über Sitzungen und Rechner hinweg, ohne Projekthistorie zu duplizieren.
 
 ### Entscheidungen, externe Inputs und projektspezifischer Code
 
@@ -246,7 +251,7 @@ In einem abgeleiteten Entwicklungsprojekt:
 - fülle `PROJECT_CONTEXT.md` aus und pflege die Datei kontinuierlich;
 - passe `DOCUMENTATION.md` und `REPOSITORY.md` als laufende Regeln an;
 - behalte normalerweise `AGENTS.md`, `ChatGPT.md`, `CODEX.md` und `PHILOSOPHY.md` und passe sie an;
-- behalte `PROJECT_SETUP.md`, `INITIAL_PROMPT.md` und die drei Prompts für spätere Sitzungen als Provenienz und wiederholbare Betriebswerkzeuge;
+- behalte `PROJECT_SETUP.md` und die anwendbaren Repository-Skills als Provenienz und wiederholbare Betriebswerkzeuge;
 - ergänze die vom Projekt benötigte Quellen-, Test-, Konfigurations- und Dokumentationsstruktur;
 - erstelle echte Decision Records nur für folgenreiche Entscheidungen;
 - halte die standardisierte KI-Kollaborationsnotiz sichtbar und sachlich korrekt.
@@ -255,7 +260,7 @@ Halte Source-Template-Version und -Commit, Initialisierungsstatus, letzte Harmon
 
 ## Verwendung dieses Templates
 
-1. Erzeuge ein Repository aus dem Template und gib dem Agenten die Anweisung aus `INITIAL_PROMPT.md`.
+1. Erzeuge ein Repository aus dem Template und rufe `$start-project` auf.
 2. Beantworte die nummerierten Fragen des Agenten; er liest und verarbeitet `PROJECT_SETUP.md` und die übrigen Setup-Leitlinien automatisch.
 3. Prüfe den initialisierten Repository-Stand, die Validierungsergebnisse und den vorgeschlagenen ersten Commit.
 4. Lass den Agenten die Maintainer-Intention erfassen und eine validierungsorientierte Roadmap ableiten.
