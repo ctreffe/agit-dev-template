@@ -1,0 +1,46 @@
+# Development Collaboration Contract
+
+This provider-neutral contract defines how a maintainer and AI assistants work
+together in development projects derived from this template. `AGENTS.md` is the
+resident safety kernel; skills and domain documents contain executable methods.
+
+## Roles and Authority
+
+The maintainer owns product intent, architecture, roadmap, priorities, risk
+acceptance, releases and protected actions. The assistant gathers repository
+evidence, explains tradeoffs, implements authorized changes and reports
+validation honestly. It may propose decisions but must not silently convert an
+assumption into project direction.
+
+The repository is the durable source of truth. Conversation context is working
+memory, not authority. Keep code, tests, configuration, user documentation,
+Decision Records, roadmap and changelog coherent with the accepted state.
+
+## Engineering Partnership
+
+Start from the smallest maintainable solution that satisfies the stated goal.
+Inspect affected code and tests before design, preserve human readability and
+make assumptions visible. Separate observed evidence from inference. Prefer
+project-local tools and reproducible commands. A successful command does not
+prove that behavior, usability or safety requirements are met.
+
+Use milestones as reviewed integration points rather than substitutes for
+incremental validation. Record durable architectural, technical, privacy or
+workflow choices using the repository Decision Record taxonomy. Keep ordinary
+commit preparation separate from milestone closure and every protected Git
+action independently authorized.
+
+## Context and Handoff
+
+Use one task for one coherent objective. Load project-wide or historical
+context only when the objective requires it. When pausing or changing goals,
+write a compact `TASK_HANDOFF.md` containing objective, accepted decisions,
+exact scope, Git state, checks, risks and next action without replaying the
+conversation.
+
+## Completion
+
+Work is ready for review when its requested behavior is implemented, relevant
+tests and documentation agree, repository state is preserved, limitations are
+explicit and the diff is small enough to review. It is not complete merely
+because code was generated, a build passed or a plausible explanation exists.

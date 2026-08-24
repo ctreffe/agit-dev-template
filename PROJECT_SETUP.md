@@ -63,7 +63,7 @@ Every AGIT project README should include an AI Collaboration Note directly below
 
 The note is a standardized disclosure element. It should preserve the purpose, position and level of visibility of the template note, but the wording must remain factually correct for the derived project.
 
-For the AGIT Dev Template itself, the note states that the repository maintains the AGIT Dev Template. For derived projects, adapt that project-specific sentence so it accurately describes the collaboration in the derived repository, while still pointing readers to `ChatGPT.md`.
+For the AGIT Dev Template itself, the note states that the repository maintains the AGIT Dev Template. For derived projects, adapt that project-specific sentence so it accurately describes the collaboration in the derived repository, while still pointing readers to `COLLABORATION.md`.
 
 The derived note should also include one concrete sentence describing what the collaboration model documents in the project, such as engineering practices, collaboration workflows, validation expectations, handoff rules or repository conventions.
 
@@ -72,7 +72,7 @@ Before completing project setup, verify that:
 - `README.md` contains an English AI Collaboration Note below the badges
 - `README.de.md`, if kept, contains a German AI Collaboration Note below the badges
 - the note describes what the collaboration model documents for the derived project
-- both notes point to `ChatGPT.md`
+- both notes point to `COLLABORATION.md`
 - no generated project update has replaced the note with a shortened variant
 
 ## README Badge Policy
@@ -179,12 +179,12 @@ The following documents usually remain in the derived project:
 - `README.de.md` where useful
 - `CHANGELOG.md`
 - `AGENTS.md` as the automatic agent entry point
-- `ChatGPT.md`
-- `CODEX.md` when Codex will be used for local project work
+- `COLLABORATION.md`
 - `PHILOSOPHY.md`
 - `LICENSE`
 
-These documents define the current project state, user documentation, version history, collaboration model, local Codex operating policy, engineering philosophy and license of the project.
+These documents define current state, user documentation, version history,
+collaboration, resident agent safety, engineering philosophy and license.
 
 ---
 
@@ -222,7 +222,7 @@ Keep documentation focused on the users and contributors of the derived project.
 
 # 10. Review the Collaboration Model
 
-Review `ChatGPT.md`.
+Review `COLLABORATION.md`.
 
 The file should usually be kept unchanged unless the derived project has a specific reason to adjust the Collaboration Model.
 
@@ -230,11 +230,11 @@ If the AGIT Dev Template contains a newer version of the Collaboration Model, pr
 
 ---
 
-# 11. Review the Codex Operating Policy
+# 11. Review the Resident Agent Contract
 
-Review `CODEX.md` if Codex will be used for local project work.
+Review `AGENTS.md` for every derived project.
 
-`CODEX.md` defines local execution rules for Codex, including:
+`AGENTS.md` retains the compact enforceable core, including:
 
 - allowed local tools
 - read-only Git usage
@@ -245,9 +245,8 @@ Review `CODEX.md` if Codex will be used for local project work.
 - multi-repository safety
 - delivery expectations
 
-Keep `CODEX.md` in the derived project when Codex will continue to assist with local repository work.
-
-If the project does not use Codex locally, the file may be removed during setup.
+Keep `AGENTS.md` in the derived project as its provider-neutral resident entry
+point. Adapt local boundaries without copying detailed workflows into it.
 
 ---
 
@@ -377,10 +376,10 @@ specialized outcome is required. Remove the project copy of
 # 17. Start Development
 
 After the initial setup commit, continue development according to the
-Collaboration Model in `ChatGPT.md`. Begin each bounded new task through
+Collaboration Model in `COLLABORATION.md`. Begin each bounded new task through
 `start-task` and use `TASK_HANDOFF.md` for a versioned checkpoint.
 
-When using Codex locally, also follow `CODEX.md`.
+When using Codex locally, also follow `AGENTS.md`.
 
 Keep `PROJECT_CONTEXT.md` current when completing milestones, changing the roadmap, resolving important decisions or preparing to resume the project in a new collaboration session.
 

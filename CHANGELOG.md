@@ -8,6 +8,8 @@ This project follows Semantic Versioning.
 
 ### Added
 
+- Add the provider-neutral `COLLABORATION.md` contract with `AGENTS.md` as the
+  sole resident repository file.
 - Add repository-scoped collaboration skills and a tracked compact
   `TASK_HANDOFF.md` for the development-project lifecycle.
 - Add provider-neutral synchronized external project storage for large non-Git
@@ -15,6 +17,9 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Remove active root `CODEX.md` and `ChatGPT.md`, route their current authority
+  to the resident kernel, conditional collaboration and specialized documents,
+  and make `commit-milestone` explicit-only.
 - Replace the root initialization, continuation, harmonization, retrospective
   and local-project creation prompts with `$start-project` and scoped skills;
   retain `PROJECT_SETUP.md` as initialization method and provenance.

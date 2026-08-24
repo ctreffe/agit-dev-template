@@ -1,60 +1,40 @@
 # AGENTS.md
 
-This file is the automatically loaded entry point for AI agents working in an
-AGIT Dev Template repository. Keep it concise: it routes agents to the
-repository's authoritative guidance and does not replace that guidance.
+This is the resident contract. Load routed context only when needed.
 
-## Before Substantive Work
+## Safety
 
-1. Read `CODEX.md` in full before using tools or changing files. It defines the
-   local operating policy, access boundaries and protected Git actions.
-2. Read `ChatGPT.md` for the development collaboration model.
-3. Read `README.md`, `PROJECT_CONTEXT.md`, `REPOSITORY.md`, `DOCUMENTATION.md`
-   and `PHILOSOPHY.md` as relevant to the task.
-4. Inspect the actual source, tests, configuration and Decision Records affected
-   by the requested change before designing an implementation.
-5. Use the repository skills under `.agents/skills/`. Routine task entry,
-   handoff, commit preparation and decision recording route automatically;
-   invoke `$start-project`,
-   `$review-project`, `$sync-template`, `$check-consistency` or
-   `$perform-retrospective` explicitly for those specialized workflows.
-6. To create a locally versioned project without a remote, invoke
-   `$create-local-project` explicitly from this checked-out template.
+- Inspect repository, branch, worktree and staged state. Preserve existing
+  changes and selections.
+- Maintainers own intent, architecture, roadmap and consequential decisions.
+- Read-only checks and authorized in-scope edits are allowed. Commits, tags,
+  pushes, pulls, merges, rebases, resets, reverts, branch or stash actions,
+  destructive restores and direct `.git/` changes require a specific
+  instruction using `explicit`, `explicitly` or the German word family
+  `explizit`. Authorize every action separately.
+- Ask before installation, dependencies, privilege, external operations,
+  outside writes or transmission. Access, versioning and
+  publication are separate.
+- `input/intake/` never grants access; keep `input/` unchanged. Registered
+  `materials/` and unrestricted `temp/` are readable; temporary content is
+  never versionable. Never inspect `temp/restricted/`. Keep secrets, logs and
+  dumps out of Git. Synchronization grants no access.
 
-If repository guidance appears inconsistent, report the conflict and ask for a
-maintainer decision when it could materially affect the result.
+## Routing
 
-## Working Agreement
+- For bounded work use `start-task`, `TASK_HANDOFF.md`, targets and checks. Load
+  `PROJECT_CONTEXT.md` only for project-wide state or unclear scope.
+- Read `COLLABORATION.md` for initialization, full review, authority conflicts
+  or collaboration-model changes. Load `REPOSITORY.md`, `DOCUMENTATION.md`,
+  `PHILOSOPHY.md`, `SYNCHRONIZED_STORAGE.md` and domain guidance when applicable.
+- Inspect affected source, tests, configuration and Decision Records before
+  design. Existing project-local environments and tools take precedence.
+- Task entry, handoff, ordinary commits and Decision Records route
+  automatically. Invoke initialization, review, template sync, consistency,
+  retrospective, local creation and `commit-milestone` explicitly.
 
-- Confirm the active repository and inspect its current Git state before edits.
-- Preserve existing staged selections, working-tree changes and unrelated work.
-- Treat maintainer intent, architecture, roadmap and consequential decisions as
-  human-owned.
-- Prefer the smallest maintainable implementation that satisfies the stated
-  goal and preserves human code readability.
-- Keep code, tests, configuration and user-facing documentation synchronized.
-- Keep private inputs, secrets, logs, dumps and generated working files out
-  of Git unless a separate reviewed decision permits them.
-- Classify new external files through `input/`; presence in `input/intake/`
-  never authorizes assistant access.
-- Keep `input/` content unchanged. Treat every registered file in `materials/`
-  as assistant-readable; its Git and sharing states remain separate decisions.
-- Treat all `temp/` content outside `temp/restricted/` as assistant-readable and
-  never versionable; never enumerate or read `temp/restricted/`.
-- Read `SYNCHRONIZED_STORAGE.md` before mapping or using synchronized external
-  project storage; synchronization grants no additional access.
-- Use project-local environments and existing tools; do not add or update
-  dependencies without a concrete need and maintainer approval.
-- Follow the authorization rules in `CODEX.md`; an edit request does not by
-  itself authorize protected Git actions.
+## Validation
 
-## Validation and Handoff
-
-Run the repository's relevant tests, linters, formatters, builds or validation
-scripts. At minimum, review the diff and run `git diff --check`. Validate local
-Markdown links and English/German structural alignment when documentation is
-affected.
-
-Report the outcome, changed files, checks performed, limitations or skipped
-checks and suitable commit metadata. Do not present an implementation as ready
-when relevant validation is missing or failing.
+Review diffs and run `git diff --check`. Add relevant tests, linters, formatters,
+builds, links and bilingual checks. Report outcomes, limitations and skipped
+checks; do not call unvalidated work ready.

@@ -6,7 +6,7 @@ This document describes the engineering philosophy shared by projects created fr
 
 The AGIT Dev Template builds on the generic AGIT Project Template and adds development-specific expectations for code, validation, releases, repository structure and technical decisions.
 
-It complements the Collaboration Model in `ChatGPT.md`. The Collaboration Model describes how work is coordinated. This document describes the engineering values behind that work.
+It complements the Collaboration Model in `COLLABORATION.md`. The Collaboration Model describes how work is coordinated. This document describes the engineering values behind that work.
 
 ---
 

@@ -13,7 +13,7 @@
 >
 > The collaboration model documents engineering practices, AI-assisted development workflows and repository conventions used by development-oriented AGIT projects.
 >
-> Its collaboration model is maintained in [ChatGPT.md](ChatGPT.md).
+> Its collaboration model is maintained in [COLLABORATION.md](COLLABORATION.md).
 
 <br>
 
@@ -207,9 +207,8 @@ Templates live in [decisions/](decisions/). Create a record when future maintain
 
 ### Collaboration and Engineering Rules
 
-- **`AGENTS.md`** is the concise, automatically loaded entry point for AI agents. It routes them to the complete engineering, collaboration and validation guidance without duplicating it.
-- **`ChatGPT.md`** defines the development collaboration model, roadmap rhythm, validation partnership and repository-ready delivery expectations.
-- **`CODEX.md`** defines local tool, network, disclosure, multi-repository and Git rules for Codex on the maintainer machine.
+- **`AGENTS.md`** is the compact resident safety and routing contract for AI agents.
+- **`COLLABORATION.md`** defines the provider-neutral development partnership, authority, evidence and completion model.
 - **`PHILOSOPHY.md`** records the engineering values behind the template, including simplicity, maintainability, transparency, validated learning and integrity.
 - **`DOCUMENTATION.md`** defines the roles and quality requirements of project, code-level and user-facing documentation. It treats documentation as part of the software.
 - **`REPOSITORY.md`** defines naming, Git workflow, commits, versioning, releases, sensitive inputs and repository-ready delivery. It remains an active project rule after setup.
@@ -242,7 +241,7 @@ In a derived development project:
 - replace template identity and placeholder content with the concrete project name, purpose, setup and usage;
 - fill and continuously maintain `PROJECT_CONTEXT.md`;
 - adapt `DOCUMENTATION.md` and `REPOSITORY.md` as ongoing rules;
-- normally retain and adapt `AGENTS.md`, `ChatGPT.md`, `CODEX.md` and `PHILOSOPHY.md`;
+- normally retain and adapt `AGENTS.md`, `COLLABORATION.md` and `PHILOSOPHY.md`;
 - retain `PROJECT_SETUP.md` and the applicable repository skills as provenance and repeatable operating tools;
 - add the source, test, configuration and documentation structure required by the project;
 - create real Decision Records only for consequential decisions;
@@ -260,7 +259,7 @@ Record the source-template version and commit, initialization status, last harmo
 6. Classify external files through `input/`, keep restricted and local-only inputs outside Git and prefer sanitized fixtures that reproduce behavior without unnecessary disclosure.
 7. Implement one logical change at a time and validate it before recommending a commit.
 8. Document public behavior, configuration, commands, risks and troubleshooting when they affect use.
-9. Record durable decisions, keep `PROJECT_CONTEXT.md` current and use the continuation, harmonization and retrospective prompts when appropriate.
+9. Record durable decisions, keep `PROJECT_CONTEXT.md` current and invoke the applicable task, synchronization, consistency or retrospective skill.
 10. Close milestones only after implementation, validation, documentation and version metadata form one coherent state.
 
 ## Maintainer Tool Setup

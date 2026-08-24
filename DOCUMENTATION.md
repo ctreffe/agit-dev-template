@@ -66,7 +66,7 @@ The version history.
 
 It records completed changes by version. It should not replace `PROJECT_CONTEXT.md` or the roadmap.
 
-## ChatGPT.md
+## COLLABORATION.md
 
 The AGIT Collaboration Model.
 
@@ -74,15 +74,9 @@ It describes how the maintainer and AI assistant collaborate, including reposito
 
 ## AGENTS.md
 
-The concise, automatically loaded agent entry point. It routes agents to the
-complete engineering, collaboration and validation guidance without duplicating
-`ChatGPT.md` or `CODEX.md`.
-
-## CODEX.md
-
-The local Codex operating policy.
-
-It describes what Codex may do on the maintainer's machine, including local tool usage, read-only Git access, approval-required actions, data disclosure rules and delivery expectations.
+The compact resident safety and routing contract. It keeps protected-action,
+access and repository-state rules enforceable while routing detailed
+collaboration and engineering methods to conditional authority.
 
 ## PHILOSOPHY.md
 
@@ -163,8 +157,8 @@ Documentation changes are repository-ready only when they are consistent across 
 
 For example, if the collaboration workflow changes, review at least:
 
-- `ChatGPT.md`
-- `CODEX.md`, if local Codex operating rules are affected
+- `COLLABORATION.md`
+- `AGENTS.md`, if resident safety or routing is affected
 - `PHILOSOPHY.md`
 - `PROJECT_CONTEXT.md`
 - `README.md`
@@ -196,7 +190,7 @@ The milestone commit should contain the coherent completed state. Avoid relying 
 
 Some documentation elements are standardized template components. They should be reused consistently in derived projects rather than removed during setup.
 
-The AI Collaboration Note in `README.md` and `README.de.md` is such an element. It should appear directly below the README badges and preserve the template note's disclosure purpose, structure and visibility. Derived projects should adapt project-specific wording when the literal template wording would be inaccurate, while still linking to `ChatGPT.md`.
+The AI Collaboration Note in `README.md` and `README.de.md` is such an element. It should appear directly below the README badges and preserve the template note's disclosure purpose, structure and visibility. Derived projects should adapt project-specific wording when the literal template wording would be inaccurate, while still linking to `COLLABORATION.md`.
 
 When repository documentation is updated with AI assistance, the assistant should preserve standardized elements unless explicitly instructed to change them.
 
@@ -206,12 +200,13 @@ When repository documentation is updated with AI assistance, the assistant shoul
 
 Keep the general collaboration model and local execution rules separate.
 
-- `ChatGPT.md` documents the general AGIT Collaboration Model.
-- `CODEX.md` documents how Codex may operate locally.
+- `COLLABORATION.md` documents the general AGIT Collaboration Model.
+- `AGENTS.md` contains the resident safety and routing contract.
 - `PROJECT_SETUP.md` explains how to prepare a local project environment.
 - `PROJECT_CONTEXT.md` describes the current state of a derived project after setup.
 
-Do not move local tool rules, Git command restrictions or machine-specific execution guidance into `ChatGPT.md` unless the rule is part of the general collaboration model.
+Do not move protected-action or access rules out of `AGENTS.md`. Keep detailed
+workflows in skills or their specialized repository authority.
 
 ---
 

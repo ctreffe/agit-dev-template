@@ -88,8 +88,8 @@ Repository guidance should avoid assuming command-line Git usage whenever practi
 
 Command-line Git may still be used when needed, but documentation should not depend on it unless there is a clear reason.
 
-When Codex is used locally, `CODEX.md` defines the allowed Git usage. By
-default, Codex may inspect Git state. Specifically requested staging and
+`AGENTS.md` defines allowed agent Git usage. By default, an assistant may
+inspect Git state. Specifically requested staging and
 unstaging do not require a control word; protected Git actions do.
 
 This is a hard collaboration rule, not only a Codex implementation detail.
@@ -246,7 +246,7 @@ recorded in regular commits before the milestone closure commit.
 
 Documentation changes are first-class engineering work.
 
-Updates to README files, CHANGELOG.md, PHILOSOPHY.md, ChatGPT.md, CODEX.md, DOCUMENTATION.md or other project documentation should receive clear commits.
+Updates to README files, CHANGELOG.md, PHILOSOPHY.md, COLLABORATION.md, AGENTS.md, DOCUMENTATION.md or other project documentation should receive clear commits.
 
 Documentation-only commits are acceptable when they improve clarity, usability or maintainability.
 
@@ -397,7 +397,7 @@ Translations should be complete and consistent, not partially localized copies.
 
 Derived repositories should preserve required template elements unless intentionally changed.
 
-The AI Collaboration Note in `README.md` and `README.de.md` is a required repository-visible element for AGIT projects. It should remain directly below the README badges and preserve the original disclosure purpose. Derived projects may adapt project-specific wording when the literal template wording would be inaccurate, but the note should still clearly disclose AI collaboration and point readers to `ChatGPT.md`.
+The AI Collaboration Note in `README.md` and `README.de.md` is a required repository-visible element for AGIT projects. It should remain directly below the README badges and preserve the original disclosure purpose. Derived projects may adapt project-specific wording when the literal template wording would be inaccurate, but the note should still clearly disclose AI collaboration and point readers to `COLLABORATION.md`.
 
 ---
 
@@ -421,8 +421,7 @@ The following documents usually remain part of the derived project:
 - `README.de.md` where useful
 - `CHANGELOG.md`
 - `AGENTS.md` as the automatic agent entry point
-- `ChatGPT.md`
-- `CODEX.md` when Codex is used for local project work
+- `COLLABORATION.md`
 - `PHILOSOPHY.md`
 - `DOCUMENTATION.md`
 - `REPOSITORY.md`

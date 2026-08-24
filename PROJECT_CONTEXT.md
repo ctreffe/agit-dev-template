@@ -298,8 +298,8 @@ Use this section as a navigation aid.
 - `$perform-retrospective` — structured development-collaboration review
 - `CHANGELOG.md` — version history
 - `PHILOSOPHY.md` — shared AGIT engineering philosophy
-- `ChatGPT.md` — AGIT Collaboration Model
-- `CODEX.md` — local Codex operating policy, if Codex is used
+- `COLLABORATION.md` — AGIT Collaboration Model
+- `AGENTS.md` — resident agent safety and routing contract
 - `<architecture document>` — system structure, if applicable
 - `decisions/` — Decision Records, if used
 - `input/` — unchanged external files and sources plus their catalog
@@ -336,7 +336,7 @@ Current collaboration notes:
 - Capability limitations should be stated directly instead of hidden behind simulated completion.
 - Required template elements such as the AI Collaboration Note should remain visible and factually accurate unless intentionally modified.
 - `PROJECT_SETUP.md` remains as initialization provenance unless the maintainer documents a deliberate exception.
-- If Codex is used locally, `CODEX.md` defines the local operating policy.
+- `AGENTS.md` defines the resident agent safety and routing contract.
 - Long-running sessions should update `PROJECT_CONTEXT.md` before context exhaustion becomes likely.
 - When a change is approaching commit readiness, the assistant should provide concise numbered next steps for decisions, validation, review and commit actions whenever practical.
 - Projects should establish an explicit initial roadmap before implementation accelerates, including early milestones, purpose, intended validation and intentional non-goals.

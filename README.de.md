@@ -13,7 +13,7 @@
 >
 > Das Kollaborationsmodell dokumentiert Engineering-Praktiken, KI-gestützte Entwicklungsworkflows und Repository-Konventionen für entwicklungsorientierte AGIT-Projekte.
 >
-> Das Kollaborationsmodell wird in [ChatGPT.md](ChatGPT.md) gepflegt.
+> Das Kollaborationsmodell wird in [COLLABORATION.md](COLLABORATION.md) gepflegt.
 
 <br>
 
@@ -214,9 +214,8 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record, wenn 
 
 ### Zusammenarbeit und Engineering-Regeln
 
-- **`AGENTS.md`** ist der kompakte, automatisch geladene Einstiegspunkt für KI-Agenten. Die Datei führt zu den vollständigen Engineering-, Kollaborations- und Validierungsleitlinien, ohne sie zu duplizieren.
-- **`ChatGPT.md`** definiert das Entwicklungskollaborationsmodell, den Roadmap-Rhythmus, die Validierungspartnerschaft und Erwartungen an repository-fertige Übergaben.
-- **`CODEX.md`** definiert lokale Tool-, Netzwerk-, Offenlegungs-, Multi-Repository- und Git-Regeln für Codex auf dem Maintainer-System.
+- **`AGENTS.md`** ist der kompakte residente Sicherheits- und Routingvertrag für KI-Agenten.
+- **`COLLABORATION.md`** definiert die providerneutrale Entwicklungspartnerschaft sowie Autorität, Evidenz und Abschlusskriterien.
 - **`PHILOSOPHY.md`** hält die Engineering-Werte hinter dem Template fest, darunter Einfachheit, Wartbarkeit, Transparenz, validiertes Lernen und Integrität.
 - **`DOCUMENTATION.md`** definiert Rollen und Qualitätsanforderungen der Projekt-, Code- und Benutzerdokumentation. Sie behandelt Dokumentation als Teil der Software.
 - **`REPOSITORY.md`** definiert Benennung, Git-Workflow, Commits, Versionierung, Releases, sensible Inputs und repository-fertige Übergaben. Die Datei bleibt nach dem Setup eine aktive Projektregel.
@@ -250,7 +249,7 @@ In einem abgeleiteten Entwicklungsprojekt:
 - ersetze Template-Identität und Platzhalterinhalte durch konkreten Projektnamen, Zweck, Setup und Nutzung;
 - fülle `PROJECT_CONTEXT.md` aus und pflege die Datei kontinuierlich;
 - passe `DOCUMENTATION.md` und `REPOSITORY.md` als laufende Regeln an;
-- behalte normalerweise `AGENTS.md`, `ChatGPT.md`, `CODEX.md` und `PHILOSOPHY.md` und passe sie an;
+- behalte normalerweise `AGENTS.md`, `COLLABORATION.md` und `PHILOSOPHY.md` und passe sie an;
 - behalte `PROJECT_SETUP.md` und die anwendbaren Repository-Skills als Provenienz und wiederholbare Betriebswerkzeuge;
 - ergänze die vom Projekt benötigte Quellen-, Test-, Konfigurations- und Dokumentationsstruktur;
 - erstelle echte Decision Records nur für folgenreiche Entscheidungen;
@@ -268,7 +267,7 @@ Halte Source-Template-Version und -Commit, Initialisierungsstatus, letzte Harmon
 6. Klassifiziere externe Dateien über `input/`, halte beschränkte und nur lokale Inputs außerhalb von Git und bevorzuge bereinigte Fixtures, die Verhalten ohne unnötige Offenlegung reproduzieren.
 7. Implementiere jeweils eine logische Änderung und validiere sie vor einer Commit-Empfehlung.
 8. Dokumentiere öffentliches Verhalten, Konfiguration, Befehle, Risiken und Fehlerbehebung, wenn sie die Nutzung beeinflussen.
-9. Dokumentiere dauerhafte Entscheidungen, halte `PROJECT_CONTEXT.md` aktuell und nutze die Prompts für Fortsetzung, Harmonisierung und Retrospektive nach Bedarf.
+9. Dokumentiere dauerhafte Entscheidungen, halte `PROJECT_CONTEXT.md` aktuell und rufe den passenden Task-, Synchronisierungs-, Konsistenz- oder Retrospektive-Skill auf.
 10. Schließe Milestones erst ab, wenn Implementierung, Validierung, Dokumentation und Versionsmetadaten einen kohärenten Zustand bilden.
 
 ## Tool-Setup für Maintainer
