@@ -26,8 +26,11 @@ the Secure AI Template this may be a fresh local control-plane clone.
 5. Adapt `AGENTS.md` only for concrete commands, layout or validation
    differences. Retain `PROJECT_SETUP.md` and domain setup documents as the
    initialization method; no separate initialization prompt is retained.
-6. After successful normal-project initialization, remove the inherited
-   `create-local-project` skill and its template-only references. Do not remove
+6. After successful normal-project initialization, remove the inherited source-
+   template `IDEAS.md`, the `create-local-project` skill and their template-only
+   references. Retain `IDEAS.md` only when the maintainer deliberately
+   establishes a project-local backlog. Do not alter an existing active
+   derived project's backlog through initialization cleanup, and do not remove
    `create-secure-project` from a Secure AI control plane. If setup is
    incomplete, leave cleanup pending and report it.
 7. Run proportionate local validation and report changes, checks, limitations,

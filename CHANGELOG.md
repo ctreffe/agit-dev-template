@@ -8,6 +8,8 @@ This project follows Semantic Versioning.
 
 ### Added
 
+- Add a source-template `IDEAS.md` backlog for sanitized reusable
+  retrospective candidates.
 - Add the provider-neutral `COLLABORATION.md` contract with `AGENTS.md` as the
   sole resident repository file.
 - Add repository-scoped collaboration skills and a tracked compact
@@ -17,6 +19,12 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Assign targeted engineering checks to implementation and the complete
+  applicable repository gate to commit preparation, with earlier escalation
+  only through an explicit risk or local completion requirement.
+- Route retrospective findings explicitly to project, source-template or
+  governance destinations with a Pending Idea Transfer fallback, and remove
+  the template backlog during successful normal-project initialization.
 - Remove active root `CODEX.md` and `ChatGPT.md`, route their current authority
   to the resident kernel, conditional collaboration and specialized documents,
   and make `commit-milestone` explicit-only.
