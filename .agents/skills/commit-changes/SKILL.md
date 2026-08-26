@@ -16,11 +16,20 @@ shared-family changes. Domain validation remains additive.
 Run the selected full gate after the last relevant correction. A failure must
 be diagnosed and rerun after an in-scope fix; do not replace it with targeted
 checks or `git diff --check`. Keep successful output concise while retaining
-failure diagnostics. Then propose an appropriate Conventional Commit summary
-and a concise body explaining the meaningful change and validation.
+failure diagnostics.
+
+Then present and check the complete proposed message. An ordinary summary uses
+one exact direct prefix from `feat:`, `fix:`, `docs:`, `chore:`, `refactor:`,
+`test:`, `ci:` or `build:` followed by a concise imperative summary. Scoped
+forms such as `feat(scope):` do not satisfy this repository-family convention.
+Provide a meaningful body that explains purpose, material changes, important
+boundaries and relevant validation without merely repeating the summary. Use
+real line breaks and reject literal `\n` escape text. Milestone metadata is
+handled only by `commit-milestone`.
 
 Create the commit only after action-specific authorization required by the
-repository. Verify the resulting commit and remaining working tree. A push is a
+repository. Verify the resulting commit, including its complete message, and
+the remaining working tree. A push is a
 separate protected action: perform it only when separately authorized, then
 verify local HEAD and the intended upstream revision.
 

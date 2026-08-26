@@ -205,7 +205,7 @@ result does not authorize access, versioning or publication.
 
 Feature commits implement or improve a specific logical step.
 
-Regular working commits must use Conventional Commit prefixes such as:
+Regular working commits must use exact direct prefixes such as:
 
 ```text
 feat:
@@ -217,6 +217,10 @@ test:
 ci:
 build:
 ```
+
+Do not insert an optional scope between the type and colon; `feat(scope):` is
+not part of this repository-family convention. Use real line breaks in the
+meaningful description and never literal `\n` escape text.
 
 Choose the prefix that matches the actual change. Documentation-only changes should normally use `docs:`.
 

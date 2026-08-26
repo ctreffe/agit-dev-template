@@ -19,6 +19,9 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Require successful project initialization to replace inherited template
+  maintenance history in `CHANGELOG.md` and `TASK_HANDOFF.md` with project-owned
+  state, and reinduce exact direct-prefix commit messages with meaningful bodies.
 - Assign targeted engineering checks to implementation and the complete
   applicable repository gate to commit preparation, with earlier escalation
   only through an explicit risk or local completion requirement.

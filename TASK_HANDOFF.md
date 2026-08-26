@@ -1,18 +1,22 @@
 # Task Handoff
 
-- Status: completed
-- Outcome: The four lifecycle skills implement TVDR-0022 validation phases:
-  targeted checks during implementation, truthful full-gate state at handoff
-  and the complete applicable repository gate at commit preparation.
-- Decisions: Do not run a complete validator merely at task entry or handoff.
-  Exercise a changed validator in its narrowest useful scope and escalate
-  earlier only through a local completion contract or explicit risk decision.
-- Changed files: start-task, handoff-task, commit-changes, commit-milestone and
-  CHANGELOG.md.
-- Checks: The shared production skill validator, complete Family gate and
-  `git diff --check` pass.
-- Preserved unrelated state: The earlier IDEA-0006 changes are included in the
-  current authorized commit scope. Nothing else is staged or changed; push
-  remains unauthorized.
-- Open points: Exercise the later retrospective-transfer behavioral follow-up.
-- Next step: Create and verify the authorized commit; do not push.
+- Status: ready for authorized follow-up commit
+- Outcome: Development-project initialization now replaces inherited template maintenance
+  entries in `CHANGELOG.md` and `TASK_HANDOFF.md` with project-owned state, and
+  ordinary commit preparation reinduces exact direct prefixes and meaningful
+  bodies.
+- Decisions: Preserve source-template lineage in `PROJECT_CONTEXT.md`. Perform
+  the reset only after successful setup and preserve engineering validation,
+  roadmap authority and existing active derived projects.
+- Changed files: commit, creation and initialization skills; `REPOSITORY.md`;
+  `PROJECT_SETUP.md`; changelog; and this handoff.
+- Checks: The targeted production skill validator and `git diff --check` pass.
+  At commit preparation the complete Family gate must pass once after this
+  final handoff update.
+- Preserved unrelated state: The amended predecessor commit retains its
+  original tree. Existing derived projects were not inspected or changed, and
+  push remains unauthorized.
+- Open points: Observe future initialized projects for clean project-owned
+  history and retain the later retrospective-transfer behavioral follow-up.
+- Next step: Create and verify the separately authorized follow-up commit after
+  the Family gate; do not push.
