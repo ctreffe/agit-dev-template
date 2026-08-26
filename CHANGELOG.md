@@ -19,6 +19,8 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Interrupt recurring tool or environment failures for durable authorized
+  diagnosis and verified recovery before resuming engineering work.
 - Require successful project initialization to replace inherited template
   maintenance history in `CHANGELOG.md` and `TASK_HANDOFF.md` with project-owned
   state, and reinduce exact direct-prefix commit messages with meaningful bodies.
