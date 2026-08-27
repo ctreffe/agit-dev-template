@@ -40,6 +40,13 @@ conversation.
 
 ## Completion
 
+On a recurring equivalent tool failure or immediate setup, policy, permission
+or dependency-environment failure, pause and use `troubleshoot-environment`.
+Load known issues only after activation, require signature and applicability
+matching, and verify the original engineering operation before resuming.
+Troubleshooting grants no dependency installation, input, secret, Git, external
+operation or publication authority.
+
 Work is ready for review when its requested behavior is implemented, relevant
 tests and documentation agree, repository state is preserved, limitations are
 explicit and the diff is small enough to review. It is not complete merely

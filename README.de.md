@@ -223,9 +223,11 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record, wenn 
 ### Setup, Fortsetzung und Review
 
 - **`PROJECT_SETUP.md`** leitet die erste Initialisierung an und bewahrt ihre methodische Baseline. `$start-project` ist der explizite ausführbare Einstiegspunkt.
-- **`.agents/skills/`** enthält schlanke automatische Aufgaben- und
-  Commit-Abläufe sowie ausdrückliche Initialisierungs-, Review-,
-  Synchronisierungs-, Konsistenz- und Retrospektivabläufe.
+- **`.agents/skills/`** enthält schlanke automatische Aufgaben-, Commit- und
+  Umgebungs-Troubleshooting-Abläufe sowie ausdrückliche Initialisierungs-,
+  Review-, Synchronisierungs-, Konsistenz- und Retrospektivabläufe.
+- **`TROUBLESHOOTING.md`** enthält portable verifizierte Umgebungsfehler; die
+  ignorierte `TROUBLESHOOTING.local.md` enthält Hostfakten nach Aktivierung.
 - **`TASK_HANDOFF.md`** trägt den kompakten versionierten Aufgaben-Checkpoint
   über Sitzungen und Rechner hinweg, ohne Projekthistorie zu duplizieren.
 

@@ -13,9 +13,8 @@ Resident contract.
   `explicitly` or German `explizit`.
 - Ask before dependencies, installation, privilege, external operations,
   outside writes or transmission; access, versioning and publication differ.
-- After a failure, retry once only if plausibly transient. On recurrence or any
-  setup/policy error, pause; diagnose, seek an authorized durable fix, verify
-  it, then resume.
+- Retry once if plausibly transient. On recurrence or setup/policy error, pause;
+  use `troubleshoot-environment`; authorize, repair, verify and resume.
 - `input/intake/` grants no access; keep `input/` unchanged. Registered
   `materials/` and unrestricted `temp/` are readable; never version temporary
   content or inspect `temp/restricted/`. Keep secrets, logs and dumps out of

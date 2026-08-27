@@ -216,9 +216,11 @@ Templates live in [decisions/](decisions/). Create a record when future maintain
 ### Setup, Continuation and Review
 
 - **`PROJECT_SETUP.md`** guides the first initialization and preserves its methodological baseline. `$start-project` is the explicit executable entry point.
-- **`.agents/skills/`** contains lean automatic task lifecycle and commit
-  workflows plus explicit initialization, review, synchronization, consistency
-  and retrospective workflows.
+- **`.agents/skills/`** contains lean automatic task lifecycle, commit and
+  environment-troubleshooting workflows plus explicit initialization, review,
+  synchronization, consistency and retrospective workflows.
+- **`TROUBLESHOOTING.md`** stores portable verified environment failures;
+  ignored `TROUBLESHOOTING.local.md` stores host-specific facts after activation.
 - **`TASK_HANDOFF.md`** carries the compact versioned task checkpoint across
   sessions and computers without duplicating project history.
 

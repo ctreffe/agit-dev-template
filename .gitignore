@@ -25,6 +25,7 @@ __pycache__/
 .codex-cache/
 .codex-tmp/
 .codex-output/
+TROUBLESHOOTING.local.md
 
 # Local generated outputs
 /generated/

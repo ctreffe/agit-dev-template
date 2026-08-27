@@ -292,6 +292,7 @@ Use this section as a navigation aid.
 - `PROJECT_SETUP.md` — retained initialization method and provenance
 - `TASK_HANDOFF.md` — compact versioned task checkpoint
 - `.agents/skills/` — automatic lifecycle and explicit specialized workflows
+- `TROUBLESHOOTING.md` — conditionally loaded portable environment recovery patterns
 - `SYNCHRONIZED_STORAGE.md` — provider-neutral external storage and per-device mapping workflow
 - `$sync-template` — source-template comparison and selected adoption
 - `$check-consistency` — internal code, documentation and roadmap diagnosis
