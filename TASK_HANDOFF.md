@@ -1,19 +1,17 @@
 # Task Handoff
 
 - Status: completed and validated
-- Outcome: The TVDR-0026 rollout adds the implicit troubleshooting skill,
-  conditional portable registry and ignored host-local record while preserving
-  engineering and dependency boundaries.
-- Decisions: Reuse known issues only after activation and a matching verified
-  signature; rerun the originally failing operation before resuming.
-- Changed files: Resident and collaboration routing, skill, troubleshooting
-  registry and ignore, bilingual guidance, context, changelog and this handoff.
-- Checks: Skill Creator validation, production-skill topology, Markdown links,
-  2,014-byte resident budget and `git diff --check` pass.
+- Outcome: TVDR-0027 makes development-project initialization progressive with
+  no more than six coherent fundamental questions.
+- Decisions: Ask first for the useful capability and minimum evidence; defer
+  nonessential architecture, tooling, dependency, deployment and release detail
+  until concrete engineering work needs it.
+- Changed files: `start-project`, `PROJECT_SETUP.md`, `PROJECT_CONTEXT.md`,
+  changelog and this handoff.
+- Checks: Production skill topology, 15 local Markdown links and
+  `git diff --check` pass.
+- Full gate: The complete Templateverse gate passes from Governance.
 - Preserved unrelated state: Architecture, dependency, test, access and Git
-  controls remain unchanged. Staging, history and remotes are unchanged; commit
-  and push remain unauthorized.
-- Full gate: The repository-targeted checks pass. The complete family gate was
-  not run because Toolkit is explicitly excluded.
-- Open points: None for the authorized rollout.
+  controls remain unchanged; staging, history and remotes are untouched.
+- Open points: Observe the contract in a real derived-project initialization.
 - Next step: Await repository-specific explicit ordinary-commit authorization.

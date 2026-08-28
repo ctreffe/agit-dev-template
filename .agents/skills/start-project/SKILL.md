@@ -12,11 +12,17 @@ the Secure AI Template this may be a fresh local control-plane clone.
 1. Apply `AGENTS.md`, then read `PROJECT_SETUP.md` and only the setup,
    privacy, domain and repository guidance it directly requires. Inspect Git
    read-only and preserve all existing work.
-2. Establish the access boundary before inspecting external material. Ask for
-   the maintainer-owned identity, intent, scope, audience, non-goals, storage,
-   validation, roadmap and collaboration decisions required by the local setup
-   contract. Do not invent or accept those decisions.
-3. After the maintainer answers, update the project-specific context and
+2. Establish the access boundary before inspecting external material. Ask only
+   unanswered fundamentals in one initial set of no more than six numbered,
+   coherent questions: project identity and purpose; intended audience and use;
+   first useful outcome and minimum success evidence; current scope and
+   non-goals; source, material or data access and sensitivity; and only those
+   operating constraints that must be fixed now. Explain unfamiliar terms,
+   accept explicit deferral of nonessential choices and do not hide a longer
+   questionnaire in nested subparts. Never infer access, versioning,
+   transmission or publication authority from a default or another answer.
+3. After the maintainer answers, apply safe repository and domain defaults to
+   nonessential undecided details and update the project-specific context and
    documentation named by `PROJECT_SETUP.md`. Record initialization status and
    date, source-template version and commit, synchronization baseline and
    intentional deviations.

@@ -66,6 +66,11 @@ Intentional template deviations and relevant Decision Records:
 
 Keep `PROJECT_SETUP.md` as initialization provenance.
 
+During initialization, replace only the placeholders needed to record the six
+fundamental answers, the first useful capability and its current safety
+boundary. Keep nonessential architecture, tooling, test, deployment and release
+detail explicitly undecided until concrete work needs it.
+
 ---
 
 # Project

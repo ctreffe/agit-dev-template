@@ -10,6 +10,30 @@ and the template lineage in `PROJECT_CONTEXT.md`.
 
 Use this template for development-oriented AGIT projects. For general non-development projects, start from the generic AGIT Project Template instead.
 
+## Lean initialization contract
+
+`$start-project` begins with no more than six fundamental maintainer
+questions. Each numbered item is one coherent decision, not a container for a
+hidden questionnaire:
+
+1. What is the software project's identity and purpose?
+2. Who will use or maintain it, and in which operating context?
+3. What is the first useful capability, and what minimum evidence will show
+   that it works?
+4. What is currently in scope, and what are the explicit non-goals?
+5. Which source, material, data or environment evidence may the assistant
+   access now, and which sensitivity boundary applies?
+6. Which technical or operational constraint must be fixed before work begins?
+
+Use repository evidence for answers already established. The last question
+includes only a constraint that is consequential now; do not turn architecture,
+tooling, dependencies, storage, versioning, release and publication preferences
+into a bundled survey. Keep safe template defaults for nonessential choices or
+mark them explicitly undecided. Clarify detailed architecture, roadmap,
+commands, test matrix, deployment and release policy only when a concrete task
+needs them. Later dependency, security or protected-action questions remain
+mandatory when triggered; the limit does not weaken those gates.
+
 ---
 
 # 1. Create the Repository
@@ -341,12 +365,12 @@ PROJECT_CONTEXT.md as the current state entry point for future development
 sessions.
 ```
 
-Initialization is complete only when repository identity, maintainer intent,
-desired end state, boundaries, initial roadmap, validation model, human code
-readership, sensitive-input rules, local tooling, decision-record needs,
-versioning and retained template files have been reviewed and the repository is
-internally consistent. Do not begin substantive implementation while required
-maintainer-owned setup decisions remain hidden behind placeholders.
+Initialization is complete when the six fundamentals are answered or already
+evidenced, the first useful capability and minimum validation evidence are
+recorded, current access boundaries and safe defaults are explicit and the
+retained template state is internally consistent. Nonessential architecture,
+tooling, roadmap and release fields may remain explicitly undecided. Do not
+begin implementation that depends on an unresolved safety or authority choice.
 
 The initialization commit is normally a regular `chore:` commit. Use an
 unprefixed milestone commit only when initialization also completes a genuinely

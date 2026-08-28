@@ -21,6 +21,9 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Make development-project initialization progressive: ask no more than six
+  coherent fundamentals and defer architecture, tooling, test, deployment and
+  release detail until concrete work needs it.
 - Route recurring, setup, policy, permission and dependency-environment failures
   to signature-matched, authorized and verified engineering recovery.
 - Interrupt recurring tool or environment failures for durable authorized
