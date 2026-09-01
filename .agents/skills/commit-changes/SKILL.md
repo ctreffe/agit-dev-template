@@ -5,18 +5,18 @@ description: Finalize an ordinary reviewed change as a scoped Git commit and opt
 
 # Commit Changes
 
-Confirm repository scope, working-tree state, staged selection and diff.
-Preserve unrelated and pre-existing changes. Classify the semantic scope, not
-only the changed paths, and select the repository's complete validation gate.
-That gate is mandatory at ordinary commit preparation. In Templateverse
-governance, use the focused governance validator for governance-local changes;
-use selected-repository checks and the family validator for coordinated or
-shared-family changes. Domain validation remains additive.
+Confirm repository scope, working-tree state, staged selection and changed
+hunks. Preserve unrelated and pre-existing changes. Reuse current evidence
+while governed inputs have not changed.
 
-Run the selected full gate after the last relevant correction. A failure must
-be diagnosed and rerun after an in-scope fix; do not replace it with targeted
-checks or `git diff --check`. Keep successful output concise while retaining
-failure diagnostics.
+An ordinary commit needs a good, targeted and reviewable state, not a complete
+repository gate. Select the smallest check or review that materially increases
+confidence in the changed behavior, text or contract. Automated tests,
+whitespace checks, broad renders, builds and full suites are optional unless
+affected or required by a stated material risk. A failed relevant check must be
+diagnosed and rerun after an in-scope fix. Keep success output concise and
+retain focused failure diagnostics. Member repositories do not run the family
+validator; possible shared consequences become a Governance follow-up.
 
 Then present and check the complete proposed message. An ordinary summary uses
 one exact direct prefix from `feat:`, `fix:`, `docs:`, `chore:`, `refactor:`,

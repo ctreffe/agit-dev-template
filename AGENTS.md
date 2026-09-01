@@ -35,6 +35,9 @@ Resident contract.
 
 ## Validation
 
-Review diffs and run `git diff --check`. Add relevant tests, linters, formatters,
-builds, links and bilingual checks. Report outcomes, limits and skipped
-checks; do not call unvalidated work ready.
+Scale evidence by stage: a bounded change needs the smallest useful behavioral
+or source review, an ordinary commit needs targeted evidence for a good
+reviewable state, and a milestone commit owns comprehensive engineering and
+release checks. Tests, linters, formatters, builds, whitespace, links and
+bilingual scans are not defaults before the milestone unless affected or
+required by a stated material risk. Report limits and deferred checks truthfully.

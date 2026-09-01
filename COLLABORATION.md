@@ -38,6 +38,16 @@ write a compact `TASK_HANDOFF.md` containing objective, accepted decisions,
 exact scope, Git state, checks, risks and next action without replaying the
 conversation.
 
+## Validation Stages
+
+A bounded change needs only enough source or behavioral evidence to be
+acceptable. An ordinary commit needs focused tests or review for a good,
+reviewable state, not production-grade completeness. A milestone commit owns
+the comprehensive applicable test, lint, format, build, integration and release
+gate. Run a broader check earlier only when it covers affected behavior or a
+stated material risk. Prefer bounded success output and retain focused failure
+diagnostics.
+
 ## Completion
 
 On a recurring equivalent tool failure or immediate setup, policy, permission

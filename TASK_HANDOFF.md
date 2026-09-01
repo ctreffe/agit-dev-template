@@ -1,18 +1,18 @@
 # Task Handoff
 
-- Status: completed and validated
-- Outcome: The Dev source-template `PROJECT_CONTEXT.md` is a compact
-  initialization and current-state form below the 8,192-byte shared target.
-- Decisions: Keep maintainer intent, access boundaries, active engineering
-  state, roadmap, validation and next action in context; route general workflow,
-  history and rationale to existing authorities.
-- Changed files: `PROJECT_CONTEXT.md`, `CHANGELOG.md` and this handoff.
-- Checks: Context size, affected-scope Markdown links and `git diff --check`
-  pass.
-- Full gate: The complete Templateverse gate passes across Governance and all
-  seven registered members.
-- Preserved unrelated state: Source, tests, dependencies, architecture,
-  staging, history, remotes and publication state are unchanged.
-- Open points: None for this context-state pass.
-- Next step: Review the diff and await repository-specific explicit
-  ordinary-commit authorization.
+- Status: completed at the proportional-change stage
+- Outcome: The Dev Template uses focused behavioral evidence for ordinary work
+  and comprehensive engineering and release gates at milestones.
+- Decisions: Tests, lint, format, builds and full suites are selected by affected
+  behavior and risk rather than run automatically before every commit.
+- Changed files: AGENTS.md, COLLABORATION.md, CHANGELOG.md, four lifecycle
+  skills and this handoff.
+- Checks: Shared skill semantics and the coordinated diffs were reviewed;
+  conflicting ordinary-commit full-gate language is absent.
+- Deferred evidence: Complete engineering validation belongs to milestone
+  closure; no full suite or whitespace scan was run for this contract change.
+- Preserved state: Source, tests, staging, Git history, remote and releases are
+  unchanged.
+- Open points: None for the template rollout.
+- Next step: Review and, if accepted, authorize an ordinary commit in this
+  repository.

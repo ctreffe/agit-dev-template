@@ -21,6 +21,9 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Adopt TVDR-0028's proportional lifecycle so ordinary work uses focused
+  behavioral evidence and comprehensive engineering gates move to milestones.
+
 - Reduce the source-template `PROJECT_CONTEXT.md` to a focused initialization
   and current-state form below the shared context-residency target, routing
   general engineering workflow to its existing authorities.
