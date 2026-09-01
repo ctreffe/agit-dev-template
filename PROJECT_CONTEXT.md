@@ -1,384 +1,127 @@
-# PROJECT_CONTEXT.md
-
 # Project Context Template
 
-This document is a project-context template for repositories created from the AGIT Dev Template.
-
-In a derived project, this file should be adapted to capture the current state of that project.
-
-After adaptation, it becomes the primary entry point for resuming work after a pause, when starting a new AI-assisted collaboration session or when onboarding another contributor.
-
-It should describe where the derived project stands today. It should not provide the complete project history.
-
-The placeholders in this file are intentional. Replace them during project setup.
-
----
-
-# Template Lineage and Initialization
-
-Repository role:
-
-```text
-<derived project>
-```
-
-Source template:
-
-```text
-AGIT Dev Template
-```
-
-Initial template baseline:
-
-```text
-<template version and commit hash>
-```
-
-Initialization status:
-
-```text
-<not started | in progress | completed>
-```
-
-Initialization date:
-
-```text
-<YYYY-MM-DD | not yet completed>
-```
-
-Last template harmonization:
-
-```text
-<not yet performed | template version, commit hash and date>
-```
-
-Last collaboration retrospective:
-
-```text
-<not yet performed | reviewed period or milestone, date and relevant record>
-```
-
-Intentional template deviations and relevant Decision Records:
-
-```text
-<none | concise list>
-```
-
-Keep `PROJECT_SETUP.md` as initialization provenance.
-
-During initialization, replace only the placeholders needed to record the six
-fundamental answers, the first useful capability and its current safety
-boundary. Keep nonessential architecture, tooling, test, deployment and release
-detail explicitly undecided until concrete work needs it.
-
----
-
-# Project
-
-Project name:
-
-```text
-<project name>
-```
-
-Repository:
-
-```text
-<repository URL>
-```
-
-Short description:
-
-```text
-<one or two sentences describing the project>
-```
-
----
-
-# Maintainer Project Intent
-
-Maintainer-owned initial context:
-
-```text
-<problem space, operating context, target users or environment>
-```
-
-Desired end state:
-
-```text
-<what the project should enable, feel like or technically achieve when successful>
-```
-
-Initial boundaries and non-goals:
-
-```text
-<what the project should not do, should avoid or should intentionally postpone>
-```
-
-Roadmap implications:
-
-```text
-<how the context and desired end state shape the first milestones>
-```
-
-Human code readership:
-
-```text
-<who will inspect, review, debug, maintain or extend the code; expected technical and domain knowledge; repository language standard>
-```
-
-Sensitive development inputs and Git rules:
-
-```text
-<which logs, dumps, screenshots, customer data or other raw inputs must remain local; applicable .gitignore rules>
-```
-
-External input catalog and location mapping:
-
-```text
-<input/CATALOG.md entries and any required input/PATHS.local.md mappings>
-```
-
-Synchronized external storage:
-
-```text
-<not used | project ID, sync: roots, mapped engineering files, availability, conflict and backup notes>
-```
-
-Assistant-access approval:
-
-```text
-<exact sanitized fixtures or reviewed derivatives, permitted task and limitations>
-```
-
-Git-versioning approval:
-
-```text
-<exact fixtures, derivatives or generated outputs approved for Git, or none>
-```
-
-Retained project materials and storage states:
-
-```text
-<materials/CATALOG.md entries, source relationships and local | versioned | external states>
-```
-
-Promotion into maintained engineering files:
-
-```text
-<materials promoted into source, tests, fixtures, configuration or documentation>
-```
-
-Publication or external-sharing approval:
-
-```text
-<exact files or outputs and audience, or none>
-```
-
-The maintainer should provide this section at project start. It should guide the initial roadmap and help future sessions understand why the roadmap has its current shape.
-
----
-
-# Current Status
-
-Current project version:
-
-```text
-<latest completed version>
-```
-
-Current phase or milestone:
-
-```text
-<current milestone name>
-```
-
-Current focus:
-
-```text
-<what the project is currently working on>
-```
-
-Status:
-
-```text
-<planned | in development | validation | completed | paused>
-```
-
----
-
-# Repository Baseline
-
-Current working baseline:
-
-```text
-<local working tree | public repository main branch | uploaded ZIP filename | accepted generated output>
-```
-
-Baseline notes:
-
-```text
-<notes about the repository state that should be used for the next contribution>
-```
-
-This section should make it clear which repository state is authoritative for the next work session.
-
----
-
-# Completed Milestones
-
-- `<version or tag>` — `<milestone summary>`
-- `<version or tag>` — `<milestone summary>`
-
-Only include completed milestones. Work in progress belongs in the current status and roadmap sections.
-
----
-
-# Current Roadmap
-
-- `<next step>` — `<planned focus>`
+Use this file as the current-state re-entry point in a project created from the
+AGIT Dev Template. Replace the placeholders during initialization and keep the
+result focused on present intent, baseline, active work, validation and next
+steps. History belongs in `CHANGELOG.md`; durable rationale belongs in Decision
+Records; detailed methods belong in the relevant domain documents.
+
+## Template Lineage and Initialization
+
+- **Repository role:** `<derived project>`
+- **Source template:** AGIT Dev Template
+- **Initial template baseline:** `<version and commit>`
+- **Initialization:** `<not started | in progress | completed; date>`
+- **Last template harmonization:** `<not yet | baseline and date>`
+- **Last retrospective:** `<not yet | reviewed period, date and record>`
+- **Intentional deviations:** `<none | concise list and Decision Records>`
+
+Keep `PROJECT_SETUP.md` as initialization provenance. Initially record only the
+six fundamental answers, first useful capability and current safety boundary;
+defer architecture, tooling, tests, deployment and release detail until a
+concrete task needs it.
+
+## Project Intent
+
+- **Project name:** `<name>`
+- **Repository:** `<URL or local baseline>`
+- **Short description:** `<one or two sentences>`
+- **Problem and users:** `<operating context and intended users>`
+- **Desired end state:** `<useful outcome and quality bar>`
+- **Boundaries and non-goals:** `<excluded or postponed behavior>`
+- **First roadmap implication:** `<first useful milestone and why>`
+- **Human code readership:** `<maintainers, reviewers and language standard>`
+
+The maintainer owns this intent. The assistant may clarify and structure it,
+but must not invent the project's purpose or consequential decisions.
+
+## Access, Storage and Publication Boundary
+
+- **Sensitive inputs and Git rules:** `<logs, dumps, screenshots, data and ignores>`
+- **Input catalog:** `<input/CATALOG.md and optional PATHS.local.md entries>`
+- **Synchronized storage:** `<not used | project ID, roots and state>`
+- **Assistant access:** `<exact sources or sanitized derivatives and task>`
+- **Git versioning:** `<exact approved fixtures or outputs | none>`
+- **Retained materials:** `<catalog entries, source relation and storage state>`
+- **Promotion into maintained files:** `<source, tests, fixtures or docs>`
+- **Publication or external sharing:** `<exact artifacts and audience | none>`
+
+Access, Git versioning and publication are separate decisions. Do not infer one
+from another.
+
+## Current State
+
+- **Current version:** `<latest completed version>`
+- **Milestone:** `<active milestone>`
+- **Focus:** `<current engineering objective>`
+- **Status:** `<planned | development | validation | paused | completed>`
+- **Working baseline:** `<local tree | public branch | archive | accepted output>`
+- **Baseline notes:** `<state required for the next contribution>`
+
+## Roadmap and Milestones
+
+Completed:
+
+- `<version or tag>` — `<validated milestone>`
+
+Next:
+
+- `<next step>` — `<uncertainty reduced or behavior proved>`
 - `<later step>` — `<planned focus>`
 
-Roadmap entries should be small enough to validate.
+Keep roadmap entries reviewable. Work in progress belongs in Current State,
+not in the completed list.
 
-For proof-of-concept work, phrase roadmap entries around the uncertainty they reduce or the behavior they prove.
-
----
-
-# Validation Status
-
-Document what has been validated and what has not.
+## Validation
 
 Validated:
 
-- `<validated behavior>`
+- `<behavior and evidence>`
 
 Not yet validated:
 
-- `<open validation item>`
+- `<open check or limitation>`
 
-Validation notes:
+Immediate validation target: `<next relevant check>`
 
-```text
-<important observations from real-system tests or reviews>
-```
+## Decisions
 
----
+Open:
 
-# Open Decisions
+- `<unresolved or deliberately deferred decision | none>`
 
-List decisions that are unresolved or intentionally postponed.
+Important accepted decisions:
 
-- `<decision>`
-- `<decision>`
+- `<decision and Decision Record when applicable>`
 
-If there are no open decisions, state that explicitly.
+Record durable architecture or project decisions in the local taxonomy instead
+of expanding their rationale here.
 
----
+## Relevant Documents
 
-# Important Decisions Already Made
+- `README.md` — user-facing entry point
+- `PROJECT_SETUP.md` — initialization method and provenance
+- `TASK_HANDOFF.md` — compact current-task checkpoint
+- `COLLABORATION.md` and `AGENTS.md` — collaboration and resident safety
+- `PHILOSOPHY.md`, `REPOSITORY.md`, `DOCUMENTATION.md` — engineering rules
+- `TROUBLESHOOTING.md` — conditionally loaded recovery patterns
+- `SYNCHRONIZED_STORAGE.md` — external storage mapping
+- `.agents/skills/` — lifecycle and specialized workflows
+- `decisions/` — durable choices
+- `CHANGELOG.md` — completed version history
+- `input/`, `materials/`, `temp/`, `output/` — governed artifact locations
+- `<architecture or domain document>` — `<purpose>`
 
-Summarize decisions that are important for continuing the project.
+Remove or adapt entries that do not apply.
 
-Detailed reasoning should remain in decision records where applicable.
+## Next Session
 
-- `<decision>`
-- `<decision>`
+- **Objective:** `<one coherent next objective>`
+- **Start from:** `<exact baseline and active artifacts>`
+- **Preserve:** `<user work, inputs, selections and non-goals>`
+- **Checks pending:** `<specific checks>`
+- **Next action:** `<single practical step>`
 
-Include validated negative findings here when they affect future work.
-
----
-
-# Relevant Documents
-
-Use this section as a navigation aid.
-
-- `README.md` — project overview and user-facing entry point
-- `PROJECT_SETUP.md` — retained initialization method and provenance
-- `TASK_HANDOFF.md` — compact versioned task checkpoint
-- `.agents/skills/` — automatic lifecycle and explicit specialized workflows
-- `TROUBLESHOOTING.md` — conditionally loaded portable environment recovery patterns
-- `SYNCHRONIZED_STORAGE.md` — provider-neutral external storage and per-device mapping workflow
-- `$sync-template` — source-template comparison and selected adoption
-- `$check-consistency` — internal code, documentation and roadmap diagnosis
-- `$perform-retrospective` — structured development-collaboration review
-- `CHANGELOG.md` — version history
-- `PHILOSOPHY.md` — shared AGIT engineering philosophy
-- `COLLABORATION.md` — AGIT Collaboration Model
-- `AGENTS.md` — resident agent safety and routing contract
-- `<architecture document>` — system structure, if applicable
-- `decisions/` — Decision Records, if used
-- `input/` — unchanged external files and sources plus their catalog
-- `temp/` — never-versioned intermediate files
-- `materials/` — retained assistant-readable engineering files and catalog
-- `output/` — generated deliverables
-
-Remove or adapt entries that do not apply to the derived project.
-
----
-
-# Collaboration Context
-
-AGIT Dev Template version:
-
-```text
-<template version>
-```
-
-Collaboration Model version:
-
-```text
-v1.20
-```
-
-Current collaboration notes:
-
-- The repository is the authoritative project state.
-- A local repository working tree may be used as the working baseline when accessible to the assistant.
-- A public repository may be used as the working baseline when accessible.
-- A current ZIP archive should be provided when the assistant cannot reliably access the repository state.
-- Explicit create or commit requests require actual repository-ready deliverables.
-- Integrity has priority over apparent helpfulness: files and changes must exist before they are reported as delivered.
-- Capability limitations should be stated directly instead of hidden behind simulated completion.
-- Required template elements such as the AI Collaboration Note should remain visible and factually accurate unless intentionally modified.
-- `PROJECT_SETUP.md` remains as initialization provenance unless the maintainer documents a deliberate exception.
-- `AGENTS.md` defines the resident agent safety and routing contract.
-- Long-running sessions should update `PROJECT_CONTEXT.md` before context exhaustion becomes likely.
-- When a change is approaching commit readiness, the assistant should provide concise numbered next steps for decisions, validation, review and commit actions whenever practical.
-- Projects should establish an explicit initial roadmap before implementation accelerates, including early milestones, purpose, intended validation and intentional non-goals.
-- Initial roadmaps should be derived from maintainer-owned project intent, context, desired end state and boundaries.
-- Active milestones should progress through small implement-validate-adjust-prepare loops, with feature commit guidance kept separate from milestone commit guidance.
-- Commit recommendations should include both a concise summary and a meaningful description.
-- Assistant-written code should be documented and structured so maintainers and future contributors can understand it without private chat history.
-- User-facing documentation should explain setup, configuration, productive usage, reference surfaces and troubleshooting where relevant.
-- Substantial modules, integrations or workflows should use dedicated documentation instead of overloading the README.
-- Substantial production components should include a demonstration, example configuration or validation path when applicable.
-- Before preparing a milestone commit, documentation should be checked for version, status, roadmap, changelog, README, dedicated-documentation links, setup guidance, validation freshness and sensitive input or generated-output handling.
-- When validation requires maintainer-local or elevated execution, the assistant should provide exact steps, interpret the output and document relevant validation results.
-- Feature commits and milestone commits should remain separate.
-- After a milestone commit or tag exists, `PROJECT_CONTEXT.md` should be updated if it still describes pre-commit or pre-tag review work as the current focus.
-- Staging and unstaging require a specific maintainer request or authorization
-  of the corresponding commit, but no control word. Protected Git actions are
-  maintainer-controlled and require a specific instruction containing
-  `explicit`, `explicitly` or the German word family `explizit`.
-- Validation should happen before declaring a step complete.
-
-Adapt this section when the project intentionally uses different collaboration rules.
-
----
-
-# Notes for the Next Session
-
-Use this section to make restarting work easy.
-
-Examples:
-
-- what to do next
-- what not to change yet
-- what information needs to be verified
-- what repository state should be used
-- what was validated in the previous session
-
-```text
-<notes>
-```
+Update this file after material state changes and before a long-session handoff.
+Feature and milestone commits remain separate; protected Git actions require
+their own explicit authorization.

@@ -21,6 +21,9 @@ This project follows Semantic Versioning.
 
 ### Changed
 
+- Reduce the source-template `PROJECT_CONTEXT.md` to a focused initialization
+  and current-state form below the shared context-residency target, routing
+  general engineering workflow to its existing authorities.
 - Make development-project initialization progressive: ask no more than six
   coherent fundamentals and defer architecture, tooling, test, deployment and
   release detail until concrete work needs it.
