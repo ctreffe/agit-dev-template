@@ -76,17 +76,25 @@ The simplest instruction to the agent is:
 > `$start-project`
 
 There is no initialization prompt to open or copy into the conversation.
+Before the normal questionnaire, the agent offers one concise choice between
+the normal lean path and the explicit `$grill-me` path for detailed engineering
+planning. The choice grants no access, dependency, Git or release authority.
 
 The agent then:
 
 1. reads the collaboration, engineering, setup, documentation, repository and decision rules;
 2. inspects the repository baseline without altering Git history;
-3. presents concise questions about the problem, desired end state, users, environment, boundaries, roadmap, validation model and code readership;
-4. asks for maintainer-owned architecture, sensitive-input and project decisions instead of inventing them;
+3. follows the selected path and, on the lean path, asks no more than six
+   unanswered fundamentals covering project purpose, users, the first useful
+   capability and its evidence, current scope and non-goals, source or input
+   access and sensitivity, and only engineering constraints needed now;
+4. asks for maintainer-owned consequential decisions instead of inventing them
+   and defers architecture, tooling, tests, deployment and release detail until
+   concrete work requires it;
 5. adapts the README files, project context, repository rules and project structure after the maintainer answers;
-6. establishes rules for secrets, logs, dumps, screenshots, fixtures, external files and generated outputs;
-7. validates the initial technical baseline and prepares the first small project-specific change; and
-8. hands back the initialized state with checks, unresolved decisions and suggested commit metadata.
+6. applies safe defaults for secrets, logs, dumps, screenshots, fixtures, external files and generated outputs;
+7. validates only the initial technical behavior needed for the first useful outcome; and
+8. hands back the initialized state with proportionate checks, unresolved decisions and suggested commit metadata.
 
 `PROJECT_SETUP.md` remains the agent's detailed checklist and a provenance record of the initialization method. `$start-project` is the single executable entry point that activates it.
 
@@ -94,9 +102,11 @@ For a project that should remain local and have no remote, invoke
 `$create-local-project` explicitly in this checked-out template. It verifies
 the destination, creates an independent local clone without a remote and then
 invokes `$start-project`; it is not a second initialization.
-After successful initialization, the project's copy of the creation prompt and
-its template-only references are removed, while the initialization files remain
-as provenance.
+After successful initialization, inherited template history in `CHANGELOG.md`
+and `TASK_HANDOFF.md` is replaced with project-owned state. The template-only
+`IDEAS.md`, the project's copy of `$create-local-project` and their references
+are removed unless a project-local idea backlog is deliberately established.
+The initialization files remain as provenance.
 
 ## External Files and Sources
 
@@ -185,6 +195,10 @@ Staging and unstaging are index operations. They do not require a control word, 
 
 Protected actions include commits, amendments, tags, pushes, pulls, merges, rebases, resets, branch changes, stash manipulation and other Git history operations. An assistant may perform a specific protected action only when the instruction for that action contains `explicit` or `explicitly` in English, or the German word family `explizit`. File-edit approval does not authorize Git history changes, and approval for one protected action does not authorize another.
 
+When this rule requires authorization, the assistant proposes one minimum-scope,
+copy-ready instruction naming the exact action, repository and material
+consequence. The proposal itself is not authorization.
+
 Regular engineering commits use prefixes such as `feat:`, `fix:`, `docs:`, `refactor:` or `test:`. Milestone commits omit the prefix, name the completed version and close work already implemented and validated through regular commits.
 
 ## Decision Records
@@ -218,11 +232,16 @@ Templates live in [decisions/](decisions/). Create a record when future maintain
 - **`PROJECT_SETUP.md`** guides the first initialization and preserves its methodological baseline. `$start-project` is the explicit executable entry point.
 - **`.agents/skills/`** contains lean automatic task lifecycle, commit and
   environment-troubleshooting workflows plus explicit initialization, review,
-  synchronization, consistency and retrospective workflows.
+  synchronization, consistency and retrospective workflows. The `$grill-me`
+  path and its `grilling` primitive are explicit-only and never replace the
+  normal lean initialization.
 - **`TROUBLESHOOTING.md`** stores portable verified environment failures;
   ignored `TROUBLESHOOTING.local.md` stores host-specific facts after activation.
 - **`TASK_HANDOFF.md`** carries the compact versioned task checkpoint across
   sessions and computers without duplicating project history.
+- **`IDEAS.md`** is a source-template backlog for reusable engineering
+  candidates and is removed during normal project initialization unless a
+  project-local backlog is deliberately retained.
 
 ### Decisions, External Inputs and Project-Specific Code
 
@@ -254,7 +273,9 @@ Record the source-template version and commit, initialization status, last harmo
 ## How to Use This Template
 
 1. Create a repository from the template and invoke `$start-project`.
-2. Answer the numbered questions the agent presents; it reads and applies `PROJECT_SETUP.md` and the remaining setup guidance automatically.
+2. Choose the normal lean path or explicitly opt into `$grill-me`; on the lean
+   path, answer no more than six unanswered engineering fundamentals while the
+   agent applies `PROJECT_SETUP.md` and the remaining guidance automatically.
 3. Review the initialized repository state, validation results and proposed first commit.
 4. Let the agent capture maintainer intent and derive a validation-oriented roadmap.
 5. Establish the code, test, documentation and local-tool structure needed by the concrete project.
@@ -281,7 +302,7 @@ Prefer local environments such as `.venv/` and `node_modules/` over global insta
 
 Development projects should retain practices that have proven useful and remove unnecessary complexity. Validated negative results, recurring validation problems and maintainability lessons are legitimate project knowledge.
 
-Use harmonization to reconcile project content, implementation, tests, documentation and roadmap. Use retrospectives separately to evaluate collaboration, engineering handoffs, validation strategy and work rhythm. A finding becomes a template candidate only after its transferability, maintenance cost and effect on different development projects have been considered.
+Use `$sync-template` to compare a project with its verified source-template baseline and adopt selected developments. Use `$check-consistency` separately to diagnose contradictions among implementation, tests, documentation and roadmap, and `$perform-retrospective` to evaluate collaboration, engineering handoffs, validation strategy and work rhythm. A finding becomes a template candidate only after its transferability, maintenance cost and effect on different development projects have been considered.
 
 The maintainer coordinates cross-template evolution in a private governance repository named `agit-templateverse`. It records shared conventions, deliberate specializations and evidence from derived projects. The repository is intentionally not linked because template users do not need access to it.
 

@@ -76,17 +76,27 @@ Die einfachste Anweisung an den Agenten lautet:
 > `$start-project`
 
 Es muss kein Initialisierungs-Prompt geöffnet oder in die Unterhaltung kopiert werden.
+Vor dem normalen Frageblock bietet der Agent eine knappe Wahl zwischen dem
+üblichen schlanken Weg und dem expliziten `$grill-me`-Weg für detaillierte
+Engineering-Planung an. Die Wahl erteilt keine Zugriffs-, Abhängigkeits-, Git-
+oder Release-Befugnis.
 
 Der Agent:
 
 1. liest die Kollaborations-, Engineering-, Setup-, Dokumentations-, Repository- und Entscheidungsregeln;
 2. prüft die Repository-Baseline, ohne die Git-Historie zu verändern;
-3. legt kompakte Fragen zu Problem, gewünschtem Endzustand, Nutzer:innen, Umgebung, Grenzen, Roadmap, Validierungsmodell und Code-Leserschaft vor;
-4. fragt vom Maintainer zu treffende Architektur-, sensible Input- und Projektentscheidungen ab, statt sie zu erfinden;
+3. folgt dem gewählten Weg und stellt auf dem schlanken Weg höchstens sechs
+   unbeantwortete Grundfragen zu Projektzweck, Nutzer:innen, erster nützlicher
+   Fähigkeit und deren Nachweis, aktuellem Umfang und Nicht-Zielen, Quellen-
+   oder Inputzugriff und Sensitivität sowie nur jetzt nötigen Engineering-
+   Bedingungen;
+4. fragt folgenreiche Maintainer-Entscheidungen ab, statt sie zu erfinden, und
+   verschiebt Architektur-, Tooling-, Test-, Deployment- und Release-Details,
+   bis konkrete Arbeit sie benötigt;
 5. passt nach den Antworten README-Dateien, Projektkontext, Repository-Regeln und Projektstruktur an;
-6. legt Regeln für Secrets, Logs, Dumps, Screenshots, Fixtures, externe Dateien und erzeugte Outputs fest;
-7. validiert die initiale technische Baseline und bereitet die erste kleine projektspezifische Änderung vor; und
-8. übergibt den initialisierten Stand mit Prüfergebnissen, offenen Entscheidungen und vorgeschlagenen Commit-Metadaten.
+6. wendet sichere Standardwerte für Secrets, Logs, Dumps, Screenshots, Fixtures, externe Dateien und erzeugte Outputs an;
+7. validiert nur das für das erste nützliche Ergebnis benötigte technische Verhalten; und
+8. übergibt den initialisierten Stand mit angemessenen Prüfungen, offenen Entscheidungen und vorgeschlagenen Commit-Metadaten.
 
 `PROJECT_SETUP.md` bleibt die ausführliche Checkliste des Agenten und dokumentiert die Methode der Initialisierung. `$start-project` ist der einzige ausführbare Einstiegspunkt, der sie aktiviert.
 
@@ -94,9 +104,12 @@ Soll ein Projekt lokal bleiben und keinen Remote erhalten, rufe in diesem
 ausgecheckten Template ausdrücklich `$create-local-project` auf. Der Skill
 prüft das Ziel, erzeugt einen unabhängigen lokalen Clone ohne Remote und ruft
 anschließend `$start-project` auf; er ist keine zweite Initialisierung.
-Nach erfolgreicher Initialisierung werden die Projektkopie des Erstellungs-
-Prompts und ihre reinen Template-Verweise entfernt; die Initialisierungsdateien
-bleiben dagegen als Provenienz erhalten.
+Nach erfolgreicher Initialisierung wird die geerbte Template-Historie in
+`CHANGELOG.md` und `TASK_HANDOFF.md` durch projektspezifischen Zustand ersetzt.
+Das reine Template-`IDEAS.md`, die Projektkopie von `$create-local-project` und
+ihre Verweise werden entfernt, sofern nicht bewusst ein projekteigener
+Ideenbestand eingerichtet wird. Die Initialisierungsdateien bleiben als
+Provenienz erhalten.
 
 ## Externe Dateien und Quellen
 
@@ -192,6 +205,11 @@ Staging und Unstaging sind Indexoperationen. Sie benötigen kein Kontrollwort, d
 
 Geschützte Aktionen umfassen Commits, Amendments, Tags, Pushes, Pulls, Merges, Rebases, Resets, Branch-Wechsel, Stash-Manipulationen und andere Operationen an der Git-Historie. Ein Assistant darf eine bestimmte geschützte Aktion nur ausführen, wenn die Anweisung für genau diese Aktion `explicit` oder `explicitly` auf Englisch oder die deutsche Wortfamilie `explizit` enthält. Die Freigabe von Dateiänderungen autorisiert keine Änderung der Git-Historie; die Freigabe einer geschützten Aktion autorisiert keine andere.
 
+Wenn diese Regel eine Autorisierung verlangt, schlägt der Assistant eine
+minimal abgegrenzte, kopierfertige Anweisung vor, die genaue Aktion,
+Repository und wesentliche Konsequenz benennt. Der Vorschlag selbst ist keine
+Autorisierung.
+
 Reguläre Engineering-Commits verwenden Präfixe wie `feat:`, `fix:`, `docs:`, `refactor:` oder `test:`. Milestone-Commits verzichten auf das Präfix, nennen die abgeschlossene Version und schließen Arbeit ab, die bereits durch reguläre Commits implementiert und validiert wurde.
 
 ## Decision Records
@@ -225,11 +243,16 @@ Vorlagen befinden sich in [decisions/](decisions/). Erstelle einen Record, wenn 
 - **`PROJECT_SETUP.md`** leitet die erste Initialisierung an und bewahrt ihre methodische Baseline. `$start-project` ist der explizite ausführbare Einstiegspunkt.
 - **`.agents/skills/`** enthält schlanke automatische Aufgaben-, Commit- und
   Umgebungs-Troubleshooting-Abläufe sowie ausdrückliche Initialisierungs-,
-  Review-, Synchronisierungs-, Konsistenz- und Retrospektivabläufe.
+  Review-, Synchronisierungs-, Konsistenz- und Retrospektivabläufe. Der
+  `$grill-me`-Weg und sein `grilling`-Baustein sind ausschließlich explizit
+  nutzbar und ersetzen niemals die normale schlanke Initialisierung.
 - **`TROUBLESHOOTING.md`** enthält portable verifizierte Umgebungsfehler; die
   ignorierte `TROUBLESHOOTING.local.md` enthält Hostfakten nach Aktivierung.
 - **`TASK_HANDOFF.md`** trägt den kompakten versionierten Aufgaben-Checkpoint
   über Sitzungen und Rechner hinweg, ohne Projekthistorie zu duplizieren.
+- **`IDEAS.md`** ist ein Source-Template-Backlog für wiederverwendbare
+  Engineering-Kandidaten und wird bei normaler Projektinitialisierung entfernt,
+  sofern nicht bewusst ein projekteigener Ideenbestand erhalten bleibt.
 
 ### Entscheidungen, externe Inputs und projektspezifischer Code
 
@@ -262,7 +285,10 @@ Halte Source-Template-Version und -Commit, Initialisierungsstatus, letzte Harmon
 ## Verwendung dieses Templates
 
 1. Erzeuge ein Repository aus dem Template und rufe `$start-project` auf.
-2. Beantworte die nummerierten Fragen des Agenten; er liest und verarbeitet `PROJECT_SETUP.md` und die übrigen Setup-Leitlinien automatisch.
+2. Wähle den normalen schlanken Weg oder ausdrücklich `$grill-me`; beantworte
+   auf dem schlanken Weg höchstens sechs unbeantwortete Engineering-Grundfragen,
+   während der Agent `PROJECT_SETUP.md` und die übrigen Leitlinien automatisch
+   anwendet.
 3. Prüfe den initialisierten Repository-Stand, die Validierungsergebnisse und den vorgeschlagenen ersten Commit.
 4. Lass den Agenten die Maintainer-Intention erfassen und eine validierungsorientierte Roadmap ableiten.
 5. Richte die für das konkrete Projekt benötigte Code-, Test-, Dokumentations- und lokale Toolstruktur ein.
@@ -289,7 +315,7 @@ Bevorzuge lokale Umgebungen wie `.venv/` und `node_modules/` gegenüber globaler
 
 Entwicklungsprojekte sollten bewährte Praktiken bewahren und unnötige Komplexität entfernen. Validierte negative Ergebnisse, wiederkehrende Validierungsprobleme und Wartbarkeitserkenntnisse sind legitimes Projektwissen.
 
-Nutze Harmonisierung, um Projektinhalt, Implementierung, Tests, Dokumentation und Roadmap abzugleichen. Nutze Retrospektiven separat, um Zusammenarbeit, Engineering-Übergaben, Validierungsstrategie und Arbeitsrhythmus zu bewerten. Ein Befund wird erst dann zum Template-Kandidaten, wenn seine Übertragbarkeit, Wartungskosten und Auswirkungen auf unterschiedliche Entwicklungsprojekte geprüft wurden.
+Nutze `$sync-template`, um ein Projekt mit seiner verifizierten Source-Template-Baseline zu vergleichen und ausgewählte Entwicklungen zu übernehmen. Verwende `$check-consistency` getrennt für Widersprüche zwischen Implementierung, Tests, Dokumentation und Roadmap und `$perform-retrospective` für Zusammenarbeit, Engineering-Übergaben, Validierungsstrategie und Arbeitsrhythmus. Ein Befund wird erst dann zum Template-Kandidaten, wenn seine Übertragbarkeit, Wartungskosten und Auswirkungen auf unterschiedliche Entwicklungsprojekte geprüft wurden.
 
 Der Maintainer koordiniert die templateübergreifende Weiterentwicklung in einem privaten Governance-Repository namens `agit-templateverse`. Es dokumentiert gemeinsame Konventionen, bewusste Spezialisierungen und Evidenz aus abgeleiteten Projekten. Das Repository wird bewusst nicht verlinkt, da Template-Nutzer:innen keinen Zugriff darauf benötigen.
 
