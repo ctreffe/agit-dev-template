@@ -27,7 +27,12 @@ developing or reviewing the milestone.
    inventorying unrelated contents.
 6. Resolve only authorized closure gaps, rerun required validation and propose
    a human-readable versioned summary plus concise evidence-based body.
-7. Create the commit only with action-specific authorization and verify it.
+7. Create the commit only with action-specific authorization and verify it. If
+   the repository control word is still needed, propose one minimal copy-ready
+   instruction naming the exact action, repository and material consequence;
+   the proposal is not authorization.
 
 Push, tag creation, tag push and release publication remain separate protected
-actions requiring their own authorization and post-action verification.
+actions requiring their own authorization and post-action verification. When a
+control word is still needed, propose separate copy-ready wording for each
+independent action.

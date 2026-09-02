@@ -28,10 +28,13 @@ real line breaks and reject literal `\n` escape text. Milestone metadata is
 handled only by `commit-milestone`.
 
 Create the commit only after action-specific authorization required by the
-repository. Verify the resulting commit, including its complete message, and
-the remaining working tree. A push is a
-separate protected action: perform it only when separately authorized, then
-verify local HEAD and the intended upstream revision.
+repository. If its control word is still needed, propose one minimal copy-ready
+instruction naming the exact action, repository and material consequence; the
+proposal is not authorization. Verify the resulting commit, including its
+complete message, and the remaining working tree. A push is a separate
+protected action: perform it only when separately authorized, using a separate
+copy-ready suggestion when needed, then verify local HEAD and the intended
+upstream revision.
 
 Stop instead of silently widening scope, repairing unrelated failures or
 including files that were not reviewed.

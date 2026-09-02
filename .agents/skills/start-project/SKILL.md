@@ -12,7 +12,15 @@ the Secure AI Template this may be a fresh local control-plane clone.
 1. Apply `AGENTS.md`, then read `PROJECT_SETUP.md` and only the setup,
    privacy, domain and repository guidance it directly requires. Inspect Git
    read-only and preserve all existing work.
-2. Establish the access boundary before inspecting external material. Ask only
+2. Before the normal questionnaire, ask one concise, unnumbered routing
+   question: continue with the lean path or use `grill-me` for detailed
+   initialization and planning. Explain that the lean path is the normal
+   default. Invoke `grill-me` only when the maintainer explicitly selects it;
+   a suggestion is not consent. The maintainer may decline or stop grilling
+   and return to the lean path. Do not act on grilling results until the
+   maintainer confirms shared understanding, and never treat path selection as
+   new access or action authority. On the lean path, establish the access
+   boundary before inspecting external material and ask only
    unanswered fundamentals in one initial set of no more than six numbered,
    coherent questions: project identity and purpose; intended audience and use;
    first useful outcome and minimum success evidence; current scope and

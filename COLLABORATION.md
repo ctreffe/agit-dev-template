@@ -30,6 +30,12 @@ workflow choices using the repository Decision Record taxonomy. Keep ordinary
 commit preparation separate from milestone closure and every protected Git
 action independently authorized.
 
+When an applicable repository rule requires a control word, accompany the
+request with one minimal copy-ready suggested instruction naming the exact
+action, repository or destination and material engineering or release
+consequence. Only matching user-originated wording grants authority; keep
+independent actions separate and never request standing or blanket authority.
+
 ## Context and Handoff
 
 Use one task for one coherent objective. Load project-wide or historical

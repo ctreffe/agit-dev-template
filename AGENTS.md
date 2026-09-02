@@ -11,6 +11,9 @@ Resident contract.
   rebases, resets, reverts, branches, stashes, destructive restores and direct
   `.git/` changes each require an instruction containing `explicit`,
   `explicitly` or German `explizit`.
+- When such a control-word instruction is needed, propose one minimal copy-ready
+  wording that names the exact action, repository and material consequence;
+  the proposal is not authorization.
 - Ask before dependencies, installation, privilege, external operations,
   outside writes or transmission; access, versioning and publication differ.
 - Retry once if plausibly transient. On recurrence or setup/policy error, pause;

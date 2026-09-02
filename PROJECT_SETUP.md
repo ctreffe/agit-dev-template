@@ -12,6 +12,14 @@ Use this template for development-oriented AGIT projects. For general non-develo
 
 ## Lean initialization contract
 
+Before the normal questionnaire, `$start-project` asks one concise,
+unnumbered routing choice: use the normal lean path or explicitly select
+`$grill-me` for detailed initialization and planning. The routing choice is
+not one of the six project questions. The skill is never invoked from a
+suggestion; a suggestion is not consent. The maintainer may decline or stop
+grilling and return to the lean path, and neither path changes any access,
+versioning, transmission, publication or protected-action authority.
+
 `$start-project` begins with no more than six fundamental maintainer
 questions. Each numbered item is one coherent decision, not a container for a
 hidden questionnaire:

@@ -20,7 +20,10 @@ Restore a verified working path without broadening the suspended task.
    boundaries. Ask before privilege, installation, credentials, sensitive
    access, external transmission, global configuration, security relaxation,
    destructive recovery or another protected action. Existing project-local
-   tool and environment choices take precedence.
+   tool and environment choices take precedence. When a repository control word
+   is needed, propose one minimal copy-ready instruction naming the exact
+   recovery action, repository and engineering or release consequence; the
+   proposal is not authorization.
 5. Apply only the authorized recovery, then rerun the originally failing
    operation through its normal path. Recheck any security or trust assumption
    changed by the recovery.

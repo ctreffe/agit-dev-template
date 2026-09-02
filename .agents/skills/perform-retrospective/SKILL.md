@@ -31,6 +31,10 @@ the exact intended destination and `Destination-write authorization: Not
 granted`. Reference it in `TASK_HANDOFF.md` only when that handoff is already
 being updated within the same task; do not open a handoff merely to store it.
 
+When the destination write is the next requested step, also propose one minimal
+copy-ready instruction naming the exact action, destination repository and
+material consequence; the proposal is not authorization.
+
 Capture is not promotion or implementation approval. Do not edit another
 repository automatically, create a derived-project `IDEAS.md`, or add, remove
 or rewrite one in an existing derived project.
