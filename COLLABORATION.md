@@ -67,3 +67,12 @@ Work is ready for review when its requested behavior is implemented, relevant
 tests and documentation agree, repository state is preserved, limitations are
 explicit and the diff is small enough to review. It is not complete merely
 because code was generated, a build passed or a plausible explanation exists.
+
+## Explicit Codex Optimization
+
+Only explicit maintainer invocation starts `$optimize-codex`. Its bounded
+scope covers Codex settings, needed writable paths and required local runtime
+setup. Invocation preserves all action-specific authority boundaries.
+The template and new derived projects use a domain-adapted local variant.
+Cross-repository and shared user-wide configuration work belongs to Governance.
+Existing derived projects adopt it only through deliberate template sync.

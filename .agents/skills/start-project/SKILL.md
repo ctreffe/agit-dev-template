@@ -34,6 +34,11 @@ the Secure AI Template this may be a fresh local control-plane clone.
    documentation named by `PROJECT_SETUP.md`. Record initialization status and
    date, source-template version and commit, synchronization baseline and
    intentional deviations.
+   Check only the local runtime needed for the first outcome using the
+   "Required local runtime setup" section of PROJECT_SETUP.md. Reuse existing
+   environments and answers; prepare any necessary setup with its applicable
+   installation authority. Defer optional tools and do not implicitly invoke
+   optimize-codex or expand the initial questionnaire.
 4. Establish local input, temporary, material and output handling only as the
    repository guidance authorizes. Do not inspect, move, transmit or version a
    file merely because it exists.

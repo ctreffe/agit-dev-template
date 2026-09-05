@@ -472,3 +472,26 @@ input and material scope, availability checks, conflict handling and backup.
 Create ignored `sync:` mappings on every device. Do not use synchronized
 storage as a substitute for maintained source, tests, fixtures, configuration,
 runtime paths or build outputs, and do not synchronize `temp/`.
+
+## Required local runtime setup
+
+During initialization, check only what the first concrete outcome needs.
+Reuse established answers; defer later tooling and do not add a mandatory
+questionnaire. This check does not invoke optimize-codex implicitly.
+
+Check the runtime needed for the selected outcome and the actual interpreter
+used by its commands. A new clone/device does not inherit ignored environments;
+missing local setup is not evidence of damage. Reuse the project's established
+manager and isolation model. When Python is required and no suitable managed
+environment exists, prepare a clone-local ignored .venv; do not create one for
+a project without Python needs or copy one from another clone.
+
+Track dependencies and lockfiles using existing project conventions (for
+example requirements-tools.txt for Python helpers). Document reproducible setup
+and explicit interpreter or manager commands. Prepare only needed local setup,
+reuse existing approval and obtain any missing installation/download authority
+before applying it. Verify the interpreter and a minimal relevant import or
+original command; defer optional tools without blocking unrelated work.
+
+Existing uv, Poetry or another project manager and its lockfiles take precedence;
+do not introduce a competing environment or replace dependency management.

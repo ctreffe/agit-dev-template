@@ -6,6 +6,12 @@ This project follows Semantic Versioning.
 
 ## [Unreleased]
 
+- Make local runtime setup demand-driven, reproducible per clone and explicit
+  about interpreter selection; preserve existing environment managers.
+
+- Add maintainer-invoked `optimize-codex` for bounded Codex configuration and
+  existing runtime checks, preserving local scope and separate action authority.
+
 ## [v1.5.0] - 2026-09-02
 
 ### Added
