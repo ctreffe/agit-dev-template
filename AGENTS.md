@@ -17,7 +17,10 @@ Resident contract.
 - Ask before dependencies, installation, privilege, external operations,
   outside writes or transmission; access, versioning and publication differ.
 - Retry once if plausibly transient. On recurrence or setup/policy error, pause;
-  use `troubleshoot-environment`; authorize, repair, verify and resume.
+  use `troubleshoot-environment`; describe the problem and ask whether to exit
+  for an ordinary quick workaround or resolve the cause. Explicit maintainer
+  invocation enters focused resolution directly. Verify repair only by
+  continuing the originally blocked operation.
 - `input/intake/` grants no access; keep `input/` unchanged. Registered
   `materials/` and unrestricted `temp/` are readable; never version temporary
   content or inspect `temp/restricted/`. Keep secrets, logs and dumps out of

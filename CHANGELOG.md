@@ -9,8 +9,10 @@ This project follows Semantic Versioning.
 - Make local runtime setup demand-driven, reproducible per clone and explicit
   about interpreter selection; preserve existing environment managers.
 
-- Add maintainer-invoked `optimize-codex` for bounded Codex configuration and
-  existing runtime checks, preserving local scope and separate action authority.
+- Rebuild `troubleshoot-environment` around an undocumented quick exit or
+  focused cause removal, direct explicit invocation, and acceptance at the
+  original checkpoint or a pre-agreed standalone test. Remove the unspecific
+  `optimize-codex` skill while preserving demand-driven setup.
 
 ## [v1.5.0] - 2026-09-02
 

@@ -477,7 +477,8 @@ runtime paths or build outputs, and do not synchronize `temp/`.
 
 During initialization, check only what the first concrete outcome needs.
 Reuse established answers; defer later tooling and do not add a mandatory
-questionnaire. This check does not invoke optimize-codex implicitly.
+questionnaire. General optimization has no dedicated skill; concrete recurring
+environment problems route through `troubleshoot-environment`.
 
 Check the runtime needed for the selected outcome and the actual interpreter
 used by its commands. A new clone/device does not inherit ignored environments;
