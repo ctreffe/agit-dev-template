@@ -18,11 +18,18 @@ Establish only the context needed for the requested objective.
 4. Read the target and only directly applicable authority, domain, decision and
    validation material. Prefer matched sections, changed hunks and bounded
    output before full files or diffs.
+   Before a coordinated or context-sensitive patch, freshly read each exact
+   target span. Build small hunks around stable semantic anchors and separate
+   independent files or uncertain hunks. When assembling a patch dynamically,
+   preserve an explicit operation marker on every hunk line.
 5. Perform the bounded work. Obtain only the smallest evidence needed to show
    that the affected behavior or text is acceptable and aligned with project
    intent; an automated check is optional. Do not default to whitespace checks,
    broad renders or complete suites. Exercise a changed validator narrowly and
    escalate only for a stated material risk.
+   After a context-verification rejection, inspect whether any partial edit
+   occurred and reread only the failed target instead of retrying the same
+   patch or assuming whitespace damage.
 6. Report evidence actually obtained and checks deferred or not run. Keep
    successful output concise and retain focused diagnostics for failures.
 
