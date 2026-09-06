@@ -8,7 +8,11 @@ description: Start a new bounded repository task with lean context reconstructio
 Establish only the context needed for the requested objective.
 
 1. Read the closest repository instructions and current `TASK_HANDOFF.md` when
-   present. Treat a stale or unrelated handoff as non-authoritative.
+   present. Reconcile any transient Git observation there with live repository
+   state. A commit created after a completed handoff is normal lifecycle
+   progression, not a stale handoff; do not surface that mismatch unless it
+   changes the recorded outcome, substantive open points or continuation.
+   Treat an otherwise stale or unrelated handoff as non-authoritative.
 2. Inspect branch, working tree and staged state without changing them.
 3. State the outcome, repository scope and important non-goals.
 4. Read the target and only directly applicable authority, domain, decision and

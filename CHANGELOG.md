@@ -6,6 +6,10 @@ This project follows Semantic Versioning.
 
 ## [Unreleased]
 
+- Make completed task handoffs commit-stable: record durable task facts
+  without claiming that the enclosing changes remain uncommitted or making
+  versioning the next task, and reconcile continuation against live Git state.
+
 - Make local runtime setup demand-driven, reproducible per clone and explicit
   about interpreter selection; preserve existing environment managers.
 

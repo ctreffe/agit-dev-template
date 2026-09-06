@@ -41,8 +41,9 @@ independent actions separate and never request standing or blanket authority.
 Use one task for one coherent objective. Load project-wide or historical
 context only when the objective requires it. When pausing or changing goals,
 write a compact `TASK_HANDOFF.md` containing objective, accepted decisions,
-exact scope, Git state, checks, risks and next action without replaying the
-conversation.
+exact scope, checks, risks, substantive open points, continuation and the
+versioning boundary without replaying the conversation. Reconstruct live Git
+state on resume rather than treating a completed handoff as its authority.
 
 ## Validation Stages
 

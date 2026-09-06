@@ -27,6 +27,10 @@ boundaries and relevant validation without merely repeating the summary. Use
 real line breaks and reject literal `\n` escape text. Milestone metadata is
 handled only by `commit-milestone`.
 
+When `TASK_HANDOFF.md` is included, confirm that its completed-state wording
+remains true after the commit. Do not update it after committing merely to
+record that the commit occurred; later work reconstructs live Git state.
+
 Create the commit only after action-specific authorization required by the
 repository. If its control word is still needed, propose one minimal copy-ready
 instruction naming the exact action, repository and material consequence; the
