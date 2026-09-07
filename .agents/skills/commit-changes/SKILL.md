@@ -31,6 +31,14 @@ When `TASK_HANDOFF.md` is included, confirm that its completed-state wording
 remains true after the commit. Do not update it after committing merely to
 record that the commit occurred; later work reconstructs live Git state.
 
+The default `workspace-write` sandbox keeps `.git` read-only. Once exact
+staging is requested or the corresponding commit is authorized, request each
+`git add` and `git commit` command through the platform's narrow sandbox
+escalation on its first attempt; do not probe the expected `.git/index.lock`
+denial first. Keep read-only Git inspection sandboxed. Escalation changes only
+the execution boundary: it grants no repository, action, path-selection, push
+or standing authority and creates no persistent allow rule.
+
 Create the commit only after action-specific authorization required by the
 repository. If its control word is still needed, propose one minimal copy-ready
 instruction naming the exact action, repository and material consequence; the

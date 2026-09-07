@@ -27,6 +27,13 @@ developing or reviewing the milestone.
    inventorying unrelated contents.
 6. Resolve only authorized closure gaps, rerun required validation and propose
    a human-readable versioned summary plus concise evidence-based body.
+   The default `workspace-write` sandbox keeps `.git` read-only. Once exact
+   milestone staging is requested or the milestone commit is authorized,
+   request each `git add` and `git commit` command through the platform's
+   narrow sandbox escalation on its first attempt; do not probe the expected
+   `.git/index.lock` denial first. Keep read-only Git inspection sandboxed.
+   Escalation changes only the execution boundary, grants no additional Git or
+   path-selection authority and creates no persistent allow rule.
 7. Create the commit only with action-specific authorization and verify it. If
    the repository control word is still needed, propose one minimal copy-ready
    instruction naming the exact action, repository and material consequence;

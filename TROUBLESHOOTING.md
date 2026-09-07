@@ -28,6 +28,34 @@ Every entry records:
 
 ## Known Issues
 
+## KI-0001: Windows sandbox Git ownership check blocks a repository
+
+- **Stable signature:** Normal Git stops with `fatal: detected dubious ownership
+  in repository` under a Windows sandbox identity different from the owner.
+- **Applicability:** Native Windows Codex tasks where filesystem policy already
+  permits the repository and Git uses the maintainer's global configuration.
+  Filesystem setup failure is separate.
+- **Cause:** Git independently protects repositories owned by another identity;
+  active-workspace command trust does not automatically cover siblings.
+- **Safe diagnostic:** Inspect `git config --show-origin --show-scope --get-all
+  safe.directory`. For an exact authorized path, retry only the failed read-only
+  query with `git -c safe.directory=<absolute-repository> status`. Success
+  confirms missing ownership trust; it is not a repair.
+- **Durable repair:** With explicit approval for persistent user-level Git trust,
+  add only each intended absolute path with `git config --global --add
+  safe.directory <absolute-repository>`. A coordinator may generate exact paths
+  from its registry. Never use `safe.directory=*`, system-level trust or
+  automatic derived-project inclusion.
+- **Authorization needs:** This security relaxation needs approval. It grants no
+  filesystem or dependency access and changes no engineering, test, release,
+  Git or publication authority.
+- **Verification:** Run normal `git status` in every intended repository without
+  `-c safe.directory`; verify writes only at an independently authorized write
+  checkpoint.
+- **Last confirmed:** 2026-09-07, sanitized native-Windows family evidence;
+  seven exact current-user entries allowed normal status in Governance and all
+  six source templates without a trust override.
+
 ## KI-0004: Context-sensitive patch application rejects a coordinated edit
 
 - **Stable signature:** `apply_patch` rejects an edit with
@@ -79,3 +107,47 @@ Every entry records:
   intended skill changes. After the malformed generated insertion was diagnosed
   and rejected atomically, a later dynamically assembled seven-file handoff
   patch with explicit line markers also succeeded on its first attempt.
+
+## KI-0005: Default sandbox blocks an authorized Git metadata write
+
+- **Stable signature:** An authorized `git add -- <exact paths>` or `git commit`
+  starts in the default `workspace-write` sandbox and fails because Git cannot
+  create `.git/index.lock`. Read-only Git inspection succeeds, no partial
+  index state is observed, and the same exact write succeeds when separately
+  approved to run outside the sandbox.
+- **Applicability:** Codex local command execution with a writable repository
+  root under the default `workspace-write` policy. The protection also applies
+  when `.git` is a pointer file and Git resolves metadata elsewhere.
+- **Cause:** Codex deliberately protects every writable root's `.git` path
+  recursively as read-only. Creating `index.lock` is the normal first step for
+  an index write, so this denial is an expected sandbox boundary, not evidence
+  of a stale lock, repository ACL defect or transient Git failure.
+- **Safe diagnostic:** Do not repeat the write in the sandbox. Preserve the
+  current selection, inspect status and staged paths read-only, distinguish
+  failure to create `index.lock` from an already-existing lock, and confirm
+  that no partial index change occurred. Investigate an existing lock or a
+  failure outside the sandbox as a different incident.
+- **Durable repair:** Once exact staging is requested or the corresponding
+  commit is authorized, request each exact Git command that writes `.git`
+  through the platform's narrow sandbox escalation on its first attempt. Keep
+  read-only Git inspection sandboxed. Do not add `.git` to writable roots,
+  change ACLs or ownership, delete a lock, enable full access, or install a
+  persistent allow rule. Escalation changes only the execution boundary and
+  grants no additional dependency, engineering, test, release, path-selection,
+  push or standing authority.
+- **Authorization needs:** Staging requires its normal concrete request or the
+  authorization of the corresponding commit. Commits and other protected Git
+  actions retain every repository-specific control-word requirement. The
+  platform's narrowly scoped sandbox approval is separate from both.
+- **Verification:** At the next natural authorized staging or commit, run the
+  exact metadata-writing command outside the sandbox on its first attempt, then
+  verify the intended staged paths, index state and absence of a residual lock
+  through the normal workflow. Do not create a fix-specific repository or
+  substitute index test.
+- **Last confirmed:** 2026-09-07, official Codex protected-path documentation,
+  the active `workspace-write` permission boundary and recurring sanitized
+  derived-project reports matched the signature. The seven-repository
+  instruction rollout received focused source and diff review.
+- **Unresolved marker:** Runtime acceptance remains open until the next natural
+  authorized staging or commit completes through the first-attempt escalation
+  path without a preceding sandbox denial.

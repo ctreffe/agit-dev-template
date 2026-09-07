@@ -1,29 +1,32 @@
 # Task Handoff
 
-- **Status:** Completed; no substantive task work remains.
-- **Outcome:** AGIT Dev Template now carries the TVDR-0036 context-safe patching
-  contract in task entry and its portable KI-0004 recovery record.
-- **Decisions:** Coordinated patches use freshly read exact targets, small
-  stable semantic anchors and separated independent or uncertain hunks without
-  changing dependency, engineering, test, release or Git authority.
-  Dynamically assembled patches preserve line-level operation markers.
-- **Change scope:** `start-task`, `TROUBLESHOOTING.md`, `CHANGELOG.md` and
-  this handoff. Engineering artifacts and existing derived projects remain
-  unchanged.
-- **Checks:** The shared natural acceptance patch updated this and the other six
-  `start-task` files on its first attempt; its focused diff was reviewed.
-  A later dynamically assembled seven-file handoff patch with explicit line
-  markers also succeeded on its first attempt.
-  Skill Creator validation passed for the changed skill, and Governance's
-  focused family contract check passed after handoff replacement.
-- **Deferred evidence:** No build, broad suite, complete Templateverse gate,
-  milestone or release check ran; this is a bounded collaboration-contract
-  rollout.
+- **Status:** KI-0001 is completed; paused only for KI-0005's natural runtime
+  acceptance.
+- **Outcome:** The Dev Template carries the portable verified KI-0001 exact-path
+  Git trust repair and TVDR-0037's first-attempt Git metadata
+  contract in resident guidance, ordinary/milestone commit skills, portable
+  KI-0005 and the changelog.
+- **Decisions:** Exact authorized metadata writes request narrow sandbox
+  escalation before their first attempt; read-only Git remains sandboxed.
+  Escalation changes no dependency, engineering, test, release or Git authority
+  and creates no persistent rule or full access. KI-0001 user-level Git trust is
+  separately approved, exact-path only and grants none of those authorities.
+- **Change scope:** `AGENTS.md`, `commit-changes`, `commit-milestone`,
+  `TROUBLESHOOTING.md`, `CHANGELOG.md` and this handoff. Engineering
+  artifacts and existing derived projects remain unchanged.
+- **Checks:** Both changed skills passed Skill Creator validation. Focused
+  source and diff review confirmed the shared rule, engineering boundaries and
+  unchanged staging. Normal sandboxed Git status and `git diff --check` passed.
+- **Deferred evidence:** The next natural authorized staging or commit remains
+  the runtime acceptance. No build, broad suite, full Templateverse gate,
+  milestone or release check ran.
 - **Preserved unrelated state:** Inputs, materials, source, tests, generated
-  outputs, existing derived projects, history and remotes were not changed.
-- **Substantive open points:** None for this rollout.
-- **Continuation:** None; existing derived projects may adopt the contract only
-  through a later deliberate template synchronization.
-- **Versioning boundary:** This handoff authorizes no commit or push. Determine
-  current Git state live before any separately authorized versioning or
-  publication action.
+  outputs, existing derived projects, staging, history and remotes were not
+  changed.
+- **Substantive open point:** KI-0005 remains unresolved until a natural
+  authorized metadata write succeeds through first-attempt escalation.
+- **Continuation:** At that operation, verify exact staged paths and residual-
+  lock absence, then synchronize the confirmed KI-0005 evidence normally. No
+  KI-0001 task work remains.
+- **Versioning boundary:** No commit or push is authorized or performed. Later
+  versioning decisions must use live Git state.

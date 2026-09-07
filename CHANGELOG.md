@@ -6,6 +6,15 @@ This project follows Semantic Versioning.
 
 ## [Unreleased]
 
+- Add portable KI-0001 for exact current-user Git ownership trust under the
+  Windows sandbox, without granting filesystem or dependency access or changing
+  engineering, test, release, Git or publication authority.
+
+- Harmonize KI-0005 with the Templateverse first-attempt Git metadata contract.
+  Already authorized staging and commits now request narrow sandbox escalation
+  before their first write instead of probing the expected `.git/index.lock`
+  denial, without changing dependency, test, release or Git authority.
+
 - Harmonize KI-0004 with the Templateverse family contract. Bounded engineering
   work now prereads exact patch targets, uses stable semantic anchors, separates
   uncertain hunks and retains a portable recovery record without changing

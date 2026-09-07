@@ -14,6 +14,11 @@ Resident contract.
 - When such a control-word instruction is needed, propose one minimal copy-ready
   wording that names the exact action, repository and material consequence;
   the proposal is not authorization.
+- Once exact staging is requested or its commit is authorized, run Git commands
+  that write `.git` through narrow sandbox escalation on their first attempt;
+  do not probe the expected `workspace-write` `.git/index.lock` denial. Keep
+  read-only Git inspection sandboxed. Escalation grants no additional Git or
+  standing authority.
 - Ask before dependencies, installation, privilege, external operations,
   outside writes or transmission; access, versioning and publication differ.
 - Retry once if plausibly transient. On recurrence or setup/policy error, pause;
