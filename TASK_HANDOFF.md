@@ -1,7 +1,6 @@
 # Task Handoff
 
-- **Status:** KI-0001 is completed; paused only for KI-0005's natural runtime
-  acceptance.
+- **Status:** Completed; KI-0001 and KI-0005 are verified.
 - **Outcome:** The Dev Template carries the portable verified KI-0001 exact-path
   Git trust repair and TVDR-0037's first-attempt Git metadata
   contract in resident guidance, ordinary/milestone commit skills, portable
@@ -16,17 +15,14 @@
   artifacts and existing derived projects remain unchanged.
 - **Checks:** Both changed skills passed Skill Creator validation. Focused
   source and diff review confirmed the shared rule, engineering boundaries and
-  unchanged staging. Normal sandboxed Git status and `git diff --check` passed.
-- **Deferred evidence:** The next natural authorized staging or commit remains
-  the runtime acceptance. No build, broad suite, full Templateverse gate,
+  unchanged staging. Normal sandboxed Git status and `git diff --check` passed;
+  natural first-attempt escalated staging and commit then succeeded with no lock.
+- **Deferred evidence:** No build, broad suite, full Templateverse gate,
   milestone or release check ran.
 - **Preserved unrelated state:** Inputs, materials, source, tests, generated
   outputs, existing derived projects, staging, history and remotes were not
   changed.
-- **Substantive open point:** KI-0005 remains unresolved until a natural
-  authorized metadata write succeeds through first-attempt escalation.
-- **Continuation:** At that operation, verify exact staged paths and residual-
-  lock absence, then synchronize the confirmed KI-0005 evidence normally. No
-  KI-0001 task work remains.
+- **Substantive open point:** None for KI-0001 or KI-0005.
+- **Continuation:** No task work remains; later work uses live Git state.
 - **Versioning boundary:** No commit or push is authorized or performed. Later
   versioning decisions must use live Git state.

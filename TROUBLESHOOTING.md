@@ -144,10 +144,7 @@ Every entry records:
   verify the intended staged paths, index state and absence of a residual lock
   through the normal workflow. Do not create a fix-specific repository or
   substitute index test.
-- **Last confirmed:** 2026-09-07, official Codex protected-path documentation,
-  the active `workspace-write` permission boundary and recurring sanitized
-  derived-project reports matched the signature. The seven-repository
-  instruction rollout received focused source and diff review.
-- **Unresolved marker:** Runtime acceptance remains open until the next natural
-  authorized staging or commit completes through the first-attempt escalation
-  path without a preceding sandbox denial.
+- **Last confirmed:** 2026-09-07, natural seven-repository runtime acceptance.
+  Exact authorized `git add` and `git commit` operations succeeded on their
+  first attempt through narrow sandbox escalation in Governance and all six
+  source templates, with exact selections and no residual `index.lock`.
