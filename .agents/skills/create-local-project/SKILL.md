@@ -11,6 +11,9 @@ does not share object storage, remove the inherited remote and verify that no
 remote remains.
 
 Read the new repository's own instructions before invoking `start-project`.
+Carry the exact verified source-template clone path into that initialization
+only to seed the new repository's ignored `RETROSPECTIVE_PATHS.local.md`; the
+path grants no source access or cross-repository action authority.
 That initialization replaces inherited source-template maintenance history in
 `CHANGELOG.md` and `TASK_HANDOFF.md` with project-owned state while retaining
 lineage in `PROJECT_CONTEXT.md`. After successful initialization, remove only

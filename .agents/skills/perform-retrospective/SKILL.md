@@ -16,6 +16,17 @@ project's roadmap or Decision Record process, template candidates to the
 verified source template's `IDEAS.md` and family-wide candidates to governance
 `IDEAS.md`.
 
+Only when a result needs another repository, read
+`RETROSPECTIVE_PATHS.local.md`. Canonicalize the selected path, verify the
+tracked repository identity and, for a derived project's source template,
+confirm that the recorded source baseline exists in that clone. Treat a
+missing file, `Unset`, identity mismatch or absent baseline as an unresolved or
+stale mapping: report the exact role and offer to create or refresh the current
+repository's ignored file. Do not scan drives, guess from directory names or
+include a concrete path in transferable evidence or a handoff. A valid mapping
+still grants no access, destination write, Git, versioning, transmission or
+publication authority.
+
 For each transferable candidate record an approved non-sensitive source label,
 reviewed period, sanitized evidence, opportunity, recurrence, reusable
 elements, benefit, risk, boundaries and next maintainer decision. Sanitize

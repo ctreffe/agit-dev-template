@@ -56,6 +56,27 @@ Every entry records:
   seven exact current-user entries allowed normal status in Governance and all
   six source templates without a trust override.
 
+## KI-0002: Skill validator lacks its YAML dependency
+
+- **Stable signature:** The Skill Creator's `quick_validate.py` stops with
+  `ModuleNotFoundError: No module named 'yaml'` before validating a skill.
+- **Applicability:** Skill-editing tasks whose selected project interpreter
+  lacks PyYAML. Ignored environments do not transfer through Git.
+- **Cause:** The validator imports `yaml`, but that interpreter has no PyYAML.
+- **Safe diagnostic:** Print `sys.executable` and query
+  `importlib.util.find_spec('yaml')` without installing anything.
+- **Durable repair:** At first validation use, prefer the project's established
+  package manager and isolated environment; otherwise create the ignored
+  `.venv`. Install the pin from `requirements-tools.txt` under separate
+  dependency and network authority, then use `scripts/Test-CodexSkill.ps1`
+  with the exact managed `-PythonPath`. The wrapper never installs packages.
+- **Authorization needs:** Ask before dependency changes, environment creation,
+  download or installation. Do not change global Python or `pip`.
+- **Verification:** Import `yaml` with the selected interpreter and rerun the
+  original validator operation through the wrapper.
+- **Last confirmed:** 2026-09-09, portable Templateverse contract and structural
+  validation only; this clone must prove runtime readiness on first use.
+
 ## KI-0004: Context-sensitive patch application rejects a coordinated edit
 
 - **Stable signature:** `apply_patch` rejects an edit with

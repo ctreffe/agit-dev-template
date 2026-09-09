@@ -34,6 +34,12 @@ the Secure AI Template this may be a fresh local control-plane clone.
    documentation named by `PROJECT_SETUP.md`. Record initialization status and
    date, source-template version and commit, synchronization baseline and
    intentional deviations.
+   If `RETROSPECTIVE_PATHS.local.md` is absent, create it from the tracked
+   example. Retain an exact verified source-template clone path supplied by
+   `create-local-project`; otherwise leave that mapping `Unset`. Record a
+   Governance path only from maintainer-supplied or already verified evidence.
+   Do not add these optional path values to the initial questionnaire, block
+   initialization on them or copy them into tracked project state.
    Check only the local runtime needed for the first outcome using the
    "Required local runtime setup" section of PROJECT_SETUP.md. Reuse existing
    environments and answers; prepare any necessary setup with its applicable

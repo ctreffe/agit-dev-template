@@ -6,6 +6,20 @@ This project follows Semantic Versioning.
 
 ## [Unreleased]
 
+- Implement IDEA-0020 under TVDR-0041. Normal sandboxed execution remains
+  preferred when equally effective; already authorized in-scope actions request
+  the narrowest sufficient platform escalation when technically required,
+  without changing dependency, engineering, test, release or Git authority.
+
+- Implement IDEA-0019 under TVDR-0040 with an ignored per-device retrospective
+  repository mapping while preserving
+  engineering provenance and roadmap authority. Initialization retains a known
+  source-template path; retrospective routing verifies identity and baseline.
+
+- Add demand-driven first-use readiness for Skill Creator validation through
+  pinned PyYAML, an explicit-interpreter wrapper and portable KI-0002 while
+  preserving existing package managers and dependency authority.
+
 - Add portable KI-0001 for exact current-user Git ownership trust under the
   Windows sandbox, without granting filesystem or dependency access or changing
   engineering, test, release, Git or publication authority.
